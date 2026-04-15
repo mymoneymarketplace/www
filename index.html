@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Financial Products | My Money Marketplace</title>
+    <meta name="description" content="Compare credit cards, business loans, personal loans and savings accounts. Expert reviews and recommendations to help you make smarter financial decisions.">
+    <link rel="canonical" href="https://mymoneymarketplace.com/">
+    <meta property="og:title" content="Compare Financial Products | My Money Marketplace">
+    <meta property="og:description" content="Compare credit cards, business loans, personal loans and savings accounts. Expert reviews and recommendations to help you make smarter financial decisions.">
+    <meta property="og:url" content="https://mymoneymarketplace.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="My Money Marketplace">
+    <meta property="og:image" content="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compare Financial Products | My Money Marketplace">
+    <meta name="twitter:description" content="Compare credit cards, business loans, personal loans and savings accounts. Expert reviews and recommendations to help you make smarter financial decisions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "My Money Marketplace",
+                "url": "https://mymoneymarketplace.com",
+                "logo": "https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"
+            },
+            {
+                "@type": "WebSite",
+                "name": "My Money Marketplace",
+                "url": "https://mymoneymarketplace.com",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://mymoneymarketplace.com/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://mymoneymarketplace.com/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --green: #008254;
+            --green-light: #00a86b;
+            --green-bg: #f0faf5;
+            --text: #111111;
+            --text-secondary: #444444;
+            --text-muted: #717171;
+            --border: #e2e2e2;
+            --bg-light: #f7f7f7;
+            --gold: #f5a623;
+            --white: #ffffff;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .header-logo img {
+            height: 40px;
+            display: block;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: var(--green);
+        }
+
+        .header-cta {
+            background: var(--green);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .header-cta:hover {
+            background: var(--green-light);
+            color: var(--white);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 16px 24px;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 12px 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--green);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--white);
+            padding: 100px 24px 60px;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filled {
+            background: var(--green);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: 2px solid var(--green);
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+        }
+
+        .btn-filled:hover {
+            background: var(--green-light);
+            border-color: var(--green-light);
+            color: var(--white);
+        }
+
+        .btn-outlined {
+            background: transparent;
+            color: var(--green);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: 2px solid var(--green);
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+        }
+
+        .btn-outlined:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        /* ── PRODUCT CATEGORY GRID ── */
+        .categories {
+            background: var(--bg-light);
+            padding: 60px 0;
+        }
+
+        .categories h2 {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 36px;
+            color: var(--text);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: box-shadow 0.2s;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .category-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+        }
+
+        .category-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .category-card p {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+
+        .category-card .card-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--green);
+            transition: opacity 0.2s;
+        }
+
+        .category-card .card-link:hover {
+            opacity: 0.8;
+        }
+
+        /* ── HOW IT WORKS ── */
+        .how-it-works {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .how-it-works h2 {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text);
+        }
+
+        .how-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .steps {
+            display: flex;
+            gap: 32px;
+        }
+
+        .step {
+            flex: 1;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--green-bg);
+            color: var(--green);
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+        }
+
+        .step h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ── FEATURED GUIDES ── */
+        .guides {
+            background: var(--bg-light);
+            padding: 60px 0;
+        }
+
+        .guides h2 {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 36px;
+            color: var(--text);
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guide-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .guide-banner {
+            height: 6px;
+        }
+
+        .guide-content {
+            padding: 20px;
+        }
+
+        .guide-category {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--green);
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .guide-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .guide-card p {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .guide-card .guide-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--green);
+        }
+
+        .guide-card .guide-link:hover {
+            opacity: 0.8;
+        }
+
+        /* ── TRUST SECTION ── */
+        .trust {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .trust h2 {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text);
+        }
+
+        .trust-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .trust-items {
+            display: flex;
+            gap: 32px;
+        }
+
+        .trust-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .trust-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--green-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+        }
+
+        .trust-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: var(--green);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .trust-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .trust-item p {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #1a1a1a;
+            padding: 48px 24px 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-brand img {
+            height: 36px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.5;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            padding: 4px 0;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-col .coming-soon {
+            font-size: 13px;
+            color: rgba(255,255,255,0.35);
+            padding: 4px 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 32px;
+            padding-top: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-disclaimer {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ── MOBILE ── */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-filled,
+            .btn-outlined {
+                width: 100%;
+                max-width: 400px;
+                text-align: center;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-items {
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guides-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="/" class="header-logo">
+                <img src="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png" alt="My Money Marketplace" height="40">
+            </a>
+            <nav class="header-nav">
+                <a href="/business-loans">Business Loans</a>
+                <a href="/credit-cards">Credit Cards</a>
+                <a href="/personal-loans">Personal Loans</a>
+                <a href="/savings">Savings</a>
+            </nav>
+            <a href="/business-loans" class="header-cta">Compare Now</a>
+            <button class="hamburger" aria-label="Toggle navigation menu" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav">
+        <a href="/business-loans">Business Loans</a>
+        <a href="/credit-cards">Credit Cards</a>
+        <a href="/personal-loans">Personal Loans</a>
+        <a href="/savings">Savings</a>
+        <a href="/business-loans">Compare Now</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Make Smarter Money Decisions</h1>
+            <p>Compare hundreds of financial products and find the best fit for your needs — completely free</p>
+            <div class="hero-buttons">
+                <a href="/business-loans" class="btn-filled">Compare Business Loans</a>
+                <a href="/credit-cards" class="btn-outlined">Compare Credit Cards</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT CATEGORY GRID -->
+    <section class="categories">
+        <div class="container">
+            <h2>Explore Financial Products</h2>
+            <div class="categories-grid">
+                <a href="/business-loans" class="category-card">
+                    <div class="category-icon" style="background:#008254;">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="white"/><text x="8" y="17" font-size="14" font-weight="bold" fill="white">$</text><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="white" stroke-width="1.5"/></svg>
+                    </div>
+                    <h3>Business Loans</h3>
+                    <p>Compare SBA loans, equipment financing and working capital</p>
+                    <span class="card-link">Explore &rarr;</span>
+                </a>
+                <a href="/credit-cards" class="category-card">
+                    <div class="category-icon" style="background:#1a6bb0;">
+                        <svg viewBox="0 0 24 24" fill="white"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="white" stroke-width="1.8"/><line x1="2" y1="10" x2="22" y2="10" stroke="white" stroke-width="1.8"/><rect x="5" y="14" width="4" height="2" rx="0.5" fill="white"/></svg>
+                    </div>
+                    <h3>Credit Cards</h3>
+                    <p>Find cash back, travel and business credit cards</p>
+                    <span class="card-link">Explore &rarr;</span>
+                </a>
+                <a href="/personal-loans" class="category-card">
+                    <div class="category-icon" style="background:#7b2d8b;">
+                        <svg viewBox="0 0 24 24" fill="white"><circle cx="12" cy="8" r="4" fill="none" stroke="white" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Personal Loans</h3>
+                    <p>Compare personal loans for any purpose</p>
+                    <span class="card-link">Explore &rarr;</span>
+                </a>
+                <a href="/sba-loans" class="category-card">
+                    <div class="category-icon" style="background:#e6850a;">
+                        <svg viewBox="0 0 24 24" fill="white"><rect x="3" y="10" width="18" height="10" rx="1" fill="none" stroke="white" stroke-width="1.8"/><path d="M5 10V7a7 7 0 0114 0v3" fill="none" stroke="white" stroke-width="1.8"/><path d="M7 3h10M12 3v4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>SBA Loans</h3>
+                    <p>Government-backed financing for small businesses</p>
+                    <span class="card-link">Explore &rarr;</span>
+                </a>
+                <a href="/business-loans" class="category-card">
+                    <div class="category-icon" style="background:#c93a3a;">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Equipment Financing</h3>
+                    <p>Finance equipment with flexible terms</p>
+                    <span class="card-link">Explore &rarr;</span>
+                </a>
+                <a href="/savings" class="category-card">
+                    <div class="category-icon" style="background:#2a9d8f;">
+                        <svg viewBox="0 0 24 24" fill="white"><ellipse cx="12" cy="17" rx="8" ry="4" fill="none" stroke="white" stroke-width="1.8"/><path d="M20 12c0 2.2-3.6 4-8 4s-8-1.8-8-4" fill="none" stroke="white" stroke-width="1.8"/><ellipse cx="12" cy="7" rx="8" ry="4" fill="none" stroke="white" stroke-width="1.8"/><line x1="4" y1="7" x2="4" y2="17" stroke="white" stroke-width="1.8"/><line x1="20" y1="7" x2="20" y2="17" stroke="white" stroke-width="1.8"/></svg>
+                    </div>
+                    <h3>Savings Accounts</h3>
+                    <p>Find high-yield savings and money market accounts</p>
+                    <span class="card-link">Explore &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-inner">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Tell us what you need</h3>
+                        <p>Answer a few simple questions about your financial goals</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Compare top options</h3>
+                        <p>See personalized recommendations from our expert-reviewed partners</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Apply with confidence</h3>
+                        <p>Choose the best fit and apply directly with the provider</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED GUIDES -->
+    <section class="guides">
+        <div class="container">
+            <h2>Latest Financial Guides</h2>
+            <div class="guides-grid">
+                <a href="https://mymoneymarketplace.github.io/business-loans-miami-fl.html" class="guide-card">
+                    <div class="guide-banner" style="background:#008254;"></div>
+                    <div class="guide-content">
+                        <div class="guide-category">BUSINESS LOANS</div>
+                        <h3>Business Loans in Miami, FL</h3>
+                        <p>Compare lenders, rates and programs for South Florida</p>
+                        <span class="guide-link">Read Guide &rarr;</span>
+                    </div>
+                </a>
+                <a href="https://mymoneymarketplace.github.io/best-cash-back-credit-cards-2026.html" class="guide-card">
+                    <div class="guide-banner" style="background:#1a6bb0;"></div>
+                    <div class="guide-content">
+                        <div class="guide-category">CREDIT CARDS</div>
+                        <h3>Best Cash Back Credit Cards 2026</h3>
+                        <p>Expert reviews of the top cash back cards</p>
+                        <span class="guide-link">Read Guide &rarr;</span>
+                    </div>
+                </a>
+                <a href="https://mymoneymarketplace.github.io/business-loans-dallas-tx.html" class="guide-card">
+                    <div class="guide-banner" style="background:#e6850a;"></div>
+                    <div class="guide-content">
+                        <div class="guide-category">BUSINESS LOANS</div>
+                        <h3>Business Loans in Dallas, TX</h3>
+                        <p>Fund your North Texas business</p>
+                        <span class="guide-link">Read Guide &rarr;</span>
+                    </div>
+                </a>
+                <a href="/credit-cards" class="guide-card">
+                    <div class="guide-banner" style="background:#7b2d8b;"></div>
+                    <div class="guide-content">
+                        <div class="guide-category">CREDIT CARDS</div>
+                        <h3>Best Travel Rewards Cards 2026</h3>
+                        <p>Top cards for earning miles and points</p>
+                        <span class="guide-link">Read Guide &rarr;</span>
+                    </div>
+                </a>
+                <a href="https://mymoneymarketplace.github.io/business-loans-chicago-il.html" class="guide-card">
+                    <div class="guide-banner" style="background:#c93a3a;"></div>
+                    <div class="guide-content">
+                        <div class="guide-category">BUSINESS LOANS</div>
+                        <h3>SBA Loans in Chicago, IL</h3>
+                        <p>Government-backed financing for Chicagoland</p>
+                        <span class="guide-link">Read Guide &rarr;</span>
+                    </div>
+                </a>
+                <a href="/credit-cards" class="guide-card">
+                    <div class="guide-banner" style="background:#2a9d8f;"></div>
+                    <div class="guide-content">
+                        <div class="guide-category">CREDIT CARDS</div>
+                        <h3>Best Business Credit Cards 2026</h3>
+                        <p>Cards that help your business grow</p>
+                        <span class="guide-link">Read Guide &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-inner">
+                <h2>Why Trust My Money Marketplace</h2>
+                <div class="trust-items">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3>Editorial Independence</h3>
+                        <p>Our ratings are never influenced by advertiser compensation</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3>200+ Products Reviewed</h3>
+                        <p>We analyze hundreds of financial products across every major provider</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3>Updated Monthly</h3>
+                        <p>Our expert team reviews and re-evaluates rankings every month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png" alt="My Money Marketplace" height="36">
+                <p>Your trusted source for financial product comparisons</p>
+            </div>
+            <div class="footer-col">
+                <h4>Business Loans</h4>
+                <a href="/business-loans">Business Loans</a>
+                <a href="/sba-loans">SBA Loans</a>
+                <a href="/business-loans">Equipment Financing</a>
+                <a href="/business-loans">Line of Credit</a>
+                <a href="/business-loans">Working Capital</a>
+            </div>
+            <div class="footer-col">
+                <h4>Credit Cards</h4>
+                <a href="/credit-cards">Cash Back Cards</a>
+                <a href="/credit-cards">Travel Rewards</a>
+                <a href="/credit-cards">Business Cards</a>
+                <a href="/credit-cards">Balance Transfer</a>
+                <a href="/credit-cards">No Annual Fee</a>
+            </div>
+            <div class="footer-col">
+                <h4>More Products</h4>
+                <a href="/personal-loans">Personal Loans</a>
+                <a href="/savings">Savings Accounts</a>
+                <span class="coming-soon">Insurance (coming soon)</span>
+                <span class="coming-soon">Mortgages (coming soon)</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-disclaimer">My Money Marketplace is an independent editorial website. We may receive compensation from partners. This does not affect our editorial ratings. Financial product information is provided for educational purposes. Terms subject to change.</p>
+            <p class="footer-copyright">&copy; 2026 My Money Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
