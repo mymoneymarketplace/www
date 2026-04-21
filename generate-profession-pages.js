@@ -315,9 +315,26 @@ function extractFaqs(html) {
     return [];
 }
 
+// Decode HTML entities ONCE on extracted values so our own esc() in the
+// renderer doesn't double-encode (e.g. parasite meta has "&amp;" -> raw
+// capture gives "&amp;" -> esc() would emit "&amp;amp;"). Decoding first
+// yields "&" -> esc() emits "&amp;" -> browser renders "&".
+function decodeEntities(s) {
+    if (!s) return s;
+    return s
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&apos;/g, "'")
+        .replace(/&#x27;/g, "'")
+        .replace(/&nbsp;/g, ' ');
+}
+
 function extractMeta(html, name) {
     const m = html.match(new RegExp(`<meta\\s+name="${name}"\\s+content="([^"]*)"`, 'i'));
-    return m ? m[1] : '';
+    return m ? decodeEntities(m[1]) : '';
 }
 
 // Prefer the parasite's declared canonical slug over the filename-derived slug.
