@@ -29,9 +29,9 @@ const TODAY = new Date().toISOString().slice(0, 10);
 // four sibling slugs (rotated so no two pages have identical "related" lists).
 const BUCKETS = {
     healthcare: ['nurses', 'doctors', 'pharmacists', 'medical-students', 'physical-therapists', 'dentists', 'veterinarians', 'travel-nurses'],
-    trades: ['plumbers', 'electricians', 'hvac-technicians', 'mechanics', 'landscapers', 'contractors', 'construction-workers'],
+    trades: ['plumbers', 'electricians', 'hvac-technicians', 'auto-mechanics', 'landscapers', 'contractors', 'construction-workers'],
     creative: ['content-creators', 'photographers', 'gamers'],
-    'business-pros': ['accountants', 'attorneys', 'insurance-agents', 'real-estate-agents', 'freelancers', 'small-business-startups', 'restaurant-owners', 'salon-owners', 'food-truck-owners', 'etsy-sellers', 'amazon-sellers'],
+    'business-pros': ['accountants', 'attorneys', 'insurance-agents', 'real-estate-agents', 'freelancers', 'startups', 'restaurant-owners', 'salon-owners', 'food-truck-owners', 'etsy-sellers', 'amazon-sellers'],
     drivers: ['doordash-drivers', 'uber-drivers', 'truck-drivers', 'instacart-shoppers'],
     'life-stage': ['college-students', 'recent-graduates', 'new-parents', 'first-time-homebuyers', 'seniors', 'remote-workers'],
     military: ['military', 'veterans'],
@@ -320,6 +320,15 @@ function extractMeta(html, name) {
     return m ? m[1] : '';
 }
 
+// Prefer the parasite's declared canonical slug over the filename-derived slug.
+// Handles cases where the parasite filename and its canonical disagree --
+// e.g. best-credit-cards-for-mechanics-2026.html canonicals to
+// /credit-cards/auto-mechanics, so the apex slug should be `auto-mechanics`.
+function extractCanonicalSlug(html) {
+    const m = html.match(/<link\s+rel="canonical"\s+href="https?:\/\/[^\/]+\/credit-cards\/([^"\/]+)"/i);
+    return m ? m[1] : null;
+}
+
 // ─────────── per-profession data builder ───────────
 
 function relatedFor(slug) {
@@ -391,9 +400,12 @@ const skipped = [];
 const errors = [];
 
 for (const f of files) {
-    const slug = professionSlugFromFilename(f);
-    if (!slug) continue;
+    const filenameSlug = professionSlugFromFilename(f);
+    if (!filenameSlug) continue;
     const html = fs.readFileSync(path.join(SEO_PAGES, f), 'utf8');
+    // Use the parasite's declared canonical slug when present; otherwise fall
+    // back to the filename-derived slug.
+    const slug = extractCanonicalSlug(html) || filenameSlug;
     const metaDesc = extractMeta(html, 'description') || `Compare the best credit cards for ${titleCase(slug).toLowerCase()} in 2026.`;
     const faqs = extractFaqs(html);
     if (faqs.length === 0) {
