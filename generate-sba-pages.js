@@ -1,17 +1,10 @@
 // Flagship SBA-scenario page generator.
+// v2: split-screen hero with embedded quiz, point-based scoring, visual
+// program cards, inline pull-quote + comparison table + denial cards,
+// horizontal process timeline, closed FAQ with icons, cleaned footer.
 //
-// Reuses the rendering shell (header/footer/breadcrumb/CSS tokens) from the
-// existing apex generators so layout and branding stay byte-identical to the
-// 257 pages already shipped. Adds three new sections beyond the existing
-// template:
-//   1. Interactive client-side qualification quiz with 4 result profiles
-//   2. "SBA programs that fit this scenario" 3-card block
-//   3. Numbered step-by-step process block
-// And one additional schema block: FinancialService.
-//
-// Driven by a SCENARIOS array so scaling to 12+ sibling pages is adding
-// entries, not touching the renderer. Only scenario #1 (startups) is
-// defined here; siblings land in follow-up commits.
+// One output per SCENARIOS entry. Scaling to 12+ sibling pages is adding
+// entries to the array, not touching the renderer.
 
 const fs = require('fs');
 const path = require('path');
@@ -20,10 +13,14 @@ const ROOT = __dirname;
 const LOGO = 'https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png';
 const TODAY = new Date().toISOString().slice(0, 10);
 
-// ─────────── shared helpers (same as other apex generators) ───────────
+// ─────────── shared helpers ───────────
 
 function esc(s) {
-    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
 }
 
 function buildBreadcrumbSchema(bc) {
@@ -32,11 +29,9 @@ function buildBreadcrumbSchema(bc) {
         item: b.url === '/' ? 'https://mymoneymarketplace.com' : 'https://mymoneymarketplace.com' + b.url
     }));
 }
-
 function buildFaqSchema(faqs) {
     return faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }));
 }
-
 function renderBreadcrumb(bc) {
     return bc.map((b, i) => {
         const isLast = i === bc.length - 1;
@@ -45,101 +40,177 @@ function renderBreadcrumb(bc) {
     }).join('');
 }
 
-function renderFaqs(faqs) {
-    return faqs.map(f => `
-            <details>
-                <summary>${esc(f.q)}</summary>
-                <div class="faq-answer">${esc(f.a)}</div>
-            </details>`).join('');
-}
+// ─────────── inline SVG icons ───────────
+// Kept minimal + consistent stroke weight (1.75) so icons read as a set.
 
-// ─────────── SBA-specific render helpers ───────────
+const ICONS = {
+    seedling: '<svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V11"/><path d="M12 11c0-3.5 3-6 7-6-1 3-3 6-7 6z"/><path d="M12 11c0-3.5-3-6-7-6 1 3 3 6 7 6z"/><path d="M8 22h8"/></svg>',
+    community: '<svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M14 20c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg>',
+    building: '<svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="9" y1="9" x2="9" y2="9"/><line x1="15" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="9" y2="13"/><line x1="15" y1="13" x2="15" y2="13"/><line x1="10" y1="21" x2="10" y2="17"/><line x1="14" y1="21" x2="14" y2="17"/></svg>',
+    // FAQ icons — same stroke weight / size
+    coins:    '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><path d="M16 21a5 5 0 1 0-4.9-6"/><path d="M8 5v6"/><path d="M5.5 7.5h5"/></svg>',
+    bank:     '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9"/><path d="M19 10v9"/><path d="M9 10v9"/><path d="M15 10v9"/><path d="M3 20h18"/></svg>',
+    calendar: '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 10h18"/></svg>',
+    link:     '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>',
+    chart:    '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="20" x2="4" y2="10"/><line x1="10" y1="20" x2="10" y2="4"/><line x1="16" y1="20" x2="16" y2="13"/><line x1="22" y1="20" x2="2" y2="20"/></svg>',
+    clock:    '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/></svg>',
+    refresh:  '<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><polyline points="21 3 21 8 16 8"/></svg>'
+};
+
+// ─────────── render helpers ───────────
 
 function renderQuizHtml(quiz) {
     const questions = quiz.questions.map((q, qi) => `
-                <div class="quiz-question" data-q="${qi}"${qi === 0 ? '' : ' style="display:none"'}>
-                    <h3>${esc(q.prompt)}</h3>
-                    <div class="quiz-options">
-${q.options.map(o => `                        <button type="button" class="quiz-option" data-value="${esc(o.value)}">${esc(o.label)}</button>`).join('\n')}
-                    </div>
-                </div>`).join('');
+                    <div class="quiz-question" data-q="${qi}"${qi === 0 ? '' : ' style="display:none"'}>
+                        <h3>${esc(q.prompt)}</h3>
+                        <div class="quiz-options">
+${q.options.map(o => `                            <button type="button" class="quiz-option" data-value="${esc(o.value)}">${esc(o.label)}</button>`).join('\n')}
+                        </div>
+                    </div>`).join('');
 
     return `
-        <div class="quiz-card" id="quizCard">
-            <div class="quiz-progress" id="quizProgress">
-                <span class="quiz-step-label">Question <span id="quizCurrent">1</span> of ${quiz.questions.length}</span>
-                <div class="quiz-bar"><div class="quiz-bar-fill" id="quizBar" style="width:${(100 / quiz.questions.length).toFixed(1)}%"></div></div>
-            </div>
-            <div id="quizQuestions">${questions}
-            </div>
-            <div id="quizResult" style="display:none" aria-live="polite">
-                <div class="quiz-result-badge" id="resultBadge"></div>
-                <h3 id="resultHeadline"></h3>
-                <p id="resultBody"></p>
-                <ul id="resultBullets" class="quiz-result-bullets"></ul>
-                <a id="resultCta" class="quiz-cta-btn" href="#" rel="nofollow sponsored">Get matched with lenders in 2 minutes at Lendmate &rarr;</a>
-                <button type="button" class="quiz-retake" id="quizRetake">Start over</button>
-            </div>
-        </div>`;
+            <div class="quiz-card" id="quizCard">
+                <div class="quiz-progress" id="quizProgress">
+                    <span class="quiz-step-label">Question <span id="quizCurrent">1</span> of ${quiz.questions.length}</span>
+                    <div class="quiz-bar"><div class="quiz-bar-fill" id="quizBar" style="width:${(100 / quiz.questions.length).toFixed(1)}%"></div></div>
+                </div>
+                <div id="quizQuestions">${questions}
+                </div>
+                <div id="quizResult" class="quiz-result" style="display:none" aria-live="polite">
+                    <div class="quiz-result-badge" id="resultBadge"></div>
+                    <h3 id="resultHeadline"></h3>
+                    <p id="resultBody"></p>
+                    <a id="resultCta" class="quiz-cta-btn" href="#" rel="nofollow sponsored">Continue &rarr;</a>
+                    <button type="button" class="quiz-retake" id="quizRetake">Start over</button>
+                </div>
+            </div>`;
 }
 
 function renderProgramCards(cards) {
     return cards.map(c => `
-            <div class="program-card">
-                <div class="program-badge">${esc(c.badge)}</div>
+            <div class="program-card" style="border-top:4px solid ${c.accent};">
+                <div class="program-head">
+                    <div class="program-icon-wrap" style="color:${c.accent}">${ICONS[c.icon] || ''}</div>
+                    <div class="program-label">${esc(c.label)}</div>
+                </div>
                 <h3>${esc(c.name)}</h3>
-                <dl class="program-specs">
-                    <div><dt>Max amount</dt><dd>${esc(c.amount)}</dd></div>
-                    <div><dt>Typical timeline</dt><dd>${esc(c.timeline)}</dd></div>
-                    <div><dt>Minimum credit</dt><dd>${esc(c.minCredit)}</dd></div>
-                </dl>
-                <p class="program-fit"><strong>Right for you if:</strong> ${esc(c.fit)}</p>
+                <div class="program-stats">
+                    <div class="program-stat">
+                        <span class="program-stat-value">${esc(c.amount)}</span>
+                        <span class="program-stat-label">max amount</span>
+                    </div>
+                    <div class="program-stat">
+                        <span class="program-stat-value">${esc(c.timeline)}</span>
+                        <span class="program-stat-label">to close</span>
+                    </div>
+                    <div class="program-stat">
+                        <span class="program-stat-value">${esc(c.minCredit)}</span>
+                        <span class="program-stat-label">min credit</span>
+                    </div>
+                </div>
+                <p class="program-fit"><strong>${esc(c.fitLead)}</strong> ${esc(c.fitRest)}</p>
             </div>`).join('');
 }
 
-function renderLongForm(sections) {
-    return sections.map(s => `
-        <h3>${esc(s.h3)}</h3>
-${s.p.map(p => `        <p>${esc(p)}</p>`).join('\n')}`).join('');
+function renderComparisonTable(tbl) {
+    const rows = tbl.rows.map(r => `
+                <tr>
+                    <th scope="row">${esc(r.factor)}</th>
+                    <td>${esc(r.conv7a)}</td>
+                    <td>${esc(r.ca)}</td>
+                    <td>${esc(r.micro)}</td>
+                </tr>`).join('');
+    return `
+        <div class="compare-wrap">
+            <h4 class="compare-title">${esc(tbl.title)}</h4>
+            <div class="compare-scroll">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Factor</th>
+                            <th scope="col">Conventional 7(a)</th>
+                            <th scope="col">Community Advantage</th>
+                            <th scope="col">Microloan</th>
+                        </tr>
+                    </thead>
+                    <tbody>${rows}
+                    </tbody>
+                </table>
+            </div>
+        </div>`;
 }
 
-function renderSteps(steps) {
+function renderDenialCards(cards) {
+    return `
+        <div class="denial-grid">${cards.map(c => `
+            <div class="denial-card">
+                <h4>${esc(c.headline)}</h4>
+                <p>${esc(c.remediation)}</p>
+            </div>`).join('')}
+        </div>`;
+}
+
+function renderTimelineSteps(steps) {
     return steps.map((s, i) => `
-            <li class="process-step">
-                <span class="process-num">${i + 1}</span>
-                <div class="process-copy">
-                    <h4>${esc(s.title)}</h4>
-                    <p>${esc(s.text)}</p>
-                </div>
-            </li>`).join('');
+                <li class="timeline-node">
+                    <div class="timeline-dot"><span>${i + 1}</span></div>
+                    <div class="timeline-copy">
+                        <h4>${esc(s.title)}</h4>
+                        <p>${esc(s.text)}</p>
+                    </div>
+                </li>`).join('');
+}
+
+function renderFaqs(faqs) {
+    return faqs.map(f => `
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap">${ICONS[f.icon] || ''}</span>
+                    <span class="faq-q">${esc(f.q)}</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">${esc(f.a)}</div>
+            </details>`).join('');
+}
+
+function renderEligibility(eligibility) {
+    // Assemble the eligibility section: prose sections with inline visual
+    // components interleaved at specific anchors.
+    const parts = [];
+    for (const s of eligibility.sections) {
+        parts.push(`        <h3>${esc(s.h3)}</h3>`);
+        for (const p of s.p) parts.push(`        <p>${esc(p)}</p>`);
+        if (s.after === 'pullquote') {
+            parts.push(`
+        <blockquote class="pullquote">
+            <p>${esc(eligibility.pullquote)}</p>
+        </blockquote>`);
+        } else if (s.after === 'comparison') {
+            parts.push(renderComparisonTable(eligibility.comparison));
+        } else if (s.after === 'denial-cards') {
+            parts.push(renderDenialCards(eligibility.denialCards));
+        }
+    }
+    return parts.join('\n');
 }
 
 // ─────────── page shell ───────────
 
 function buildPage(p) {
     const canonical = `https://mymoneymarketplace.com/${p.slug}`;
-    const heroCtaAnchor = '#quiz';
 
     const schema = {
         '@context': 'https://schema.org',
         '@graph': [
-            {
-                '@type': 'Organization',
-                name: 'My Money Marketplace',
-                url: 'https://mymoneymarketplace.com',
-                logo: LOGO
-            },
-            {
-                '@type': 'BreadcrumbList',
-                itemListElement: buildBreadcrumbSchema(p.breadcrumb)
-            },
+            { '@type': 'Organization', name: 'My Money Marketplace', url: 'https://mymoneymarketplace.com', logo: LOGO },
+            { '@type': 'BreadcrumbList', itemListElement: buildBreadcrumbSchema(p.breadcrumb) },
             {
                 '@type': 'Article',
                 headline: p.articleHeadline,
                 description: p.metaDesc,
                 author: { '@type': 'Organization', name: 'My Money Marketplace' },
                 publisher: { '@type': 'Organization', name: 'My Money Marketplace', logo: { '@type': 'ImageObject', url: LOGO } },
-                datePublished: TODAY,
+                datePublished: p.datePublished || TODAY,
                 dateModified: TODAY,
                 mainEntityOfPage: canonical
             },
@@ -151,17 +222,12 @@ function buildPage(p) {
                 areaServed: { '@type': 'Country', name: 'United States' },
                 provider: { '@type': 'Organization', name: 'My Money Marketplace', url: 'https://mymoneymarketplace.com' }
             },
-            {
-                '@type': 'FAQPage',
-                mainEntity: buildFaqSchema(p.faqs)
-            }
+            { '@type': 'FAQPage', mainEntity: buildFaqSchema(p.faqs) }
         ]
     };
 
-    // Quiz result profiles are serialized into the inline JS so scoring +
-    // content + UTM all live in one place and are scenario-specific.
-    const profilesJs = JSON.stringify(p.quiz.resultProfiles);
-    const scoringJs = p.quiz.scoringFn; // serialized function body as string
+    const profilesJson = JSON.stringify(p.quiz.resultProfiles);
+    const baseUtm = `https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${p.quiz.utmCampaign}`;
 
     return `<!DOCTYPE html>
 <html lang="en">
@@ -184,9 +250,17 @@ function buildPage(p) {
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --green: #008254; --green-dark: #006b45; --green-bg: #f0faf5; --text: #111111; --text-secondary: #444444; --text-muted: #717171; --border: #e2e2e2; --bg-light: #f7f7f7; --white: #ffffff; --amber: #f5a623; --red: #d94141; --navy: #1a3a5c; }
+        :root {
+            --green: #008254; --green-dark: #006b45; --green-bg: #f0faf5;
+            --text: #111111; --text-secondary: #444444; --text-muted: #717171;
+            --border: #e2e2e2; --bg-light: #f7f7f7; --white: #ffffff;
+            --navy: #1a3a5c; --navy-deep: #122a42;
+            --accent-green: #2D8659; --accent-blue: #2F6BB3; --accent-amber: #B8741C;
+            --quote-accent: #2F6BB3;
+        }
         html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; }
 
         /* Header */
         .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid var(--border); height: 64px; }
@@ -212,102 +286,146 @@ function buildPage(p) {
         .breadcrumb-list .sep { color: var(--text-muted); }
         .breadcrumb-list .current { color: var(--text-secondary); font-weight: 500; }
 
-        /* Hero */
-        .hero { padding: 56px 0 48px; text-align: center; background: var(--white); }
-        .hero h1 { font-size: clamp(30px, 4.2vw, 42px); font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 14px; }
-        .hero .sub { font-size: 17px; color: var(--text-secondary); max-width: 640px; margin: 0 auto 28px; line-height: 1.6; }
-        .hero-cta { display: inline-flex; align-items: center; background: var(--green); color: var(--white); font-size: 16px; font-weight: 600; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.2s; }
-        .hero-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+        /* Hero — split screen */
+        .hero { padding: 56px 0 72px; background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%); }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+        .hero-left h1 { font-size: clamp(32px, 4vw, 44px); font-weight: 700; color: var(--text); line-height: 1.15; margin-bottom: 18px; }
+        .hero-left .sub { font-size: 17px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 22px; }
+        .hero-value { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--navy); background: var(--green-bg); border-left: 3px solid var(--green); padding: 12px 18px; border-radius: 4px; margin-bottom: 22px; line-height: 1.5; }
+        .hero-skip { font-size: 14px; color: var(--text-muted); text-decoration: none; border-bottom: 1px dotted var(--text-muted); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+        .hero-skip:hover { color: var(--green); border-bottom-color: var(--green); }
+        @media (max-width: 900px) {
+            .hero { padding: 40px 0 48px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
 
-        /* Quiz */
-        .quiz { padding: 48px 0 64px; background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .quiz h2 { font-size: 26px; font-weight: 700; color: var(--text); margin-bottom: 8px; text-align: center; }
-        .quiz-intro { text-align: center; color: var(--text-secondary); font-size: 15px; margin-bottom: 28px; }
-        .quiz-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px; max-width: 680px; margin: 0 auto; }
-        .quiz-progress { margin-bottom: 24px; }
-        .quiz-step-label { display: block; font-size: 13px; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }
+        /* Quiz card */
+        .quiz-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 6px 24px rgba(20, 40, 70, 0.06); }
+        .quiz-progress { margin-bottom: 22px; }
+        .quiz-step-label { display: block; font-size: 12px; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.4px; text-transform: uppercase; }
         .quiz-bar { height: 6px; background: var(--bg-light); border-radius: 3px; overflow: hidden; }
-        .quiz-bar-fill { height: 100%; background: var(--green); transition: width 0.3s ease; }
-        .quiz-question h3 { font-size: 19px; font-weight: 600; color: var(--text); margin-bottom: 20px; line-height: 1.35; }
-        .quiz-options { display: flex; flex-direction: column; gap: 10px; }
-        .quiz-option { text-align: left; font-family: inherit; font-size: 15px; padding: 14px 18px; border: 1px solid var(--border); border-radius: 8px; background: var(--white); color: var(--text); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+        .quiz-bar-fill { height: 100%; background: var(--green); transition: width 0.35s ease; }
+        .quiz-question h3 { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 18px; line-height: 1.35; }
+        .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+        .quiz-option { text-align: left; font-family: inherit; font-size: 15px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--white); color: var(--text); cursor: pointer; transition: border-color 0.15s, background 0.15s, transform 0.1s; }
         .quiz-option:hover { border-color: var(--green); background: var(--green-bg); }
-        .quiz-option:focus { outline: 2px solid var(--green); outline-offset: 2px; }
-        .quiz-result-badge { display: inline-block; padding: 4px 12px; background: var(--green-bg); color: var(--green); font-size: 12px; font-weight: 600; border-radius: 12px; letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 12px; }
-        #resultHeadline { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
-        #resultBody { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 18px; }
-        .quiz-result-bullets { list-style: none; padding: 0; margin: 0 0 24px; }
-        .quiz-result-bullets li { font-size: 14px; color: var(--text-secondary); padding: 6px 0 6px 22px; position: relative; line-height: 1.55; }
-        .quiz-result-bullets li::before { content: '\u2713'; color: var(--green); position: absolute; left: 0; top: 6px; font-weight: 700; }
-        .quiz-cta-btn { display: inline-flex; align-items: center; background: var(--green); color: var(--white); font-size: 16px; font-weight: 600; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
-        .quiz-cta-btn:hover { background: var(--green-dark); }
-        .quiz-retake { display: block; margin-top: 14px; background: none; border: none; color: var(--text-muted); font-size: 13px; font-family: inherit; cursor: pointer; text-decoration: underline; }
+        .quiz-option:active { transform: scale(0.99); }
+        .quiz-option:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+        .quiz-result-badge { display: inline-block; padding: 4px 12px; background: var(--green-bg); color: var(--green); font-size: 11px; font-weight: 700; border-radius: 12px; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 14px; }
+        #resultHeadline { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 12px; line-height: 1.3; }
+        #resultBody { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 22px; }
+        .quiz-cta-btn { display: inline-flex; align-items: center; background: var(--green); color: var(--white); font-size: 16px; font-weight: 600; padding: 14px 26px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+        .quiz-cta-btn:hover { background: var(--green-dark); color: var(--white); }
+        .quiz-retake { display: block; margin-top: 14px; background: none; border: none; color: var(--text-muted); font-size: 13px; font-family: inherit; cursor: pointer; text-decoration: underline; padding: 4px 0; }
         .quiz-retake:hover { color: var(--text); }
 
-        /* Programs 3-card block */
-        .programs { padding: 64px 0; }
-        .programs h2 { font-size: 26px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 12px; }
-        .programs-sub { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 640px; margin: 0 auto 36px; }
-        .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .program-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
-        .program-badge { display: inline-block; padding: 3px 10px; background: var(--navy); color: var(--white); font-size: 11px; font-weight: 600; border-radius: 4px; letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 14px; }
-        .program-card h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 14px; line-height: 1.3; }
-        .program-specs { margin: 0 0 14px; }
-        .program-specs > div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--bg-light); font-size: 13px; }
-        .program-specs > div:last-child { border-bottom: 0; }
-        .program-specs dt { color: var(--text-muted); }
-        .program-specs dd { color: var(--text); font-weight: 600; text-align: right; }
-        .program-fit { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
-        .program-fit strong { color: var(--text); }
-        @media (max-width: 900px) { .programs-grid { grid-template-columns: 1fr; } }
+        /* Program cards */
+        .programs { padding: 72px 0; background: var(--white); }
+        .programs h2 { font-size: 28px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 10px; }
+        .programs-sub { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 640px; margin: 0 auto 44px; }
+        .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .program-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 32px; display: flex; flex-direction: column; }
+        .program-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+        .program-icon-wrap { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; background: var(--bg-light); }
+        .program-label { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-muted); }
+        .program-card h3 { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 22px; line-height: 1.3; }
+        .program-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 22px; padding: 16px 0; border-top: 1px solid var(--bg-light); border-bottom: 1px solid var(--bg-light); }
+        .program-stat { display: flex; flex-direction: column; align-items: flex-start; }
+        .program-stat-value { font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.2; }
+        .program-stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .program-fit { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-top: auto; }
+        .program-fit strong { color: var(--text); font-weight: 600; }
+        @media (max-width: 900px) {
+            .programs-grid { grid-template-columns: 1fr; gap: 20px; }
+            .program-stat-value { font-size: 20px; }
+        }
 
-        /* Long-form eligibility */
-        .eligibility { padding: 64px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
-        .eligibility h2 { font-size: 26px; font-weight: 700; color: var(--text); margin-bottom: 24px; text-align: center; }
-        .eligibility h3 { font-size: 19px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
-        .eligibility p { font-size: 15px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 14px; }
+        /* Eligibility + pull-quote + comparison + denial cards */
+        .eligibility { padding: 72px 0; background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .eligibility h2 { font-size: 28px; font-weight: 700; color: var(--text); margin-bottom: 28px; text-align: center; }
+        .eligibility h3 { font-size: 20px; font-weight: 600; color: var(--text); margin: 36px 0 12px; }
+        .eligibility p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
         .eligibility a { color: var(--green); font-weight: 500; text-decoration: underline; }
 
-        /* Process steps */
-        .process { padding: 64px 0; }
-        .process h2 { font-size: 26px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 10px; }
-        .process-intro { text-align: center; color: var(--text-secondary); font-size: 15px; margin-bottom: 32px; }
-        .process-list { list-style: none; padding: 0; max-width: 760px; margin: 0 auto; }
-        .process-step { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--border); }
-        .process-step:last-child { border-bottom: 0; }
-        .process-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; }
-        .process-copy h4 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-        .process-copy p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        .pullquote { background: var(--white); border-left: 4px solid var(--quote-accent); padding: 24px 28px; margin: 28px 0 32px; border-radius: 0 6px 6px 0; }
+        .pullquote p { font-size: 22px; line-height: 1.45; font-weight: 500; color: var(--navy); margin: 0; }
 
-        /* FAQ */
-        .faq-section { padding: 56px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
-        .faq-section h2 { font-size: 26px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 32px; }
-        .faq-list { max-width: 760px; margin: 0 auto; }
-        details { border: 1px solid var(--border); border-radius: 8px; background: var(--white); margin-bottom: 10px; overflow: hidden; }
-        details summary { padding: 16px 20px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; }
-        details summary::-webkit-details-marker { display: none; }
-        details summary::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--text-muted); flex-shrink: 0; margin-left: 12px; }
-        details[open] summary::after { content: '-'; }
-        details .faq-answer { padding: 0 20px 18px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+        .compare-wrap { margin: 28px 0 36px; }
+        .compare-title { font-size: 14px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; text-align: center; }
+        .compare-scroll { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); background: var(--white); }
+        .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .compare-table thead { background: var(--navy); color: var(--white); }
+        .compare-table th { text-align: left; padding: 12px 14px; font-weight: 600; font-size: 13px; }
+        .compare-table tbody th { background: var(--bg-light); color: var(--text); font-weight: 600; white-space: nowrap; }
+        .compare-table td { padding: 12px 14px; color: var(--text-secondary); border-top: 1px solid var(--bg-light); vertical-align: top; }
+        .compare-table tbody tr:first-child th, .compare-table tbody tr:first-child td { border-top: 0; }
+
+        .denial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0 28px; }
+        .denial-card { background: var(--white); border: 1px solid var(--border); border-left: 3px solid #c0392b; border-radius: 6px; padding: 18px 20px; }
+        .denial-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.3; }
+        .denial-card p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+        @media (max-width: 640px) { .denial-grid { grid-template-columns: 1fr; } }
+
+        /* Process timeline */
+        .process { padding: 72px 0; background: var(--white); }
+        .process h2 { font-size: 28px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 10px; }
+        .process-intro { text-align: center; color: var(--text-secondary); font-size: 15px; margin-bottom: 48px; max-width: 640px; margin-left: auto; margin-right: auto; }
+        .timeline { list-style: none; padding: 0; max-width: 1040px; margin: 0 auto; }
+        /* Desktop: 4 columns x 2 rows */
+        @media (min-width: 900px) {
+            .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px 24px; position: relative; }
+            .timeline-node { position: relative; padding-top: 48px; }
+            .timeline-node::before { content: ''; position: absolute; left: 50%; top: 20px; width: calc(100% - 40px); height: 2px; background: var(--border); transform: translateX(-50%); z-index: 0; }
+            .timeline-node:nth-child(4n)::before { display: none; }
+            .timeline-dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; }
+            .timeline-copy { text-align: center; }
+        }
+        /* Mobile: vertical stack with connector line */
+        @media (max-width: 899px) {
+            .timeline { padding-left: 48px; position: relative; }
+            .timeline::before { content: ''; position: absolute; top: 20px; bottom: 20px; left: 19px; width: 2px; background: var(--border); }
+            .timeline-node { position: relative; padding: 8px 0 24px; }
+            .timeline-dot { position: absolute; left: -48px; top: 2px; }
+        }
+        .timeline-dot { width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; box-shadow: 0 0 0 4px var(--white); }
+        .timeline-copy h4 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.3; }
+        .timeline-copy p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; }
+
+        /* FAQ — compressed, closed by default, icons */
+        .faq-section { padding: 72px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 28px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 36px; }
+        .faq-list { max-width: 780px; margin: 0 auto; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; transition: box-shadow 0.2s; }
+        .faq-item[open] { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05); }
+        .faq-item summary { display: flex; align-items: center; gap: 14px; padding: 16px 20px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; list-style: none; transition: background 0.15s; }
+        .faq-item summary:hover { background: var(--bg-light); }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-icon-wrap { flex-shrink: 0; color: var(--green); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--green-bg); border-radius: 6px; }
+        .faq-q { flex: 1; }
+        .faq-marker { flex-shrink: 0; width: 16px; height: 16px; position: relative; }
+        .faq-marker::before, .faq-marker::after { content: ''; position: absolute; background: var(--text-muted); top: 7px; left: 1px; right: 1px; height: 2px; border-radius: 1px; transition: transform 0.25s ease; }
+        .faq-marker::after { transform: rotate(90deg); }
+        .faq-item[open] .faq-marker::after { transform: rotate(0deg); }
+        .faq-answer { overflow: hidden; max-height: 0; padding: 0 20px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.75; transition: max-height 0.3s ease, padding 0.3s ease; }
+        .faq-item[open] .faq-answer { max-height: 800px; padding: 0 20px 18px 62px; }
 
         /* Closing CTA */
-        .closing-cta { padding: 64px 0; background: var(--navy); text-align: center; }
+        .closing-cta { padding: 72px 0; background: var(--navy); text-align: center; }
         .closing-cta h2 { font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 14px; }
-        .closing-cta p { font-size: 16px; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 28px; line-height: 1.6; }
+        .closing-cta p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 640px; margin: 0 auto 30px; line-height: 1.65; }
+        .closing-cta p a { color: #7ee0b1; text-decoration: underline; }
         .closing-cta-btn { display: inline-flex; align-items: center; background: var(--green); color: var(--white); font-size: 16px; font-weight: 600; padding: 16px 36px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.2s; }
         .closing-cta-btn:hover { background: var(--green-dark); transform: translateY(-1px); }
-        .closing-cta-micro { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 14px; }
 
-        /* Footer */
-        .footer { background: #1a1a1a; color: #cccccc; padding: 56px 0 0; }
-        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 40px; }
-        .footer-col h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 16px; letter-spacing: 0.3px; }
+        /* Footer (trimmed — only links that actually exist on apex + disclosure text) */
+        .footer { background: #1a1a1a; color: #cccccc; padding: 48px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; margin-bottom: 32px; }
+        .footer-col h4 { color: var(--white); font-size: 13px; font-weight: 600; margin-bottom: 16px; letter-spacing: 0.4px; text-transform: uppercase; }
         .footer-col a { display: block; font-size: 13px; color: #999999; text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
         .footer-col a:hover { color: var(--white); }
-        .footer-col p { font-size: 13px; color: #999999; line-height: 1.6; }
+        .footer-col p { font-size: 13px; color: #999999; line-height: 1.7; }
         .footer-bottom { border-top: 1px solid #333333; padding: 20px 0; text-align: center; font-size: 12px; color: #666666; }
-        @media (max-width: 768px) { .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-        @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
     </style>
     <script type="application/ld+json">
 ${JSON.stringify(schema, null, 4)}
@@ -323,7 +441,6 @@ ${JSON.stringify(schema, null, 4)}
             <a href="/personal-loans" class="header-link">Personal Loans</a>
             <a href="/business-loans" class="header-link">Business Loans</a>
             <a href="/savings" class="header-link">Savings</a>
-            <a href="https://mymoneymarketplace.com/compare" class="header-cta">Compare Rates</a>
             <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </div>
@@ -337,21 +454,21 @@ ${JSON.stringify(schema, null, 4)}
 
 <section class="hero">
     <div class="container">
-        <h1>${esc(p.h1)}</h1>
-        <p class="sub">${esc(p.heroSub)}</p>
-        <a href="${heroCtaAnchor}" class="hero-cta">${esc(p.heroCtaLabel)}</a>
+        <div class="hero-grid">
+            <div class="hero-left">
+                <h1>${esc(p.h1)}</h1>
+                <p class="sub">${esc(p.heroSub)}</p>
+                <p class="hero-value">${esc(p.heroValueProp)}</p>
+                <a href="#programs" class="hero-skip">Skip ahead to program details &rarr;</a>
+            </div>
+            <div class="hero-right" id="quiz">
+${renderQuizHtml(p.quiz)}
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="quiz" id="quiz">
-    <div class="container-narrow">
-        <h2>${esc(p.quiz.heading)}</h2>
-        <p class="quiz-intro">${esc(p.quiz.intro)}</p>
-        ${renderQuizHtml(p.quiz)}
-    </div>
-</section>
-
-<section class="programs">
+<section class="programs" id="programs">
     <div class="container">
         <h2>${esc(p.programs.heading)}</h2>
         <p class="programs-sub">${esc(p.programs.intro)}</p>
@@ -362,7 +479,8 @@ ${JSON.stringify(schema, null, 4)}
 
 <section class="eligibility">
     <div class="container-narrow">
-        <h2>${esc(p.eligibility.heading)}</h2>${renderLongForm(p.eligibility.sections)}
+        <h2>${esc(p.eligibility.heading)}</h2>
+${renderEligibility(p.eligibility)}
     </div>
 </section>
 
@@ -370,7 +488,7 @@ ${JSON.stringify(schema, null, 4)}
     <div class="container">
         <h2>${esc(p.process.heading)}</h2>
         <p class="process-intro">${esc(p.process.intro)}</p>
-        <ol class="process-list">${renderSteps(p.process.steps)}
+        <ol class="timeline">${renderTimelineSteps(p.process.steps)}
         </ol>
     </div>
 </section>
@@ -385,9 +503,8 @@ ${JSON.stringify(schema, null, 4)}
 
 <!--
     TODO: once Angle 2 sibling pages ship
-    (/sba-loans/women-owned, /sba-loans/veterans, /sba-loans/minority-owned,
-     etc.), populate a related-products grid here with 3 scenarios + the
-    /sba-loans hub. Left empty deliberately for scenario #1.
+    (/sba-loans/women-owned, /sba-loans/veterans, /sba-loans/minority-owned, etc.),
+    populate a related-products grid here with 3 scenarios + the /sba-loans hub.
 -->
 
 <section class="closing-cta">
@@ -395,7 +512,6 @@ ${JSON.stringify(schema, null, 4)}
         <h2>${esc(p.closingCta.heading)}</h2>
         <p>${p.closingCta.bodyHtml}</p>
         <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${p.closingCta.utmCampaign}" class="closing-cta-btn" rel="nofollow sponsored">${esc(p.closingCta.buttonLabel)} &rarr;</a>
-        <p class="closing-cta-micro">Soft credit check. Won't affect your credit score.</p>
     </div>
 </section>
 
@@ -411,25 +527,8 @@ ${JSON.stringify(schema, null, 4)}
                 <a href="/savings">Savings</a>
             </div>
             <div class="footer-col">
-                <h4>Resources</h4>
-                <a href="/guides">Financial Guides</a>
-                <a href="/calculators">Loan Calculators</a>
-                <a href="/blog">Blog</a>
-                <a href="/glossary">Glossary</a>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <a href="/about">About Us</a>
-                <a href="/how-it-works">How It Works</a>
-                <a href="/contact">Contact</a>
-                <a href="/press">Press</a>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-                <a href="/disclosures">Disclosures</a>
-                <p style="margin-top: 12px;">My Money Marketplace helps consumers compare financial products. We may receive compensation from partners when you click links on our site.</p>
+                <h4>About</h4>
+                <p>My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not provide financial, legal, or tax advice.</p>
             </div>
         </div>
     </div>
@@ -439,76 +538,118 @@ ${JSON.stringify(schema, null, 4)}
 </footer>
 
 <script>
-(function(){
-    // Quiz state + config (scenario-specific data serialized from the generator)
-    var profiles = ${profilesJs};
-    var scoringFn = ${scoringJs};
-    var baseUtm = ${JSON.stringify(p.quiz.baseUtm)};
+(function () {
+    'use strict';
 
-    var answers = [];
-    var questions = document.querySelectorAll('.quiz-question');
-    var totalQuestions = questions.length;
-    var currentEl = document.getElementById('quizCurrent');
-    var barEl = document.getElementById('quizBar');
+    var PROFILES = ${profilesJson};
+    var BASE_UTM = ${JSON.stringify(baseUtm)};
+    var TOTAL = 6;
+
+    var answers = [null, null, null, null, null, null];
+
+    // Point-based scoring with D/A/B/C cascade per spec.
+    function scoreAnswers(ans) {
+        var tib = ans[0], credit = ans[1], amount = ans[2];
+        var collat = ans[4], franchise = ans[5];
+
+        // Hard override: Microloan / Community Advantage path
+        if (amount === 'under-50k' || tib === 'not-yet') return 'D';
+
+        var pts = 0;
+
+        // Q1 — time in business
+        if (tib === 'under-6mo') pts += -1;
+        else if (tib === '6-12mo') pts += 0;
+        else if (tib === '1-2y')   pts += 1;
+        else if (tib === '2-plus') pts += 2;
+
+        // Q2 — credit
+        if (credit === 'below-580') pts += -2;
+        else if (credit === '580-639') pts += -1;
+        else if (credit === '640-679') pts += 0;
+        else if (credit === '680-719') pts += 1;
+        else if (credit === '720-plus') pts += 2;
+
+        // Q3 — amount (under-50k already routed above)
+        if (amount === '150-500k' || amount === '500-1m') pts += 1;
+
+        // Q5 — collateral
+        if (collat === 'real-estate') pts += 2;
+        else if (collat === 'other-assets') pts += 1;
+        else if (collat === 'none') pts += -1;
+
+        // Q6 — franchise
+        if (franchise === 'yes') pts += 1;
+
+        // Routing
+        if (pts >= 4 && (tib === '1-2y' || tib === '2-plus')) return 'A';
+        if (pts >= 0) return 'B';
+        return 'C';
+    }
+
+    var questionEls = document.querySelectorAll('.quiz-question');
+    var progressCurrent = document.getElementById('quizCurrent');
+    var progressBar = document.getElementById('quizBar');
+    var progressWrap = document.getElementById('quizProgress');
     var questionsWrap = document.getElementById('quizQuestions');
     var resultWrap = document.getElementById('quizResult');
-    var progressWrap = document.getElementById('quizProgress');
 
     function showQuestion(idx) {
-        questions.forEach(function(el, i) {
-            el.style.display = i === idx ? 'block' : 'none';
-        });
-        currentEl.textContent = (idx + 1);
-        barEl.style.width = ((idx + 1) / totalQuestions * 100).toFixed(1) + '%';
+        for (var i = 0; i < questionEls.length; i++) {
+            questionEls[i].style.display = (i === idx) ? 'block' : 'none';
+        }
+        if (progressCurrent) progressCurrent.textContent = (idx + 1);
+        if (progressBar) progressBar.style.width = (((idx + 1) / TOTAL) * 100).toFixed(1) + '%';
     }
 
     function showResult() {
-        var key = scoringFn(answers);
-        var p = profiles[key] || profiles['B'];
-        document.getElementById('resultBadge').textContent = p.badge;
-        document.getElementById('resultHeadline').textContent = p.headline;
-        document.getElementById('resultBody').textContent = p.body;
-        var bulletsEl = document.getElementById('resultBullets');
-        bulletsEl.innerHTML = '';
-        (p.bullets || []).forEach(function(b) {
-            var li = document.createElement('li');
-            li.textContent = b;
-            bulletsEl.appendChild(li);
-        });
-        var ctaEl = document.getElementById('resultCta');
-        ctaEl.href = baseUtm + '&utm_content=' + encodeURIComponent(p.utmContent);
-        questionsWrap.style.display = 'none';
-        progressWrap.style.display = 'none';
+        var key = scoreAnswers(answers);
+        var profile = PROFILES[key] || PROFILES.B;
+        document.getElementById('resultBadge').textContent = profile.badge;
+        document.getElementById('resultHeadline').textContent = profile.headline;
+        document.getElementById('resultBody').textContent = profile.body;
+        var cta = document.getElementById('resultCta');
+        cta.href = BASE_UTM + '&utm_content=' + encodeURIComponent(profile.utmContent);
+        cta.textContent = profile.ctaLabel + ' \\u2192';
+        // Use innerHTML so the rightward arrow renders as a real character
+        cta.innerHTML = profile.ctaLabel + ' &rarr;';
+
+        if (progressWrap) progressWrap.style.display = 'none';
+        if (questionsWrap) questionsWrap.style.display = 'none';
         resultWrap.style.display = 'block';
-        // Gentle scroll-into-view so the result is centered after click
-        setTimeout(function() { resultWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 50);
+        try { resultWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) {}
     }
 
     function reset() {
-        answers = [];
-        questions.forEach(function(el) { el.style.display = 'none'; });
-        resultWrap.style.display = 'none';
-        progressWrap.style.display = 'block';
-        questionsWrap.style.display = 'block';
+        answers = [null, null, null, null, null, null];
+        if (resultWrap) resultWrap.style.display = 'none';
+        if (progressWrap) progressWrap.style.display = 'block';
+        if (questionsWrap) questionsWrap.style.display = 'block';
         showQuestion(0);
     }
 
-    document.querySelectorAll('.quiz-option').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var qEl = btn.closest('.quiz-question');
+    // Event delegation on the questions wrapper is more robust than per-button listeners
+    if (questionsWrap) {
+        questionsWrap.addEventListener('click', function (ev) {
+            var tgt = ev.target;
+            if (!tgt || !tgt.classList || !tgt.classList.contains('quiz-option')) return;
+            ev.preventDefault();
+            var qEl = tgt.closest('.quiz-question');
+            if (!qEl) return;
             var qIdx = parseInt(qEl.getAttribute('data-q'), 10);
-            answers[qIdx] = btn.getAttribute('data-value');
-            if (qIdx + 1 >= totalQuestions) {
+            answers[qIdx] = tgt.getAttribute('data-value');
+            if (qIdx + 1 >= TOTAL) {
                 showResult();
             } else {
                 showQuestion(qIdx + 1);
             }
         });
-    });
+    }
 
     var retakeBtn = document.getElementById('quizRetake');
     if (retakeBtn) retakeBtn.addEventListener('click', reset);
 
+    // Initialize: show only Q1
     showQuestion(0);
 })();
 </script>
@@ -526,23 +667,23 @@ const SCENARIOS = [
         title: 'SBA Loans for Startups 2026 | My Money Marketplace',
         metaDesc: 'Compare SBA loan options for startups and new businesses. See if you qualify for SBA Microloans, 7(a) Small Loans, or Community Advantage. Take our 2-minute quiz to get matched.',
         articleHeadline: 'SBA Loans for Startups: The 2026 Guide',
+        datePublished: '2026-04-21',
         breadcrumb: [
             { name: 'Home', url: '/' },
             { name: 'SBA Loans', url: '/sba-loans' },
             { name: 'SBA Loans for Startups', url: '/sba-loans/startups' }
         ],
         h1: 'SBA Loans for Startups',
-        heroSub: 'SBA financing options for businesses under two years old with limited operating history — including programs designed specifically for startups and pre-revenue founders.',
-        heroCtaLabel: 'Check if I qualify',
+        heroSub: 'SBA financing options for businesses under two years old with limited operating history, including programs designed specifically for startups and pre-revenue founders.',
+        heroValueProp: 'Answer 6 questions. Get a real eligibility read in 60 seconds.',
         financialService: {
             name: 'SBA Startup Loan Matching',
             serviceType: 'SBA loan guidance and lender matching for early-stage businesses',
             description: 'My Money Marketplace helps startup founders compare SBA Microloan, 7(a) Small Loan, and Community Advantage options and get matched with preferred lenders experienced in startup underwriting.'
         },
+
         quiz: {
-            heading: 'Will SBA work for your startup?',
-            intro: 'Answer six quick questions to see which SBA program fits your situation — or whether alternative funding is the smarter starting point.',
-            baseUtm: 'https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-startups-quiz',
+            utmCampaign: 'sba-startups-quiz',
             questions: [
                 {
                     id: 'tib', prompt: 'How long have you been operating?',
@@ -602,147 +743,138 @@ const SCENARIOS = [
                     ]
                 }
             ],
-            // Scoring function is serialized into the page's inline JS.
-            // Cascade priority: D beats A beats C beats B, so the order below
-            // reflects that. Result keys map to `profiles` below.
-            scoringFn: `function(ans) {
-                var tib = ans[0], score = ans[1], amount = ans[2], franchise = ans[5];
-                // D: Microloan / Community Advantage candidate
-                if (franchise === 'yes' || amount === 'under-50k' || tib === 'not-yet') {
-                    return 'D';
-                }
-                // A: Strong SBA candidate
-                if (tib === '2-plus' && (score === '680-719' || score === '720-plus')) {
-                    return 'A';
-                }
-                // C: Alternative-first (too early or credit too low)
-                if (tib === 'under-6mo' || score === 'below-580' || score === '580-639') {
-                    return 'C';
-                }
-                // B: SBA-possible, alternative-preferred (default)
-                return 'B';
-            }`,
             resultProfiles: {
                 A: {
                     badge: 'Strong SBA candidate',
-                    headline: "You're a strong fit for SBA 7(a) or 504",
-                    body: 'Your combination of 2+ years operating and prime-range credit puts you squarely in conventional SBA territory. Expect 60-90 days from application to funding, so if your capital need is urgent, plan for bridge financing while SBA processes.',
-                    bullets: [
-                        'SBA 7(a) Small Loan up to $500K or full 7(a) up to $5M',
-                        'SBA 504 if you need real estate or major equipment',
-                        'Rates typically 2-3 points over prime, 10-25 year terms',
-                        'Consider alternative bridge funding for the 60-90 day wait'
-                    ],
-                    utmContent: 'strong-candidate'
+                    headline: "You're a strong SBA candidate",
+                    body: 'Your profile fits the conventional SBA 7(a) or 504 path well. Expect 60-90 days to funding. Because that timeline can miss time-sensitive opportunities, many strong-profile borrowers pursue SBA while lining up bridge funding that can deploy in days.',
+                    ctaLabel: 'Explore funding options at Lendmate',
+                    utmContent: 'profile-a-strong'
                 },
                 B: {
-                    badge: 'SBA-possible',
-                    headline: 'SBA is within reach, but alternatives may fund faster',
-                    body: 'Your time-in-business or credit puts you in the borderline zone where SBA approval is possible but slower, and where alternative lending can match or exceed SBA terms on short-horizon capital needs. Worth comparing both tracks before committing.',
-                    bullets: [
-                        'SBA approval possible with strong business plan + owner equity',
-                        '60-90 days to SBA funding vs. 24-72 hours for alternative',
-                        'Alternative can serve immediate need, SBA can follow later',
-                        'Match with a lender who can compare both in one conversation'
-                    ],
-                    utmContent: 'possible-alt-preferred'
+                    badge: 'SBA-possible, alternative-preferred',
+                    headline: 'SBA is possible — alternatives may fund faster',
+                    body: "Your profile could qualify for SBA, but one or more factors (time in business, credit, or collateral) mean approval isn't guaranteed and may take time. Alternative lenders often fund similar amounts in 24-72 hours with more flexible underwriting.",
+                    ctaLabel: 'See what Lendmate can match you with',
+                    utmContent: 'profile-b-possible'
                 },
                 C: {
                     badge: 'Alternative-first',
-                    headline: 'Start with alternative funding, revisit SBA in 6-12 months',
-                    body: 'Most conventional SBA lenders will struggle to approve a business under 12 months old or a borrower with credit below 640. The right move is to build operating history and credit with alternative capital now, then come back to SBA when you clear the bar.',
-                    bullets: [
-                        'Conventional SBA 7(a) unlikely at this stage',
-                        'Alternative working capital or equipment financing bridges the gap',
-                        'Build 12-18 months of revenue + payment history, then reapply',
-                        'SBA Microloan still an option if funding need is small'
-                    ],
-                    utmContent: 'alternative-first'
+                    headline: "SBA likely isn't the right fit yet",
+                    body: 'Your current profile faces long odds on conventional SBA approval. Most borrowers in this position build the business and credit for 6-12 months with alternative financing, then revisit SBA once the profile strengthens. Lendmate can match you with funding that works today.',
+                    ctaLabel: 'See what funding you can access now',
+                    utmContent: 'profile-c-alternative'
                 },
                 D: {
-                    badge: 'Microloan / Community Advantage',
-                    headline: 'Look at the SBA Microloan and Community Advantage programs first',
-                    body: 'Pre-launch, franchise, or smaller-dollar requests are exactly what the SBA Microloan program (up to $50K via non-profit intermediaries) and Community Advantage program (up to $350K, designed for underserved markets including startups) were built for. These programs have different underwriting and do not require 2 years in business.',
-                    bullets: [
-                        'SBA Microloan: up to $50K, 30-45 day close, non-profit intermediaries',
-                        'Community Advantage: up to $350K, startup-friendly underwriting',
-                        'Franchise Directory listing unlocks streamlined 7(a) path too',
-                        'Match with a lender who works across all three programs'
-                    ],
-                    utmContent: 'microloan-ca'
+                    badge: 'Microloan / CDC candidate',
+                    headline: 'SBA Microloan or Community Advantage is your path',
+                    body: 'Your situation (small amount, early stage, or franchise) fits programs designed specifically for startups — SBA Microloan (up to $50K via non-profit intermediaries) or Community Advantage (up to $350K in underserved markets). These have different criteria and faster timelines than conventional SBA.',
+                    ctaLabel: 'Get matched with the right lender',
+                    utmContent: 'profile-d-microloan'
                 }
             }
         },
+
         programs: {
-            heading: 'Which SBA programs fit startups',
+            heading: 'Three SBA programs realistic for startups',
             intro: 'Not every SBA program is realistic for early-stage businesses. These three are.',
             cards: [
                 {
-                    badge: 'Microloan',
+                    label: 'Fastest',
                     name: 'SBA Microloan',
-                    amount: 'Up to $50,000',
-                    timeline: '30-45 days',
-                    minCredit: 'Often 575+',
-                    fit: 'You need under $50K, the business is early-stage or pre-revenue, and you can work with a non-profit intermediary lender.'
+                    icon: 'seedling',
+                    accent: '#2D8659',
+                    amount: '$50K',
+                    timeline: '30-45d',
+                    minCredit: '575+',
+                    fitLead: 'Right for you if:',
+                    fitRest: 'you need under $50K, the business is early-stage or pre-revenue, and you can work with a non-profit intermediary lender.'
                 },
                 {
-                    badge: 'Community Advantage',
+                    label: 'Underserved markets',
                     name: 'SBA Community Advantage',
-                    amount: 'Up to $350,000',
-                    timeline: '45-75 days',
-                    minCredit: 'Often 620+',
-                    fit: 'You are in an underserved market or underserved demographic and need more than Microloan can provide but less than full 7(a).'
+                    icon: 'community',
+                    accent: '#2F6BB3',
+                    amount: '$350K',
+                    timeline: '45-75d',
+                    minCredit: '620+',
+                    fitLead: 'Right for you if:',
+                    fitRest: 'you are in an underserved market or demographic and need more than Microloan can provide but less than full 7(a).'
                 },
                 {
-                    badge: '7(a) Small Loan',
+                    label: 'Largest amount',
                     name: 'SBA 7(a) Small Loan',
-                    amount: 'Up to $500,000',
-                    timeline: '60-90 days',
-                    minCredit: 'Often 680+',
-                    fit: 'You have 12+ months operating, reasonable credit, and a lender who specifically works with startup 7(a) applicants.'
+                    icon: 'building',
+                    accent: '#B8741C',
+                    amount: '$500K',
+                    timeline: '60-90d',
+                    minCredit: '680+',
+                    fitLead: 'Right for you if:',
+                    fitRest: 'you have 12+ months operating, reasonable credit, and a lender who specifically works with startup 7(a) applicants.'
                 }
             ]
         },
+
         eligibility: {
             heading: 'SBA eligibility for startups',
+            pullquote: "There is no hard SBA rule requiring 2 years in business. That's a lender preference, not a statute.",
+            comparison: {
+                title: 'Eligibility expectations at a glance',
+                rows: [
+                    { factor: 'Time in business', conv7a: '12-24 months typical', ca: 'No minimum',        micro: 'No minimum' },
+                    { factor: 'Credit score',    conv7a: 'Often 680+',           ca: 'Often 620+',         micro: 'Often 575+' },
+                    { factor: 'Owner equity',    conv7a: '10-30% typical',       ca: '10-30% typical',     micro: '10-30% typical' },
+                    { factor: 'Collateral',      conv7a: 'Required when available', ca: 'Required when available', micro: 'Often flexible' },
+                    { factor: 'Business plan',   conv7a: 'Detailed + projections', ca: 'Required, format flexible', micro: 'Intermediary may help build' }
+                ]
+            },
+            denialCards: [
+                { headline: 'Insufficient owner equity', remediation: 'Document cash, home equity, or family gifts; borrowed money from credit cards or unsecured loans does not count as owner equity.' },
+                { headline: 'Weak business plan',         remediation: 'Avoid boilerplate templates. Focus on unit economics, market specifics, and three-year projections a reviewer can follow.' },
+                { headline: 'Ineligible industry',        remediation: 'Check the SBA\u2019s published list before applying. Gambling, multi-level marketing, speculative investments, and pyramid schemes are excluded.' },
+                { headline: 'Unrealistic projections',    remediation: 'Tie every revenue number to a concrete customer-acquisition mechanism and cost, not wishful growth curves.' }
+            ],
             sections: [
                 {
                     h3: 'The under-2-years reality',
                     p: [
-                        "There is no hard rule in SBA regulations that says a business must be two years old to qualify for an SBA loan. The two-year number is a lender preference, not a statute. It exists because two years of tax returns and financials give underwriters enough history to forecast repayment capacity. Startups without that history aren't disqualified — they're held to a higher bar on the other factors lenders evaluate.",
+                        "There is no hard rule in SBA regulations that says a business must be two years old to qualify for an SBA loan. The two-year number is a lender preference, not a statute. It exists because two years of tax returns and financials give underwriters enough history to forecast repayment capacity. Startups without that history aren't disqualified, they are held to a higher bar on the other factors lenders evaluate.",
                         "That means the right question isn't \"can a startup get an SBA loan\" (the answer is yes) but \"what does a startup need to compensate for the missing history?\" The honest answer is: a detailed business plan, verifiable owner equity, meaningful collateral, and either direct industry experience or a franchise relationship the SBA already recognizes."
-                    ]
+                    ],
+                    after: 'pullquote'
                 },
                 {
                     h3: 'What lenders actually want to see',
                     p: [
-                        "Expect a preferred SBA lender to evaluate four factors for a startup application. First, the business plan — not a 40-page document, but a concise operating plan with a clear market, realistic unit economics, and three-year financial projections backed by assumptions a reviewer can follow. Second, owner equity, usually 10% to 30% of total project cost. Borrowed money does not count; savings, home equity, or documented family gifts do.",
+                        "Expect a preferred SBA lender to evaluate four factors for a startup application. First, the business plan, not a 40-page document, but a concise operating plan with a clear market, realistic unit economics, and three-year financial projections backed by assumptions a reviewer can follow. Second, owner equity, usually 10% to 30% of total project cost. Borrowed money does not count; savings, home equity, or documented family gifts do.",
                         "Third, collateral. Even though SBA loans are partially government-guaranteed, lenders still require collateral when available. Commercial real estate is the strongest form; equipment and other business assets are accepted. A personal guarantee is standard on any SBA loan where a single owner holds more than 20% of the business. Fourth, the borrower's industry experience. A first-time restaurateur faces longer odds than a veteran line cook opening their own place, even with identical financials."
-                    ]
+                    ],
+                    after: 'comparison'
                 },
                 {
                     h3: 'Common reasons startups get denied',
                     p: [
-                        "The most frequent denial reason for startup SBA applications is insufficient owner equity. An applicant who wants to borrow 95% of project cost is asking the lender to take most of the risk on a business with no revenue history. That rarely clears underwriting. Other common reasons: weak or boilerplate business plans, ineligible industries (the SBA has a published list — gambling, multi-level marketing, speculative investments, and pyramid schemes are out, among others), and applications with revenue projections that don't tie back to realistic customer-acquisition assumptions.",
-                        "Credit is often blamed for startup denials, but by itself, credit in the 640-679 range is rarely the sole reason. It becomes fatal when combined with thin equity or a weak plan. When it is the limiting factor, the realistic path is building the business and credit for 12-18 months and reapplying — or going through an SBA Microloan intermediary that explicitly lends to lower-credit borrowers."
-                    ]
+                        "The four most frequent denial reasons for startup SBA applications tend to cluster. Each is fixable, but fixing it usually means revising the application rather than rushing a resubmission."
+                    ],
+                    after: 'denial-cards'
                 },
                 {
                     h3: 'Franchise considerations',
                     p: [
-                        "Franchising is the one scenario where the SBA explicitly gives startups a smoother path. The SBA maintains an online Franchise Directory — if your franchise is listed, most of the brand-level underwriting is already complete, and the lender's review focuses almost entirely on you as the borrower. Listed franchises generally close faster and at higher approval rates than independent startups of comparable size.",
-                        "If a franchise isn't in the directory, an SBA loan is still possible but each lender has to do its own brand review, which adds time and variability. Before signing a franchise agreement with SBA financing in mind, confirm the brand is listed at sba.gov/franchise-directory — it's a one-minute check that can save weeks."
+                        "Franchising is the one scenario where the SBA explicitly gives startups a smoother path. The SBA maintains an online Franchise Directory. If your franchise is listed, most of the brand-level underwriting is already complete, and the lender's review focuses almost entirely on you as the borrower. Listed franchises generally close faster and at higher approval rates than independent startups of comparable size.",
+                        "If a franchise isn't in the directory, an SBA loan is still possible but each lender has to do its own brand review, which adds time and variability. Before signing a franchise agreement with SBA financing in mind, confirm the brand is listed at sba.gov/franchise-directory. It's a one-minute check that can save weeks."
                     ]
                 },
                 {
-                    h3: 'The SBA\'s informal two-year rule and its exceptions',
+                    h3: "The SBA's informal two-year rule and its exceptions",
                     p: [
                         "Three SBA programs were designed with fewer time-in-business constraints. The SBA Microloan program, administered through non-profit intermediaries, makes loans up to $50,000 and often funds pre-revenue founders with strong plans and training hours completed at the intermediary's business development center. The Community Advantage program targets underserved markets and explicitly includes startups in its mandate, lending up to $350,000.",
-                        "Within the standard 7(a) program, the 7(a) Small Loan (under $500K) has a streamlined process that some lenders run against startups when the other factors are strong. These aren't workarounds — they're programs the SBA built on purpose to serve new businesses. If a conventional lender says \"we need 2 years,\" the right response is to ask whether they participate in Microloan, Community Advantage, or startup-focused 7(a) Small Loan lending, or to find a lender that does."
+                        "Within the standard 7(a) program, the 7(a) Small Loan (under $500K) has a streamlined process that some lenders run against startups when the other factors are strong. These aren't workarounds, they are programs the SBA built on purpose to serve new businesses. If a conventional lender says \"we need 2 years,\" the right response is to ask whether they participate in Microloan, Community Advantage, or startup-focused 7(a) Small Loan lending, or to find a lender that does."
                     ]
                 }
             ]
         },
+
         process: {
             heading: 'The startup SBA process, step by step',
             intro: 'Plan for 60-90 days end-to-end on a conventional 7(a). Microloan timelines compress this meaningfully.',
@@ -750,28 +882,27 @@ const SCENARIOS = [
                 { title: 'Choose the right SBA program', text: 'Match your stage, amount, and timeline to Microloan, Community Advantage, or 7(a) Small Loan. Applying to the wrong program is the most common early mistake.' },
                 { title: 'Build the application package', text: 'Three years of personal tax returns, any business tax returns you have, a personal financial statement (SBA Form 413), the SBA borrower form (SBA Form 1919), and a resume for each 20%+ owner.' },
                 { title: 'Document owner equity', text: 'Bank statements, brokerage statements, or home-equity documentation proving the equity is yours and is not borrowed. This is the step applicants most often underestimate.' },
-                { title: 'Write the business plan and projections', text: 'Focus on realistic unit economics. A three-year P&L, monthly for year one and quarterly after, with assumptions a lender can evaluate. Templates from SCORE and SBDCs are fine starting points.' },
-                { title: 'Identify collateral and personal guarantee', text: 'List every collateral-eligible asset. Personal guarantee is standard from any owner with 20%+ stake — this is a lender requirement, not a negotiation point.' },
+                { title: 'Write plan and projections', text: 'Focus on realistic unit economics. A three-year P&L, monthly for year one and quarterly after, with assumptions a lender can evaluate. Templates from SCORE and SBDCs are fine starting points.' },
+                { title: 'Identify collateral', text: 'List every collateral-eligible asset. Personal guarantee is standard from any owner with 20%+ stake. This is a lender requirement, not a negotiation point.' },
                 { title: 'Submit to an SBA-preferred lender', text: 'Preferred Lender Program (PLP) members can approve loans without SBA central-office review, which shaves weeks off timelines. Ask upfront whether your lender is a PLP lender.' },
-                { title: 'Underwriting and closing', text: 'Expect additional document requests — respond within 24 hours to keep momentum. At closing, you sign the note, UCC-1 financing statements on collateral, and the personal guarantee.' },
+                { title: 'Underwriting and closing', text: 'Expect additional document requests. Respond within 24 hours to keep momentum. At closing, you sign the note, UCC-1 financing statements on collateral, and the personal guarantee.' },
                 { title: 'Post-closing', text: 'Most SBA loans require annual financial statements and covenant compliance. Set calendar reminders on day one. Missing a reporting deadline is an unnecessary way to trigger a lender conversation.' }
             ]
         },
+
         faqs: [
-            { q: 'Can I get an SBA loan with no revenue yet?', a: 'Yes, but only through specific programs. The SBA Microloan (up to $50,000) and SBA Community Advantage program accept pre-revenue startups with strong business plans and founder equity. Conventional SBA 7(a) loans almost always require at least 12 months of revenue history, though some lenders within the 7(a) Small Loan program work with earlier-stage applicants when franchise status or industry experience is strong.' },
-            { q: 'How much personal equity do I need to invest?', a: 'Most SBA lenders want to see the owner contribute 10% to 30% of total project cost from personal funds. This demonstrates commitment and reduces lender risk. Personal equity can include cash savings, a home equity line, or documented funds from family that do not need to be repaid. Borrowed money from credit cards or unsecured loans does not count as owner equity.' },
-            { q: "What's the minimum time in business for SBA?", a: 'There is no formal SBA minimum. That is a common myth. Lenders set their own policies. Most 7(a) Small Loan programs want 12-24 months of operating history, though some specialize in startups with zero. The SBA Microloan and Community Advantage programs are explicitly designed for early-stage businesses and do not require a time-in-business minimum.' },
-            { q: 'Will the SBA fund a franchise I am buying?', a: 'If the franchise is listed in the SBA Franchise Directory, yes, and the underwriting is significantly streamlined. Lenders treat listed franchises as pre-approved from a brand-risk perspective, leaving only the individual borrower qualifications to evaluate. Franchises not in the directory require a more detailed lender review. The full directory is at sba.gov/franchise-directory.' },
-            { q: 'What credit score do I really need?', a: 'Most SBA-preferred lenders want personal credit of 680 or higher for the primary borrower. Scores of 640-679 can qualify with compensating strengths such as significant owner equity, strong collateral, or demonstrated industry experience. Below 640, most conventional SBA programs become very difficult, and SBA Microloan or Community Advantage programs become the realistic path.' },
-            { q: 'How long does SBA approval take for startups?', a: 'Budget 60 to 90 days from first application to funding for conventional 7(a) loans. SBA Microloans typically close in 30 to 45 days because the non-profit intermediaries have less bureaucratic overhead. Community Advantage loans fall in between. Startups often see longer timelines because lenders want more time to evaluate the business plan and projections.' },
-            { q: 'What happens if I am denied?', a: 'Ask for the specific reason in writing. Lenders are required to provide it. Common remediable issues include a thin business plan, insufficient owner equity, or weak collateral. You can reapply after addressing the issue, and in many cases a different SBA lender with different underwriting priorities will approve the same borrower. Alternative non-SBA financing such as equipment loans, revenue-based funding, or business credit cards can also bridge capital while you strengthen the SBA profile.' }
+            { icon: 'coins',    q: 'Can I get an SBA loan with no revenue yet?',                       a: 'Yes, but only through specific programs. The SBA Microloan (up to $50,000) and SBA Community Advantage program accept pre-revenue startups with strong business plans and founder equity. Conventional SBA 7(a) loans almost always require at least 12 months of revenue history, though some lenders within the 7(a) Small Loan program work with earlier-stage applicants when franchise status or industry experience is strong.' },
+            { icon: 'bank',     q: 'How much personal equity do I need to invest?',                    a: 'Most SBA lenders want to see the owner contribute 10% to 30% of total project cost from personal funds. This demonstrates commitment and reduces lender risk. Personal equity can include cash savings, a home equity line, or documented funds from family that do not need to be repaid. Borrowed money from credit cards or unsecured loans does not count as owner equity.' },
+            { icon: 'calendar', q: "What's the minimum time in business for SBA?",                     a: 'There is no formal SBA minimum. That is a common myth. Lenders set their own policies. Most 7(a) Small Loan programs want 12-24 months of operating history, though some specialize in startups with zero. The SBA Microloan and Community Advantage programs are explicitly designed for early-stage businesses and do not require a time-in-business minimum.' },
+            { icon: 'link',     q: 'Will the SBA fund a franchise I am buying?',                       a: 'If the franchise is listed in the SBA Franchise Directory, yes, and the underwriting is significantly streamlined. Lenders treat listed franchises as pre-approved from a brand-risk perspective, leaving only the individual borrower qualifications to evaluate. Franchises not in the directory require a more detailed lender review. The full directory is at sba.gov/franchise-directory.' },
+            { icon: 'chart',    q: 'What credit score do I really need?',                               a: 'Most SBA-preferred lenders want personal credit of 680 or higher for the primary borrower. Scores of 640-679 can qualify with compensating strengths such as significant owner equity, strong collateral, or demonstrated industry experience. Below 640, most conventional SBA programs become very difficult, and SBA Microloan or Community Advantage programs become the realistic path.' },
+            { icon: 'clock',    q: 'How long does SBA approval take for startups?',                    a: 'Budget 60 to 90 days from first application to funding for conventional 7(a) loans. SBA Microloans typically close in 30 to 45 days because the non-profit intermediaries have less bureaucratic overhead. Community Advantage loans fall in between. Startups often see longer timelines because lenders want more time to evaluate the business plan and projections.' },
+            { icon: 'refresh',  q: 'What happens if I am denied?',                                      a: 'Ask for the specific reason in writing. Lenders are required to provide it. Common remediable issues include a thin business plan, insufficient owner equity, or weak collateral. You can reapply after addressing the issue, and in many cases a different SBA lender with different underwriting priorities will approve the same borrower. Alternative non-SBA financing such as equipment loans, revenue-based funding, or business credit cards can also bridge capital while you strengthen the SBA profile.' }
         ],
+
         closingCta: {
             heading: 'Ready to explore your funding options?',
-            // bodyHtml is rendered raw (author-controlled, safe). Embeds the
-            // required apex cross-links: /sba-loans (parent hub) and
-            // /business-loans (faster alternative cross-sell).
-            bodyHtml: 'Whether SBA is the right fit or alternative lending gets you there faster, a two-minute match at Lendmate Capital surfaces both in one conversation. See the broader <a href="/sba-loans" style="color:#4fd39f;text-decoration:underline;">SBA loans hub</a> for other scenarios, or compare <a href="/business-loans" style="color:#4fd39f;text-decoration:underline;">traditional business loans</a> as a faster-funding companion option.',
+            bodyHtml: 'Whether SBA is the right fit or alternative lending gets you there faster, a two-minute match at Lendmate Capital surfaces both in one conversation. See the broader <a href="/sba-loans">SBA loans hub</a> for other scenarios, or compare <a href="/business-loans">traditional business loans</a> as a faster-funding companion option.',
             buttonLabel: 'See what Lendmate can do in 2 minutes',
             utmCampaign: 'sba-startups-closing-cta'
         }
@@ -790,8 +921,7 @@ for (const s of SCENARIOS) {
     written++;
 }
 
-// ─────────── sitemap ───────────
-
+// Sitemap entry (idempotent)
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
     let sitemap = fs.readFileSync(sitemapPath, 'utf8');

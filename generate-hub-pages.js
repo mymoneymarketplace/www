@@ -658,25 +658,8 @@ ${JSON.stringify(schema, null, 4)}
                 <a href="/savings">Savings</a>
             </div>
             <div class="footer-col">
-                <h4>Resources</h4>
-                <a href="/guides">Financial Guides</a>
-                <a href="/calculators">Loan Calculators</a>
-                <a href="/blog">Blog</a>
-                <a href="/glossary">Glossary</a>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <a href="/about">About Us</a>
-                <a href="/how-it-works">How It Works</a>
-                <a href="/contact">Contact</a>
-                <a href="/press">Press</a>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-                <a href="/disclosures">Disclosures</a>
-                <p style="margin-top: 12px;">My Money Marketplace helps consumers compare financial products. We may receive compensation from partners when you click links on our site.</p>
+                <h4>About</h4>
+                <p>My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not provide financial, legal, or tax advice.</p>
             </div>
         </div>
     </div>
