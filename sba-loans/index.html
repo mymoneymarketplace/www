@@ -104,6 +104,24 @@
         @media (max-width: 768px) { .city-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 480px) { .city-grid { grid-template-columns: 1fr; } }
 
+        /* ── Scenario grid (Angle 2 pages) ── */
+        .scenario-section { padding: 56px 0; background: var(--white); }
+        .scenario-section h2 { font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 8px; text-align: center; }
+        .scenario-section .scenario-intro { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 600px; margin: 0 auto 36px; line-height: 1.6; }
+        .scenario-featured { max-width: 800px; margin: 0 auto 28px; padding: 20px 24px; background: var(--bg-light); border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+        .scenario-featured .sf-text { flex: 1 1 320px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; }
+        .scenario-featured .sf-text strong { color: var(--text); }
+        .scenario-featured a { flex: 0 0 auto; display: inline-flex; align-items: center; font-size: 14px; font-weight: 600; color: var(--green); text-decoration: none; }
+        .scenario-featured a:hover { text-decoration: underline; }
+        .scenario-group-wrap { max-width: 1000px; margin: 0 auto; }
+        .scenario-group { margin-bottom: 24px; }
+        .scenario-group-title { font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; padding-left: 2px; }
+        .scenario-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .scenario-link { display: block; padding: 12px 16px; background: var(--white); border: 1px solid var(--border); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--text-secondary); text-decoration: none; text-align: center; transition: all 0.2s; }
+        .scenario-link:hover { border-color: var(--green); color: var(--green); background: #f7fbf9; }
+        @media (max-width: 768px) { .scenario-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .scenario-grid { grid-template-columns: 1fr; } }
+
         /* ── Content ── */
         .content-section { padding: 56px 0; }
         .content-section h2 { font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 20px; }
@@ -327,6 +345,59 @@
             <a href="/sba-loans/indianapolis-in" class="city-link">Indianapolis, IN</a>
             <a href="/sba-loans/san-jose-ca" class="city-link">San Jose, CA</a>
             <a href="/sba-loans/jacksonville-fl" class="city-link">Jacksonville, FL</a>
+        </div>
+    </div>
+</section>
+
+<!-- SBA Loans by Scenario (Angle 2) -->
+<section class="scenario-section">
+    <div class="container">
+        <h2>SBA Loans by Your Situation</h2>
+        <p class="scenario-intro">Twelve scenario-specific guides &mdash; each with its own 2-minute quiz, program recommendations, and editorial depth for the situation that fits you.</p>
+
+        <div class="scenario-featured">
+            <div class="sf-text">
+                <strong>New to SBA?</strong> Start with the complete SBA loan requirements guide &mdash; credit, time in business, equity, citizenship, and the full documentation list.
+            </div>
+            <a href="/sba-loans/requirements">See SBA loan requirements &rarr;</a>
+        </div>
+
+        <div class="scenario-group-wrap">
+            <div class="scenario-group">
+                <div class="scenario-group-title">By qualification scenario</div>
+                <div class="scenario-grid">
+                    <a class="scenario-link" href="/sba-loans/bad-credit">Bad credit</a>
+                    <a class="scenario-link" href="/sba-loans/no-collateral">No collateral</a>
+                    <a class="scenario-link" href="/sba-loans/after-bankruptcy">After bankruptcy</a>
+                    <a class="scenario-link" href="/sba-loans/self-employed">Self-employed</a>
+                </div>
+            </div>
+
+            <div class="scenario-group">
+                <div class="scenario-group-title">By business type</div>
+                <div class="scenario-grid">
+                    <a class="scenario-link" href="/sba-loans/startups">Startups</a>
+                    <a class="scenario-link" href="/sba-loans/franchise">Franchise</a>
+                    <a class="scenario-link" href="/sba-loans/business-acquisition">Business acquisition</a>
+                    <a class="scenario-link" href="/sba-loans/requirements">All requirements</a>
+                </div>
+            </div>
+
+            <div class="scenario-group">
+                <div class="scenario-group-title">By demographic</div>
+                <div class="scenario-grid">
+                    <a class="scenario-link" href="/sba-loans/veterans">Veterans</a>
+                    <a class="scenario-link" href="/sba-loans/women">Women-owned</a>
+                    <a class="scenario-link" href="/sba-loans/minority">Minority-owned</a>
+                </div>
+            </div>
+
+            <div class="scenario-group">
+                <div class="scenario-group-title">By circumstance</div>
+                <div class="scenario-grid">
+                    <a class="scenario-link" href="/sba-loans/disaster">Disaster recovery</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
