@@ -281,6 +281,16 @@ const CONFIGS = {
 
 '621111': {
     slug: 'physicians',
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Modern medical clinic waiting room with contemporary seating and clean professional decor, representative of physician practice interiors funded through SBA 7(a) loans',
+        width: 1200,
+        height: 800,
+        photographer: 'Los Muertos Crew',
+        photographerUrl: 'https://www.pexels.com/@cristian-rojas/',
+        sourceUrl: 'https://www.pexels.com/photo/8459996/',
+        sourceName: 'Pexels',
+    },
     programsContext: {
         fits: {
             standard: "practice acquisitions (the dominant use), buildouts, partnership buy-in under the May 2023 partial-purchase rule.",
