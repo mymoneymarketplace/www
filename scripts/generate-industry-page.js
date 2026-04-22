@@ -2322,12 +2322,56 @@ var rb=document.getElementById('quizRetake');if(rb)rb.addEventListener('click',r
 `;
 }
 
+// ─── Pre-publish guardrail (shared integration) ─────────────────────────
+// Runs the per-page audit against freshly-generated HTML BEFORE writing it
+// to disk. CRITICAL and HIGH severity findings BLOCK the write; MEDIUM and
+// LOW findings are printed as warnings but do not block. Findings already
+// present in data/audit-baseline.json are grandfathered so regenerating an
+// existing page with pre-existing issues does not fail.
+//
+// Bypass: set SKIP_AUDIT=1 to skip the guardrail (development only, do not
+// use for commits that will land on main).
+//
+// Preview mode: pass --preview as a third CLI arg to run the audit and print
+// findings without writing the file (useful for CI-style checks).
+
+const audit = require('./audit-module.js');
+
+function runPrePublishGuardrail({ html, urlPath, label }) {
+    if (process.env.SKIP_AUDIT === '1') {
+        console.warn(`  [audit] SKIP_AUDIT=1 — guardrail bypassed for ${label}.`);
+        return { blocked: false, findings: [] };
+    }
+    const baselinePath = path.join(__dirname, '..', 'data', 'audit-baseline.json');
+    const baseline = audit.loadBaseline(baselinePath);
+    const findings = audit.runChecks(html, {
+        urlPath,
+        checkNames: audit.PRE_PUBLISH_CHECKS,
+    });
+    const newFindings = audit.filterNewFindings(findings, baseline);
+    const blockers = newFindings.filter(f => audit.BLOCKING_SEVERITIES.includes(f.severity));
+    const warnings = newFindings.filter(f => !audit.BLOCKING_SEVERITIES.includes(f.severity));
+
+    if (warnings.length > 0) {
+        console.warn(`  [audit] ${warnings.length} non-blocking finding(s) for ${label}:`);
+        for (const w of warnings) console.warn(`    - ${audit.formatFinding(w).replace(/\n/g, '\n      ')}`);
+    }
+    if (blockers.length > 0) {
+        console.error(`\n  [audit] BLOCKED: ${blockers.length} CRITICAL/HIGH finding(s) for ${label}:`);
+        for (const b of blockers) console.error(`    - ${audit.formatFinding(b).replace(/\n/g, '\n      ')}`);
+        console.error(`\n  File NOT written. Fix the above issues or set SKIP_AUDIT=1 to bypass (not for production).`);
+        return { blocked: true, findings: blockers };
+    }
+    return { blocked: false, findings: newFindings };
+}
+
 // ─── CLI entrypoint ─────────────────────────────────────────────────────
 
 function main() {
     const naicsCode = process.argv[2];
+    const preview = process.argv.includes('--preview');
     if (!naicsCode) {
-        console.error('Usage: node scripts/generate-industry-page.js <NAICS_CODE>');
+        console.error('Usage: node scripts/generate-industry-page.js <NAICS_CODE> [--preview]');
         console.error('Configured NAICS codes: ' + Object.keys(CONFIGS).join(', '));
         process.exit(1);
     }
@@ -2337,7 +2381,18 @@ function main() {
         process.exit(1);
     }
     const html = renderPage(naicsCode);
+    const urlPath = `/sba-loans/${cfg.slug}`;
     const outPath = path.join(__dirname, '..', 'sba-loans', cfg.slug, 'index.html');
+
+    // Pre-publish guardrail
+    const { blocked } = runPrePublishGuardrail({ html, urlPath, label: urlPath });
+    if (blocked) process.exit(1);
+
+    if (preview) {
+        console.log(`[preview] Would write ${outPath} (${html.length.toLocaleString()} chars). No file written.`);
+        return;
+    }
+
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, html, 'utf8');
     console.log(`Wrote ${outPath} (${html.length.toLocaleString()} chars)`);
@@ -2345,4 +2400,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { renderPage, CONFIGS };
+module.exports = { renderPage, CONFIGS, runPrePublishGuardrail };

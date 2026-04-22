@@ -798,12 +798,54 @@ function main() {
         process.exit(1);
     }
     const html = renderPage(naicsCode, stateAbbr);
+    const urlPath = `/sba-loans/${cfg.industryParentSlug}/${cfg.stateSlug}`;
     const outPath = path.join(__dirname, '..', 'sba-loans', cfg.industryParentSlug, cfg.stateSlug, 'index.html');
+
+    // Pre-publish guardrail
+    const { blocked } = runPrePublishGuardrail({ html, urlPath, label: urlPath });
+    if (blocked) process.exit(1);
+
+    if (process.argv.includes('--preview')) {
+        console.log(`[preview] Would write ${outPath} (${html.length.toLocaleString()} chars). No file written.`);
+        return;
+    }
+
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, html, 'utf8');
     console.log(`Wrote ${outPath} (${html.length.toLocaleString()} chars)`);
 }
 
+// ─── Pre-publish guardrail (shared with generate-industry-page.js) ──────
+// CRITICAL and HIGH findings block the write. MEDIUM/LOW warn only.
+// Set SKIP_AUDIT=1 to bypass (dev only).
+// Pass --preview as a CLI flag to run the audit without writing the file.
+const audit = require('./audit-module.js');
+
+function runPrePublishGuardrail({ html, urlPath, label }) {
+    if (process.env.SKIP_AUDIT === '1') {
+        console.warn(`  [audit] SKIP_AUDIT=1 — guardrail bypassed for ${label}.`);
+        return { blocked: false, findings: [] };
+    }
+    const baselinePath = path.join(__dirname, '..', 'data', 'audit-baseline.json');
+    const baseline = audit.loadBaseline(baselinePath);
+    const findings = audit.runChecks(html, { urlPath, checkNames: audit.PRE_PUBLISH_CHECKS });
+    const newFindings = audit.filterNewFindings(findings, baseline);
+    const blockers = newFindings.filter(f => audit.BLOCKING_SEVERITIES.includes(f.severity));
+    const warnings = newFindings.filter(f => !audit.BLOCKING_SEVERITIES.includes(f.severity));
+
+    if (warnings.length > 0) {
+        console.warn(`  [audit] ${warnings.length} non-blocking finding(s) for ${label}:`);
+        for (const w of warnings) console.warn(`    - ${audit.formatFinding(w).replace(/\n/g, '\n      ')}`);
+    }
+    if (blockers.length > 0) {
+        console.error(`\n  [audit] BLOCKED: ${blockers.length} CRITICAL/HIGH finding(s) for ${label}:`);
+        for (const b of blockers) console.error(`    - ${audit.formatFinding(b).replace(/\n/g, '\n      ')}`);
+        console.error(`\n  File NOT written. Fix the above issues or set SKIP_AUDIT=1 to bypass (not for production).`);
+        return { blocked: true, findings: blockers };
+    }
+    return { blocked: false, findings: newFindings };
+}
+
 if (require.main === module) main();
 
-module.exports = { renderPage, CONFIGS };
+module.exports = { renderPage, CONFIGS, runPrePublishGuardrail };
