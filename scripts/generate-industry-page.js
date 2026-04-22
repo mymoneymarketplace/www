@@ -1659,7 +1659,7 @@ const CONFIGS = {
 
 // ─── Rendering helpers (programmatic, work for any NAICS) ───────────────
 
-function renderStatsBlock(stats, overall) {
+function renderStatsBlock(stats, overall, industryNoun, naicsCode, naicsDescription) {
     const chgoffRatio = (stats.charge_off_pct / overall.charge_off_pct);
     const chgoffVsSba = chgoffRatio < 1 ? 'better than' : 'above';
     const chgoffArrow = chgoffRatio < 1 ? '&darr;' : '&uarr;';
@@ -1669,11 +1669,19 @@ function renderStatsBlock(stats, overall) {
     const secondState = stats.top_states_by_count[1];
     const thirdState = stats.top_states_by_count[2];
 
+    // Capitalize industry noun for the heading
+    const noun = industryNoun || 'SBA';
+    const nounCap = noun.charAt(0).toUpperCase() + noun.slice(1);
+    // NAICS descriptor line — use naicsDescription if available, else synthesize
+    const naicsLine = naicsCode && naicsDescription
+        ? `SBA 7(a) loans to ${naicsDescription.toLowerCase()} (NAICS ${naicsCode}), fiscal years 2020 through December 2025. Pulled from SBA FOIA 7(a) dataset.`
+        : `SBA 7(a) loans to ${noun} businesses, fiscal years 2020 through December 2025. Pulled from SBA FOIA 7(a) dataset.`;
+
     return `
     <section class="by-numbers">
         <div class="container">
-            <h2>Restaurant SBA lending &mdash; by the numbers</h2>
-            <p class="bn-sub">SBA 7(a) loans to full-service restaurants (NAICS 722511), fiscal years 2020 through December 2025. Pulled from SBA FOIA 7(a) dataset.</p>
+            <h2>${nounCap} SBA lending &mdash; by the numbers</h2>
+            <p class="bn-sub">${naicsLine}</p>
             <div class="bn-grid">
                 <div class="bn-card">
                     <div class="bn-label">Loans approved</div>
@@ -1963,15 +1971,22 @@ function renderPage(naicsCode) {
 
     const canonicalUrl = `https://mymoneymarketplace.com/sba-loans/${cfg.slug}`;
 
-    // Compute narrative substitutions (failure-rate section uses stats)
+    // Compute narrative substitutions — apply UNIFORMLY across all narrative
+    // sections so any {token} placeholder resolves regardless of which section
+    // a config authored it in. This fixes the {franchise_pct} leak previously
+    // constrained to cfg.narrative.indep only.
     const chgoffRatio = stats.charge_off_vs_sba_avg_ratio || (stats.charge_off_pct / overall.charge_off_pct);
     const chgoffRatioLabel = chgoffRatio < 1 ? `${chgoffRatio.toFixed(2)}x` : `${chgoffRatio.toFixed(2)}x`;
-    const failureSection = cfg.narrative.failure
+    const substitute = (s) => (s || '')
         .replace(/\{cost_off_pct\}/g, fmt.pct(stats.charge_off_pct))
         .replace(/\{sba_avg_chgoff\}/g, fmt.pct(overall.charge_off_pct))
-        .replace(/\{chgoff_ratio_label\}/g, chgoffRatioLabel);
-    const indepSection = cfg.narrative.indep
-        .replace(/\{franchise_pct\}/g, stats.franchise_loan_pct.toFixed(2));
+        .replace(/\{chgoff_ratio_label\}/g, chgoffRatioLabel)
+        .replace(/\{franchise_pct\}/g, (stats.franchise_loan_pct || 0).toFixed(2))
+        .replace(/\{yoy_growth\}/g, (stats.yoy_growth || 0).toFixed(2))
+        .replace(/\{loan_count\}/g, fmt.num(stats.loan_count || 0));
+    const failureSection = substitute(cfg.narrative.failure);
+    const indepSection = substitute(cfg.narrative.indep);
+    const underwritingSection = substitute(cfg.narrative.underwriting);
 
     const { questionsHtml, profilesJson, scoringBody, total } = renderQuiz(cfg);
 
@@ -2230,7 +2245,7 @@ ${renderHeroPhoto(cfg.heroPhoto)}
     </div>
 </section>
 
-${renderStatsBlock(stats, overall)}
+${renderStatsBlock(stats, overall, cfg.industryNoun || cfg.slug.replace(/-/g, ' '), naicsCode, industry.naics_description)}
 
 ${renderComparisonTiles(stats, overall, cfg.industryNoun || cfg.slug.replace(/-/g, ' '), DATA.metadata.overall_sba_stats.loan_count)}
 
@@ -2239,7 +2254,7 @@ ${renderProgramsSection(cfg)}
 <section class="ed">
     <div class="ed-inner">
         <h2 style="text-align:left;">${cfg.narrative.underwritingTitle}</h2>
-        ${cfg.narrative.underwriting}
+        ${underwritingSection}
     </div>
 </section>
 
@@ -2271,9 +2286,9 @@ ${renderStatesSection(stats.top_states_by_count, cfg.industryNoun || cfg.slug.re
 
 <section class="closing-cta">
     <div class="container">
-        <h2>Get matched with restaurant-experienced SBA lenders</h2>
-        <p>Restaurant SBA is a narrow specialty. The top ten lenders above handle about a third of all restaurant 7(a) volume &mdash; matching there vs. a generalist branch is the difference between a clean 60-day close and a stalled file. See the broader <a href="/sba-loans">SBA loans hub</a> or <a href="/sba-loans/business-acquisition">SBA acquisition mechanics</a>.</p>
-        <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${cfg.campaignSlug}&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with restaurant SBA lenders &rarr;</a>
+        <h2>Get matched with ${cfg.industryNoun || cfg.slug.replace(/-/g, ' ')}-experienced SBA lenders</h2>
+        <p>${cfg.industryNoun ? cfg.industryNoun.charAt(0).toUpperCase() + cfg.industryNoun.slice(1) : 'This'} SBA is a narrow specialty. The top ten lenders above handle a meaningful share of all ${cfg.industryNoun || 'industry'} 7(a) volume &mdash; matching there vs. a generalist branch is the difference between a clean 60-day close and a stalled file. See the broader <a href="/sba-loans">SBA loans hub</a> or <a href="/sba-loans/business-acquisition">SBA acquisition mechanics</a>.</p>
+        <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${cfg.campaignSlug}&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with ${cfg.industryNoun || cfg.slug.replace(/-/g, ' ')} SBA lenders &rarr;</a>
         <p class="closing-fine">MMM does not originate SBA loans. Applications are processed through SBA-authorized lenders. Statistics above are sourced from the SBA FOIA 7(a) dataset, fiscal years 2020 through December 2025.</p>
     </div>
 </section>

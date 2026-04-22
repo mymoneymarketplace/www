@@ -135,6 +135,35 @@
         .faq-item[open] .faq-marker::after { transform: rotate(0deg); }
         .faq-answer { overflow: hidden; max-height: 0; padding: 0 20px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.75; transition: max-height 0.3s ease, padding 0.3s ease; }
         .faq-item[open] .faq-answer { max-height: 800px; padding: 0 20px 18px 62px; }
+        /* Hero photo banner */
+        .hero-photo-banner { position: relative; margin-top: 64px; background: #1a3a5c; overflow: hidden; height: 320px; }
+        .hero-photo-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-photo-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(247,247,247,0.2) 75%, rgba(247,247,247,1) 100%); pointer-events: none; }
+        .hero-photo-credit { position: absolute; bottom: 8px; right: 14px; font-size: 11px; color: rgba(255,255,255,0.9); text-shadow: 0 1px 3px rgba(0,0,0,0.5); margin: 0; z-index: 2; }
+        .hero-photo-credit a { color: inherit; text-decoration: underline; }
+        .hero-photo-credit a:hover { color: var(--white); }
+        .hero-photo-banner + .breadcrumb { margin-top: 0; }
+        @media (max-width: 640px) { .hero-photo-banner { height: 220px; } }
+        /* Inline SVG data viz container */
+        .viz-container { max-width: 780px; margin: 0 auto; padding: 16px 0; }
+        .data-viz-svg { width: 100%; height: auto; display: block; font-family: 'Inter', sans-serif; }
+        /* Comparison tiles */
+        .comparison-tiles { padding: 48px 0; background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .comparison-tiles h2 { font-size: 22px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 28px; }
+        .ct-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1040px; margin: 0 auto; }
+        .ct-tile { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; display: flex; flex-direction: column; }
+        .ct-tile.ct-highlight { border-left: 3px solid var(--green); background: var(--green-bg); }
+        .ct-delta { display: inline-block; align-self: flex-start; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+        .ct-delta.ct-up { background: #fff4e5; color: var(--accent-amber); }
+        .ct-delta.ct-down { background: #e8f5ef; color: var(--green); }
+        .ct-delta.ct-neutral { background: #eef0f4; color: #555; }
+        .ct-big { font-size: 40px; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+        .ct-label { font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 8px; }
+        .ct-values { font-size: 15px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px; }
+        .ct-values strong { color: var(--text); font-weight: 700; }
+        .ct-values span { color: var(--text-muted); font-size: 13px; }
+        .ct-context { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-top: auto; }
+        @media (max-width: 760px) { .ct-grid { grid-template-columns: 1fr; } }
         /* Closing CTA */
         .closing-cta { padding: 64px 0; background: var(--navy); text-align: center; }
         .closing-cta h2 { font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
@@ -168,6 +197,7 @@
         </nav>
     </div>
 </header>
+
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
@@ -267,8 +297,8 @@
 
     <section class="by-numbers">
         <div class="container">
-            <h2>Restaurant SBA lending &mdash; by the numbers</h2>
-            <p class="bn-sub">SBA 7(a) loans to full-service restaurants (NAICS 722511), fiscal years 2020 through December 2025. Pulled from SBA FOIA 7(a) dataset.</p>
+            <h2>Specialty trade SBA lending &mdash; by the numbers</h2>
+            <p class="bn-sub">SBA 7(a) loans to all other specialty trade contractors (NAICS 238990), fiscal years 2020 through December 2025. Pulled from SBA FOIA 7(a) dataset.</p>
             <div class="bn-grid">
                 <div class="bn-card">
                     <div class="bn-label">Loans approved</div>
@@ -303,6 +333,33 @@
             </div>
         </div>
     </section>
+
+
+    <section class="comparison-tiles">
+        <div class="container">
+            <h2>Specialty trade SBA vs. SBA overall &mdash; at a glance</h2>
+            <div class="ct-grid">
+                <div class="ct-tile">
+                    <div class="ct-delta ct-down">-7.7%</div>
+                    <div class="ct-label">Average loan size</div>
+                    <div class="ct-values"><strong>$479K</strong> specialty trade &nbsp;vs&nbsp; <span>$520K SBA avg</span></div>
+                    <div class="ct-context">Close to SBA average loan size across all industries.</div>
+                </div>
+                <div class="ct-tile">
+                    <div class="ct-delta ct-down">-0.49pp</div>
+                    <div class="ct-label">Charge-off rate</div>
+                    <div class="ct-values"><strong>0.87%</strong> specialty trade &nbsp;vs&nbsp; <span>1.36% SBA avg</span></div>
+                    <div class="ct-context">Better than SBA average &mdash; reflects favorable specialty trade economics.</div>
+                </div>
+                <div class="ct-tile ct-highlight">
+                    <div class="ct-big">5,857</div>
+                    <div class="ct-label">Specialty trade SBA loans (FY2020-2025)</div>
+                    <div class="ct-context">1.6% of all SBA 7(a) loans nationally across $2.81B in approvals.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <section class="programs" id="programs">
     <div class="container">
@@ -377,155 +434,115 @@
 
     <section class="lenders-section">
         <div class="container-narrow">
-            <h2>Top SBA lenders for restaurant deals</h2>
-            <p class="ls-sub">The ten banks that have approved the most SBA 7(a) restaurant loans FY2020-2025. Pulled from SBA FOIA data. This is an editorial observation, not an endorsement &mdash; loan count doesn&rsquo;t capture lender fit for your specific deal.</p>
-            <div class="lender-table-wrap">
-                <table class="lender-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Lender</th>
-                            <th>Loans</th>
-                            <th>Avg loan</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                <tr>
-                    <td class="rank">1</td>
-                    <td class="lender-name">The Huntington National Bank</td>
-                    <td class="lender-count">982</td>
-                    <td class="lender-avg">$265K</td>
-                </tr>
-                <tr>
-                    <td class="rank">2</td>
-                    <td class="lender-name">U.S. Bank, National Association</td>
-                    <td class="lender-count">340</td>
-                    <td class="lender-avg">$244K</td>
-                </tr>
-                <tr>
-                    <td class="rank">3</td>
-                    <td class="lender-name">Manufacturers and Traders Trust Company</td>
-                    <td class="lender-count">233</td>
-                    <td class="lender-avg">$107K</td>
-                </tr>
-                <tr>
-                    <td class="rank">4</td>
-                    <td class="lender-name">Northeast Bank</td>
-                    <td class="lender-count">199</td>
-                    <td class="lender-avg">$169K</td>
-                </tr>
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="lender-name">Live Oak Banking Company</td>
-                    <td class="lender-count">161</td>
-                    <td class="lender-avg">$1248K</td>
-                </tr>
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="lender-name">TD Bank, National Association</td>
-                    <td class="lender-count">160</td>
-                    <td class="lender-avg">$157K</td>
-                </tr>
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="lender-name">Wells Fargo Bank National Association</td>
-                    <td class="lender-count">148</td>
-                    <td class="lender-avg">$398K</td>
-                </tr>
-                <tr>
-                    <td class="rank">8</td>
-                    <td class="lender-name">BayFirst National Bank</td>
-                    <td class="lender-count">147</td>
-                    <td class="lender-avg">$185K</td>
-                </tr>
-                <tr>
-                    <td class="rank">9</td>
-                    <td class="lender-name">JPMorgan Chase Bank, National Association</td>
-                    <td class="lender-count">139</td>
-                    <td class="lender-avg">$273K</td>
-                </tr>
-                <tr>
-                    <td class="rank">10</td>
-                    <td class="lender-name">Readycap Lending, LLC</td>
-                    <td class="lender-count">127</td>
-                    <td class="lender-avg">$433K</td>
-                </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="ls-footnote">Top 10 lenders account for approximately one-third of all restaurant SBA 7(a) volume &mdash; restaurant lending concentrates more than the cross-industry average.</p>
+            <h2>Top SBA lenders for specialty trade deals</h2>
+            <p class="ls-sub">The ten banks that have approved the most SBA 7(a) specialty trade loans FY2020-2025. Pulled directly from SBA FOIA data. Loan count alone doesn&rsquo;t capture lender fit for your specific deal &mdash; volume leaders and specialist fit can differ.</p>
+            <div class="viz-container"><svg viewBox="0 0 640 404" role="img" aria-labelledby="viz-lenders-title viz-lenders-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
+    <title id="viz-lenders-title">Top 10 SBA specialty trade lenders by loan count</title>
+    <desc id="viz-lenders-desc">Horizontal bar chart: The Huntington National Bank 982 loans; U.S. Bank, National Association 340 loans; Manufacturers and Traders Trust Company 233 loans; Northeast Bank 199 loans; Live Oak Banking Company 161 loans; TD Bank, National Association 160 loans; Wells Fargo Bank National Association 148 loans; BayFirst National Bank 147 loans; JPMorgan Chase Bank, National Association 139 loans; Readycap Lending, LLC 127 loans.</desc>
+    <g>
+      <text x="210" y="50" text-anchor="end" font-size="13" fill="#444">The Huntington National Bank</text>
+      <rect x="220" y="36" width="320.0" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="548.0" y="50" text-anchor="start" font-size="13" font-weight="600" fill="#111">982</text>
+    </g>
+    <g>
+      <text x="210" y="86" text-anchor="end" font-size="13" fill="#444">U.S. Bank, N.A.</text>
+      <rect x="220" y="72" width="110.8" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="338.8" y="86" text-anchor="start" font-size="13" font-weight="600" fill="#111">340</text>
+    </g>
+    <g>
+      <text x="210" y="122" text-anchor="end" font-size="13" fill="#444">Manufacturers and Traders Trust Company</text>
+      <rect x="220" y="108" width="75.9" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="303.9" y="122" text-anchor="start" font-size="13" font-weight="600" fill="#111">233</text>
+    </g>
+    <g>
+      <text x="210" y="158" text-anchor="end" font-size="13" fill="#444">Northeast Bank</text>
+      <rect x="220" y="144" width="64.8" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="292.8" y="158" text-anchor="start" font-size="13" font-weight="600" fill="#111">199</text>
+    </g>
+    <g>
+      <text x="210" y="194" text-anchor="end" font-size="13" fill="#444">Live Oak Banking Company</text>
+      <rect x="220" y="180" width="52.5" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="280.5" y="194" text-anchor="start" font-size="13" font-weight="600" fill="#111">161</text>
+    </g>
+    <g>
+      <text x="210" y="230" text-anchor="end" font-size="13" fill="#444">TD Bank, N.A.</text>
+      <rect x="220" y="216" width="52.1" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="280.1" y="230" text-anchor="start" font-size="13" font-weight="600" fill="#111">160</text>
+    </g>
+    <g>
+      <text x="210" y="266" text-anchor="end" font-size="13" fill="#444">Wells Fargo Bank National Association</text>
+      <rect x="220" y="252" width="48.2" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="276.2" y="266" text-anchor="start" font-size="13" font-weight="600" fill="#111">148</text>
+    </g>
+    <g>
+      <text x="210" y="302" text-anchor="end" font-size="13" fill="#444">BayFirst National Bank</text>
+      <rect x="220" y="288" width="47.9" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="275.9" y="302" text-anchor="start" font-size="13" font-weight="600" fill="#111">147</text>
+    </g>
+    <g>
+      <text x="210" y="338" text-anchor="end" font-size="13" fill="#444">JPMorgan Chase Bank, N.A.</text>
+      <rect x="220" y="324" width="45.3" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="273.3" y="338" text-anchor="start" font-size="13" font-weight="600" fill="#111">139</text>
+    </g>
+    <g>
+      <text x="210" y="374" text-anchor="end" font-size="13" fill="#444">Readycap Lending, LLC</text>
+      <rect x="220" y="360" width="41.4" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="269.4" y="374" text-anchor="start" font-size="13" font-weight="600" fill="#111">127</text>
+    </g>
+  </svg></div>
+            <p class="ls-footnote">Top 10 lenders account for approximately 45.0% of all specialty trade SBA 7(a) volume.</p>
         </div>
     </section>
 
 
     <section class="states-section">
         <div class="container-narrow">
-            <h2>Where restaurant SBA lending happens</h2>
-            <p class="ls-sub">The seven states leading in restaurant SBA 7(a) approvals FY2020-2025. California alone accounts for more than 1 in 8 restaurant SBA loans nationally, reflecting a combination of population, tourism, and high restaurant density per capita.</p>
-            <div class="lender-table-wrap">
-                <table class="lender-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>State</th>
-                            <th>Loans</th>
-                            <th>Share</th>
-                            <th>Total approved</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                <tr>
-                    <td class="rank">1</td>
-                    <td class="state-name">CA</td>
-                    <td class="state-count">552</td>
-                    <td class="state-pct">9.4%</td>
-                    <td class="state-approved">$310.4M</td>
-                </tr>
-                <tr>
-                    <td class="rank">2</td>
-                    <td class="state-name">FL</td>
-                    <td class="state-count">502</td>
-                    <td class="state-pct">8.6%</td>
-                    <td class="state-approved">$355.2M</td>
-                </tr>
-                <tr>
-                    <td class="rank">3</td>
-                    <td class="state-name">OH</td>
-                    <td class="state-count">500</td>
-                    <td class="state-pct">8.5%</td>
-                    <td class="state-approved">$130.8M</td>
-                </tr>
-                <tr>
-                    <td class="rank">4</td>
-                    <td class="state-name">NY</td>
-                    <td class="state-count">345</td>
-                    <td class="state-pct">5.9%</td>
-                    <td class="state-approved">$128.3M</td>
-                </tr>
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="state-name">TX</td>
-                    <td class="state-count">339</td>
-                    <td class="state-pct">5.8%</td>
-                    <td class="state-approved">$194.4M</td>
-                </tr>
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="state-name">MI</td>
-                    <td class="state-count">316</td>
-                    <td class="state-pct">5.4%</td>
-                    <td class="state-approved">$82.5M</td>
-                </tr>
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="state-name">PA</td>
-                    <td class="state-count">218</td>
-                    <td class="state-pct">3.7%</td>
-                    <td class="state-approved">$109.7M</td>
-                </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2>Where specialty trade SBA lending concentrates</h2>
+            <p class="ls-sub">The eight states leading in specialty trade SBA 7(a) approvals FY2020-2025. CA leads the next-largest state (FL) by roughly 1.10&times; on loan count; top 8 states account for roughly half of all national specialty trade SBA volume.</p>
+            <div class="viz-container"><svg viewBox="0 0 640 332" role="img" aria-labelledby="viz-states-title viz-states-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
+    <title id="viz-states-title">Top 8 states for SBA specialty trade lending</title>
+    <desc id="viz-states-desc">Horizontal bar chart of the top 8 states by SBA specialty trade loan count: CA 552 loans (9.4%); FL 502 loans (8.6%); OH 500 loans (8.5%); NY 345 loans (5.9%); TX 339 loans (5.8%); MI 316 loans (5.4%); PA 218 loans (3.7%); MN 189 loans (3.2%). Leading state highlighted in green.</desc>
+    <g>
+      <text x="80" y="50" text-anchor="end" font-size="13" font-weight="700" fill="#111">CA</text>
+      <rect x="92" y="36" width="420.0" height="20" rx="3" fill="#008254"/>
+      <text x="520.0" y="50" text-anchor="start" font-size="13" font-weight="700" fill="#111">552 &#8226; 9.4%</text>
+    </g>
+    <g>
+      <text x="80" y="86" text-anchor="end" font-size="13" font-weight="500" fill="#444">FL</text>
+      <rect x="92" y="72" width="382.0" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="482.0" y="86" text-anchor="start" font-size="13" font-weight="500" fill="#444">502 &#8226; 8.6%</text>
+    </g>
+    <g>
+      <text x="80" y="122" text-anchor="end" font-size="13" font-weight="500" fill="#444">OH</text>
+      <rect x="92" y="108" width="380.4" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="480.4" y="122" text-anchor="start" font-size="13" font-weight="500" fill="#444">500 &#8226; 8.5%</text>
+    </g>
+    <g>
+      <text x="80" y="158" text-anchor="end" font-size="13" font-weight="500" fill="#444">NY</text>
+      <rect x="92" y="144" width="262.5" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="362.5" y="158" text-anchor="start" font-size="13" font-weight="500" fill="#444">345 &#8226; 5.9%</text>
+    </g>
+    <g>
+      <text x="80" y="194" text-anchor="end" font-size="13" font-weight="500" fill="#444">TX</text>
+      <rect x="92" y="180" width="257.9" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="357.9" y="194" text-anchor="start" font-size="13" font-weight="500" fill="#444">339 &#8226; 5.8%</text>
+    </g>
+    <g>
+      <text x="80" y="230" text-anchor="end" font-size="13" font-weight="500" fill="#444">MI</text>
+      <rect x="92" y="216" width="240.4" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="340.4" y="230" text-anchor="start" font-size="13" font-weight="500" fill="#444">316 &#8226; 5.4%</text>
+    </g>
+    <g>
+      <text x="80" y="266" text-anchor="end" font-size="13" font-weight="500" fill="#444">PA</text>
+      <rect x="92" y="252" width="165.9" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="265.9" y="266" text-anchor="start" font-size="13" font-weight="500" fill="#444">218 &#8226; 3.7%</text>
+    </g>
+    <g>
+      <text x="80" y="302" text-anchor="end" font-size="13" font-weight="500" fill="#444">MN</text>
+      <rect x="92" y="288" width="143.8" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="243.8" y="302" text-anchor="start" font-size="13" font-weight="500" fill="#444">189 &#8226; 3.2%</text>
+    </g>
+  </svg></div>
         </div>
     </section>
 
@@ -567,9 +584,9 @@
 
 <section class="closing-cta">
     <div class="container">
-        <h2>Get matched with restaurant-experienced SBA lenders</h2>
-        <p>Restaurant SBA is a narrow specialty. The top ten lenders above handle about a third of all restaurant 7(a) volume &mdash; matching there vs. a generalist branch is the difference between a clean 60-day close and a stalled file. See the broader <a href="/sba-loans">SBA loans hub</a> or <a href="/sba-loans/business-acquisition">SBA acquisition mechanics</a>.</p>
-        <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-specialty-trades-quiz&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with restaurant SBA lenders &rarr;</a>
+        <h2>Get matched with specialty trade-experienced SBA lenders</h2>
+        <p>Specialty trade SBA is a narrow specialty. The top ten lenders above handle a meaningful share of all specialty trade 7(a) volume &mdash; matching there vs. a generalist branch is the difference between a clean 60-day close and a stalled file. See the broader <a href="/sba-loans">SBA loans hub</a> or <a href="/sba-loans/business-acquisition">SBA acquisition mechanics</a>.</p>
+        <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-specialty-trades-quiz&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with specialty trade SBA lenders &rarr;</a>
         <p class="closing-fine">MMM does not originate SBA loans. Applications are processed through SBA-authorized lenders. Statistics above are sourced from the SBA FOIA 7(a) dataset, fiscal years 2020 through December 2025.</p>
     </div>
 </section>
