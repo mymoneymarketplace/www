@@ -46,6 +46,14 @@ const CONFIGS = {
 
 '811111': {
     slug: 'auto-repair',
+    programsContext: {
+        fits: {
+            standard: "shop acquisitions, fleet expansion, real estate combined with the operating business.",
+            '504': "buying the shop real estate. Fixed long-term rates on the real-estate portion; paired with 7(a) companion loan for the business.",
+            small: "lift replacement, diagnostic tool upgrades, working capital under $500K.",
+            equipment: "lifts, alignment racks, diagnostic equipment. 3-10 day funding vs. 45-75 for SBA &mdash; speed often matters more than rate on single-piece equipment.",
+        },
+    },
     industryNoun: 'auto repair',
     industryNounPossessive: "auto repair shop's",
     heroPhoto: {
@@ -155,6 +163,14 @@ const CONFIGS = {
 
 '621210': {
     slug: 'dentists',
+    programsContext: {
+        fits: {
+            standard: "practice acquisitions (the dominant use), buildouts, associate buyout of retiring dentist.",
+            '504': "buying the office building alongside the practice. Fixed long-term rates.",
+            small: "equipment upgrades, imaging or CAD/CAM investments, working capital under $500K.",
+            equipment: "chairs, digital imaging, CAD/CAM mills. Equipment financing beats SBA on speed for single-piece dental equipment purchases.",
+        },
+    },
     industryNoun: 'dental practice',
     industryNounPossessive: "dental practice's",
     heroPhoto: {
@@ -265,6 +281,14 @@ const CONFIGS = {
 
 '621111': {
     slug: 'physicians',
+    programsContext: {
+        fits: {
+            standard: "practice acquisitions (the dominant use), buildouts, partnership buy-in under the May 2023 partial-purchase rule.",
+            '504': "buying the practice real estate. Fixed long-term rates.",
+            small: "equipment upgrades, technology investments, working capital under $500K.",
+            equipment: "medical equipment with shorter lifecycle. Faster than SBA and often better rate/term match to equipment lifecycle.",
+        },
+    },
     industryNoun: 'physician practice',
     industryNounPossessive: "physician practice's",
     // heroPhoto: null — no hero photo; available Pexels options were all patient-clinical cliches or MRI-specialty specific; skipping rather than settling
@@ -365,6 +389,14 @@ const CONFIGS = {
 
 '541940': {
     slug: 'veterinarians',
+    programsContext: {
+        fits: {
+            standard: "practice acquisitions (the dominant use), clinic buildouts, multi-location expansion.",
+            '504': "buying the clinic building. Fixed long-term rates. Particularly valuable in veterinary given recession-resistant demand.",
+            small: "equipment upgrades, mobile vet unit buildout, working capital under $500K.",
+            equipment: "imaging, surgical equipment, diagnostic tools. Faster than SBA when equipment lifecycle is shorter than SBA amortization.",
+        },
+    },
     industryNoun: 'veterinary practice',
     industryNounPossessive: "veterinary practice's",
     heroPhoto: {
@@ -474,6 +506,14 @@ const CONFIGS = {
 
 '524210': {
     slug: 'insurance-agencies',
+    programsContext: {
+        fits: {
+            standard: "book-of-business acquisitions (the dominant use), partner buyouts, multi-agency consolidation.",
+            '504': "buying the office real estate. Fixed long-term rates &mdash; less common in this category given agencies are capital-light.",
+            small: "technology investments, office buildout, smaller book acquisitions under $500K.",
+            equipment: "rarely used; insurance agencies are intangible-asset businesses with minimal equipment needs.",
+        },
+    },
     industryNoun: 'insurance agency',
     industryNounPossessive: "insurance agency's",
     heroPhoto: {
@@ -584,6 +624,15 @@ const CONFIGS = {
 
 '238220': {
     slug: 'plumbing-hvac',
+    industryNoun: "plumbing and HVAC",
+    programsContext: {
+        fits: {
+            standard: "shop acquisitions, fleet expansion, real estate combined with the operating business.",
+            '504': "buying the yard or shop real estate. Fixed long-term rates on the real-estate portion.",
+            small: "fleet additions, diagnostic tool upgrades, working capital under $500K.",
+            equipment: "service vehicles, diagnostic equipment, HVAC recovery units. Faster than SBA for fleet replacement.",
+        },
+    },
     h1: 'SBA Loans for Plumbing & HVAC Businesses',
     title: 'SBA Loan for Plumbing & HVAC Contractors 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for plumbing and HVAC contractors. 6,128 loans approved FY2020-2025 covering equipment, service vehicles, acquisitions, and facilities. Take the 2-minute quiz.',
@@ -646,6 +695,15 @@ const CONFIGS = {
 
 '624410': {
     slug: 'child-care',
+    industryNoun: "child care",
+    programsContext: {
+        fits: {
+            standard: "center acquisitions, facility buildouts, multi-location expansion.",
+            '504': "buying the center facility. Fixed long-term rates on the real-estate portion.",
+            small: "equipment upgrades, playground improvements, working capital for staff ramp under $500K.",
+            equipment: "classroom equipment, playground buildouts. Faster than SBA when timeline matters for enrollment cycles.",
+        },
+    },
     h1: 'SBA Loans for Child Care Centers',
     title: 'SBA Loan for Child Care & Daycare 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for child care centers and daycare facilities. 5,081 child care SBA loans approved FY2020-2025 with 0.51% charge-off (0.38x SBA average). Take the 2-minute quiz.',
@@ -709,6 +767,15 @@ const CONFIGS = {
 
 '561730': {
     slug: 'landscaping',
+    industryNoun: "landscaping",
+    programsContext: {
+        fits: {
+            standard: "business acquisitions, fleet builds, multi-crew expansion.",
+            '504': "buying the yard or facility real estate. Fixed long-term rates.",
+            small: "equipment upgrades, trucks and trailers, seasonal working capital under $500K.",
+            equipment: "mowers, trimmers, specialty equipment. Faster than SBA for seasonal replacement cycles.",
+        },
+    },
     h1: 'SBA Loans for Landscaping Businesses',
     title: 'SBA Loan for Landscaping Business 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for landscaping businesses. 5,962 landscaping SBA loans approved FY2020-2025 covering equipment, acquisitions, and seasonal working capital. Take the 2-minute quiz.',
@@ -771,6 +838,15 @@ const CONFIGS = {
 
 '238990': {
     slug: 'specialty-trades',
+    industryNoun: "specialty trade",
+    programsContext: {
+        fits: {
+            standard: "business acquisitions, equipment expansion to support larger bonded contracts.",
+            '504': "buying the yard or facility real estate. Fixed long-term rates.",
+            small: "vehicles, tools, bonding-capacity working capital under $500K.",
+            equipment: "trade-specific equipment (welding rigs, paint sprayers, site-prep gear). Faster than SBA.",
+        },
+    },
     h1: 'SBA Loans for Specialty Trade Contractors',
     title: 'SBA Loan for Specialty Trade Contractor 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for specialty trade contractors — welding, painting, site prep, demolition, and other specialty subs. 5,857 loans approved FY2020-2025 with 0.87% charge-off (0.64x SBA avg).',
@@ -833,6 +909,15 @@ const CONFIGS = {
 
 '812910': {
     slug: 'pet-care',
+    industryNoun: "pet care",
+    programsContext: {
+        fits: {
+            standard: "facility buildouts for boarding and daycare, acquisitions, multi-location expansion.",
+            '504': "buying the facility real estate. Particularly valuable in pet care given zoning sensitivity around noise and animal housing.",
+            small: "grooming equipment, minor buildouts, working capital under $500K.",
+            equipment: "grooming tables, mobile unit outfitting. Faster than SBA.",
+        },
+    },
     h1: 'SBA Loans for Pet Care Businesses',
     title: 'SBA Loan for Pet Boarding, Grooming & Daycare 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for pet care businesses — boarding, grooming, daycare, and training. 2,865 SBA loans approved FY2020-2025 with strong performance and +11% YoY growth.',
@@ -896,6 +981,15 @@ const CONFIGS = {
 
 '812199': {
     slug: 'personal-care',
+    industryNoun: "personal care",
+    programsContext: {
+        fits: {
+            standard: "medspa buildouts, salon acquisitions, multi-location expansion.",
+            '504': "buying the facility real estate. Fixed long-term rates.",
+            small: "equipment upgrades, smaller acquisitions, working capital under $500K.",
+            equipment: "laser, body contouring, injection equipment. Often better match than SBA because equipment lifecycle (3-5 years) is shorter than SBA amortization.",
+        },
+    },
     h1: 'SBA Loans for Personal Care Businesses',
     title: 'SBA Loan for Medspa, Salon & Personal Care Business 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for personal care businesses — medspas, nail salons, skincare, wellness, and spa services. 3,617 SBA loans approved FY2020-2025 with 28% franchise participation.',
@@ -964,6 +1058,15 @@ const CONFIGS = {
 
 '541211': {
     slug: 'cpas',
+    industryNoun: "CPA firm",
+    programsContext: {
+        fits: {
+            standard: "firm acquisitions (the dominant use), partner buyouts, multi-office consolidation.",
+            '504': "buying the office real estate. Fixed long-term rates &mdash; less common given CPA firms are capital-light.",
+            small: "technology investments, smaller book acquisitions, working capital under $500K.",
+            equipment: "rarely used; CPA firm capital is almost entirely intangible (book of business, staff, technology subscriptions).",
+        },
+    },
     h1: 'SBA Loans for CPA Firms',
     title: 'SBA Loan for CPA Firm 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for CPA firm acquisitions and partner buyouts. 2,072 CPA firm SBA loans approved FY2020-2025 with 0.48% charge-off (0.35x SBA average). Take the 2-minute quiz.',
@@ -1024,6 +1127,15 @@ const CONFIGS = {
 
 '541219': {
     slug: 'accounting',
+    industryNoun: "accounting services",
+    programsContext: {
+        fits: {
+            standard: "book acquisitions, franchise tax-prep openings, multi-location expansion.",
+            '504': "less commonly used &mdash; accounting services firms are capital-light.",
+            small: "technology investments, small book acquisitions, working capital under $500K. The most common path in this category.",
+            equipment: "rarely used; software subscriptions and computers dominate rather than physical equipment.",
+        },
+    },
     h1: 'SBA Loans for Accounting & Bookkeeping Firms',
     title: 'SBA Loan for Accounting, Bookkeeping & Tax Prep 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for accounting, bookkeeping, tax prep, and payroll firms. 1,722 SBA loans approved FY2020-2025 with +49% YoY growth — fastest-growing industry in the SBA dataset.',
@@ -1084,6 +1196,15 @@ const CONFIGS = {
 
 '811121': {
     slug: 'auto-body',
+    industryNoun: "auto body",
+    programsContext: {
+        fits: {
+            standard: "shop acquisitions, spray-booth or frame-machine upgrades, DRP capacity builds.",
+            '504': "buying the shop real estate. Fixed long-term rates &mdash; important in auto body where facility infrastructure (ventilation, filtration) is built in.",
+            small: "equipment upgrades, ADAS calibration tooling, working capital under $500K.",
+            equipment: "spray booths, frame machines, ADAS recalibration equipment. Faster than SBA when DRP certification timelines require new equipment quickly.",
+        },
+    },
     h1: 'SBA Loans for Auto Body Shops',
     title: 'SBA Loan for Auto Body & Collision Repair 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for auto body and collision repair shops. 1,767 SBA loans approved FY2020-2025 with +23% YoY growth. Distinct from mechanical auto repair — DRP relationships matter.',
@@ -1146,6 +1267,15 @@ const CONFIGS = {
 
 '621310': {
     slug: 'chiropractors',
+    industryNoun: "chiropractic practice",
+    programsContext: {
+        fits: {
+            standard: "practice acquisitions (the dominant use), clinic buildouts, multi-location expansion.",
+            '504': "buying the clinic real estate. Fixed long-term rates.",
+            small: "equipment upgrades, therapy equipment, working capital under $500K. Most chiropractic deals fit this category given smaller average size.",
+            equipment: "adjusting tables, X-ray, therapy equipment. Faster than SBA.",
+        },
+    },
     h1: 'SBA Loans for Chiropractic Practices',
     title: 'SBA Loan for Chiropractic Practice 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for chiropractic practice acquisitions, buildouts, and equipment. 2,994 chiropractic SBA loans approved FY2020-2025 with 1.00% charge-off (0.74x SBA average).',
@@ -1208,6 +1338,15 @@ const CONFIGS = {
 
 '812112': {
     slug: 'beauty-salons',
+    industryNoun: "beauty salon",
+    programsContext: {
+        fits: {
+            standard: "salon acquisitions, multi-location expansion, larger buildouts.",
+            '504': "buying the salon real estate. Fixed long-term rates.",
+            small: "buildout, chairs and stations, working capital under $500K. Most salon deals fit this category given smaller average size.",
+            equipment: "chairs, stations, specialty styling equipment. Faster than SBA.",
+        },
+    },
     h1: 'SBA Loans for Beauty Salons',
     title: 'SBA Loan for Beauty Salon 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for beauty salon acquisitions, buildouts, and equipment. 5,033 beauty salon SBA loans approved FY2020-2025. Distinct from medspa/personal care — covers hair and styling salons.',
@@ -1269,6 +1408,15 @@ const CONFIGS = {
 
 '561790': {
     slug: 'building-services',
+    industryNoun: "building services",
+    programsContext: {
+        fits: {
+            standard: "business acquisitions, fleet expansion, equipment-heavy scaling for larger contracts.",
+            '504': "buying the facility real estate. Fixed long-term rates.",
+            small: "equipment, vehicles, working capital for contract ramp under $500K.",
+            equipment: "commercial cleaning equipment, pest control vehicles, specialized tools. Faster than SBA for fleet expansion.",
+        },
+    },
     h1: 'SBA Loans for Commercial Cleaning & Building Services',
     title: 'SBA Loan for Commercial Cleaning & Building Services 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for commercial cleaning and building services — pest control, window cleaning, carpet cleaning, pool maintenance. 1,416 SBA loans approved FY2020-2025 with +33% YoY growth.',
@@ -1331,6 +1479,14 @@ const CONFIGS = {
 
 '722511': {
     slug: 'restaurants',
+    programsContext: {
+        fits: {
+            standard: "restaurant acquisitions, buildouts, expansion. Most common restaurant SBA path.",
+            '504': "buying the building alongside the restaurant. Fixed long-term rates on the real-estate portion.",
+            small: "equipment upgrades, small acquisitions, working capital under $500K. Faster close than Standard 7(a).",
+            equipment: "replacing specific destroyed or out-of-service equipment when SBA timeline won&rsquo;t work. Higher rate than SBA but much faster.",
+        },
+    },
     industryNoun: 'restaurant',
     industryNounPossessive: "restaurant's",
     heroPhoto: {
@@ -1661,6 +1817,50 @@ function renderStatesSection(states, industryNoun) {
             <div class="viz-container">${chartSvg}</div>
         </div>
     </section>`;
+}
+
+function renderProgramsSection(cfg) {
+    const pc = cfg.programsContext;
+    if (!pc || !pc.fits) {
+        return `<section class="programs" id="programs"><div class="container"><h2 style="color:#c0392b">[Missing programsContext for ${esc(cfg.slug || 'unknown')}]</h2></div></section>`;
+    }
+    const industryNoun = cfg.industryNoun || cfg.slug.replace(/-/g, ' ');
+    const heading = pc.heading || `Four financing paths for ${industryNoun} deals`;
+    const sub = pc.sub || `SBA 7(a) handles most ${industryNoun} acquisitions and expansion needs. SBA 504 adds long-term fixed rates when real estate is part of the deal. Equipment financing is the non-SBA alternative for speed.`;
+    const lbl = (k, def) => (pc.labels && pc.labels[k]) || def;
+    return `
+<section class="programs" id="programs">
+    <div class="container">
+        <h2>${esc(heading)}</h2>
+        <p class="programs-sub">${sub}</p>
+        <div class="programs-grid">
+            <div class="program-card" style="border-top:4px solid #2F6BB3;">
+                <div class="program-head"><div class="program-icon-wrap" style="color:#2F6BB3"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21V11h6v10"/></svg></div><div class="program-label">${esc(lbl('standard','Acquisition + buildout'))}</div></div>
+                <h3>SBA 7(a) Standard</h3>
+                <div class="program-stats"><div><span class="program-stat-value">$5M</span><div class="program-stat-label">max</div></div><div><span class="program-stat-value">10%</span><div class="program-stat-label">min equity</div></div><div><span class="program-stat-value">60-90d</span><div class="program-stat-label">to close</div></div></div>
+                <p class="program-fit"><strong>Right for:</strong> ${pc.fits.standard}</p>
+            </div>
+            <div class="program-card" style="border-top:4px solid #B8741C;">
+                <div class="program-head"><div class="program-icon-wrap" style="color:#B8741C"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 12 3l9 6v12H3z"/><path d="M9 21v-6h6v6"/></svg></div><div class="program-label">${esc(lbl('504','Real estate + heavy equipment'))}</div></div>
+                <h3>SBA 504</h3>
+                <div class="program-stats"><div><span class="program-stat-value">$5.5M</span><div class="program-stat-label">max (SBA)</div></div><div><span class="program-stat-value">10%</span><div class="program-stat-label">min equity</div></div><div><span class="program-stat-value">75-120d</span><div class="program-stat-label">to close</div></div></div>
+                <p class="program-fit"><strong>Right for:</strong> ${pc.fits['504']}</p>
+            </div>
+            <div class="program-card" style="border-top:4px solid #2D8659;">
+                <div class="program-head"><div class="program-icon-wrap" style="color:#2D8659"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div><div class="program-label">${esc(lbl('small','Under $500K deals'))}</div></div>
+                <h3>SBA 7(a) Small Loan</h3>
+                <div class="program-stats"><div><span class="program-stat-value">$500K</span><div class="program-stat-label">max</div></div><div><span class="program-stat-value">10%</span><div class="program-stat-label">min equity</div></div><div><span class="program-stat-value">45-75d</span><div class="program-stat-label">to close</div></div></div>
+                <p class="program-fit"><strong>Right for:</strong> ${pc.fits.small}</p>
+            </div>
+            <div class="program-card" style="border-top:4px solid #717171;">
+                <div class="program-head"><div class="program-icon-wrap" style="color:#717171"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div><div class="program-label">${esc(lbl('equipment','Non-SBA alternative'))}</div></div>
+                <h3>Equipment Financing</h3>
+                <div class="program-stats"><div><span class="program-stat-value">Full</span><div class="program-stat-label">replacement</div></div><div><span class="program-stat-value">Equip</span><div class="program-stat-label">as collateral</div></div><div><span class="program-stat-value">3-10d</span><div class="program-stat-label">to close</div></div></div>
+                <p class="program-fit"><strong>Right for:</strong> ${pc.fits.equipment}</p>
+            </div>
+        </div>
+    </div>
+</section>`;
 }
 
 function renderComparisonTiles(stats, overall, industryNoun, totalSbaCount) {
@@ -2024,38 +2224,7 @@ ${renderStatsBlock(stats, overall)}
 
 ${renderComparisonTiles(stats, overall, cfg.industryNoun || cfg.slug.replace(/-/g, ' '), DATA.metadata.overall_sba_stats.loan_count)}
 
-<section class="programs" id="programs">
-    <div class="container">
-        <h2>Four financing paths for restaurant deals</h2>
-        <p class="programs-sub">SBA 7(a) handles most restaurant acquisitions and buildouts. 504 adds long-term fixed rates when real estate is part of the deal. Equipment financing is the non-SBA alternative for speed.</p>
-        <div class="programs-grid">
-            <div class="program-card" style="border-top:4px solid #2F6BB3;">
-                <div class="program-head"><div class="program-icon-wrap" style="color:#2F6BB3"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21V11h6v10"/></svg></div><div class="program-label">Acquisition + buildout</div></div>
-                <h3>SBA 7(a) Standard</h3>
-                <div class="program-stats"><div><span class="program-stat-value">$5M</span><div class="program-stat-label">max</div></div><div><span class="program-stat-value">10%</span><div class="program-stat-label">min equity</div></div><div><span class="program-stat-value">60-90d</span><div class="program-stat-label">to close</div></div></div>
-                <p class="program-fit"><strong>Right for:</strong> restaurant acquisitions, buildouts, expansion. Most common restaurant SBA path.</p>
-            </div>
-            <div class="program-card" style="border-top:4px solid #B8741C;">
-                <div class="program-head"><div class="program-icon-wrap" style="color:#B8741C"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 12 3l9 6v12H3z"/><path d="M9 21v-6h6v6"/></svg></div><div class="program-label">Real estate + heavy equipment</div></div>
-                <h3>SBA 504</h3>
-                <div class="program-stats"><div><span class="program-stat-value">$5.5M</span><div class="program-stat-label">max (SBA)</div></div><div><span class="program-stat-value">10%</span><div class="program-stat-label">min equity</div></div><div><span class="program-stat-value">75-120d</span><div class="program-stat-label">to close</div></div></div>
-                <p class="program-fit"><strong>Right for:</strong> buying the building alongside the restaurant. Fixed long-term rates on the real-estate portion.</p>
-            </div>
-            <div class="program-card" style="border-top:4px solid #2D8659;">
-                <div class="program-head"><div class="program-icon-wrap" style="color:#2D8659"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div><div class="program-label">Under $500K deals</div></div>
-                <h3>SBA 7(a) Small Loan</h3>
-                <div class="program-stats"><div><span class="program-stat-value">$500K</span><div class="program-stat-label">max</div></div><div><span class="program-stat-value">10%</span><div class="program-stat-label">min equity</div></div><div><span class="program-stat-value">45-75d</span><div class="program-stat-label">to close</div></div></div>
-                <p class="program-fit"><strong>Right for:</strong> equipment upgrades, small acquisitions, working capital under $500K. Faster close than Standard 7(a).</p>
-            </div>
-            <div class="program-card" style="border-top:4px solid #717171;">
-                <div class="program-head"><div class="program-icon-wrap" style="color:#717171"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div><div class="program-label">Non-SBA alternative</div></div>
-                <h3>Equipment Financing</h3>
-                <div class="program-stats"><div><span class="program-stat-value">Full</span><div class="program-stat-label">replacement</div></div><div><span class="program-stat-value">Equip</span><div class="program-stat-label">as collateral</div></div><div><span class="program-stat-value">3-10d</span><div class="program-stat-label">to close</div></div></div>
-                <p class="program-fit"><strong>Right for:</strong> replacing specific destroyed or out-of-service equipment when SBA timeline won&rsquo;t work. Higher rate than SBA but much faster.</p>
-            </div>
-        </div>
-    </div>
-</section>
+${renderProgramsSection(cfg)}
 
 <section class="ed">
     <div class="ed-inner">
