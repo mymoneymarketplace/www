@@ -265,6 +265,10 @@ const CONFIGS = {
 
 '621111': {
     slug: 'physicians',
+    industryNoun: 'physician practice',
+    industryNounPossessive: "physician practice's",
+    // heroPhoto: null — no hero photo; available Pexels options were all patient-clinical cliches or MRI-specialty specific; skipping rather than settling
+    highlightLenderNames: [],
     h1: 'SBA Loans for Physician Practices',
     title: 'SBA Loan for Physician Practice 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for physician practice acquisitions, buildouts, and equipment. 3,986 physician practice SBA loans approved FY2020-2025, 0.68% charge-off rate — half the SBA average.',
