@@ -135,6 +135,35 @@
         .faq-item[open] .faq-marker::after { transform: rotate(0deg); }
         .faq-answer { overflow: hidden; max-height: 0; padding: 0 20px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.75; transition: max-height 0.3s ease, padding 0.3s ease; }
         .faq-item[open] .faq-answer { max-height: 800px; padding: 0 20px 18px 62px; }
+        /* Hero photo banner */
+        .hero-photo-banner { position: relative; margin-top: 64px; background: #1a3a5c; overflow: hidden; height: 320px; }
+        .hero-photo-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-photo-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(247,247,247,0.2) 75%, rgba(247,247,247,1) 100%); pointer-events: none; }
+        .hero-photo-credit { position: absolute; bottom: 8px; right: 14px; font-size: 11px; color: rgba(255,255,255,0.9); text-shadow: 0 1px 3px rgba(0,0,0,0.5); margin: 0; z-index: 2; }
+        .hero-photo-credit a { color: inherit; text-decoration: underline; }
+        .hero-photo-credit a:hover { color: var(--white); }
+        .hero-photo-banner + .breadcrumb { margin-top: 0; }
+        @media (max-width: 640px) { .hero-photo-banner { height: 220px; } }
+        /* Inline SVG data viz container */
+        .viz-container { max-width: 780px; margin: 0 auto; padding: 16px 0; }
+        .data-viz-svg { width: 100%; height: auto; display: block; font-family: 'Inter', sans-serif; }
+        /* Comparison tiles */
+        .comparison-tiles { padding: 48px 0; background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .comparison-tiles h2 { font-size: 22px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 28px; }
+        .ct-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1040px; margin: 0 auto; }
+        .ct-tile { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; display: flex; flex-direction: column; }
+        .ct-tile.ct-highlight { border-left: 3px solid var(--green); background: var(--green-bg); }
+        .ct-delta { display: inline-block; align-self: flex-start; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+        .ct-delta.ct-up { background: #fff4e5; color: var(--accent-amber); }
+        .ct-delta.ct-down { background: #e8f5ef; color: var(--green); }
+        .ct-delta.ct-neutral { background: #eef0f4; color: #555; }
+        .ct-big { font-size: 40px; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+        .ct-label { font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 8px; }
+        .ct-values { font-size: 15px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px; }
+        .ct-values strong { color: var(--text); font-weight: 700; }
+        .ct-values span { color: var(--text-muted); font-size: 13px; }
+        .ct-context { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-top: auto; }
+        @media (max-width: 760px) { .ct-grid { grid-template-columns: 1fr; } }
         /* Closing CTA */
         .closing-cta { padding: 64px 0; background: var(--navy); text-align: center; }
         .closing-cta h2 { font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
@@ -168,6 +197,12 @@
         </nav>
     </div>
 </header>
+
+<section class="hero-photo-banner" aria-label="Hero image">
+    <img src="https://images.pexels.com/photos/6473194/pexels-photo-6473194.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Modern dental operatory with dental chair and equipment, representative of contemporary dental practices financed through SBA 7(a) loans" width="1200" height="801" class="hero-photo-img" loading="eager" fetchpriority="high">
+    <div class="hero-photo-overlay"></div>
+    <p class="hero-photo-credit">Photo: <a href="https://www.pexels.com/@gene-wide-3750088/" rel="noopener" target="_blank">Gene Wide</a> via <a href="https://www.pexels.com/photo/6473194/" rel="noopener" target="_blank">Pexels</a></p>
+</section>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
@@ -301,6 +336,32 @@
         </div>
     </section>
 
+
+    <section class="comparison-tiles">
+        <div class="container">
+            <h2>Dental practice SBA vs. SBA overall &mdash; at a glance</h2>
+            <div class="ct-grid">
+                <div class="ct-tile">
+                    <div class="ct-delta ct-up">+75.2%</div>
+                    <div class="ct-label">Average loan size</div>
+                    <div class="ct-values"><strong>$910K</strong> dental practice &nbsp;vs&nbsp; <span>$520K SBA avg</span></div>
+                    <div class="ct-context">Meaningfully higher than SBA average &mdash; dental practice deals tend to be capital-intensive.</div>
+                </div>
+                <div class="ct-tile">
+                    <div class="ct-delta ct-down">-1.09pp</div>
+                    <div class="ct-label">Charge-off rate</div>
+                    <div class="ct-values"><strong>0.27%</strong> dental practice &nbsp;vs&nbsp; <span>1.36% SBA avg</span></div>
+                    <div class="ct-context">Materially below SBA average &mdash; one of the stronger performers in the portfolio.</div>
+                </div>
+                <div class="ct-tile ct-highlight">
+                    <div class="ct-big">4,070</div>
+                    <div class="ct-label">Dental practice SBA loans (FY2020-2025)</div>
+                    <div class="ct-context">1.1% of all SBA 7(a) loans nationally across $3.70B in approvals.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <section class="programs" id="programs">
     <div class="container">
         <h2>Four financing paths for restaurant deals</h2>
@@ -378,155 +439,116 @@
 
     <section class="lenders-section">
         <div class="container-narrow">
-            <h2>Top SBA lenders for restaurant deals</h2>
-            <p class="ls-sub">The ten banks that have approved the most SBA 7(a) restaurant loans FY2020-2025. Pulled from SBA FOIA data. This is an editorial observation, not an endorsement &mdash; loan count doesn&rsquo;t capture lender fit for your specific deal.</p>
-            <div class="lender-table-wrap">
-                <table class="lender-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Lender</th>
-                            <th>Loans</th>
-                            <th>Avg loan</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                <tr>
-                    <td class="rank">1</td>
-                    <td class="lender-name">Live Oak Banking Company</td>
-                    <td class="lender-count">618</td>
-                    <td class="lender-avg">$1862K</td>
-                </tr>
-                <tr>
-                    <td class="rank">2</td>
-                    <td class="lender-name">The Huntington National Bank</td>
-                    <td class="lender-count">349</td>
-                    <td class="lender-avg">$941K</td>
-                </tr>
-                <tr>
-                    <td class="rank">3</td>
-                    <td class="lender-name">Bank of America, National Association</td>
-                    <td class="lender-count">203</td>
-                    <td class="lender-avg">$652K</td>
-                </tr>
-                <tr>
-                    <td class="rank">4</td>
-                    <td class="lender-name">Wells Fargo Bank National Association</td>
-                    <td class="lender-count">175</td>
-                    <td class="lender-avg">$890K</td>
-                </tr>
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="lender-name">United Midwest Savings Bank National Association</td>
-                    <td class="lender-count">133</td>
-                    <td class="lender-avg">$1258K</td>
-                </tr>
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="lender-name">U.S. Bank, National Association</td>
-                    <td class="lender-count">127</td>
-                    <td class="lender-avg">$848K</td>
-                </tr>
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="lender-name">BayFirst National Bank</td>
-                    <td class="lender-count">123</td>
-                    <td class="lender-avg">$213K</td>
-                </tr>
-                <tr>
-                    <td class="rank">8</td>
-                    <td class="lender-name">Newtek Bank, National Association</td>
-                    <td class="lender-count">118</td>
-                    <td class="lender-avg">$484K</td>
-                </tr>
-                <tr>
-                    <td class="rank">9</td>
-                    <td class="lender-name">Readycap Lending, LLC</td>
-                    <td class="lender-count">93</td>
-                    <td class="lender-avg">$465K</td>
-                </tr>
-                <tr>
-                    <td class="rank">10</td>
-                    <td class="lender-name">United Community Bank</td>
-                    <td class="lender-count">89</td>
-                    <td class="lender-avg">$1376K</td>
-                </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="ls-footnote">Top 10 lenders account for approximately one-third of all restaurant SBA 7(a) volume &mdash; restaurant lending concentrates more than the cross-industry average.</p>
+            <h2>Top SBA lenders for dental practice deals</h2>
+            <p class="ls-sub">The ten banks that have approved the most SBA 7(a) dental practice loans FY2020-2025. Pulled directly from SBA FOIA data. Loan count alone doesn&rsquo;t capture lender fit for your specific deal &mdash; volume leaders and specialist fit can differ.</p>
+            <div class="viz-container"><svg viewBox="0 0 640 404" role="img" aria-labelledby="viz-lenders-title viz-lenders-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
+    <title id="viz-lenders-title">Top 10 SBA dental practice lenders by loan count</title>
+    <desc id="viz-lenders-desc">Horizontal bar chart: Live Oak Banking Company 618 loans; The Huntington National Bank 349 loans; Bank of America, National Association 203 loans; Wells Fargo Bank National Association 175 loans; United Midwest Savings Bank National Association 133 loans; U.S. Bank, National Association 127 loans; BayFirst National Bank 123 loans; Newtek Bank, National Association 118 loans; Readycap Lending, LLC 93 loans; United Community Bank 89 loans. Specialist lenders (Live Oak Banking Company) highlighted in amber; other lenders in blue.</desc>
+    <g>
+      <text x="210" y="50" text-anchor="end" font-size="13" fill="#444">Live Oak Banking Company</text>
+      <rect x="220" y="36" width="320.0" height="20" rx="3" fill="#B8741C"/>
+      <text x="548.0" y="50" text-anchor="start" font-size="13" font-weight="600" fill="#111">618</text>
+    </g>
+    <g>
+      <text x="210" y="86" text-anchor="end" font-size="13" fill="#444">The Huntington National Bank</text>
+      <rect x="220" y="72" width="180.7" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="408.7" y="86" text-anchor="start" font-size="13" font-weight="600" fill="#111">349</text>
+    </g>
+    <g>
+      <text x="210" y="122" text-anchor="end" font-size="13" fill="#444">Bank of America, N.A.</text>
+      <rect x="220" y="108" width="105.1" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="333.1" y="122" text-anchor="start" font-size="13" font-weight="600" fill="#111">203</text>
+    </g>
+    <g>
+      <text x="210" y="158" text-anchor="end" font-size="13" fill="#444">Wells Fargo Bank National Association</text>
+      <rect x="220" y="144" width="90.6" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="318.6" y="158" text-anchor="start" font-size="13" font-weight="600" fill="#111">175</text>
+    </g>
+    <g>
+      <text x="210" y="194" text-anchor="end" font-size="13" fill="#444">United Midwest Savings Bank National Association</text>
+      <rect x="220" y="180" width="68.9" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="296.9" y="194" text-anchor="start" font-size="13" font-weight="600" fill="#111">133</text>
+    </g>
+    <g>
+      <text x="210" y="230" text-anchor="end" font-size="13" fill="#444">U.S. Bank, N.A.</text>
+      <rect x="220" y="216" width="65.8" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="293.8" y="230" text-anchor="start" font-size="13" font-weight="600" fill="#111">127</text>
+    </g>
+    <g>
+      <text x="210" y="266" text-anchor="end" font-size="13" fill="#444">BayFirst National Bank</text>
+      <rect x="220" y="252" width="63.7" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="291.7" y="266" text-anchor="start" font-size="13" font-weight="600" fill="#111">123</text>
+    </g>
+    <g>
+      <text x="210" y="302" text-anchor="end" font-size="13" fill="#444">Newtek Bank, N.A.</text>
+      <rect x="220" y="288" width="61.1" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="289.1" y="302" text-anchor="start" font-size="13" font-weight="600" fill="#111">118</text>
+    </g>
+    <g>
+      <text x="210" y="338" text-anchor="end" font-size="13" fill="#444">Readycap Lending, LLC</text>
+      <rect x="220" y="324" width="48.2" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="276.2" y="338" text-anchor="start" font-size="13" font-weight="600" fill="#111">93</text>
+    </g>
+    <g>
+      <text x="210" y="374" text-anchor="end" font-size="13" fill="#444">United Community Bank</text>
+      <rect x="220" y="360" width="46.1" height="20" rx="3" fill="#2F6BB3"/>
+      <text x="274.1" y="374" text-anchor="start" font-size="13" font-weight="600" fill="#111">89</text>
+    </g>
+  </svg></div>
+            <p class="ls-footnote">Top 10 lenders account for approximately 49.8% of all dental practice SBA 7(a) volume.</p>
+            <p class="ls-footnote"><strong>Specialist lender signal:</strong> Live Oak Banking Company is a recognized dental practice SBA specialist, highlighted in amber above. Specialist lenders close dental practice files faster and at better terms than generalist banks.</p>
         </div>
     </section>
 
 
     <section class="states-section">
         <div class="container-narrow">
-            <h2>Where restaurant SBA lending happens</h2>
-            <p class="ls-sub">The seven states leading in restaurant SBA 7(a) approvals FY2020-2025. California alone accounts for more than 1 in 8 restaurant SBA loans nationally, reflecting a combination of population, tourism, and high restaurant density per capita.</p>
-            <div class="lender-table-wrap">
-                <table class="lender-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>State</th>
-                            <th>Loans</th>
-                            <th>Share</th>
-                            <th>Total approved</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                <tr>
-                    <td class="rank">1</td>
-                    <td class="state-name">CA</td>
-                    <td class="state-count">732</td>
-                    <td class="state-pct">18.0%</td>
-                    <td class="state-approved">$766.9M</td>
-                </tr>
-                <tr>
-                    <td class="rank">2</td>
-                    <td class="state-name">TX</td>
-                    <td class="state-count">399</td>
-                    <td class="state-pct">9.8%</td>
-                    <td class="state-approved">$413.0M</td>
-                </tr>
-                <tr>
-                    <td class="rank">3</td>
-                    <td class="state-name">FL</td>
-                    <td class="state-count">304</td>
-                    <td class="state-pct">7.5%</td>
-                    <td class="state-approved">$288.5M</td>
-                </tr>
-                <tr>
-                    <td class="rank">4</td>
-                    <td class="state-name">NY</td>
-                    <td class="state-count">195</td>
-                    <td class="state-pct">4.8%</td>
-                    <td class="state-approved">$111.4M</td>
-                </tr>
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="state-name">OH</td>
-                    <td class="state-count">174</td>
-                    <td class="state-pct">4.3%</td>
-                    <td class="state-approved">$185.6M</td>
-                </tr>
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="state-name">CO</td>
-                    <td class="state-count">154</td>
-                    <td class="state-pct">3.8%</td>
-                    <td class="state-approved">$220.1M</td>
-                </tr>
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="state-name">NJ</td>
-                    <td class="state-count">129</td>
-                    <td class="state-pct">3.2%</td>
-                    <td class="state-approved">$70.6M</td>
-                </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2>Where dental practice SBA lending concentrates</h2>
+            <p class="ls-sub">The eight states leading in dental practice SBA 7(a) approvals FY2020-2025. CA leads the next-largest state (TX) by roughly 1.83&times; on loan count; top 8 states account for roughly half of all national dental practice SBA volume.</p>
+            <div class="viz-container"><svg viewBox="0 0 640 332" role="img" aria-labelledby="viz-states-title viz-states-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
+    <title id="viz-states-title">Top 8 states for SBA dental practice lending</title>
+    <desc id="viz-states-desc">Horizontal bar chart of the top 8 states by SBA dental practice loan count: CA 732 loans (18.0%); TX 399 loans (9.8%); FL 304 loans (7.5%); NY 195 loans (4.8%); OH 174 loans (4.3%); CO 154 loans (3.8%); NJ 129 loans (3.2%); IL 126 loans (3.1%). Leading state highlighted in green.</desc>
+    <g>
+      <text x="80" y="50" text-anchor="end" font-size="13" font-weight="700" fill="#111">CA</text>
+      <rect x="92" y="36" width="420.0" height="20" rx="3" fill="#008254"/>
+      <text x="520.0" y="50" text-anchor="start" font-size="13" font-weight="700" fill="#111">732 &#8226; 18.0%</text>
+    </g>
+    <g>
+      <text x="80" y="86" text-anchor="end" font-size="13" font-weight="500" fill="#444">TX</text>
+      <rect x="92" y="72" width="228.9" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="328.9" y="86" text-anchor="start" font-size="13" font-weight="500" fill="#444">399 &#8226; 9.8%</text>
+    </g>
+    <g>
+      <text x="80" y="122" text-anchor="end" font-size="13" font-weight="500" fill="#444">FL</text>
+      <rect x="92" y="108" width="174.4" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="274.4" y="122" text-anchor="start" font-size="13" font-weight="500" fill="#444">304 &#8226; 7.5%</text>
+    </g>
+    <g>
+      <text x="80" y="158" text-anchor="end" font-size="13" font-weight="500" fill="#444">NY</text>
+      <rect x="92" y="144" width="111.9" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="211.9" y="158" text-anchor="start" font-size="13" font-weight="500" fill="#444">195 &#8226; 4.8%</text>
+    </g>
+    <g>
+      <text x="80" y="194" text-anchor="end" font-size="13" font-weight="500" fill="#444">OH</text>
+      <rect x="92" y="180" width="99.8" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="199.8" y="194" text-anchor="start" font-size="13" font-weight="500" fill="#444">174 &#8226; 4.3%</text>
+    </g>
+    <g>
+      <text x="80" y="230" text-anchor="end" font-size="13" font-weight="500" fill="#444">CO</text>
+      <rect x="92" y="216" width="88.4" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="188.4" y="230" text-anchor="start" font-size="13" font-weight="500" fill="#444">154 &#8226; 3.8%</text>
+    </g>
+    <g>
+      <text x="80" y="266" text-anchor="end" font-size="13" font-weight="500" fill="#444">NJ</text>
+      <rect x="92" y="252" width="74.0" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="174.0" y="266" text-anchor="start" font-size="13" font-weight="500" fill="#444">129 &#8226; 3.2%</text>
+    </g>
+    <g>
+      <text x="80" y="302" text-anchor="end" font-size="13" font-weight="500" fill="#444">IL</text>
+      <rect x="92" y="288" width="72.3" height="20" rx="3" fill="#c9d0d8"/>
+      <text x="172.3" y="302" text-anchor="start" font-size="13" font-weight="500" fill="#444">126 &#8226; 3.1%</text>
+    </g>
+  </svg></div>
         </div>
     </section>
 

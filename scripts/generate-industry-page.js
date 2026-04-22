@@ -155,6 +155,19 @@ const CONFIGS = {
 
 '621210': {
     slug: 'dentists',
+    industryNoun: 'dental practice',
+    industryNounPossessive: "dental practice's",
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/6473194/pexels-photo-6473194.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Modern dental operatory with dental chair and equipment, representative of contemporary dental practices financed through SBA 7(a) loans',
+        width: 1200,
+        height: 801,
+        photographer: 'Gene Wide',
+        photographerUrl: 'https://www.pexels.com/@gene-wide-3750088/',
+        sourceUrl: 'https://www.pexels.com/photo/6473194/',
+        sourceName: 'Pexels',
+    },
+    highlightLenderNames: ['Live Oak Banking Company'],
     h1: 'SBA Loans for Dental Practices',
     title: 'SBA Loan for Dental Practice 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for dental practice acquisitions, buildouts, and equipment. 4,070 dental SBA loans approved FY2020-2025 with one of the lowest charge-off rates in any SBA industry category.',
