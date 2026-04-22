@@ -1268,6 +1268,353 @@ const SCENARIOS = [
             buttonLabel: 'See what Lendmate can match you with',
             utmCampaign: 'sba-bad-credit-closing-cta'
         }
+    },
+
+    // ═════════════════════════════ scenario #3 ═════════════════════════════
+    // Audience: asset-light founder asking whether SBA is realistic without
+    // real estate or equipment to pledge.
+    //
+    // Editorial angle: SBA collateral policy is tiered by loan size, and most
+    // searchers don't realize they're already in the no-collateral zone.
+    //   - 7(a) $50K or less: SBA explicitly does NOT require collateral
+    //     (per current SOP 50 10 7, sba.gov/partners/lenders/7a-loan-program
+    //     /types-7a-loans, updated Sept 2025)
+    //   - 7(a) $50K-$500K: lender's own policy ("to the extent available")
+    //   - 7(a) over $500K: SBA requires collateral to the loan amount
+    //   - Microloan: typically no collateral
+    //   - Personal guarantee from 20%+ owners: always required (non-negotiable)
+    //
+    // Quiz reweights: collateral becomes Q1, amount is Q2 (because the tier
+    // structure is amount-driven). Credit drops to Q3.
+    {
+        slug: 'sba-loans/no-collateral',
+        title: 'SBA Loans with No Collateral 2026 | My Money Marketplace',
+        metaDesc: 'SBA loans without collateral, by loan size: under $50K needs none, $50K-$500K is lender discretion, over $500K requires it. See which tier applies to your loan amount.',
+        articleHeadline: 'SBA Loans with No Collateral: What the Tier Structure Actually Means',
+        datePublished: '2026-04-22',
+        breadcrumb: [
+            { name: 'Home', url: '/' },
+            { name: 'SBA Loans', url: '/sba-loans' },
+            { name: 'SBA Loans with No Collateral', url: '/sba-loans/no-collateral' }
+        ],
+        h1: 'SBA Loans with No Collateral',
+        heroSub: 'SBA collateral rules change by loan size. Under $50K, SBA policy doesn\u2019t require collateral at all. Above $500K, it does. The zone in between is where most borrowers actually sit \u2014 and where the answer depends on which lender reviews your file.',
+        heroValueProp: 'Answer 6 questions. See which SBA tier your loan size falls into.',
+        financialService: {
+            name: 'SBA Loan Matching for Asset-Light Businesses',
+            serviceType: 'SBA loan guidance and lender matching for borrowers without real estate or equipment collateral',
+            description: 'My Money Marketplace helps asset-light founders compare SBA Microloan, 7(a) Small Loan, and lender-flexible SBA pathways that do not require real estate or equipment collateral, and get matched with preferred lenders comfortable underwriting collateral-light applications.'
+        },
+
+        quiz: {
+            utmCampaign: 'sba-no-collateral-quiz',
+            // No-collateral scenario: collateral is Q1, amount is Q2, credit is Q3.
+            //   ans[0]=collateral, ans[1]=amount, ans[2]=credit, ans[3]=tib,
+            //   ans[4]=use, ans[5]=franchise
+            // Amount-collateral interaction dominates: for loans under $50K,
+            // collateral is irrelevant (SBA policy). For loans over $500K, lack
+            // of collateral is a meaningful obstacle.
+            scoringFnBody: `function(ans) {
+                var collat = ans[0], amount = ans[1], credit = ans[2];
+                var tib = ans[3], franchise = ans[5];
+
+                // D override: under $50K is SBA's collateral-free zone
+                if (amount === 'under-50k') return 'D';
+
+                var pts = 0;
+
+                // Q1 collateral
+                if (collat === 'real-estate') pts += 3;
+                else if (collat === 'other-assets') pts += 2;
+                else if (collat === 'none') pts += 0;
+                else if (collat === 'unsure') pts += 0;
+
+                // Q2 amount — interaction with collateral matters
+                if (amount === '50-150k') pts += 2;
+                else if (amount === '150-500k') pts += 1;
+                else if (amount === '500-1m') {
+                    pts += (collat === 'real-estate' || collat === 'other-assets') ? 1 : -2;
+                } else if (amount === '1m-plus') {
+                    pts += collat === 'real-estate' ? 0 : -3;
+                }
+
+                // Q3 credit
+                if (credit === 'below-580') pts += -2;
+                else if (credit === '580-639') pts += -1;
+                else if (credit === '640-679') pts += 0;
+                else if (credit === '680-719') pts += 1;
+                else if (credit === '720-plus') pts += 2;
+
+                // Q4 TIB
+                if (tib === 'not-yet') pts += -1;
+                else if (tib === 'under-6mo') pts += 0;
+                else if (tib === '6-12mo') pts += 0;
+                else if (tib === '1-2y') pts += 1;
+                else if (tib === '2-plus') pts += 2;
+
+                // Q6 franchise
+                if (franchise === 'yes') pts += 1;
+
+                // A: strong profile where collateral absence doesn't block the path
+                if (pts >= 5 && (credit === '680-719' || credit === '720-plus') && (tib === '1-2y' || tib === '2-plus')) return 'A';
+                // C: no collateral + large amount + weak overall
+                if (collat === 'none' && (amount === '500-1m' || amount === '1m-plus') && pts < 2) return 'C';
+                // C: broadly weak profile regardless of amount
+                if (pts < -1) return 'C';
+                // B default: SBA-possible; tier matters
+                return 'B';
+            }`,
+            questions: [
+                {
+                    id: 'collateral', prompt: 'What collateral can you pledge?',
+                    options: [
+                        { value: 'real-estate', label: 'Commercial or residential real estate with equity' },
+                        { value: 'other-assets', label: 'Equipment, inventory, or other business assets' },
+                        { value: 'none', label: 'No significant collateral' },
+                        { value: 'unsure', label: 'Not sure' }
+                    ]
+                },
+                {
+                    id: 'amount', prompt: 'How much funding do you need?',
+                    options: [
+                        { value: 'under-50k', label: 'Under $50K' },
+                        { value: '50-150k', label: '$50K-$150K' },
+                        { value: '150-500k', label: '$150K-$500K' },
+                        { value: '500-1m', label: '$500K-$1M' },
+                        { value: '1m-plus', label: '$1M+' }
+                    ]
+                },
+                {
+                    id: 'credit', prompt: "What's your personal credit score?",
+                    options: [
+                        { value: 'below-580', label: 'Below 580' },
+                        { value: '580-639', label: '580-639' },
+                        { value: '640-679', label: '640-679' },
+                        { value: '680-719', label: '680-719' },
+                        { value: '720-plus', label: '720+' }
+                    ]
+                },
+                {
+                    id: 'tib', prompt: 'How long have you been operating?',
+                    options: [
+                        { value: 'not-yet', label: 'Not yet launched' },
+                        { value: 'under-6mo', label: 'Under 6 months' },
+                        { value: '6-12mo', label: '6-12 months' },
+                        { value: '1-2y', label: '1-2 years' },
+                        { value: '2-plus', label: '2+ years' }
+                    ]
+                },
+                {
+                    id: 'use', prompt: 'What will the funds be used for?',
+                    options: [
+                        { value: 'working-capital', label: 'Working capital' },
+                        { value: 'equipment', label: 'Equipment' },
+                        { value: 'inventory', label: 'Inventory' },
+                        { value: 'acquisition', label: 'Business acquisition' },
+                        { value: 'real-estate', label: 'Commercial real estate' },
+                        { value: 'mixed', label: 'Multiple uses' }
+                    ]
+                },
+                {
+                    id: 'franchise', prompt: 'Is this for an SBA-approved franchise?',
+                    options: [
+                        { value: 'yes', label: 'Yes' },
+                        { value: 'no', label: 'No' }
+                    ]
+                }
+            ],
+            resultProfiles: {
+                A: {
+                    badge: 'Strong collateral-light candidate',
+                    headline: 'You can get SBA without collateral',
+                    body: "Your combination of credit, time in business, and loan amount puts you in the zone where SBA works without collateral being a factor. Under $500K, you'll likely sign a UCC blanket lien on business assets as the lender's security, but no specific collateral pledge is required. Personal guarantee is standard.",
+                    ctaLabel: 'Explore SBA options at Lendmate',
+                    utmContent: 'profile-a-strong'
+                },
+                B: {
+                    badge: 'SBA-possible',
+                    headline: 'SBA is possible; the right program depends on loan size',
+                    body: "Your profile works for SBA, and the missing collateral isn't disqualifying on its own. The key question is loan size: under $50K is clearly SBA's no-collateral zone; $50K-$500K puts you in the lender-discretion tier where 'to the extent available' applies; above $500K moves into SBA's collateral-required range. A lender match helps identify SBA-preferred lenders comfortable with collateral-light files at your loan size.",
+                    ctaLabel: 'See what Lendmate can match you with',
+                    utmContent: 'profile-b-possible'
+                },
+                C: {
+                    badge: 'Alternative-first for this loan size',
+                    headline: "SBA isn't realistic at this size without collateral",
+                    body: "Amounts above $500K without collateral fall outside SBA's standard framework. You'd need a lender willing to accept a blanket UCC lien as 'adequate' security, and that's rare when credit or other factors are also on the margin. The realistic move is alternative financing sized to what you actually need (revenue-based funding, business lines of credit, equipment financing where the equipment itself serves as collateral) while the business builds, then returning to SBA when either the amount comes down or collateral becomes available.",
+                    ctaLabel: 'See what funding you can access now',
+                    utmContent: 'profile-c-alternative'
+                },
+                D: {
+                    badge: 'No-collateral SBA zone',
+                    headline: "You're in SBA's no-collateral territory",
+                    body: "SBA explicitly does not require collateral for 7(a) loans at $50,000 or less, and the Microloan program (up to $50,000 via non-profit intermediaries) is designed without collateral requirements. At your loan size, you're squarely in the no-collateral zone. Personal guarantee is still required from all 20%+ owners, and a UCC blanket lien on business assets may still be filed, but no specific asset pledge is needed.",
+                    ctaLabel: 'Get matched with the right lender',
+                    utmContent: 'profile-d-microloan'
+                }
+            }
+        },
+
+        programs: {
+            heading: 'Three SBA programs that work without collateral',
+            intro: "Not every SBA program treats collateral the same way. For asset-light borrowers, these three are the realistic paths.",
+            cards: [
+                {
+                    label: 'Collateral-free',
+                    name: 'SBA Microloan',
+                    icon: 'seedling',
+                    accent: '#2D8659',
+                    amount: '$50K',
+                    timeline: '30-45d',
+                    minCredit: '575+',
+                    fitLead: 'Right for you if:',
+                    fitRest: "you need up to $50K and prefer a program explicitly designed without collateral requirements. Administered by non-profit intermediaries."
+                },
+                {
+                    label: 'No collateral under $50K',
+                    name: 'SBA 7(a) Small Loan',
+                    icon: 'building',
+                    accent: '#B8741C',
+                    amount: '$500K',
+                    timeline: '45-75d',
+                    minCredit: '640+',
+                    fitLead: 'Right for you if:',
+                    fitRest: "you need up to $50K (no collateral per SBA policy) or $50K-$500K (to-the-extent-available lender discretion zone, with good credit)."
+                },
+                {
+                    label: 'Flexible collateral',
+                    name: 'SBA Community Advantage',
+                    icon: 'community',
+                    accent: '#2F6BB3',
+                    amount: '$350K',
+                    timeline: '45-75d',
+                    minCredit: '620+',
+                    fitLead: 'Right for you if:',
+                    fitRest: "you operate in an underserved market and want more flexibility than conventional 7(a) on both credit and collateral. CDC-administered, more patient underwriting."
+                }
+            ]
+        },
+
+        // Reusing the compensating-factors renderer for the "What the
+        // personal guarantee actually means" section — card shape is identical.
+        compensatingFactors: {
+            heading: 'What the personal guarantee actually means',
+            intro: "The personal guarantee is what makes SBA work for asset-light businesses. It is not the same as collateral, and it is non-negotiable for owners with 20%+ equity. Four things to understand before you sign.",
+            factors: [
+                {
+                    weight: 'Core distinction',
+                    title: 'Personal guarantee is not collateral',
+                    body: 'A personal guarantee is your legal promise to repay the debt from personal assets if the business cannot. Collateral is a specific asset the lender can seize on default. The distinction matters: most SBA loans require a PG but no specific collateral pledge, especially under $50K.'
+                },
+                {
+                    weight: 'What you sign',
+                    title: 'The form, the scope, the survival',
+                    body: "You sign SBA Form 148 committing to personally repay any portion the business doesn't. This survives business bankruptcy. All owners with 20%+ equity must sign it. Some lenders require it from all owners regardless of stake size."
+                },
+                {
+                    weight: 'Practical consequences',
+                    title: 'What happens if the business fails',
+                    body: 'The lender can pursue personal income and non-exempt assets: wages, savings, investment accounts. Some states protect primary residence and retirement accounts; federal bankruptcy rules apply. A PG typically survives Chapter 7 personal bankruptcy unless explicitly discharged.'
+                },
+                {
+                    weight: 'Why SBA requires it',
+                    title: 'Why the PG is non-negotiable',
+                    body: "Without a PG, SBA loans become uncollateralized government-guaranteed loans \u2014 too much risk for the 50-85% SBA guarantee framework. The PG is what makes the math work for asset-light businesses: SBA's guarantee plus your personal guarantee substitute for what collateral would normally provide."
+                }
+            ]
+        },
+
+        eligibility: {
+            heading: 'How SBA really treats collateral',
+            pullquote: 'For 7(a) loans of $50,000 or less, SBA does not require collateral. Period.',
+            comparison: {
+                title: 'Collateral requirements by program and loan size',
+                rows: [
+                    { factor: 'Collateral required by SBA?', conv7a: 'No (under $50K) / "To extent available" ($50K-$500K) / Yes (over $500K)', ca: "'To extent available' typical", micro: 'No, generally' },
+                    { factor: 'Personal guarantee required?', conv7a: 'Yes (20%+ owners)', ca: 'Yes (20%+ owners)',       micro: 'Yes (20%+ owners)' },
+                    { factor: 'UCC blanket lien typical?', conv7a: 'Yes, even on "unsecured" loans', ca: 'Yes',      micro: 'Sometimes' },
+                    { factor: 'Credit floor', conv7a: '680+ typical',           ca: 'Often 620+',        micro: 'Often 575+' },
+                    { factor: 'Time in business',       conv7a: '12-24 months typical', ca: 'No minimum',  micro: 'No minimum' }
+                ]
+            },
+            denialCards: [
+                { headline: 'Loan size over $500K with no collateral',    remediation: 'Above $500K moves into SBA\u2019s collateral-required tier. Break the loan into smaller portions, pledge whatever is available, or accept alternative funding until you have collateral or a smaller need.' },
+                { headline: 'No collateral + weak credit + short TIB',    remediation: "No single factor is disqualifying at this amount. The compound profile is. Strengthen one dimension \u2014 usually credit or time in business \u2014 before reapplying." },
+                { headline: 'Refusing the UCC blanket lien',              remediation: '"Unsecured" SBA loans almost always come with a UCC-1 filing on business assets. Refusing to sign will end the application. Understand what it covers before you balk.' },
+                { headline: 'Trying to avoid the personal guarantee',     remediation: 'All owners with 20%+ equity must sign a PG. There is no PG-free SBA path. Asking a lender to waive it signals that underwriting will be difficult.' }
+            ],
+            sections: [
+                {
+                    h3: 'How SBA really treats collateral by loan size',
+                    p: [
+                        "SBA collateral policy is tiered by loan size, not uniform across the program. Most asset-light borrowers don't realize they are already in the no-collateral zone.",
+                        "For 7(a) loans of $50,000 or less, SBA does not require collateral \u2014 per SOP 50 10 7, updated in 2023. For 7(a) loans of $50,001 to $500,000, lenders must follow their own collateral policies (often summarized as \u201Cto the extent available\u201D). For 7(a) loans over $500,000, SBA requires collateral to the loan amount, meaning the combined value of business assets + owner guaranty assets must at least match the loan. The SBA Microloan program, administered through non-profit intermediaries, typically does not require collateral at all."
+                    ],
+                    after: 'pullquote'
+                },
+                {
+                    h3: "What 'to the extent available' actually means",
+                    p: [
+                        "The $50K-$500K range is where most searchers actually are, and the SBA\u2019s phrasing is deliberately permissive. \u201CTo the extent available\u201D means the lender must take a lien on any available business assets (inventory, receivables, equipment), but lack of collateral alone cannot be the reason for denial. A lender can\u2019t say \u201CNo, you don\u2019t have enough collateral\u201D if the other underwriting factors (credit, cash flow, business plan) are strong.",
+                        "In practice this means two things. First, lenders vary widely in how they interpret \u201Cadequate.\u201D Some SBA-preferred lenders are comfortable approving collateral-light files at this tier; others default to requiring 25-50% of loan value in assets. Second, the UCC-1 blanket lien on business assets is nearly always part of the package, even on loans marketed as \u201Cunsecured.\u201D"
+                    ],
+                    after: 'comparison'
+                },
+                {
+                    h3: 'Types of lenders more flexible on collateral',
+                    p: [
+                        "Four lender categories tend to be more flexible at the $50K-$500K tier than large national banks. SBA Preferred Lender Program (PLP) members have delegated authority, meaning they approve loans without SBA central-office review \u2014 which makes them willing to use more lender discretion on collateral. CDFIs (Community Development Financial Institutions) are chartered to serve underserved markets and often accept more collateral-light files. CDCs (Certified Development Companies) administer Community Advantage and have more patient underwriting than bank PLPs. And online SBA specialists \u2014 non-bank lenders that originate SBA 7(a) loans \u2014 compete on speed and flexibility, which often extends to collateral.",
+                        "None of these categories guarantees approval without collateral. What they change is the probability that a collateral-light file will be underwritten seriously rather than rejected at intake. If a bank says no, ask whether they can refer you to a PLP partner or a CDFI. The same file can get different answers across lender categories."
+                    ]
+                },
+                {
+                    h3: 'The UCC blanket lien most no-collateral applicants will sign',
+                    p: [
+                        'A UCC-1 financing statement is a public filing with your state that gives the lender a security interest in business assets (cash, accounts receivable, inventory, equipment, general intangibles). Filed once, it covers almost everything the business owns and may acquire in the future. Most SBA 7(a) loans marketed as \u201Cno collateral required\u201D still come with a UCC-1 blanket lien.',
+                        "The lien is enforceable if the business defaults: the lender can seize the specified asset categories to recover the loan. It does not give the lender rights to your personal assets \u2014 that\u2019s what the personal guarantee covers. Signing the UCC-1 is standard and not a red flag; refusing to sign is almost always a dealbreaker. Understand what it covers, confirm the lien releases when the loan is repaid, and move on."
+                    ]
+                },
+                {
+                    h3: 'Common patterns that get denied',
+                    p: [
+                        "Denial patterns at this tier tend to compound. The most common: loan amount above $500K + no real estate + credit under 680. Each factor alone is manageable; the three together is typically fatal for conventional 7(a). The second: a borrower who refuses the UCC blanket lien or pushes back on the personal guarantee \u2014 both signal they don\u2019t understand standard SBA terms, which makes underwriting work harder. The third: mismatching loan size to program. A $30K request shouldn't go through a 7(a) process at a bank that prefers $250K+ files; it should go through Microloan or a lender that specializes in small 7(a)."
+                    ],
+                    after: 'denial-cards'
+                }
+            ]
+        },
+
+        process: {
+            heading: 'The collateral-light SBA application, step by step',
+            intro: 'The core application is the same as any SBA 7(a). Two steps are different: tier-matching and collateral-substitute documentation.',
+            steps: [
+                { title: 'Confirm your loan tier', text: 'Under $50K = no-collateral zone. $50K-$500K = lender discretion. Over $500K = SBA requires collateral. Your answer here changes which lenders you should approach.' },
+                { title: 'Match the program to the amount', text: 'Under $50K: SBA Microloan or 7(a) Small Loan. $50K-$350K: Community Advantage or 7(a) Small Loan. $350K-$500K: 7(a) Small Loan or standard 7(a) with a flexible PLP lender. Over $500K: plan for partial collateral.' },
+                { title: 'Choose a lender that works your tier', text: 'Not every SBA-preferred lender funds collateral-light files at $150K-$500K. Ask up front: "Are you comfortable with collateral-to-extent-available applications at my loan size? What is your typical collateral coverage requirement?"' },
+                { title: 'Build the application package', text: 'Three years of personal tax returns, business tax returns if any, SBA Form 413 (personal financial statement), SBA Form 1919, SBA Form 148 (personal guarantee), and a resume for each 20%+ owner. Collateral documentation is replaced by cash-flow projections that show repayment capacity.' },
+                { title: 'Document the personal guarantee', text: 'All 20%+ owners sign SBA Form 148. Bring updated personal financial statements for each guarantor. The PG is where the "where does the lender recover" question lives when there is no collateral.' },
+                { title: 'Expect the UCC blanket lien', text: 'Most collateral-light SBA files come with a UCC-1 filing on business assets. Confirm the lien releases on payoff and that future financing is not restricted. This is standard, not negotiable for most lenders.' },
+                { title: 'Respond fast during underwriting', text: 'Collateral-light files get more scrutiny in underwriting. Respond to document requests within 24 hours to keep momentum and signal reliability.' },
+                { title: 'Plan for closing and covenants', text: 'Expect covenants limiting additional debt, requiring annual financial statements, and sometimes requiring life insurance on 20%+ owners naming the lender. Read before you sign; these survive the loan.' }
+            ]
+        },
+
+        faqs: [
+            { icon: 'coins',    q: 'Can I get an SBA loan with no collateral?',                                a: "Yes, in specific tiers. For SBA 7(a) loans of $50,000 or less, SBA policy explicitly does not require collateral. For loans of $50,001 to $500,000, lenders apply their own collateral policies, and a collateral-light file can be approved if credit, cash flow, and business plan are strong. For loans over $500,000, SBA requires collateral to the loan amount. The SBA Microloan program (up to $50,000 via non-profit intermediaries) typically does not require collateral." },
+            { icon: 'bank',     q: 'What loan amount can I get from SBA without any collateral?',              a: "Up to $50,000 is the firm no-collateral ceiling per SBA policy. Between $50,000 and $500,000, approval without collateral is possible but depends on the lender's internal policy and the rest of your profile \u2014 this is where lender choice matters most. Above $500,000, SBA policy requires collateral to cover the loan amount, so no-collateral files are not realistic without substantial partial collateral and strong compensating factors." },
+            { icon: 'link',     q: 'Is a personal guarantee the same as collateral?',                         a: 'No. A personal guarantee is a legal promise to repay from personal assets if the business defaults. Collateral is a specific asset the lender can seize. All SBA loans require a personal guarantee from every owner with 20% or more equity \u2014 this is separate from collateral and is non-negotiable. Most no-collateral SBA loans under $50K still require the PG.' },
+            { icon: 'chart',    q: "What's the easiest SBA loan to get approved for without collateral?",    a: 'The SBA Microloan is the easiest to qualify for with no collateral, because the program is explicitly designed without collateral requirements. For amounts above $50K, the SBA 7(a) Small Loan program is next easiest; under $50K, collateral is not required by SBA policy, and the underwriting focus is on personal credit, cash flow, and business plan quality.' },
+            { icon: 'refresh',  q: 'What disqualifies you from an SBA loan besides lack of collateral?',      a: 'The clearest disqualifiers are: default on a prior federal loan (including federal student loans or prior SBA loans), unresolved federal tax liens, conviction for certain crimes in the past 6 months, and operating in an ineligible industry (gambling, multi-level marketing, speculative investments, pyramid schemes). Lack of collateral by itself is rarely a hard disqualifier at loan amounts under $500K.' },
+            { icon: 'calendar', q: 'What is the monthly payment on a $50,000 SBA loan?',                       a: 'A $50,000 SBA 7(a) loan at the current prime-plus-2.75% rate (approximately 11% APR as of 2026), amortized over 10 years, is roughly $689/month. A 5-year term at the same rate is approximately $1,087/month. Microloan rates are typically 8-13% over terms of up to 7 years. The $50,000 amount is meaningful because it is exactly at the no-collateral policy ceiling for 7(a).' },
+            { icon: 'clock',    q: 'Will the lender file a UCC lien even on a no-collateral SBA loan?',       a: 'Almost always yes. A UCC-1 blanket lien on business assets (cash, receivables, inventory, equipment, general intangibles) is standard on SBA 7(a) loans regardless of whether the loan is marketed as "unsecured" or "no collateral." The lien is enforceable if the business defaults but does not create claims on your personal assets \u2014 that is what the personal guarantee covers. Refusing to sign the UCC is typically a dealbreaker.' }
+        ],
+
+        closingCta: {
+            heading: 'Know your tier. See your SBA options.',
+            bodyHtml: 'Under $50K is SBA\u2019s explicit no-collateral zone. $50K-$500K is lender discretion, and the right lender match matters more than any other variable. Lendmate Capital matches collateral-light files to SBA-preferred lenders that work at your loan size. See the broader <a href="/sba-loans">SBA loans hub</a> or compare <a href="/business-loans">alternative business loans</a> if SBA is not the right fit today.',
+            buttonLabel: 'See what Lendmate can match you with',
+            utmCampaign: 'sba-no-collateral-closing-cta'
+        }
     }
 ];
 
