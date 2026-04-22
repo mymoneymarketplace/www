@@ -1,0 +1,27 @@
+{
+  "name": "mmm-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate-city-pages.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mymoneymarketplace/www.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mymoneymarketplace/www/issues"
+  },
+  "homepage": "https://github.com/mymoneymarketplace/www#readme",
+  "dependencies": {
+    "googleapis": "^171.4.0"
+  }
+}
