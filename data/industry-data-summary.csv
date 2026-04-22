@@ -1,0 +1,145 @@
+naics_code,description,loan_count,total_approval,avg_loan,charge_off_pct,yoy_growth,top_state,top_lender
+722511,Full-Service Restaurants,16355,8627759300,527530.38,1.21,8.73,CA,The Huntington National Bank
+722513,Limited-Service Restaurants,11949,5646205500,472525.36,1.27,15.1,CA,The Huntington National Bank
+236118,Residential Remodelers,7351,1351442500,183844.72,2.38,5.94,OH,The Huntington National Bank
+713940,Fitness and Recreational Sports Centers,6770,2764934600,408409.84,1.39,25.45,TX,The Huntington National Bank
+484121,"General Freight Trucking, Long Distance, Truckload",6764,1401579000,207211.56,3.42,-12.87,OH,The Huntington National Bank
+238220,"Plumbing, Heating, and Air-Conditioning Contractors",6128,2682743200,437784.46,1.32,3.61,CA,The Huntington National Bank
+561730,Landscaping Services,5962,1809285900,303469.62,1.22,-4.23,OH,The Huntington National Bank
+238990,All Other Specialty Trade Contractors,5857,2807869900,479404.11,0.87,4.65,CA,The Huntington National Bank
+484110,"General Freight Trucking, Local",5639,1526707200,270740.77,3.55,-12.6,CA,The Huntington National Bank
+811111,General Automotive Repair,5413,2584013400,477371.77,1,26.93,CA,The Huntington National Bank
+721110,Hotels (except Casino Hotels) and Motels,5191,12903519200,2485748.26,0.1,17.18,TX,GBank
+624410,Child Day Care Services,5081,4100296900,806986.2,0.51,17.44,TX,The Huntington National Bank
+722515,Snack and Nonalcoholic Beverage Bars,5080,1929641700,379850.73,0.98,28.35,CA,The Huntington National Bank
+812112,Beauty Salons,5033,1047532400,208132.8,1.55,8.66,CA,The Huntington National Bank
+524210,Insurance Agencies and Brokerages,4249,2029663100,477680.18,1.06,20.45,TX,Live Oak Banking Company
+238210,Electrical Contractors,4137,1633514000,394854.73,1.28,14.16,CA,The Huntington National Bank
+621210,Offices of Dentists,4070,3704416100,910175.95,0.27,16.86,CA,Live Oak Banking Company
+621111,Offices of Physicians (except Mental Health Specialists),3986,2398236900,601665.05,0.68,11.04,CA,The Huntington National Bank
+812199,Other Personal Care Services,3617,1283398100,354823.91,1.22,4.96,CA,The Huntington National Bank
+621610,Home Health Care Services,3156,1528398200,484283.33,1.46,40.8,CA,The Huntington National Bank
+541110,Offices of Lawyers,3121,1094459900,350676.03,1.12,-2.67,CA,The Huntington National Bank
+621310,Offices of Chiropractors,2994,800803200,267469.34,1,12.91,FL,The Huntington National Bank
+541990,"All Other Professional, Scientific, and Technical Services",2981,1346947000,451844.01,1.11,23.56,CA,The Huntington National Bank
+561720,Janitorial Services,2945,765944600,260083.06,2.24,19.14,FL,The Huntington National Bank
+812910,Pet Care (except Veterinary) Services,2865,1408814000,491732.64,0.7,11.11,TX,The Huntington National Bank
+812990,All Other Personal Services,2781,926551800,333172.17,1.47,28.17,CA,The Huntington National Bank
+541611,Administrative Management and General Management Consulting Services,2545,640300600,251591.59,2.55,30.33,CA,"Newtek Bank, National Association"
+621399,Offices of All Other Miscellaneous Health Practitioners,2481,855318800,344747.6,0.77,14.48,CA,The Huntington National Bank
+713990,All Other Amusement and Recreation Industries,2402,1646657100,685535.85,0.79,34.84,TX,The Huntington National Bank
+445320,,2338,1888535100,807756.67,0.3,19.94,CA,Hanmi Bank
+445110,Supermarkets and Other Grocery (except Convenience) Stores,2323,1803040400,776168.92,1.33,9.16,CA,The Huntington National Bank
+236115,New Single-Family Housing Construction (except Operative Builders),2280,739360800,324281.05,1.84,46.31,CA,Northeast Bank
+236220,Commercial and Institutional Building Construction,2259,954656600,422601.42,1.28,23.7,CA,"JPMorgan Chase Bank, National Association"
+457110,,2136,3504104700,1640498.46,0.28,19.31,TX,Celtic Bank Corporation
+621330,Offices of Mental Health Practitioners (except Physicians),2130,531129100,249356.38,0.47,6.31,FL,The Huntington National Bank
+722410,Drinking Places (Alcoholic Beverages),2107,976372200,463394.49,0.81,-3.69,CA,The Huntington National Bank
+238910,Site Preparation Contractors,2085,776629400,372484.12,0.67,8.37,OH,The Huntington National Bank
+541211,Offices of Certified Public Accountants,2072,1015783300,490242.91,0.48,24.86,CA,Live Oak Banking Company
+458110,Clothing and Clothing Accessories Retailers,2008,532070400,264975.3,1.49,-1.91,CA,The Huntington National Bank
+238320,Painting and Wall Covering Contractors,1953,425437800,217838.1,2.46,7.59,CA,The Huntington National Bank
+621340,"Offices of Physical, Occupational and Speech Therapists, and Audiologi",1928,619851300,321499.64,0.57,17.4,CA,The Huntington National Bank
+531210,Offices of Real Estate Agents and Brokers,1884,474421400,251816.03,1.91,5.24,CA,"U.S. Bank, National Association"
+541613,Marketing Consulting Services,1828,483655000,264581.51,3.67,-4.61,CA,"U.S. Bank, National Association"
+541511,Custom Computer Programming Services,1777,796293000,448110.86,1.18,26.42,CA,"Newtek Bank, National Association"
+447110,Gasoline Stations with Convenience Stores,1776,2578544700,1451883.28,0.28,-16.67,TX,Celtic Bank Corporation
+811121,"Automotive Body, Paint, and Interior Repair and Maintenance",1767,998209800,564917.83,0.85,22.77,CA,The Huntington National Bank
+238160,Roofing Contractors,1735,757939200,436852.56,1.15,24.93,FL,The Huntington National Bank
+541219,Other Accounting Services,1722,518256000,300961.67,0.7,48.86,CA,"Readycap Lending, LLC"
+811192,Car Washes,1670,2382615000,1426715.57,1.02,-6.9,CA,Celtic Bank Corporation
+541940,Veterinary Services,1636,1975055200,1207246.45,0.18,40.24,CA,Live Oak Banking Company
+445310,"Beer, Wine, and Liquor Stores",1624,1287569000,792838.05,0.62,-55.56,CA,Hanmi Bank
+541330,Engineering Services,1607,921238400,573265.96,0.62,14.7,CA,The Huntington National Bank
+611620,Sports and Recreation Instruction,1541,729210700,473206.16,1.04,24.42,TX,The Huntington National Bank
+812113,Nail Salons,1490,344691200,231336.38,1.21,36.53,TX,"U.S. Bank, National Association"
+541519,Other Computer Related Services,1481,767039100,517919.72,1.35,6.27,CA,BayFirst National Bank
+623312,Homes for the Elderly,1449,1796999900,1240165.56,0.21,19.15,CA,Live Oak Banking Company
+561790,Other Services to Buildings and Dwellings,1416,458174500,323569.56,1.06,32.76,FL,The Huntington National Bank
+441120,Used Car Dealers,1356,715806600,527880.97,2.8,28.86,CA,Northeast Bank
+238110,Poured Concrete Foundation and Structure Contractors,1350,447188000,331250.37,1.63,-15.17,OH,The Huntington National Bank
+722330,Mobile Food Services,1349,125004100,92664.27,2.3,2.27,OH,The Huntington National Bank
+541512,Computer Systems Design Services,1340,575308100,429334.4,1.42,4.48,CA,"JPMorgan Chase Bank, National Association"
+423990,Other Miscellaneous Durable Goods Merchant Wholesalers,1328,982503900,739837.27,2.71,-17.17,CA,BayFirst National Bank
+459999,All Other Miscellaneous Retailers,1311,465459000,355041.19,1.68,2.4,NY,Wells Fargo Bank National Association
+238330,Flooring Contractors,1257,412008400,327771.2,2.23,-14.9,FL,The Huntington National Bank
+541213,Tax Preparation Services,1257,354440800,281973.59,1.43,25.09,CA,"Readycap Lending, LLC"
+484220,"Specialized Freight (except Used Goods) Trucking, Local",1232,317989000,258107.95,2.52,20.2,OH,The Huntington National Bank
+454110,Electronic Shopping and Mail-Order Houses,1212,492909000,406690.59,4.87,-48,CA,Wells Fargo Bank National Association
+238350,Finish Carpentry Contractors,1210,327659400,270792.89,2.07,9.13,FL,"TD Bank, National Association"
+312120,Breweries,1209,712822400,589596.69,0.25,-7.38,CA,The Huntington National Bank
+531311,Residential Property Managers,1163,391936700,337004.9,2.24,-4.48,CA,United Midwest Savings Bank National Association
+311811,Retail Bakeries,1153,423848600,367605.03,0.61,7.11,CA,The Huntington National Bank
+455219,All Other General Merchandise Retailers,1131,308226000,272525.2,1.33,12.96,CA,"TD Bank, National Association"
+541618,Other Management Consulting Services,1113,247109300,222020.93,3.05,31.22,CA,Wells Fargo Bank National Association
+492110,Couriers,1100,564273600,512976,2.82,15.2,CA,"TD Bank, National Association"
+722320,Caterers,1096,504020900,459873.08,2.1,6.87,CA,The Huntington National Bank
+811310,Commercial and Industrial Machinery and Equipment (except Automotive a,1087,535181000,492346.83,1.2,12.89,CA,The Huntington National Bank
+323111,Commercial Gravure Printing,1081,674492300,623952.17,0.46,11.82,CA,The Huntington National Bank
+332710,Machine Shops,1057,810923400,767193.38,0.66,13.13,OH,The Huntington National Bank
+531130,Lessors of Miniwarehouses and Self-Storage Units,1051,1472235500,1400794.96,0.1,-0.83,TX,Live Oak Banking Company
+238310,Drywall and Insulation Contractors,1046,349052700,333702.39,2.87,-4.68,TX,The Huntington National Bank
+812310,Coin-Operated Laundries and Drycleaners,1040,798609700,767893.94,0.67,23.46,CA,The Huntington National Bank
+541810,Advertising Agencies,1037,492233000,474670.2,1.93,-0.36,CA,"Newtek Bank, National Association"
+562910,Remediation Services,1008,423801700,420438.19,2.38,5.66,CA,United Midwest Savings Bank National Association
+541410,Interior Design Services,998,299136600,299736.07,1.1,11.84,CA,"TD Bank, National Association"
+456110,Pharmacies and Drug Stores,991,684156300,690369.63,0.2,13.36,CA,Byline Bank
+624120,Services for the Elderly and Persons with Disabilities,959,554066900,577754.85,0.94,3.23,CA,Live Oak Banking Company
+238390,Other Building Finishing Contractors,957,409380100,427774.4,0.52,3.3,CA,The Huntington National Bank
+424990,Other Miscellaneous Nondurable Goods Merchant Wholesalers,954,666788600,698939.83,1.78,1.02,CA,The Huntington National Bank
+811490,Other Personal and Household Goods Repair and Maintenance,947,241169400,254666.74,0.95,-0.88,FL,The Huntington National Bank
+531390,Other Activities Related to Real Estate,929,444797400,478791.6,2.05,-5.39,CA,"TD Bank, National Association"
+445131,,928,429927700,463284.16,0.32,11.03,CA,The Huntington National Bank
+459110,Sporting Goods Stores,907,360468800,397429.77,0.33,14.98,CA,The Huntington National Bank
+561311,Employment Placement Agencies,897,365335400,407285.84,2.23,-7.11,CA,The Huntington National Bank
+531120,Lessors of Nonresidential Buildings (except Miniwarehouses),896,924785700,1032126.9,0.33,-79.31,CA,Wells Fargo Bank National Association
+561431,Private Mail Centers,895,318716600,356107.93,0.56,35.8,CA,The Huntington National Bank
+541690,Other Scientific and Technical Consulting Services,888,296044300,333383.22,1.24,-17.34,CA,"U.S. Bank, National Association"
+812111,Barber Shops,877,152073100,173401.48,2.05,33.88,CA,The Huntington National Bank
+812210,Funeral Homes and Funeral Services,864,892150500,1032581.6,0,25.83,PA,Live Oak Banking Company
+812320,Drycleaning and Laundry Services (except Coin-Operated),862,412703700,478774.59,1.04,34.59,CA,The Huntington National Bank
+488510,Freight Transportation Arrangement,835,355158600,425339.64,1.32,7.65,CA,The Huntington National Bank
+424490,Other Grocery and Related Products Merchant Wholesalers,800,394252100,492815.13,1.63,19.05,CA,"TD Bank, National Association"
+811198,All Other Automotive Repair and Maintenance,795,286142300,359927.42,1.26,12.12,CA,The Huntington National Bank
+561710,Exterminating and Pest Control Services,778,203340500,261363.11,1.29,31.5,TX,United Midwest Savings Bank National Association
+541310,Architectural Services,776,318958800,411029.38,1.03,17.51,CA,The Huntington National Bank
+445291,Baked Goods Stores,758,365003700,481535.22,1.06,-20.34,CA,The Huntington National Bank
+488410,Motor Vehicle Towing,757,357760000,472602.38,1.45,7.97,CA,The Huntington National Bank
+445120,Convenience Stores,743,368506300,495970.79,1.35,-71.43,CA,Commonwealth Business Bank
+446110,Pharmacies and Drug Stores,737,553197500,750607.19,1.76,-66.67,CA,Live Oak Banking Company
+611710,Educational Support Services,731,202959500,277646.37,1.5,20.22,CA,Northeast Bank
+621320,Offices of Optometrists,708,380181000,536978.81,0.14,20.16,TX,The Huntington National Bank
+562111,Solid Waste Collection,698,308275100,441654.87,0.86,4.2,FL,The Huntington National Bank
+332999,All Other Miscellaneous Fabricated Metal Product Manufacturing,696,558283600,802131.61,0.57,-4.62,OH,The Huntington National Bank
+512110,Motion Picture and Video Production,691,183639800,265759.48,1.88,4.22,CA,"Newtek Bank, National Association"
+456120,"Cosmetics, Beauty Supplies, and Perfume Stores",683,279109900,408652.86,2.64,23.19,CA,Bank of Hope
+441330,,675,281766800,417432.3,0.44,9.8,CA,Northeast Bank
+112320,Broilers and Other Meat Type,673,976912100,1451578.16,0.15,3.45,MS,First Financial Bank
+453998,All Other Miscellaneous Store Retailers (except Tobacco Stores),667,279499400,419039.58,3.3,-66.67,CA,The Huntington National Bank
+423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesal",642,347988200,542037.69,2.65,-22.36,CA,"TD Bank, National Association"
+339950,Sign Manufacturing,635,343000100,540157.64,0.47,-13.43,FL,The Huntington National Bank
+611610,Fine Arts Schools,634,170610000,269100.95,0.95,42.62,CA,The Huntington National Bank
+611699,All Other Miscellaneous Schools and Instruction,632,238594800,377523.42,1.74,33.68,CA,The Huntington National Bank
+711510,"Independent Artists, Writers, and Performers",626,137573900,219766.61,2.08,-9.15,CA,Wells Fargo Bank National Association
+238140,Masonry Contractors,624,168404300,269878.69,1.28,-3.82,OH,The Huntington National Bank
+238150,Glass and Glazing Contractors,622,350899200,564146.62,1.61,10,CA,The Huntington National Bank
+445298,,617,257598500,417501.62,0.81,20.12,CA,The Huntington National Bank
+238290,Other Building Equipment Contractors,603,316011700,524065.84,1.82,-3.91,CA,The Huntington National Bank
+238190,"Other Foundation, Structure, and Building Exterior Contractors",600,191821700,319702.83,1.5,-19.59,CA,The Huntington National Bank
+484230,"Specialized Freight (except Used Goods) Trucking, Long-Distance",598,146183500,244454.01,2.17,58.67,OH,The Huntington National Bank
+621112,"Offices of Physicians, Mental Health Specialists",596,220393600,369787.92,0.84,43.48,FL,Northeast Bank
+518210,"Data Processing, Hosting, and Related Services",591,329895000,558197.97,0.34,-3.97,CA,"Newtek Bank, National Association"
+624190,Other Individual and Family Services,590,140609800,238321.69,1.86,-13.85,CA,The Huntington National Bank
+523940,,584,303962200,520483.22,0.51,28.92,CA,Live Oak Banking Company
+339999,All Other Miscellaneous Manufacturing,581,372084200,640420.31,1.03,23.16,OH,The Huntington National Bank
+459120,"Hobby, Toy, and Game Stores",565,138543900,245210.44,1.06,41.46,CA,The Huntington National Bank
+323113,Commercial Screen Printing,564,217098400,384926.24,1.24,8.55,CA,The Huntington National Bank
+425120,Wholesale Trade Agents and Brokers,545,279344400,512558.53,2.02,17.07,FL,Northeast Bank
+337110,Wood Kitchen Cabinet and Countertop Manufacturing,539,320796700,595170.13,1.3,4.88,CA,The Huntington National Bank
+484210,Used Household and Office Goods Moving,539,223992900,415571.24,3.71,6,TX,The Huntington National Bank
+423910,Sporting and Recreational Goods and Supplies Merchant Wholesalers,538,289333100,537793.87,1.3,17.53,CA,"U.S. Bank, National Association"
+445132,Vending Machine Operators,521,71939600,138079.85,0.58,51.82,TX,United Midwest Savings Bank National Association
+237310,"Highway, Street, and Bridge Construction",520,315373100,606486.73,0.77,-24.24,FL,The Huntington National Bank
+541320,Landscape Architectural Services,518,183362200,353981.08,0.58,-1.9,CA,The Huntington National Bank
+423830,Industrial Machinery and Equipment Merchant Wholesalers,517,402627300,778776.21,0.58,7.78,TX,The Huntington National Bank
+451110,Sporting Goods Stores,513,231631500,451523.39,1.75,-63.16,CA,"U.S. Bank, National Association"
