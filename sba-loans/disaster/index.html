@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBA Disaster Loan Guide 2026: EIDL + Bridge Funding | My Money Marketplace</title>
+    <meta name="description" content="Honest guide to the SBA disaster loan (EIDL) process plus bridge funding that can deploy while you wait for EIDL disbursement. Timeline, eligibility, and what to do this week.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mymoneymarketplace.com/sba-loans/disaster">
+    <meta property="og:title" content="SBA Disaster Loan Guide 2026: EIDL + Bridge Funding | My Money Marketplace">
+    <meta property="og:description" content="Honest guide to the SBA disaster loan (EIDL) process plus bridge funding that can deploy while you wait for EIDL disbursement. Timeline, eligibility, and what to do this week.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mymoneymarketplace.com/sba-loans/disaster">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #008254; --green-dark: #006b45; --green-bg: #f0faf5;
+            --text: #111111; --text-secondary: #444444; --text-muted: #717171;
+            --border: #e2e2e2; --bg-light: #f7f7f7; --white: #ffffff;
+            --navy: #1a3a5c; --navy-deep: #122a42;
+            --accent-green: #2D8659; --accent-blue: #2F6BB3; --accent-amber: #B8741C;
+            --accent-red: #b84a2f;
+            --quote-accent: #2F6BB3;
+        }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid var(--border); height: 64px; }
+        .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .header-logo img { height: 32px; display: block; }
+        .header-nav { display: flex; align-items: center; gap: 32px; }
+        .header-link { font-size: 14px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+        .header-link:hover { color: var(--green); }
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.3s; }
+        @media (max-width: 768px) { .header-link { display: none; } .mobile-toggle { display: block; } }
+
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        .container-narrow { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+        /* Breadcrumb */
+        .breadcrumb { padding: 16px 0; margin-top: 64px; background: var(--bg-light); border-bottom: 1px solid var(--border); }
+        .breadcrumb-list { display: flex; align-items: center; gap: 8px; list-style: none; font-size: 13px; flex-wrap: wrap; }
+        .breadcrumb-list a { color: var(--text-muted); text-decoration: none; }
+        .breadcrumb-list a:hover { color: var(--green); }
+        .breadcrumb-list .sep { color: var(--text-muted); }
+        .breadcrumb-list .current { color: var(--text-secondary); font-weight: 500; }
+
+        /* Hero */
+        .hero { padding: 56px 0 56px; background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%); }
+        .hero-head { max-width: 820px; margin: 0 auto 40px; padding: 0 24px; text-align: left; }
+        .hero-head h1 { font-size: clamp(30px, 4vw, 42px); font-weight: 700; color: var(--text); line-height: 1.15; margin-bottom: 16px; }
+        .hero-head .sub { font-size: 17px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; max-width: 720px; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; padding: 13px 22px; border-radius: 8px; text-decoration: none; transition: background 0.2s, border-color 0.2s, transform 0.1s; }
+        .btn-primary { background: var(--green); color: var(--white); }
+        .btn-primary:hover { background: var(--green-dark); color: var(--white); }
+        .btn-secondary { background: var(--white); color: var(--navy); border: 1px solid var(--navy); }
+        .btn-secondary:hover { background: var(--navy); color: var(--white); }
+        .hero-note { font-size: 13px; color: var(--text-muted); max-width: 620px; }
+
+        /* Timeline map — the hero visual */
+        .timeline-map { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+        .tmap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .tmap-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; position: relative; box-shadow: 0 6px 20px rgba(20,40,70,0.05); }
+        .tmap-card.phase-1 { border-top: 4px solid var(--accent-red); }
+        .tmap-card.phase-2 { border-top: 4px solid var(--accent-amber); }
+        .tmap-card.phase-3 { border-top: 4px solid var(--accent-green); }
+        .tmap-phase-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; }
+        .phase-1 .tmap-phase-label { background: #fef0ec; color: var(--accent-red); }
+        .phase-2 .tmap-phase-label { background: #fff4e5; color: var(--accent-amber); }
+        .phase-3 .tmap-phase-label { background: var(--green-bg); color: var(--green); }
+        .tmap-card h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 10px; line-height: 1.3; }
+        .tmap-card .tmap-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+        .tmap-card ul { list-style: none; padding: 0; margin: 0 0 14px; }
+        .tmap-card li { font-size: 14px; color: var(--text-secondary); line-height: 1.55; padding: 6px 0 6px 20px; position: relative; }
+        .tmap-card li::before { content: ''; position: absolute; left: 4px; top: 13px; width: 6px; height: 6px; border-radius: 50%; background: var(--text-muted); }
+        .tmap-funding { font-size: 12px; color: var(--text); padding: 10px 12px; background: var(--bg-light); border-radius: 6px; font-weight: 500; }
+        .tmap-funding strong { color: var(--navy); font-weight: 700; }
+        @media (max-width: 820px) { .tmap-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+        /* Checklist section */
+        .checklist { padding: 64px 0; background: var(--white); }
+        .checklist h2 { font-size: 28px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 10px; }
+        .checklist-sub { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 640px; margin: 0 auto 36px; line-height: 1.6; }
+        .checklist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 900px; margin: 0 auto; }
+        .check-item { display: flex; align-items: flex-start; gap: 14px; background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--green); border-radius: 6px; padding: 16px 18px; }
+        .check-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--green-bg); color: var(--green); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+        .check-body h4 { font-size: 14.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.3; }
+        .check-body p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+        @media (max-width: 720px) { .checklist-grid { grid-template-columns: 1fr; } }
+
+        /* Funding comparison table — replaces program cards */
+        .fundsrc { padding: 64px 0; background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .fundsrc h2 { font-size: 28px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 10px; }
+        .fundsrc-sub { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 680px; margin: 0 auto 32px; line-height: 1.6; }
+        .fundsrc-wrap { max-width: 1040px; margin: 0 auto; overflow-x: auto; background: var(--white); border-radius: 10px; border: 1px solid var(--border); }
+        .fundsrc-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px; }
+        .fundsrc-table thead { background: var(--navy); color: var(--white); }
+        .fundsrc-table th { text-align: left; padding: 14px 16px; font-weight: 600; font-size: 13px; letter-spacing: 0.3px; }
+        .fundsrc-table tbody th { background: var(--bg-light); color: var(--text); font-weight: 700; white-space: nowrap; font-size: 14px; }
+        .fundsrc-table tbody th .src-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+        .src-tag.sba { background: #e6eef8; color: var(--navy); }
+        .src-tag.bridge { background: var(--green-bg); color: var(--green); }
+        .fundsrc-table td { padding: 14px 16px; color: var(--text-secondary); border-top: 1px solid var(--bg-light); vertical-align: top; }
+        .fundsrc-table tbody tr:first-child th, .fundsrc-table tbody tr:first-child td { border-top: 0; }
+        .fundsrc-footnote { max-width: 1000px; margin: 14px auto 0; font-size: 12px; color: var(--text-muted); line-height: 1.55; padding: 0 4px; }
+
+        /* Editorial section shared style */
+        .ed-section { padding: 72px 0; background: var(--white); }
+        .ed-section.alt { background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .ed-section h2 { font-size: 28px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+        .ed-section h3 { font-size: 20px; font-weight: 600; color: var(--text); margin: 32px 0 12px; }
+        .ed-section p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+        .ed-section ul { margin: 10px 0 16px 22px; }
+        .ed-section li { font-size: 15px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 8px; }
+        .ed-section a.inline { color: var(--green); font-weight: 500; text-decoration: underline; }
+        .ed-section strong { color: var(--text); font-weight: 600; }
+
+        .inline-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 22px 0 10px; padding: 18px 20px; background: var(--green-bg); border-left: 3px solid var(--green); border-radius: 0 6px 6px 0; }
+        .inline-cta .ica-body { flex: 1 1 260px; font-size: 14px; color: var(--text); line-height: 1.5; }
+        .inline-cta .ica-body strong { color: var(--navy-deep); font-weight: 700; }
+        .inline-cta a { flex: 0 0 auto; }
+
+        .resource-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 22px 0 10px; padding: 18px 20px; background: var(--bg-light); border-left: 3px solid var(--navy); border-radius: 0 6px 6px 0; }
+        .resource-cta .ica-body { flex: 1 1 260px; font-size: 14px; color: var(--text); line-height: 1.5; }
+        .resource-cta .ica-body strong { color: var(--navy-deep); font-weight: 700; }
+        .resource-cta a { flex: 0 0 auto; }
+
+        .pullquote { background: var(--white); border-left: 4px solid var(--quote-accent); padding: 22px 26px; margin: 28px 0 32px; border-radius: 0 6px 6px 0; }
+        .pullquote p { font-size: 20px; line-height: 1.45; font-weight: 500; color: var(--navy); margin: 0; }
+
+        /* Resources grid */
+        .resources-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
+        .res-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; }
+        .res-card h4 { font-size: 14.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+        .res-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin: 0 0 8px; }
+        .res-card a { font-size: 13px; color: var(--green); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--green-bg); padding-bottom: 1px; }
+        .res-card a:hover { border-bottom-color: var(--green); }
+        @media (max-width: 640px) { .resources-grid { grid-template-columns: 1fr; } }
+
+        /* FAQ */
+        .faq-section { padding: 72px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 28px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 36px; }
+        .faq-list { max-width: 780px; margin: 0 auto; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; transition: box-shadow 0.2s; }
+        .faq-item[open] { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05); }
+        .faq-item summary { display: flex; align-items: center; gap: 14px; padding: 16px 20px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; list-style: none; transition: background 0.15s; }
+        .faq-item summary:hover { background: var(--bg-light); }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-icon-wrap { flex-shrink: 0; color: var(--green); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--green-bg); border-radius: 6px; }
+        .faq-q { flex: 1; }
+        .faq-marker { flex-shrink: 0; width: 16px; height: 16px; position: relative; }
+        .faq-marker::before, .faq-marker::after { content: ''; position: absolute; background: var(--text-muted); top: 7px; left: 1px; right: 1px; height: 2px; border-radius: 1px; transition: transform 0.25s ease; }
+        .faq-marker::after { transform: rotate(90deg); }
+        .faq-item[open] .faq-marker::after { transform: rotate(0deg); }
+        .faq-answer { overflow: hidden; max-height: 0; padding: 0 20px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.75; transition: max-height 0.3s ease, padding 0.3s ease; }
+        .faq-item[open] .faq-answer { max-height: 900px; padding: 0 20px 18px 62px; }
+
+        /* Closing dual-CTA */
+        .closing-cta { padding: 72px 0; background: var(--navy); }
+        .closing-cta-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; text-align: center; }
+        .closing-cta h2 { font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+        .closing-cta p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 640px; margin: 0 auto 28px; line-height: 1.65; }
+        .closing-cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 18px; }
+        .closing-cta-buttons .btn-primary { background: var(--green); color: var(--white); padding: 15px 28px; font-size: 16px; }
+        .closing-cta-buttons .btn-ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.3); padding: 15px 28px; font-size: 16px; }
+        .closing-cta-buttons .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+        .closing-cta-fine { font-size: 12.5px; color: rgba(255,255,255,0.55); max-width: 620px; margin: 0 auto; line-height: 1.55; }
+        .closing-cta-fine a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+
+        /* Footer */
+        .footer { background: #1a1a1a; color: #cccccc; padding: 48px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; margin-bottom: 32px; }
+        .footer-col h4 { color: var(--white); font-size: 13px; font-weight: 600; margin-bottom: 16px; letter-spacing: 0.4px; text-transform: uppercase; }
+        .footer-col a { display: block; font-size: 13px; color: #999999; text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--white); }
+        .footer-col p { font-size: 13px; color: #999999; line-height: 1.7; }
+        .footer-bottom { border-top: 1px solid #333333; padding: 20px 0; text-align: center; font-size: 12px; color: #666666; }
+        @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+    </style>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "name": "My Money Marketplace",
+            "url": "https://mymoneymarketplace.com",
+            "logo": "https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://mymoneymarketplace.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "SBA Loans",
+                    "item": "https://mymoneymarketplace.com/sba-loans"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "SBA Disaster Loan",
+                    "item": "https://mymoneymarketplace.com/sba-loans/disaster"
+                }
+            ]
+        },
+        {
+            "@type": "Article",
+            "headline": "SBA Disaster Loan Guide 2026: EIDL + Bridge Funding",
+            "description": "Honest guide to the SBA disaster loan (EIDL) process plus bridge funding that can deploy while you wait for EIDL disbursement. Timeline, eligibility, and what to do this week.",
+            "author": {
+                "@type": "Organization",
+                "name": "My Money Marketplace"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "My Money Marketplace",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"
+                }
+            },
+            "datePublished": "2026-04-22",
+            "dateModified": "2026-04-22",
+            "mainEntityOfPage": "https://mymoneymarketplace.com/sba-loans/disaster"
+        },
+        {
+            "@type": "FinancialService",
+            "name": "Disaster Recovery Bridge Funding Matching",
+            "serviceType": "Lender matching for business disaster recovery bridge capital and working-capital facilities, complementary to SBA EIDL",
+            "description": "My Money Marketplace helps disaster-affected businesses compare bridge funding, revenue-based financing, and equipment replacement options that can deploy while SBA EIDL applications are processing. We do not originate or fund SBA disaster loans; EIDL applications are made directly through the SBA.",
+            "areaServed": {
+                "@type": "Country",
+                "name": "United States"
+            },
+            "provider": {
+                "@type": "Organization",
+                "name": "My Money Marketplace",
+                "url": "https://mymoneymarketplace.com"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How long does an SBA disaster loan take to disburse?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For physical-damage disaster loans, the SBA targets decisions within 2 to 3 weeks and funding within 5 business days after closing — but real-world timelines often run 30 to 60 days from application to first disbursement, and longer when declaration volume is high. EIDL (economic injury) typically runs 60 to 90 days or longer from application to first disbursement. The longest segment is usually document review and closing, not the initial approval decision."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who is eligible for an SBA disaster loan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your business must be located in a declared disaster area — either a Presidential disaster declaration or an SBA Administrator disaster declaration. You can check active declarations at sba.gov/funding-programs/disaster-assistance. Small businesses, private non-profits, and in some categories homeowners and renters are eligible. For EIDL specifically, the business must demonstrate economic injury as a direct result of the disaster and have been in operation before the disaster occurred."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the difference between a Physical Disaster Loan and EIDL?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Physical Disaster Loans repair or replace tangible damage — buildings, equipment, inventory, vehicles. EIDL (Economic Injury Disaster Loan) covers working capital to keep the business operating when revenue is disrupted by the disaster, even if there was no physical damage to the property. Many businesses qualify for both. Physical loans cap at $500,000 for small businesses; EIDL caps at $2 million. Combined, the total cap is $2 million per disaster."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I get bridge funding while my EIDL application is being processed?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Bridge financing from non-SBA lenders — short-term term loans, revenue-based financing, equipment financing for destroyed assets — is designed for exactly this scenario. Typical funding speed is 24 to 72 hours versus 60 to 120 days for EIDL. Disclose any disaster-related debt on the EIDL application, and structure the bridge loan so it does not take collateral the SBA will require. Most experienced bridge lenders understand this and avoid conflicting with SBA collateral positions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I use EIDL proceeds to pay off a bridge loan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "EIDL proceeds are restricted to working capital for economic injury recovery — fixed debts, payroll, accounts payable, and other bills that would have been paid if the disaster had not occurred. That typically includes short-term disaster-period debt the business took on specifically to stay open. Refinancing general business debt that pre-existed the disaster is not permitted. Document every dollar of bridge financing to disaster-related expenses so the EIDL payoff connection is clean."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the interest rate on an SBA disaster loan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "SBA disaster loan rates are set per declaration. For most recent declarations, small-business rates have run around 3.25% to 4%, and non-profit rates around 2.875% to 3.25%. Rates are fixed for the life of the loan. Terms run up to 30 years based on the borrower's ability to repay. Home disaster loans for homeowners and renters are priced differently. The SBA publishes the current declaration-specific rate on the disaster declaration page."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is collateral required for an SBA disaster loan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For loans under $25,000 (business) or $50,000 (EIDL, per current SOP), the SBA generally does not require collateral. Above those thresholds, the SBA takes available collateral — typically a blanket lien on business assets and, for larger loans, real estate including the owner's home when required. A lack of available collateral alone will not cause a denial; the SBA takes what is available. Personal guarantees are required from any owner with 20% or more equity."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "When is the first payment due on an SBA disaster loan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The SBA typically defers the first payment on disaster loans for 12 months after the loan is funded. Interest still accrues during the deferment period, which means the eventual amortization is calculated on a slightly larger principal balance. The 12-month deferment gives borrowers time to stabilize operations before debt service begins. Deferment terms can vary by declaration."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What disaster documentation do I need to gather now?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Contact information and SSN for all applicants, FEMA disaster registration number if applicable, deed or lease for the damaged property, insurance information and any claim numbers, three years of business tax returns and current-year interim financials, a complete damage inventory with photos or video, and a running list of receipts for emergency spending caused by the disaster. Starting this documentation trail in the first 72 hours is the single biggest factor in how quickly an application moves."
+                    }
+                }
+            ]
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="header-logo"><img src="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png" alt="My Money Marketplace" width="180" height="32"></a>
+        <nav class="header-nav">
+            <a href="/credit-cards" class="header-link">Credit Cards</a>
+            <a href="/personal-loans" class="header-link">Personal Loans</a>
+            <a href="/business-loans" class="header-link">Business Loans</a>
+            <a href="/savings" class="header-link">Savings</a>
+            <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb-list"><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/sba-loans">SBA Loans</a></li><li class="sep">/</li><li class="current">SBA Disaster Loan</li></ol>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-head">
+        <h1>Business Disaster Recovery Funding &mdash; What To Do This Week</h1>
+        <p class="sub">A real guide to SBA disaster loans (EIDL) plus bridge funding that works while you wait. The SBA application is free and made directly through sba.gov. Bridge funding is what fills the gap between disaster and disbursement.</p>
+        <div class="hero-ctas">
+            <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-disaster-bridge&utm_content=hero-primary" class="btn btn-primary" rel="nofollow sponsored">Get emergency bridge funding &mdash; 24-72 hours &rarr;</a>
+            <a href="https://www.sba.gov/funding-programs/disaster-assistance" class="btn btn-secondary" rel="nofollow noopener" target="_blank">Apply for SBA EIDL directly at sba.gov &rarr;</a>
+        </div>
+        <p class="hero-note">MMM does not originate SBA disaster loans. EIDL applications are free and submitted directly to the SBA. Our matching service covers non-SBA bridge and working-capital options that can deploy while you wait.</p>
+    </div>
+
+    <div class="timeline-map" aria-label="Recovery timeline">
+        <div class="tmap-grid">
+            <div class="tmap-card phase-1">
+                <span class="tmap-phase-label">Week 1</span>
+                <h3>Immediate crisis response</h3>
+                <p class="tmap-sub">First 7 days after the event. No disaster funding has arrived yet. The job is documentation and filing.</p>
+                <ul>
+                    <li>Document damage (photo, video, inventory)</li>
+                    <li>Contact insurance carrier, open claim</li>
+                    <li>Register with FEMA if federal declaration</li>
+                    <li>Submit SBA disaster loan application</li>
+                    <li>Save every receipt for emergency spending</li>
+                </ul>
+                <p class="tmap-funding">Funding: <strong>Cash reserves + insurance advance + bridge funding (if payroll critical)</strong></p>
+            </div>
+            <div class="tmap-card phase-2">
+                <span class="tmap-phase-label">Weeks 2-6</span>
+                <h3>The waiting period</h3>
+                <p class="tmap-sub">EIDL in processing. Insurance settlements negotiating. Primary cash-flow gap. Where most businesses feel the squeeze.</p>
+                <ul>
+                    <li>Respond immediately to SBA document requests</li>
+                    <li>Insurance claim progressing, partial advances possible</li>
+                    <li>Bridge financing deploys in 24-72 hours</li>
+                    <li>Keep operations and payroll running</li>
+                    <li>File state disaster program applications</li>
+                </ul>
+                <p class="tmap-funding">Funding: <strong>Bridge term loan / revenue-based / equipment financing</strong></p>
+            </div>
+            <div class="tmap-card phase-3">
+                <span class="tmap-phase-label">Months 2-4</span>
+                <h3>EIDL disbursement &amp; recovery</h3>
+                <p class="tmap-sub">SBA funds arrive. Insurance settlement finalizes. Rebuilding starts. Bridge debt transitions to long-term structure.</p>
+                <ul>
+                    <li>EIDL funds disburse (often in tranches)</li>
+                    <li>Insurance claim settles, replacement begins</li>
+                    <li>Bridge capital repaid from working-capital proceeds</li>
+                    <li>12-month SBA deferment on first payment</li>
+                    <li>Rebuild plan executes</li>
+                </ul>
+                <p class="tmap-funding">Funding: <strong>EIDL + insurance settlement + long-term structure</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="checklist">
+    <div class="container">
+        <h2>First 72 hours checklist</h2>
+        <p class="checklist-sub">Nothing on this list requires you to know the funding answer yet. Everything on this list gets cheaper the sooner you do it.</p>
+        <div class="checklist-grid">
+            <div class="check-item">
+                <div class="check-num">1</div>
+                <div class="check-body">
+                    <h4>Document every inch of damage</h4>
+                    <p>Photos, video, walkthrough narration. Before anything is moved or cleaned. This is evidence for insurance, SBA, and any future tax deduction.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">2</div>
+                <div class="check-body">
+                    <h4>Contact your insurance carrier</h4>
+                    <p>Open the claim same-day. Ask about emergency advances; many carriers issue partial advances within days on covered losses. Get the claim number in writing.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">3</div>
+                <div class="check-body">
+                    <h4>Save every receipt, every expense</h4>
+                    <p>Emergency cleanup, generators, hotel rooms, replacement supplies, overtime payroll. Every dollar spent because of the disaster is potentially reimbursable by insurance, SBA, or tax treatment.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">4</div>
+                <div class="check-body">
+                    <h4>Register with FEMA (if federal declaration)</h4>
+                    <p>disasterassistance.gov or 1-800-621-3362. Many SBA disaster loans require a FEMA registration number. Business owners register separately from personal residence claims.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">5</div>
+                <div class="check-body">
+                    <h4>Check SBA disaster declaration status</h4>
+                    <p>sba.gov/funding-programs/disaster-assistance lists every active declaration. Your county and disaster type must match an active declaration for EIDL eligibility.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">6</div>
+                <div class="check-body">
+                    <h4>File the SBA disaster application</h4>
+                    <p>Apply online at lending.sba.gov/search-disaster, at a FEMA Disaster Recovery Center, or by calling 1-800-659-2955. Filing does not commit you; it just starts the clock.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">7</div>
+                <div class="check-body">
+                    <h4>Assess immediate cash-flow needs</h4>
+                    <p>Payroll this week, rent next week, vendors this month. Forecast the gap between now and likely insurance / EIDL disbursement. That gap is what bridge funding fills.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-num">8</div>
+                <div class="check-body">
+                    <h4>Notify key customers and vendors</h4>
+                    <p>Ahead of any service disruption. Large customers often extend payment terms or accelerate open invoices when they know what happened. Ask.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fundsrc">
+    <div class="container">
+        <h2>Funding sources compared</h2>
+        <p class="fundsrc-sub">EIDL is the long-term answer for most disaster-affected businesses. Bridge options fill the 60-90 day gap while EIDL processes.</p>
+        <div class="fundsrc-wrap">
+            <table class="fundsrc-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Funding source</th>
+                        <th scope="col">Typical timeline</th>
+                        <th scope="col">Amount range</th>
+                        <th scope="col">Best use</th>
+                        <th scope="col">Interest / cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">SBA EIDL<span class="src-tag sba">Government</span></th>
+                        <td>60-120 days</td>
+                        <td>Up to $2M</td>
+                        <td>Post-disaster working capital, rebuilding, fixed debt</td>
+                        <td>~3.25%-4% (businesses); ~2.875% (non-profits); fixed, up to 30-year term</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SBA Physical Disaster Loan<span class="src-tag sba">Government</span></th>
+                        <td>45-90 days</td>
+                        <td>Up to $500K (small biz)</td>
+                        <td>Repair or replace damaged buildings, equipment, inventory</td>
+                        <td>~3.25%-4% fixed, up to 30-year term</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bridge term loan<span class="src-tag bridge">Non-SBA</span></th>
+                        <td>24-72 hours</td>
+                        <td>$25K - $500K</td>
+                        <td>Immediate payroll, rent, vendor payments</td>
+                        <td>~9%-30% APR, 6-24 month terms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Revenue-based funding<span class="src-tag bridge">Non-SBA</span></th>
+                        <td>24-48 hours</td>
+                        <td>$5K - $2M</td>
+                        <td>Businesses with monthly revenue history; flexible daily/weekly repayment</td>
+                        <td>Factor rate 1.15-1.45 (effective ~18%-50% APR)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Equipment financing<span class="src-tag bridge">Non-SBA</span></th>
+                        <td>3-10 days</td>
+                        <td>Up to replacement cost</td>
+                        <td>Replacing specific destroyed equipment; equipment serves as collateral</td>
+                        <td>~8%-25% APR depending on credit and equipment type</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Insurance advance<span class="src-tag sba" style="background:#fff4e5;color:var(--accent-amber)">Carrier</span></th>
+                        <td>3-30 days</td>
+                        <td>Varies; partial advance on covered loss</td>
+                        <td>Most common first cash-in for a covered disaster</td>
+                        <td>Not debt; deducted from eventual settlement</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="fundsrc-footnote">Rates and timelines reflect typical ranges in early 2026; actual terms vary by declaration, lender, and borrower profile. Always confirm current SBA disaster rates on the active declaration page before applying.</p>
+    </div>
+</section>
+
+<section class="ed-section">
+    <div class="container-narrow">
+        <h2>SBA EIDL &mdash; how to apply and what to expect</h2>
+        <p>The Economic Injury Disaster Loan is the primary SBA program for business disaster recovery. Unlike SBA 7(a), EIDL is a <strong>direct SBA loan</strong> &mdash; the SBA itself underwrites and funds it, not a partner bank. That structure makes EIDL unique among SBA programs and also explains why timelines are longer: no Preferred Lender Program shortcut exists for disaster loans.</p>
+
+        <h3>Eligibility in practice</h3>
+        <p>Three things have to be true. First, your business must be in a <strong>declared disaster area</strong> &mdash; either a Presidential disaster declaration or an SBA Administrator declaration. Second, your business must demonstrate <strong>economic injury</strong> attributable to the disaster; for physical-damage loans, demonstrate the physical loss. Third, you must have been in operation before the disaster. Check active declarations at <a class="inline" href="https://www.sba.gov/funding-programs/disaster-assistance" rel="noopener" target="_blank">sba.gov/funding-programs/disaster-assistance</a>.</p>
+        <p>Small businesses, most private non-profits, agricultural cooperatives, and small agricultural businesses are all eligible. EIDL specifically does not cover lost profits or expansion &mdash; it covers the normal operating expenses the business would have paid if the disaster had not happened. Payroll, rent, fixed debts, accounts payable, utilities, and other continuity costs are all eligible uses.</p>
+
+        <h3>The honest timeline</h3>
+        <p>SBA publishes target timelines but real-world processing is slower, especially after large-declaration events. Budget <strong>60 to 120 days from application to first disbursement</strong> for EIDL. Physical disaster loans tend to move faster &mdash; 45 to 90 days is more typical &mdash; because the underwriting relies on damage assessment more than projected economic injury.</p>
+        <p>The longest single segment is usually the document review after initial decision. Missing documents restart the clock. A pattern worth knowing from Reddit small-business threads and CRS reports: EIDL applications that include a complete package on first submission move measurably faster than applications that fill in pieces over weeks.</p>
+
+        <blockquote class="pullquote">
+            <p>EIDL is a direct SBA loan. No Preferred Lender acceleration. Budget 60-120 days and plan the cash-flow gap accordingly.</p>
+        </blockquote>
+
+        <h3>What the application needs</h3>
+        <ul>
+            <li>Business tax returns for the past three years (and current-year interim financials)</li>
+            <li>Personal tax returns for each 20%+ owner</li>
+            <li>IRS Form 4506-C (signed)</li>
+            <li>Personal financial statement (SBA Form 413)</li>
+            <li>Schedule of liabilities (SBA Form 2202)</li>
+            <li>Damage inventory with photos, receipts, and repair estimates (for physical loans)</li>
+            <li>Insurance policy and claim documentation</li>
+            <li>FEMA registration number (when applicable)</li>
+        </ul>
+        <p>The whole package can be submitted at <a class="inline" href="https://lending.sba.gov/search-disaster/" rel="noopener" target="_blank">lending.sba.gov/search-disaster</a>, in person at a FEMA Disaster Recovery Center, or by mail after requesting paper forms at 1-800-659-2955.</p>
+
+        <h3>Rates, terms, and payments</h3>
+        <p>Disaster loan rates are set per declaration. Recent declarations have priced small-business EIDLs around 3.25%-4% and non-profit EIDLs around 2.875%. Rates are fixed. Terms run up to <strong>30 years</strong> based on ability to repay, with the first payment typically deferred <strong>12 months</strong> to give businesses time to stabilize before debt service starts. Interest accrues during the deferment period.</p>
+        <p>Loans under $25,000 generally do not require collateral; loans over that threshold take a blanket lien on business assets, and larger loans sometimes take real estate collateral including the owner's home if no business collateral is available. Personal guarantees are required from any owner with 20% or more equity in the business.</p>
+
+        <div class="resource-cta">
+            <div class="ica-body"><strong>Apply for SBA disaster assistance directly.</strong> The application is free and submitted through sba.gov. No intermediary fees, no broker commissions on the EIDL itself.</div>
+            <a href="https://www.sba.gov/funding-programs/disaster-assistance" class="btn btn-secondary" rel="nofollow noopener" target="_blank">Open sba.gov disaster portal &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<section class="ed-section alt">
+    <div class="container-narrow">
+        <h2>Bridge funding while EIDL processes</h2>
+        <p>The hardest moment for a disaster-affected business is usually not the disaster itself &mdash; it's week three. Initial adrenaline has worn off, insurance is still negotiating, EIDL is still in processing, and payroll is due Friday. That gap is what bridge funding is built for.</p>
+
+        <h3>When bridge funding actually makes sense</h3>
+        <p>Bridge capital is specifically the right answer when three conditions all apply: you have <strong>a funding source coming</strong> (EIDL, insurance, or both), you have <strong>a specific near-term expense</strong> you cannot defer (payroll, critical rent, vendor payments that break supply chains if missed), and the <strong>cost of bridge financing is less than the cost of not staying open</strong> until the longer-term capital arrives. If any one of those three isn't true, bridge is the wrong product.</p>
+        <p>The most common categories, in order of how much cash they can release and how fast:</p>
+        <ul>
+            <li><strong>Bridge term loans (24-72 hours)</strong>. Unsecured or lightly-collateralized short-term loans, usually 6-24 month terms. Best for businesses with ok-to-strong credit and predictable monthly revenue. Typical size $25K to $500K; APR range 9%-30% depending on profile.</li>
+            <li><strong>Revenue-based financing (24-48 hours)</strong>. Advance against future revenue; repaid as a percentage of daily or weekly deposits. Most flexible for businesses with uneven post-disaster revenue. Factor rate structure (1.15-1.45x) means effective APR runs high &mdash; 18% to 50% &mdash; but approval is faster and forgives weak months automatically.</li>
+            <li><strong>Equipment financing (3-10 days)</strong>. When the disaster destroyed specific revenue-producing equipment &mdash; a delivery truck, a commercial oven, a piece of manufacturing equipment &mdash; equipment lenders can finance replacement with the new equipment as collateral. Replacement often happens faster than insurance settlement finalizes.</li>
+            <li><strong>Working-capital lines of credit</strong>. If you already have a business line of credit, draw it. If you don't, new lines are harder to open post-disaster but not impossible for businesses with clean pre-disaster financials.</li>
+        </ul>
+
+        <h3>What bridge funding does not do</h3>
+        <p>Bridge isn't rebuilding capital. The cost structure assumes the loan is repaid on its short timeline, usually 6-18 months, not amortized over 10+ years like a long-term recovery loan. Trying to use bridge capital to fund a full rebuild when EIDL is the right instrument is a way to trade a disaster-recovery problem for a debt-service problem. Match the product to the timeline: bridge for the gap, EIDL and insurance for the rebuild.</p>
+
+        <div class="inline-cta">
+            <div class="ica-body"><strong>Get matched with bridge lenders who understand disaster recovery context.</strong> 24-72 hour funding on qualified applications. Applying is free. Lendmate does not originate SBA loans.</div>
+            <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-disaster-bridge&utm_content=bridge-section" class="btn btn-primary" rel="nofollow sponsored">Get bridge funding in 2 minutes &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<section class="ed-section">
+    <div class="container-narrow">
+        <h2>Combining EIDL with bridge funding</h2>
+        <p>This is the section most disaster SBA content skips, and it's where most of the real mistakes happen. The good news: <strong>you can have both.</strong> The nuance is in how the two stack together without one blocking the other.</p>
+
+        <h3>Does bridge debt affect EIDL eligibility?</h3>
+        <p>Taking bridge financing before or during EIDL underwriting generally does not disqualify an EIDL application, but it has to be disclosed. The SBA evaluates total debt service as part of ability-to-repay. A bridge loan at a 20% APR taken to keep payroll running during the disaster recovery period reads as rational; multiple high-cost advances taken unrelated to the disaster read as risk. Disclose on SBA Form 2202 (schedule of liabilities) at the time of application.</p>
+        <p>The rare case where bridge debt creates a problem is collateral conflict. If a bridge lender takes a first-position blanket lien on business assets, the SBA loan that follows will subordinate to it &mdash; sometimes workable, sometimes not, depending on the loan amount and the lender's willingness to subordinate. Most experienced bridge lenders know this and will structure filings that don't conflict. Ask the bridge lender directly: "Does your lien structure allow for a subsequent SBA EIDL or physical disaster loan?" If the answer is unclear, walk.</p>
+
+        <h3>Can EIDL proceeds pay off a bridge loan?</h3>
+        <p>Yes, when the bridge was used for disaster-period working capital. EIDL proceeds are restricted to expenses the business would have paid if the disaster had not happened &mdash; fixed debts, payroll, accounts payable, utilities, rent, insurance. Short-term debt specifically taken on to cover those expenses during the waiting period generally qualifies as a permissible EIDL use.</p>
+        <p>What EIDL does not cover: refinancing pre-existing debt that wasn't disaster-related, expansion capital, or long-term fixed-asset purchases (those are 7(a) or 504 territory, or the Physical Disaster Loan for damaged assets). Keep the bridge loan's use tightly tied to disaster-period expenses, and keep receipts that prove it.</p>
+
+        <h3>The practical structuring rules</h3>
+        <ul>
+            <li><strong>Document bridge use to disaster expenses.</strong> Every dollar of bridge proceeds mapped to a specific disaster-period cost line item.</li>
+            <li><strong>Disclose bridge debt on the EIDL application.</strong> Non-disclosure is material; disclosure is routine.</li>
+            <li><strong>Confirm lien compatibility before signing.</strong> Ask the bridge lender specifically about a future SBA lien position.</li>
+            <li><strong>Don't stack high-cost advances.</strong> Two bridge loans at different APRs is usually worse economics than one well-sized facility.</li>
+            <li><strong>Plan the payoff structure.</strong> If the intent is to repay bridge from EIDL proceeds, confirm no prepayment penalty on the bridge loan before signing.</li>
+        </ul>
+        <p>Handled well, the combination gives you the speed of bridge financing with the rate and term of EIDL. Handled poorly, it leaves you with overlapping liens, a partial EIDL disbursement, and a bridge balance the business can't service. The difference is entirely in the upfront structuring.</p>
+    </div>
+</section>
+
+<section class="ed-section alt">
+    <div class="container-narrow">
+        <h2>Insurance and other disaster resources</h2>
+        <p>SBA disaster loans are rarely the only instrument in a recovery. Insurance, FEMA, state programs, and industry-specific assistance all stack with EIDL. Working every available channel in parallel shortens the total recovery timeline meaningfully.</p>
+        <div class="resources-grid">
+            <div class="res-card">
+                <h4>Your insurance carrier</h4>
+                <p>Commercial property, business interruption, and flood policies are often the first money through the door. Ask specifically about emergency advances on covered losses.</p>
+                <span style="font-size:13px;color:var(--text-muted)">Start with your agent / broker</span>
+            </div>
+            <div class="res-card">
+                <h4>FEMA</h4>
+                <p>Registration is required for many federal recovery programs. Business owners register separately from personal property claims.</p>
+                <a href="https://www.fema.gov/assistance/individual/small-business" rel="noopener" target="_blank">fema.gov/assistance/individual/small-business</a>
+            </div>
+            <div class="res-card">
+                <h4>State emergency management</h4>
+                <p>Many states have their own disaster loan or grant programs that run in parallel with SBA and have different eligibility. Check your state's emergency management agency.</p>
+                <span style="font-size:13px;color:var(--text-muted)">Search: [your state] + emergency management</span>
+            </div>
+            <div class="res-card">
+                <h4>USDA (agricultural businesses)</h4>
+                <p>FSA Emergency Loans and disaster assistance for producers in declared areas. Separate process from SBA.</p>
+                <a href="https://www.fsa.usda.gov/resources/disaster-assistance-programs" rel="noopener" target="_blank">fsa.usda.gov/resources/disaster-assistance-programs</a>
+            </div>
+            <div class="res-card">
+                <h4>Local Chamber of Commerce</h4>
+                <p>Chambers often coordinate local disaster relief funds, emergency grants, and matchmaking between affected businesses and services.</p>
+                <span style="font-size:13px;color:var(--text-muted)">Start with your local chamber directly</span>
+            </div>
+            <div class="res-card">
+                <h4>Industry associations</h4>
+                <p>Many industries (restaurants, agriculture, hospitality, arts) maintain emergency relief funds for members. Worth a call on day one.</p>
+                <span style="font-size:13px;color:var(--text-muted)">Check your trade association</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section" id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                    <span class="faq-q">How long does an SBA disaster loan take to disburse?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">For physical-damage disaster loans, the SBA targets decisions within 2 to 3 weeks and funding within 5 business days after closing &mdash; but real-world timelines often run 30 to 60 days from application to first disbursement, and longer when declaration volume is high. EIDL (economic injury) typically runs 60 to 90 days or longer from application to first disbursement. The longest segment is usually document review and closing, not the initial approval decision.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 1 6 0c0 2-3 3-3 5"/><circle cx="12" cy="19" r=".5"/></svg></span>
+                    <span class="faq-q">Who is eligible for an SBA disaster loan?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">Your business must be located in a declared disaster area &mdash; either a Presidential disaster declaration or an SBA Administrator disaster declaration. You can check active declarations at sba.gov/funding-programs/disaster-assistance. Small businesses, private non-profits, and in some categories homeowners and renters are eligible. For EIDL specifically, the business must demonstrate economic injury as a direct result of the disaster and have been in operation before the disaster occurred.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg></span>
+                    <span class="faq-q">What is the difference between a Physical Disaster Loan and EIDL?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">Physical Disaster Loans repair or replace tangible damage &mdash; buildings, equipment, inventory, vehicles. EIDL (Economic Injury Disaster Loan) covers working capital to keep the business operating when revenue is disrupted by the disaster, even if there was no physical damage to the property. Many businesses qualify for both. Physical loans cap at $500,000 for small businesses; EIDL caps at $2 million. Combined, the total cap is $2 million per disaster.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg></span>
+                    <span class="faq-q">Can I get bridge funding while my EIDL application is being processed?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">Yes. Bridge financing from non-SBA lenders &mdash; short-term term loans, revenue-based financing, equipment financing for destroyed assets &mdash; is designed for exactly this scenario. Typical funding speed is 24 to 72 hours versus 60 to 120 days for EIDL. Disclose any disaster-related debt on the EIDL application, and structure the bridge loan so it does not take collateral the SBA will require. Most experienced bridge lenders understand this and avoid conflicting with SBA collateral positions.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+                    <span class="faq-q">Can I use EIDL proceeds to pay off a bridge loan?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">EIDL proceeds are restricted to working capital for economic injury recovery &mdash; fixed debts, payroll, accounts payable, and other bills that would have been paid if the disaster had not occurred. That typically includes short-term disaster-period debt the business took on specifically to stay open. Refinancing general business debt that pre-existed the disaster is not permitted. Document every dollar of bridge financing to disaster-related expenses so the EIDL payoff connection is clean.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20V13"/><path d="M22 20H2"/></svg></span>
+                    <span class="faq-q">What is the interest rate on an SBA disaster loan?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">SBA disaster loan rates are set per declaration. For most recent declarations, small-business rates have run around 3.25% to 4%, and non-profit rates around 2.875% to 3.25%. Rates are fixed for the life of the loan. Terms run up to 30 years based on the borrower's ability to repay. Home disaster loans for homeowners and renters are priced differently. The SBA publishes the current declaration-specific rate on the disaster declaration page.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg></span>
+                    <span class="faq-q">Is collateral required for an SBA disaster loan?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">For loans under $25,000 (business) or $50,000 (EIDL, per current SOP), the SBA generally does not require collateral. Above those thresholds, the SBA takes available collateral &mdash; typically a blanket lien on business assets and, for larger loans, real estate including the owner's home when required. A lack of available collateral alone will not cause a denial; the SBA takes what is available. Personal guarantees are required from any owner with 20% or more equity.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 10h18"/></svg></span>
+                    <span class="faq-q">When is the first payment due on an SBA disaster loan?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">The SBA typically defers the first payment on disaster loans for 12 months after the loan is funded. Interest still accrues during the deferment period, which means the eventual amortization is calculated on a slightly larger principal balance. The 12-month deferment gives borrowers time to stabilize operations before debt service begins. Deferment terms can vary by declaration.</div>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span>
+                    <span class="faq-q">What disaster documentation do I need to gather now?</span>
+                    <span class="faq-marker" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">Contact information and SSN for all applicants, FEMA disaster registration number if applicable, deed or lease for the damaged property, insurance information and any claim numbers, three years of business tax returns and current-year interim financials, a complete damage inventory with photos or video, and a running list of receipts for emergency spending caused by the disaster. Starting this documentation trail in the first 72 hours is the single biggest factor in how quickly an application moves.</div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="closing-cta">
+    <div class="closing-cta-inner">
+        <h2>Two paths, one recovery</h2>
+        <p>SBA EIDL is the long-term answer. Bridge funding is what keeps the lights on while you wait. Use both, in that order, and structure them so they don't conflict.</p>
+        <div class="closing-cta-buttons">
+            <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-disaster-bridge&utm_content=closing-primary" class="btn btn-primary" rel="nofollow sponsored">Get emergency bridge funding &rarr;</a>
+            <a href="https://www.sba.gov/funding-programs/disaster-assistance" class="btn btn-ghost" rel="nofollow noopener" target="_blank">Apply for SBA EIDL at sba.gov &rarr;</a>
+        </div>
+        <p class="closing-cta-fine">MMM does not originate SBA disaster loans. EIDL applications are free through sba.gov and we receive no compensation from your SBA application. Our bridge-funding match is with Lendmate Capital, a non-SBA lender network. See also the broader <a href="/sba-loans">SBA loans hub</a> and <a href="/business-loans">conventional business loan options</a>.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="/personal-loans">Personal Loans</a>
+                <a href="/business-loans">Business Loans</a>
+                <a href="/sba-loans">SBA Loans</a>
+                <a href="/credit-cards">Credit Cards</a>
+                <a href="/savings">Savings</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <p>My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not originate SBA disaster loans, and we receive no compensation from SBA EIDL applications. We do not provide financial, legal, or tax advice.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">&copy; 2026 My Money Marketplace. All rights reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>
