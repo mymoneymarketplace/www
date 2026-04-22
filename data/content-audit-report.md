@@ -1,6 +1,6 @@
 # Content Audit Report
 
-_Generated: 2026-04-22T21:13:03.571Z · Duration: 2.4s · Pages scanned: 320_
+_Generated: 2026-04-22T21:19:40.750Z · Duration: 2.2s · Pages scanned: 320_
 
 ## Summary
 
@@ -8,9 +8,9 @@ _Generated: 2026-04-22T21:13:03.571Z · Duration: 2.4s · Pages scanned: 320_
 | --- | ---: |
 | Pages scanned | 320 |
 | Pages with at least one issue | 38 |
-| Total issues | 89 |
+| Total issues | 69 |
 | CRITICAL | 1 |
-| HIGH | 25 |
+| HIGH | 5 |
 | MEDIUM | 47 |
 | LOW | 16 |
 
@@ -20,7 +20,6 @@ _Generated: 2026-04-22T21:13:03.571Z · Duration: 2.4s · Pages scanned: 320_
 | --- | ---: |
 | cross-page-leakage | 33 |
 | structural | 22 |
-| internal-link-validity | 20 |
 | cta-correctness | 5 |
 | data-traceability | 9 |
 
@@ -144,51 +143,6 @@ _Generated: 2026-04-22T21:13:03.571Z · Duration: 2.4s · Pages scanned: 320_
 - **[LOW]** `/sba-loans` — 4 empty or "#" anchor(s) present (excluding quiz-result placeholder)
   - _Fix:_ Replace with real URLs or remove
 
-## Check: internal-link-validity
-
-20 issues.
-
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/miami-fl"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/dallas-tx"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/atlanta-ga"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/chicago-il"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/houston-tx"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/phoenix-az"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/philadelphia-pa"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/san-antonio-tx"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/san-diego-ca"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/denver-co"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/seattle-wa"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/nashville-tn"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/austin-tx"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/charlotte-nc"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/las-vegas-nv"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/portland-or"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/columbus-oh"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/indianapolis-in"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/san-jose-ca"
-  - _Fix:_ Fix the link target or remove
-- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/jacksonville-fl"
-  - _Fix:_ Fix the link target or remove
-
 ## Check: cta-correctness
 
 5 issues.
@@ -237,32 +191,31 @@ Top 25 issues to fix first (by severity):
 4. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) in <h3>: "Distinct from veterinary medicine"
 5. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) in program-card text: "Right for: facility buildouts for boarding and daycare, acquisitions, multi-location expansion...."
 6. **[HIGH]** `/` _(structural)_ — Canonical mismatch: "https://mymoneymarketplace.com/" but expected "https://mymoneymarketplace.com"
-7. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/miami-fl"
-8. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/dallas-tx"
-9. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/atlanta-ga"
-10. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/chicago-il"
-11. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/houston-tx"
-12. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/phoenix-az"
-13. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/philadelphia-pa"
-14. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/san-antonio-tx"
-15. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/san-diego-ca"
-16. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/denver-co"
-17. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/seattle-wa"
-18. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/nashville-tn"
-19. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/austin-tx"
-20. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/charlotte-nc"
-21. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/las-vegas-nv"
-22. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/portland-or"
-23. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/columbus-oh"
-24. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/indianapolis-in"
-25. **[HIGH]** `/sba-loans` _(internal-link-validity)_ — Dead internal link: "/sba-loans/san-jose-ca"
+7. **[MEDIUM]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "cpa firm" (from /cpas/) appears in body prose (outside links and headings)
+8. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) appears in body prose (outside links and headings)
+9. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "mechanical repair" (from /auto-repair/) appears in body prose (outside links and headings)
+10. **[MEDIUM]** `/sba-loans/auto-repair` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+11. **[MEDIUM]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "medspa" (from /personal-care/) appears in body prose (outside links and headings)
+12. **[MEDIUM]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+13. **[MEDIUM]** `/sba-loans/child-care` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+14. **[MEDIUM]** `/sba-loans/chiropractors` _(cross-page-leakage)_ — Industry term "dental" (from /dentists/) appears in body prose (outside links and headings)
+15. **[MEDIUM]** `/sba-loans/chiropractors` _(cross-page-leakage)_ — Industry term "physician" (from /physicians/) appears in body prose (outside links and headings)
+16. **[MEDIUM]** `/sba-loans/chiropractors` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+17. **[MEDIUM]** `/sba-loans/cpas` _(cross-page-leakage)_ — Industry term "book of business" (from /insurance-agencies/) appears in body prose (outside links and headings)
+18. **[MEDIUM]** `/sba-loans/dentists` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+19. **[MEDIUM]** `/sba-loans/dentists` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
+20. **[MEDIUM]** `/sba-loans/landscaping` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+21. **[MEDIUM]** `/sba-loans/personal-care` _(cross-page-leakage)_ — Industry term "physician" (from /physicians/) appears in body prose (outside links and headings)
+22. **[MEDIUM]** `/sba-loans/personal-care` _(cross-page-leakage)_ — Industry term "hair salon" (from /beauty-salons/) appears in body prose (outside links and headings)
+23. **[MEDIUM]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
+24. **[MEDIUM]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) appears in body prose (outside links and headings)
+25. **[MEDIUM]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
 
 ## Observations
 
-- Issue distribution across checks: cross-page-leakage: 33, structural: 22, internal-link-validity: 20, cta-correctness: 5, data-traceability: 9
+- Issue distribution across checks: cross-page-leakage: 33, structural: 22, cta-correctness: 5, data-traceability: 9
 - 38 of 320 pages (11.9%) flagged at least one issue.
 - Pages with the most issues:
-  - `/sba-loans`: 21 issues
   - `/sba-loans/pet-care`: 6 issues
   - `/sba-loans/auto-body`: 4 issues
   - `/sba-loans/physicians`: 4 issues
@@ -272,3 +225,4 @@ Top 25 issues to fix first (by severity):
   - `/sba-loans/accounting`: 2 issues
   - `/sba-loans/auto-repair`: 2 issues
   - `/sba-loans/beauty-salons`: 2 issues
+  - `/sba-loans/cpas`: 2 issues
