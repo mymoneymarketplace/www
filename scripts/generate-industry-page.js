@@ -46,6 +46,19 @@ const CONFIGS = {
 
 '811111': {
     slug: 'auto-repair',
+    industryNoun: 'auto repair',
+    industryNounPossessive: "auto repair shop's",
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/8985514/pexels-photo-8985514.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Vehicle elevated on a lift in an auto repair shop floor, representative of equipment-heavy auto repair businesses funded by SBA loans',
+        width: 1200,
+        height: 675,
+        photographer: 'Artem Podrez',
+        photographerUrl: 'https://www.pexels.com/@artempodrez/',
+        sourceUrl: 'https://www.pexels.com/photo/8985514/',
+        sourceName: 'Pexels',
+    },
+    highlightLenderNames: [],
     h1: 'SBA Loans for Auto Repair Shops',
     title: 'SBA Loan for Auto Repair Shop 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) and 504 loans for auto repair shop acquisitions, equipment, and buildouts. 5,413 auto repair SBA loans approved FY2020-2025, +27% YoY growth. Take the 2-minute quiz.',
