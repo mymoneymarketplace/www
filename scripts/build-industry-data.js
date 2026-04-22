@@ -28,8 +28,58 @@ const OUT_DIR = path.resolve(__dirname, "..", "data");
 const OUT_JSON = path.join(OUT_DIR, "industry-data.json");
 const OUT_CSV = path.join(OUT_DIR, "industry-data-summary.csv");
 const OUT_MD = path.join(OUT_DIR, "industry-prioritization.md");
+const OUT_STATE_MD = path.join(OUT_DIR, "state-industry-prioritization.md");
 
 const MIN_LOANS = 500;
+// Per-state-industry inclusion in state_breakouts (reference data). Page
+// threshold for actual rendering is tracked via passes_page_threshold.
+const MIN_STATE_INDUSTRY_LOANS = 50;
+// Page render thresholds.
+const PAGE_THRESHOLD_COUNT = 200;
+const PAGE_THRESHOLD_SHARE_PCT = 3.0;
+// Guard for per-state charge-off rate: too few loans → too noisy to quote.
+const STATE_CHARGEOFF_MIN = 100;
+
+// 50 states + DC — the set we emit in state_reference. FOIA rows tagged
+// PR/GU/VI/AS/MP/UNK are still aggregated but excluded from state_reference
+// (they're not part of the state-page plan).
+const STATE_NAMES = {
+  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+  CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
+  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
+  KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland",
+  MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri",
+  MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
+  NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio",
+  OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina",
+  SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont",
+  VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+  DC: "District of Columbia",
+};
+
+// NAICS → apex-page slug for the 18 Angle 1 industry pages currently built
+// under mmm-site/sba-loans/. Used by the state-industry prioritization report
+// to filter to combos whose parent apex page already exists.
+const APEX_NAICS_TO_SLUG = {
+  "541219": "accounting",
+  "811121": "auto-body",
+  "811111": "auto-repair",
+  "812112": "beauty-salons",
+  "561790": "building-services",
+  "624410": "child-care",
+  "621310": "chiropractors",
+  "541211": "cpas",
+  "621210": "dentists",
+  "524210": "insurance-agencies",
+  "561730": "landscaping",
+  "812199": "personal-care",
+  "812910": "pet-care",
+  "621111": "physicians",
+  "238220": "plumbing-hvac",
+  "722511": "restaurants",
+  "238990": "specialty-trades",
+  "541940": "veterinarians",
+};
 
 // Fallback descriptions for NAICS codes that appear with a blank
 // naicsdescription in the FOIA extract. Keys are 2022 NAICS codes that
@@ -212,6 +262,39 @@ function newAccum(code, desc) {
   };
 }
 
+/**
+ * Lightweight per-(NAICS × state) accumulator. Narrower than newAccum() —
+ * only what state_breakouts consumers actually need.
+ */
+function newStateIndustryAccum() {
+  return {
+    count: 0,
+    totalApproval: 0,
+    grossApprovals: [], // for median
+    chargeOffN: 0,
+    chargeOffAmountSum: 0,
+    lenderCount: new Map(),
+    lenderVolume: new Map(),
+    lenderApprovals: new Map(), // bank -> { sum, n }
+    yearly: new Map(), // fy -> count
+  };
+}
+
+/**
+ * Per-state accumulator (all industries) for state_reference.
+ */
+function newStateAccum(stateAbbr) {
+  return {
+    state: stateAbbr,
+    count: 0,
+    totalApproval: 0,
+    grossApprovals: [],
+    chargeOffN: 0,
+    industryCount: new Map(), // naicscode -> count
+    industryDesc: new Map(), // naicscode -> description (most recent non-empty)
+  };
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Main
 // ─────────────────────────────────────────────────────────────────────────────
@@ -233,6 +316,12 @@ async function main() {
   const overall = newAccum("ALL", "All 7(a) loans");
   // For over-indexed state detection, we also need per-state overall loan counts:
   const overallStateCount = new Map();
+
+  // Per-state (all-industry) accumulator used for state_reference block.
+  const stateAll = new Map(); // state -> newStateAccum()
+  // Per-(NAICS × state) accumulator used for state_breakouts.
+  // Key: `${naicsCode}|${stateAbbr}`
+  const stateIndustry = new Map();
 
   let totalRows = 0;
   let skipped = 0;
@@ -395,6 +484,50 @@ async function main() {
     }
     accumulate(bucket);
 
+    // ── Per-state (all-industry) accumulation for state_reference ──────────
+    let sa = stateAll.get(state);
+    if (!sa) {
+      sa = newStateAccum(state);
+      stateAll.set(state, sa);
+    }
+    sa.count++;
+    if (Number.isFinite(gross)) {
+      sa.totalApproval += gross;
+      sa.grossApprovals.push(gross);
+    }
+    if (status === "CHGOFF") sa.chargeOffN++;
+    sa.industryCount.set(code, (sa.industryCount.get(code) || 0) + 1);
+    if (effectiveDesc && !sa.industryDesc.has(code))
+      sa.industryDesc.set(code, effectiveDesc);
+
+    // ── Per-(NAICS × state) accumulation for state_breakouts ───────────────
+    const siKey = `${code}|${state}`;
+    let si = stateIndustry.get(siKey);
+    if (!si) {
+      si = newStateIndustryAccum();
+      stateIndustry.set(siKey, si);
+    }
+    si.count++;
+    if (Number.isFinite(gross)) {
+      si.totalApproval += gross;
+      si.grossApprovals.push(gross);
+    }
+    if (status === "CHGOFF") {
+      si.chargeOffN++;
+      if (Number.isFinite(chgOffAmt) && chgOffAmt > 0)
+        si.chargeOffAmountSum += chgOffAmt;
+    }
+    si.lenderCount.set(bank, (si.lenderCount.get(bank) || 0) + 1);
+    si.lenderVolume.set(
+      bank,
+      (si.lenderVolume.get(bank) || 0) + (Number.isFinite(gross) ? gross : 0),
+    );
+    const lv = si.lenderApprovals.get(bank) || { sum: 0, n: 0 };
+    if (Number.isFinite(gross)) lv.sum += gross;
+    lv.n++;
+    si.lenderApprovals.set(bank, lv);
+    if (fy) si.yearly.set(fy, (si.yearly.get(fy) || 0) + 1);
+
     if (totalRows % 50000 === 0) {
       process.stderr.write(`… ${totalRows.toLocaleString()} rows\n`);
     }
@@ -419,13 +552,22 @@ async function main() {
   for (const [code, a] of naics.entries()) {
     if (a.count < MIN_LOANS) continue;
     const stats = finalizeIndustry(a, overallFinal, nationalStateTotals);
+    const state_breakouts = finalizeStateBreakouts(
+      code,
+      a.count,
+      stateIndustry,
+      overallFinal,
+    );
     industries[code] = {
       naics_code: code,
       naics_description: a.description,
       stats,
+      state_breakouts,
     };
     included.push(industries[code]);
   }
+
+  const state_reference = finalizeStateReference(stateAll);
 
   const output = {
     metadata: {
@@ -435,6 +577,13 @@ async function main() {
       rows_skipped: skipped,
       industries_included: included.length,
       inclusion_threshold: `>=${MIN_LOANS} loans`,
+      state_breakouts_included: true,
+      state_breakout_inclusion_threshold: `>=${MIN_STATE_INDUSTRY_LOANS} loans per (NAICS, state)`,
+      page_threshold_criteria: `passes_page_threshold = true if loan_count >= ${PAGE_THRESHOLD_COUNT} OR share_of_industry_loans_pct >= ${PAGE_THRESHOLD_SHARE_PCT}`,
+      charge_off_min_sample: `per-state charge-off rate suppressed (null) when sample < ${STATE_CHARGEOFF_MIN}`,
+      states_with_reference_data: Object.keys(state_reference).length,
+      state_enrichment_status:
+        "sba_district_office and state_sbdc_lead_center left null pending manual enrichment from sba.gov / americassbdc.org — not populated in this run to avoid fabricated contact info",
       generated_at: new Date().toISOString(),
       field_coding_notes: {
         fixedorvariableinterestind:
@@ -449,6 +598,7 @@ async function main() {
       },
       overall_sba_stats: overallFinal,
     },
+    state_reference,
     industries,
   };
 
@@ -460,6 +610,9 @@ async function main() {
 
   writePrioritizationReport(OUT_MD, included, overallFinal);
   console.error(`Wrote ${OUT_MD}`);
+
+  writeStateIndustryReport(OUT_STATE_MD, included, overallFinal, state_reference);
+  console.error(`Wrote ${OUT_STATE_MD}`);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -744,6 +897,407 @@ function writeSummaryCsv(filePath, industries) {
 // ─────────────────────────────────────────────────────────────────────────────
 // Prioritization report
 // ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// State × Industry breakouts
+// ─────────────────────────────────────────────────────────────────────────────
+
+function finalizeStateBreakouts(naicsCode, industryCount, stateIndustry, overall) {
+  const out = {};
+  for (const [key, si] of stateIndustry.entries()) {
+    const [code, state] = key.split("|");
+    if (code !== naicsCode) continue;
+    if (si.count < MIN_STATE_INDUSTRY_LOANS) continue;
+
+    const share = industryCount > 0 ? (si.count / industryCount) * 100 : 0;
+    const passesPageThreshold =
+      si.count >= PAGE_THRESHOLD_COUNT || share >= PAGE_THRESHOLD_SHARE_PCT;
+
+    // Charge-off stats only if sample is big enough to quote
+    let chargeOffPct = null;
+    let chargeOffRatio = null;
+    if (si.count >= STATE_CHARGEOFF_MIN) {
+      chargeOffPct = round2((si.chargeOffN / si.count) * 100);
+      chargeOffRatio =
+        overall.charge_off_pct > 0
+          ? round2(chargeOffPct / overall.charge_off_pct)
+          : null;
+    }
+
+    // Top lenders in this state × industry
+    const lenderEntries = [...si.lenderCount.entries()].sort(
+      (a, b) => b[1] - a[1],
+    );
+    const topLenders = lenderEntries.slice(0, 10).map(([bank, count]) => {
+      const lv = si.lenderApprovals.get(bank) || { sum: 0, n: 0 };
+      return {
+        bankname: bank,
+        loan_count: count,
+        total_approval: round2(si.lenderVolume.get(bank) || 0),
+        avg_loan_in_state_industry: round2(lv.n ? lv.sum / lv.n : 0),
+      };
+    });
+
+    // Per-state YoY — last full FY (<=2025) vs prior full FY, counts only
+    const years = [...si.yearly.keys()]
+      .map(Number)
+      .filter((y) => Number.isFinite(y) && y <= 2025)
+      .sort((x, y) => x - y);
+    let yoy = null;
+    if (years.length >= 2) {
+      const last = years[years.length - 1];
+      const prev = years[years.length - 2];
+      const lc = si.yearly.get(String(last)) || 0;
+      const pc = si.yearly.get(String(prev)) || 0;
+      if (pc > 0) yoy = round2(((lc - pc) / pc) * 100);
+    }
+
+    out[state] = {
+      loan_count: si.count,
+      total_approval: round2(si.totalApproval),
+      avg_loan: round2(si.count ? si.totalApproval / si.count : 0),
+      median_loan: round2(median(si.grossApprovals)),
+      charge_off_pct: chargeOffPct,
+      charge_off_vs_sba_avg_ratio: chargeOffRatio,
+      share_of_industry_loans_pct: round2(share),
+      top_lenders: topLenders,
+      yoy_growth: yoy,
+      passes_page_threshold: passesPageThreshold,
+    };
+  }
+  return out;
+}
+
+function finalizeStateReference(stateAll) {
+  const out = {};
+  for (const [abbr, sa] of stateAll.entries()) {
+    if (!STATE_NAMES[abbr]) continue; // skip territories / UNK
+
+    const topIndustries = [...sa.industryCount.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([code, count]) => ({
+        naics_code: code,
+        naics_description: sa.industryDesc.get(code) || "",
+        loan_count: count,
+      }));
+
+    out[abbr] = {
+      state_name: STATE_NAMES[abbr],
+      state_abbr: abbr,
+      // Left null pending manual enrichment from sba.gov / americassbdc.org.
+      // The script will not fabricate addresses or phone numbers.
+      sba_district_office: null,
+      state_sbdc_lead_center: null,
+      state_overall_sba_stats: {
+        total_loans_all_industries: sa.count,
+        total_approval: round2(sa.totalApproval),
+        avg_loan: round2(sa.count ? sa.totalApproval / sa.count : 0),
+        median_loan: round2(median(sa.grossApprovals)),
+        charge_off_pct: round2(sa.count ? (sa.chargeOffN / sa.count) * 100 : 0),
+        top_industries_by_loan_count: topIndustries,
+      },
+    };
+  }
+  return out;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// State × Industry prioritization report
+// ─────────────────────────────────────────────────────────────────────────────
+
+function writeStateIndustryReport(filePath, industries, overall, stateRef) {
+  const apexCodes = new Set(Object.keys(APEX_NAICS_TO_SLUG));
+  const lines = [];
+  lines.push("# State × Industry Prioritization Report");
+  lines.push("");
+  lines.push(
+    `_Generated ${new Date().toISOString()} from the FY2020–12/31/2025 FOIA dataset. Page thresholds: loan_count >= ${PAGE_THRESHOLD_COUNT} OR share_of_industry_loans_pct >= ${PAGE_THRESHOLD_SHARE_PCT}._`,
+  );
+  lines.push("");
+
+  // ─── 1. Summary table: for each apex-built industry, # of states passing ───
+  lines.push("## 1. Apex industries — state pages supported");
+  lines.push("");
+  lines.push(
+    "| # | NAICS | Slug | Industry | Total loans | States passing page threshold |",
+  );
+  lines.push("|---|------:|------|----------|------------:|------------------------------:|");
+
+  const apexSummary = [];
+  for (const ind of industries) {
+    if (!apexCodes.has(ind.naics_code)) continue;
+    const passing = Object.entries(ind.state_breakouts || {})
+      .filter(([abbr, sb]) => STATE_NAMES[abbr] && sb.passes_page_threshold)
+      .map(([abbr, sb]) => ({ abbr, ...sb }));
+    apexSummary.push({
+      code: ind.naics_code,
+      slug: APEX_NAICS_TO_SLUG[ind.naics_code],
+      desc: ind.naics_description,
+      total: ind.stats.loan_count,
+      passing,
+    });
+  }
+  apexSummary.sort((a, b) => b.passing.length - a.passing.length);
+  apexSummary.forEach((row, i) => {
+    lines.push(
+      `| ${i + 1} | ${row.code} | /sba-loans/${row.slug}/ | ${row.desc} | ${row.total.toLocaleString()} | **${row.passing.length}** |`,
+    );
+  });
+  lines.push("");
+
+  lines.push(
+    "_Total state × industry pages supported across the 18 apex industries: **" +
+      apexSummary.reduce((s, r) => s + r.passing.length, 0) +
+      "**._",
+  );
+  lines.push("");
+
+  // ─── 2. Top 40 state × industry combos by loan count ──────────────────────
+  lines.push("## 2. Top 40 state × industry combinations by loan count");
+  lines.push("");
+  lines.push(
+    "| Rank | State | NAICS | Industry | Loans | Share of industry | Charge-off | YoY | Apex? |",
+  );
+  lines.push(
+    "|-----:|-------|------:|----------|------:|------------------:|-----------:|----:|:-----:|",
+  );
+
+  const flat = [];
+  for (const ind of industries) {
+    for (const [abbr, sb] of Object.entries(ind.state_breakouts || {})) {
+      if (!STATE_NAMES[abbr]) continue;
+      flat.push({
+        abbr,
+        code: ind.naics_code,
+        desc: ind.naics_description,
+        sb,
+      });
+    }
+  }
+  flat.sort((a, b) => b.sb.loan_count - a.sb.loan_count);
+  const top40 = flat.slice(0, 40);
+  top40.forEach((f, i) => {
+    const chg =
+      f.sb.charge_off_pct == null
+        ? "n/a"
+        : `${f.sb.charge_off_pct}% (${f.sb.charge_off_vs_sba_avg_ratio}×)`;
+    const apex = apexCodes.has(f.code) ? "✓" : "";
+    lines.push(
+      `| ${i + 1} | ${f.abbr} | ${f.code} | ${f.desc} | ${f.sb.loan_count.toLocaleString()} | ${f.sb.share_of_industry_loans_pct}% | ${chg} | ${f.sb.yoy_growth == null ? "n/a" : f.sb.yoy_growth + "%"} | ${apex} |`,
+    );
+  });
+  lines.push("");
+
+  // ─── 3. Recommended build queue ────────────────────────────────────────────
+  lines.push("## 3. Recommended state × industry build queue");
+  lines.push("");
+  lines.push(
+    "Filtered to combos whose **apex page already exists on the site**. Exclusions:",
+  );
+  lines.push(
+    "- `charge_off_vs_sba_avg_ratio > 1.5` (stressed combo, avoid amplifying risk narrative)",
+  );
+  lines.push("- `yoy_growth < 0` at the per-state level (declining vertical)");
+  lines.push("- `!passes_page_threshold` (too small to stand up a page)");
+  lines.push("");
+  lines.push("**Composite score**:");
+  lines.push(
+    "- `volumeScore` = 0.012 × loan_count, capped at 50 (linear below ~4K loans, flat above)",
+  );
+  lines.push(
+    "- `shareScore` = 1.5 × share_of_industry_pct, capped at 25 (rewards combos where the state is a disproportionate driver of the industry)",
+  );
+  lines.push(
+    "- `riskScore` = -10 × max(0, ratio - 1) (penalize combos above SBA avg charge-off; 0 below)",
+  );
+  lines.push(
+    "- `growthScore` = 0.25 × yoy, clamped [-10, +10] (small tilt toward uptrends)",
+  );
+  lines.push("");
+
+  const candidates = flat.filter((f) => {
+    if (!apexCodes.has(f.code)) return false;
+    if (!f.sb.passes_page_threshold) return false;
+    if (
+      f.sb.charge_off_vs_sba_avg_ratio != null &&
+      f.sb.charge_off_vs_sba_avg_ratio > 1.5
+    )
+      return false;
+    if (f.sb.yoy_growth != null && f.sb.yoy_growth < 0) return false;
+    return true;
+  });
+
+  const scored = candidates.map((f) => {
+    const volume = Math.min(50, 0.012 * f.sb.loan_count);
+    const share = Math.min(25, 1.5 * f.sb.share_of_industry_loans_pct);
+    const ratio =
+      f.sb.charge_off_vs_sba_avg_ratio == null
+        ? 1
+        : f.sb.charge_off_vs_sba_avg_ratio;
+    const risk = -10 * Math.max(0, ratio - 1);
+    const growth =
+      f.sb.yoy_growth == null
+        ? 0
+        : Math.max(-10, Math.min(10, 0.25 * f.sb.yoy_growth));
+    const score = round2(volume + share + risk + growth);
+    return { f, score, volume, share, risk, growth };
+  });
+  scored.sort((a, b) => b.score - a.score);
+
+  const queueLen = Math.min(40, scored.length);
+  lines.push(
+    `| Rank | Score | State | NAICS | Industry | Apex slug | Loans | Share | CO ratio | YoY |`,
+  );
+  lines.push(
+    "|-----:|------:|-------|------:|----------|-----------|------:|------:|---------:|----:|",
+  );
+  scored.slice(0, queueLen).forEach((r, i) => {
+    const { f, score } = r;
+    const ratio =
+      f.sb.charge_off_vs_sba_avg_ratio == null
+        ? "n/a"
+        : `${f.sb.charge_off_vs_sba_avg_ratio}×`;
+    lines.push(
+      `| ${i + 1} | ${score} | ${f.abbr} | ${f.code} | ${f.desc} | /sba-loans/${APEX_NAICS_TO_SLUG[f.code]}/ | ${f.sb.loan_count.toLocaleString()} | ${f.sb.share_of_industry_loans_pct}% | ${ratio} | ${f.sb.yoy_growth == null ? "n/a" : f.sb.yoy_growth + "%"} |`,
+    );
+  });
+  lines.push("");
+
+  // ─── 4. Surprises ──────────────────────────────────────────────────────────
+  lines.push("## 4. Surprising findings");
+  lines.push("");
+
+  // 4a. Over-indexed state × industry combos across ALL industries
+  //     (not just apex). Threshold: state's share of this industry within
+  //     its own loan mix is ≥2× the national share.
+  const overIdx = [];
+  for (const ind of industries) {
+    const nationalShare =
+      overall.loan_count > 0 ? ind.stats.loan_count / overall.loan_count : 0;
+    if (!nationalShare) continue;
+    for (const [abbr, sb] of Object.entries(ind.state_breakouts || {})) {
+      if (!STATE_NAMES[abbr]) continue;
+      if (sb.loan_count < 100) continue;
+      const stateTotal =
+        stateRef[abbr]?.state_overall_sba_stats?.total_loans_all_industries;
+      if (!stateTotal) continue;
+      const stateInternalShare = sb.loan_count / stateTotal;
+      const multiple = stateInternalShare / nationalShare;
+      if (multiple >= 2.0) {
+        overIdx.push({
+          abbr,
+          code: ind.naics_code,
+          desc: ind.naics_description,
+          isApex: apexCodes.has(ind.naics_code),
+          multiple: round2(multiple),
+          sb,
+        });
+      }
+    }
+  }
+  overIdx.sort((a, b) => b.multiple - a.multiple);
+
+  lines.push("### 4a. Over-indexed state × industry combos (≥2× the national share)");
+  lines.push("");
+  if (!overIdx.length) {
+    lines.push("_No combos meet the threshold._");
+  } else {
+    lines.push(
+      "States where an industry's local share is ≥2× its national share. Strong signal that the combo deserves a dedicated state page for the apex industries, and a watch-list for future apex candidates otherwise.",
+    );
+    lines.push("");
+    lines.push(
+      "| State | NAICS | Industry | Over-index | Loans | Share of industry | Apex page? |",
+    );
+    lines.push(
+      "|-------|------:|----------|-----------:|------:|------------------:|:----------:|",
+    );
+    overIdx.slice(0, 25).forEach((s) => {
+      const apex = s.isApex ? `✓ /sba-loans/${APEX_NAICS_TO_SLUG[s.code]}/` : "—";
+      lines.push(
+        `| ${s.abbr} | ${s.code} | ${s.desc} | ${s.multiple}× | ${s.sb.loan_count.toLocaleString()} | ${s.sb.share_of_industry_loans_pct}% | ${apex} |`,
+      );
+    });
+  }
+  lines.push("");
+
+  // 4b. Fastest-growing state × industry combos in apex industries
+  //     (YoY > +30%, loans >= 200) — where local growth is worth
+  //     front-running with a state page
+  const growth = flat
+    .filter(
+      (f) =>
+        apexCodes.has(f.code) &&
+        f.sb.passes_page_threshold &&
+        f.sb.yoy_growth != null &&
+        f.sb.yoy_growth >= 30 &&
+        f.sb.loan_count >= 200,
+    )
+    .sort((a, b) => b.sb.yoy_growth - a.sb.yoy_growth);
+  lines.push(
+    "### 4b. Fastest-growing apex state × industry combos (YoY ≥ +30%, loans ≥ 200)",
+  );
+  lines.push("");
+  if (!growth.length) {
+    lines.push("_No combos meet the threshold._");
+  } else {
+    lines.push(
+      "| State | Industry | Apex slug | Loans | YoY | CO ratio |",
+    );
+    lines.push(
+      "|-------|----------|-----------|------:|----:|---------:|",
+    );
+    growth.slice(0, 15).forEach((f) => {
+      const ratio =
+        f.sb.charge_off_vs_sba_avg_ratio == null
+          ? "n/a"
+          : `${f.sb.charge_off_vs_sba_avg_ratio}×`;
+      lines.push(
+        `| ${f.abbr} | ${f.desc} | /sba-loans/${APEX_NAICS_TO_SLUG[f.code]}/ | ${f.sb.loan_count.toLocaleString()} | ${f.sb.yoy_growth}% | ${ratio} |`,
+      );
+    });
+  }
+  lines.push("");
+
+  // 4c. Stressed apex state × industry combos (charge-off > 1.5× SBA avg)
+  //     — the opposite signal: combos that look high-volume but carry risk
+  const stressed = flat
+    .filter(
+      (f) =>
+        apexCodes.has(f.code) &&
+        f.sb.passes_page_threshold &&
+        f.sb.charge_off_vs_sba_avg_ratio != null &&
+        f.sb.charge_off_vs_sba_avg_ratio > 1.5,
+    )
+    .sort((a, b) => b.sb.charge_off_vs_sba_avg_ratio - a.sb.charge_off_vs_sba_avg_ratio);
+  lines.push(
+    "### 4c. Stressed apex state × industry combos (charge-off > 1.5× SBA avg)",
+  );
+  lines.push("");
+  if (!stressed.length) {
+    lines.push("_No apex combos exceed 1.5× SBA average charge-off._");
+  } else {
+    lines.push(
+      "Combos the build queue deliberately excludes. Visible here so we don't accidentally revisit them.",
+    );
+    lines.push("");
+    lines.push(
+      "| State | Industry | Apex slug | Loans | Charge-off ratio |",
+    );
+    lines.push(
+      "|-------|----------|-----------|------:|-----------------:|",
+    );
+    stressed.slice(0, 15).forEach((f) => {
+      lines.push(
+        `| ${f.abbr} | ${f.desc} | /sba-loans/${APEX_NAICS_TO_SLUG[f.code]}/ | ${f.sb.loan_count.toLocaleString()} | ${f.sb.charge_off_vs_sba_avg_ratio}× |`,
+      );
+    });
+  }
+  lines.push("");
+
+  fs.writeFileSync(filePath, lines.join("\n"));
+}
+
 function writePrioritizationReport(filePath, industries, overall) {
   const sorted = [...industries].sort(
     (a, b) => b.stats.loan_count - a.stats.loan_count,
