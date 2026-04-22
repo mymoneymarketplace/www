@@ -1,0 +1,7024 @@
+# Content Audit Report
+
+_Generated: 2026-04-22T20:44:45.581Z · Duration: 2.3s · Pages scanned: 316_
+
+## Summary
+
+| Metric | Count |
+| --- | ---: |
+| Pages scanned | 316 |
+| Pages with at least one issue | 308 |
+| Total issues | 3461 |
+| CRITICAL | 5 |
+| HIGH | 3360 |
+| MEDIUM | 80 |
+| LOW | 16 |
+
+### Issues per check
+
+| Check | Issue count |
+| --- | ---: |
+| cross-page-leakage | 109 |
+| structural | 39 |
+| internal-link-validity | 3296 |
+| content-quality | 2 |
+| cta-correctness | 6 |
+| data-traceability | 9 |
+
+## Check: cross-page-leakage
+
+109 issues.
+
+- **[CRITICAL]** `/sba-loans/auto-body` — Industry term "auto repair" (from /auto-repair/) appears in <meta description>
+  - _Fix:_ Rewrite meta description to remove "auto repair"
+- **[CRITICAL]** `/sba-loans/beauty-salons` — Industry term "medspa" (from /personal-care/) appears in <meta description>
+  - _Fix:_ Rewrite meta description to remove "medspa"
+- **[CRITICAL]** `/sba-loans/pet-care` — Industry term "daycare" (from /child-care/) appears in <title>: "SBA Loan for Pet Boarding, Grooming &amp; Daycare 2026 | My Money Marketplace"
+  - _Fix:_ Rewrite <title> to remove "daycare"
+- **[CRITICAL]** `/sba-loans/pet-care` — Industry term "daycare" (from /child-care/) appears in <meta description>
+  - _Fix:_ Rewrite meta description to remove "daycare"
+- **[HIGH]** `/sba-loans/accounting` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/accounting` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/accounting` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/accounting` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/auto-body` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/auto-body` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/auto-body` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/auto-body` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/auto-body` — Industry term "auto repair" (from /auto-repair/) in <h3>: "Growing faster than general auto repair"
+  - _Fix:_ Rewrite h3 to remove "auto repair"
+- **[HIGH]** `/sba-loans/auto-repair` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/auto-repair` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/beauty-salons` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/beauty-salons` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/beauty-salons` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/beauty-salons` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/building-services` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/building-services` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/building-services` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/building-services` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/child-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/child-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/child-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/child-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/chiropractors` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/chiropractors` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/chiropractors` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/chiropractors` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/cpas` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/cpas` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/cpas` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/cpas` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/cpas` — Industry term "book of business" (from /insurance-agencies/) in program-card text: "Right for: rarely used; CPA firm capital is almost entirely intangible (book of business, staff, technology subscription..."
+  - _Fix:_ Update programsContext.fits in config
+- **[HIGH]** `/sba-loans/dentists` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/dentists` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/insurance-agencies` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/insurance-agencies` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/landscaping` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/landscaping` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/landscaping` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/landscaping` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/personal-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/personal-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/personal-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/personal-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/pet-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/pet-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/pet-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/pet-care` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/pet-care` — Industry term "veterinary" (from /veterinarians/) in <h3>: "Distinct from veterinary medicine"
+  - _Fix:_ Rewrite h3 to remove "veterinary"
+- **[HIGH]** `/sba-loans/pet-care` — Industry term "daycare" (from /child-care/) in program-card text: "Right for: facility buildouts for boarding and daycare, acquisitions, multi-location expansion...."
+  - _Fix:_ Update programsContext.fits in config
+- **[HIGH]** `/sba-loans/physicians` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/physicians` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/plumbing-hvac` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/plumbing-hvac` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/plumbing-hvac` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/plumbing-hvac` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/specialty-trades` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/specialty-trades` — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/specialty-trades` — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/specialty-trades` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/veterinarians` — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[HIGH]** `/sba-loans/veterinarians` — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+  - _Fix:_ Rewrite h2 to remove "restaurant"
+- **[MEDIUM]** `/sba-loans/accounting` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/accounting` — Industry term "cpa firm" (from /cpas/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/auto-body` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/auto-body` — Industry term "auto repair" (from /auto-repair/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/auto-body` — Industry term "mechanical repair" (from /auto-repair/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/auto-repair` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/auto-repair` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/beauty-salons` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/beauty-salons` — Industry term "medspa" (from /personal-care/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/beauty-salons` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/building-services` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/child-care` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/child-care` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/chiropractors` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/chiropractors` — Industry term "dental" (from /dentists/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/chiropractors` — Industry term "physician" (from /physicians/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/chiropractors` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/cpas` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/cpas` — Industry term "book of business" (from /insurance-agencies/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/dentists` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/dentists` — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/insurance-agencies` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/landscaping` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/landscaping` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/personal-care` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/personal-care` — Industry term "physician" (from /physicians/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/personal-care` — Industry term "hair salon" (from /beauty-salons/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/pet-care` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/pet-care` — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/pet-care` — Industry term "daycare" (from /child-care/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/pet-care` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/physicians` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/physicians` — Industry term "dental" (from /dentists/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/physicians` — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/plumbing-hvac` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/plumbing-hvac` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/restaurants` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/specialty-trades` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/specialty-trades` — Industry term "landscaping" (from /landscaping/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/specialty-trades` — Industry term "plumbing" (from /plumbing-hvac/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/specialty-trades` — Industry term "hvac" (from /plumbing-hvac/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/veterinarians` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/veterinarians` — Industry term "daycare" (from /child-care/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+
+## Check: structural
+
+39 issues.
+
+- **[HIGH]** `/` — Canonical mismatch: "https://mymoneymarketplace.com/" but expected "https://mymoneymarketplace.com"
+  - _Fix:_ Correct the canonical URL to match the file path
+- **[MEDIUM]** `/` — Low word count: 376 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/bridgeport-ct` — Low word count: 795 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/chesapeake-va` — Low word count: 784 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/little-rock-ar` — Low word count: 790 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/miami-fl` — Low word count: 782 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/orlando-fl` — Low word count: 793 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/raleigh-nc` — Low word count: 783 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/richmond-va` — Low word count: 798 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/credit-cards` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/0-apr` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/airline-miles` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/balance-transfer` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/business` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/cash-back` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/credit-builder` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/gas` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/hotel` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/low-interest` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/no-annual-fee` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/no-foreign-fee` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/premium` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/rewards` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/credit-cards/travel-rewards` — Missing og:url
+  - _Fix:_ Add <meta property="og:url" content="...">
+- **[MEDIUM]** `/equipment-financing` — Low word count: 560 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/line-of-credit` — Low word count: 575 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/personal-loans/bad-credit` — Low word count: 693 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/personal-loans/debt-consolidation` — Low word count: 678 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/personal-loans/home-improvement` — Low word count: 615 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/personal-loans/medical` — Low word count: 573 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/personal-loans/same-day` — Low word count: 554 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/sba-loans/bad-credit` — Missing non-origination disclosure on SBA page
+  - _Fix:_ Add "MMM does not originate SBA loans..." text somewhere on the page
+- **[MEDIUM]** `/sba-loans/business-acquisition` — Missing non-origination disclosure on SBA page
+  - _Fix:_ Add "MMM does not originate SBA loans..." text somewhere on the page
+- **[MEDIUM]** `/sba-loans/franchise` — Missing non-origination disclosure on SBA page
+  - _Fix:_ Add "MMM does not originate SBA loans..." text somewhere on the page
+- **[MEDIUM]** `/sba-loans/no-collateral` — Missing non-origination disclosure on SBA page
+  - _Fix:_ Add "MMM does not originate SBA loans..." text somewhere on the page
+- **[MEDIUM]** `/sba-loans/startups` — Missing non-origination disclosure on SBA page
+  - _Fix:_ Add "MMM does not originate SBA loans..." text somewhere on the page
+- **[MEDIUM]** `/working-capital` — Low word count: 579 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[LOW]** `/business-loans` — 3 empty or "#" anchor(s) present (excluding quiz-result placeholder)
+  - _Fix:_ Replace with real URLs or remove
+- **[LOW]** `/sba-loans` — 4 empty or "#" anchor(s) present (excluding quiz-result placeholder)
+  - _Fix:_ Replace with real URLs or remove
+
+## Check: internal-link-validity
+
+3296 issues.
+
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/akron-oh` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/albuquerque-nm` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/alexandria-va` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/amarillo-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anaheim-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/anchorage-ak` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ann-arbor-mi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/arlington-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/atlanta-ga` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-co` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/aurora-il` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/austin-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bakersfield-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baltimore-md` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/baton-rouge-la` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/beaumont-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bellevue-wa` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/birmingham-al` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/boise-id` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/bridgeport-ct` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/brownsville-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/buffalo-ny` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/burbank-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cape-coral-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/carrollton-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cedar-rapids-ia` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chandler-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/charlotte-nc` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chattanooga-tn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chesapeake-va` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chicago-il` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/chula-vista-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/cincinnati-oh` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/clarksville-tn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/colorado-springs-co` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-ga` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/columbus-oh` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/corpus-christi-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/costa-mesa-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dallas-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/dayton-oh` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denton-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/denver-co` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/des-moines-ia` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/downey-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/durham-nc` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/el-monte-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/elk-grove-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/escondido-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/eugene-or` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/evansville-in` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fayetteville-nc` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/flint-mi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fontana-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-collins-co` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-lauderdale-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fort-wayne-in` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fremont-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fresno-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/frisco-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/fullerton-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gainesville-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garden-grove-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/garland-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/gilbert-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/glendale-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/grand-rapids-mi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/greensboro-nc` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hartford-ct` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hayward-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/henderson-nv` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hialeah-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/hollywood-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/honolulu-hi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/houston-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntington-beach-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/huntsville-al` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/indianapolis-in` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/inglewood-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irvine-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/irving-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jackson-ms` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jacksonville-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/jersey-city-nj` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-ks` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/kansas-city-mo` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/killeen-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/knoxville-tn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lafayette-la` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lakewood-co` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lancaster-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lansing-mi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/laredo-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/las-vegas-nv` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lexington-ky` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lincoln-ne` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/little-rock-ar` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/long-beach-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/louisville-ky` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lowell-ma` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/lubbock-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/macon-ga` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/madison-wi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/manchester-nh` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mcallen-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/memphis-tn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesa-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mesquite-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/miami-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/midland-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/milwaukee-wi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/minneapolis-mn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/mobile-al` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/modesto-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/montgomery-al` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/moreno-valley-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/naperville-il` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/nashville-tn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-haven-ct` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/new-orleans-la` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/newark-nj` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norfolk-va` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/north-las-vegas-nv` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/norwalk-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oceanside-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/odessa-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/omaha-ne` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/ontario-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orange-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/orlando-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/overland-park-ks` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/oxnard-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/palmdale-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pasadena-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/paterson-nj` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/peoria-il` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/philadelphia-pa` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/phoenix-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pittsburgh-pa` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/plano-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/pomona-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/portland-or` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/providence-ri` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/raleigh-nc` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rancho-cucamonga-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/reno-nv` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/richmond-va` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/riverside-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rochester-ny` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/rockford-il` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/roseville-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sacramento-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salinas-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/salt-lake-city-ut` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-antonio-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-bernardino-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-diego-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/san-jose-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-ana-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-clarita-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/santa-rosa-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/savannah-ga` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/scottsdale-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/seattle-wa` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/shreveport-la` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sioux-falls-sd` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/south-bend-in` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/spokane-wa` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-il` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-ma` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/springfield-mo` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-louis-mo` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-paul-mn` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/st-petersburg-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sterling-heights-mi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/stockton-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/sunnyvale-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/surprise-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/syracuse-ny` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tacoma-wa` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tallahassee-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tampa-fl` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tempe-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/toledo-oh` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/topeka-ks` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/torrance-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/trenton-nj` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/tucson-az` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/victorville-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/virginia-beach-va` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/waco-tx` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/warren-mi` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-covina-ca` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/west-valley-city-ut` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/wichita-ks` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/winston-salem-nc` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/worcester-ma` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/business-loans/yonkers-ny` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/0-apr` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/0-apr` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/0-apr` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/0-apr` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/accountants` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/airline-miles` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/airline-miles` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/airline-miles` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/airline-miles` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-prime-members` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/amazon-sellers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/attorneys` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/auto-mechanics` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/bad-credit` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/balance-transfer` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/balance-transfer` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/balance-transfer` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/balance-transfer` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/business` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/business` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/business` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/business` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/cash-back` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/cash-back` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/cash-back` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/cash-back` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/college-students` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/construction-workers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/content-creators` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/contractors` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/costco-members` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/credit-builder` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/credit-builder` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/credit-builder` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/credit-builder` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/debt-consolidation` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dentists` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/dining-out` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/disney-families` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doctors` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/doordash-drivers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/electricians` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/etsy-sellers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/first-time-homebuyers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/fitness-enthusiasts` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/food-truck-owners` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/foodies` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/freelancers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/frequent-flyers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gamers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/gas-stations` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/groceries` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/homeowners` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hotel` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hotel` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hotel` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hotel` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/hvac-technicians` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/instacart-shoppers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/insurance-agents` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/landscapers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/low-interest` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/low-interest` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/low-interest` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/low-interest` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/medical-students` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/military` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/new-parents` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-annual-fee` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-annual-fee` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-annual-fee` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-annual-fee` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-foreign-fee` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-foreign-fee` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-foreign-fee` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/no-foreign-fee` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/nurses` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/online-shopping` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pet-owners` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/pharmacists` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/photographers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/physical-therapists` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/plumbers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/premium` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/premium` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/premium` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/premium` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/real-estate-agents` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/recent-graduates` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/remote-workers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/restaurant-owners` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/rewards` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/rewards` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/rewards` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/rewards` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/salon-owners` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/seniors` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/sports-fans` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/startups` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-nurses` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-rewards` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-rewards` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-rewards` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travel-rewards` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/travelers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/truck-drivers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/uber-drivers` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterans` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/credit-cards/veterinarians` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/equipment-financing` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/line-of-credit` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/bad-credit` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/debt-consolidation` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/home-improvement` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/medical` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/personal-loans/same-day` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/savings` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/miami-fl"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/dallas-tx"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/atlanta-ga"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/chicago-il"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/houston-tx"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/phoenix-az"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/philadelphia-pa"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/san-antonio-tx"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/san-diego-ca"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/denver-co"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/seattle-wa"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/nashville-tn"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/austin-tx"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/charlotte-nc"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/las-vegas-nv"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/portland-or"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/columbus-oh"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/indianapolis-in"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/san-jose-ca"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/sba-loans/jacksonville-fl"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/sba-loans` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/compare"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/guides"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/calculators"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/blog"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/glossary"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/about"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/how-it-works"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/contact"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/press"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/privacy"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/terms"
+  - _Fix:_ Fix the link target or remove
+- **[HIGH]** `/working-capital` — Dead internal link: "/disclosures"
+  - _Fix:_ Fix the link target or remove
+
+## Check: content-quality
+
+2 issues.
+
+- **[CRITICAL]** `/sba-loans/building-services` — Unreplaced placeholder token "{franchise_pct}" in body
+  - _Fix:_ Replace with real content or remove
+- **[MEDIUM]** `/` — Title and H1 have no non-stopword overlap. Title: "Compare Financial Products | My Money Marketplace" | H1: "Make Smarter Money Decisions"
+  - _Fix:_ Align title and H1 themes
+
+## Check: cta-correctness
+
+6 issues.
+
+- **[HIGH]** `/sba-loans/business-acquisition` — utm_campaign "sba-acquisition-closing-cta" doesn't match page slug "business-acquisition" (expected prefix "sba-business-acquisition")
+  - _Fix:_ Correct the utm_campaign to match the page
+- **[LOW]** `/sba-loans/bad-credit` — Lendmate URL missing utm_content: https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-bad-credit-closing-
+  - _Fix:_ Add utm_content for attribution
+- **[LOW]** `/sba-loans/business-acquisition` — Lendmate URL missing utm_content: https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-acquisition-closing
+  - _Fix:_ Add utm_content for attribution
+- **[LOW]** `/sba-loans/franchise` — Lendmate URL missing utm_content: https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-franchise-closing-c
+  - _Fix:_ Add utm_content for attribution
+- **[LOW]** `/sba-loans/no-collateral` — Lendmate URL missing utm_content: https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-no-collateral-closi
+  - _Fix:_ Add utm_content for attribution
+- **[LOW]** `/sba-loans/startups` — Lendmate URL missing utm_content: https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=sba-startups-closing-ct
+  - _Fix:_ Add utm_content for attribution
+
+## Check: data-traceability
+
+9 issues.
+
+- **[LOW]** `/sba-loans/accounting` — Expected data point not found on page: loan_count=1722
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/auto-body` — Expected data point not found on page: loan_count=1767
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/auto-repair` — Expected data point not found on page: loan_count=5413
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/dentists` — Expected data point not found on page: loan_count=4070
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/insurance-agencies` — Expected data point not found on page: loan_count=4249
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/physicians` — Expected data point not found on page: loan_count=3986
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/plumbing-hvac` — Expected data point not found on page: loan_count=6128
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/restaurants` — Expected data point not found on page: loan_count=16355
+  - _Fix:_ Verify page stats match data source or update copy
+- **[LOW]** `/sba-loans/veterinarians` — Expected data point not found on page: loan_count=1636
+  - _Fix:_ Verify page stats match data source or update copy
+
+## Prioritized action list
+
+Top 25 issues to fix first (by severity):
+
+1. **[CRITICAL]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) appears in <meta description>
+2. **[CRITICAL]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "medspa" (from /personal-care/) appears in <meta description>
+3. **[CRITICAL]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) appears in <title>: "SBA Loan for Pet Boarding, Grooming &amp; Daycare 2026 | My Money Marketplace"
+4. **[CRITICAL]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) appears in <meta description>
+5. **[CRITICAL]** `/sba-loans/building-services` _(content-quality)_ — Unreplaced placeholder token "{franchise_pct}" in body
+6. **[HIGH]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+7. **[HIGH]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+8. **[HIGH]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+9. **[HIGH]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+10. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+11. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+12. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+13. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+14. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) in <h3>: "Growing faster than general auto repair"
+15. **[HIGH]** `/sba-loans/auto-repair` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+16. **[HIGH]** `/sba-loans/auto-repair` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+17. **[HIGH]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+18. **[HIGH]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+19. **[HIGH]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+20. **[HIGH]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+21. **[HIGH]** `/sba-loans/building-services` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+22. **[HIGH]** `/sba-loans/building-services` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Top SBA lenders for restaurant deals"
+23. **[HIGH]** `/sba-loans/building-services` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Where restaurant SBA lending happens"
+24. **[HIGH]** `/sba-loans/building-services` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Get matched with restaurant-experienced SBA lenders"
+25. **[HIGH]** `/sba-loans/child-care` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) in <h2>: "Restaurant SBA lending by the numbers"
+
+## Observations
+
+- Issue distribution across checks: cross-page-leakage: 109, structural: 39, internal-link-validity: 3296, content-quality: 2, cta-correctness: 6, data-traceability: 9
+- 308 of 316 pages (97.5%) flagged at least one issue.
+- Pages with the most issues:
+  - `/sba-loans`: 33 issues
+  - `/business-loans/bridgeport-ct`: 13 issues
+  - `/business-loans/chesapeake-va`: 13 issues
+  - `/business-loans/little-rock-ar`: 13 issues
+  - `/business-loans/miami-fl`: 13 issues
+  - `/business-loans/orlando-fl`: 13 issues
+  - `/business-loans/raleigh-nc`: 13 issues
+  - `/business-loans/richmond-va`: 13 issues
+  - `/equipment-financing`: 13 issues
+  - `/line-of-credit`: 13 issues
