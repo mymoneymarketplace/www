@@ -122,6 +122,15 @@
         @media (max-width: 768px) { .scenario-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 480px) { .scenario-grid { grid-template-columns: 1fr; } }
 
+        /* Industry cards — used in "SBA Loans by Your Industry" section (richer cards with descriptions) */
+        .ind-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .ind-card { display: block; padding: 14px 18px; background: var(--white); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+        .ind-card:hover { border-color: var(--green); background: #f7fbf9; }
+        .ind-card .ind-name { font-size: 14.5px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+        .ind-card:hover .ind-name { color: var(--green); }
+        .ind-card .ind-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+        @media (max-width: 720px) { .ind-card-grid { grid-template-columns: 1fr; } }
+
         /* ── Content ── */
         .content-section { padding: 56px 0; }
         .content-section h2 { font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 20px; }
@@ -411,49 +420,55 @@
         <div class="scenario-group-wrap">
             <div class="scenario-group">
                 <div class="scenario-group-title">Food service</div>
-                <div class="scenario-grid">
-                    <a class="scenario-link" href="/sba-loans/restaurants">Restaurants</a>
+                <div class="ind-card-grid">
+                    <a class="ind-card" href="/sba-loans/restaurants"><div class="ind-name">Restaurants</div><div class="ind-desc">16,355 loans, $8.6B approved. Acquisition-heavy deals with favorable 0.89x charge-off ratio.</div></a>
                 </div>
             </div>
 
             <div class="scenario-group">
-                <div class="scenario-group-title">Medical &amp; veterinary</div>
-                <div class="scenario-grid">
-                    <a class="scenario-link" href="/sba-loans/dentists">Dental practices</a>
-                    <a class="scenario-link" href="/sba-loans/physicians">Physician practices</a>
-                    <a class="scenario-link" href="/sba-loans/veterinarians">Veterinary practices</a>
-                </div>
-            </div>
-
-            <div class="scenario-group">
-                <div class="scenario-group-title">Construction trades</div>
-                <div class="scenario-grid">
-                    <a class="scenario-link" href="/sba-loans/plumbing-hvac">Plumbing &amp; HVAC</a>
-                    <a class="scenario-link" href="/sba-loans/landscaping">Landscaping</a>
-                    <a class="scenario-link" href="/sba-loans/specialty-trades">Specialty trades</a>
-                </div>
-            </div>
-
-            <div class="scenario-group">
-                <div class="scenario-group-title">Personal &amp; child services</div>
-                <div class="scenario-grid">
-                    <a class="scenario-link" href="/sba-loans/child-care">Child care</a>
-                    <a class="scenario-link" href="/sba-loans/pet-care">Pet care</a>
-                    <a class="scenario-link" href="/sba-loans/personal-care">Personal care</a>
+                <div class="scenario-group-title">Medical &amp; veterinary practices</div>
+                <div class="ind-card-grid">
+                    <a class="ind-card" href="/sba-loans/dentists"><div class="ind-name">Dental practices</div><div class="ind-desc">Avg deal $910K. 0.20x charge-off ratio — one-fifth the SBA average.</div></a>
+                    <a class="ind-card" href="/sba-loans/physicians"><div class="ind-name">Physician practices</div><div class="ind-desc">Specialty mix and payer concentration drive underwriting. 0.50x charge-off ratio.</div></a>
+                    <a class="ind-card" href="/sba-loans/chiropractors"><div class="ind-name">Chiropractic practices</div><div class="ind-desc">Smaller deals than dental/physician (median $150K). Payer mix matters.</div></a>
+                    <a class="ind-card" href="/sba-loans/veterinarians"><div class="ind-name">Veterinary practices</div><div class="ind-desc">SBA's best-performing category. 0.13x charge-off ratio, +40% YoY growth.</div></a>
                 </div>
             </div>
 
             <div class="scenario-group">
                 <div class="scenario-group-title">Automotive</div>
-                <div class="scenario-grid">
-                    <a class="scenario-link" href="/sba-loans/auto-repair">Auto repair shops</a>
+                <div class="ind-card-grid">
+                    <a class="ind-card" href="/sba-loans/auto-repair"><div class="ind-name">Auto repair shops</div><div class="ind-desc">Mechanical repair. +27% YoY, equipment-strong collateral.</div></a>
+                    <a class="ind-card" href="/sba-loans/auto-body"><div class="ind-name">Auto body shops</div><div class="ind-desc">Collision repair. DRP relationships with insurance carriers drive revenue.</div></a>
+                </div>
+            </div>
+
+            <div class="scenario-group">
+                <div class="scenario-group-title">Construction trades &amp; building services</div>
+                <div class="ind-card-grid">
+                    <a class="ind-card" href="/sba-loans/plumbing-hvac"><div class="ind-name">Plumbing &amp; HVAC</div><div class="ind-desc">Largest single-trade SBA category. Licensing and fleet collateral dominate.</div></a>
+                    <a class="ind-card" href="/sba-loans/landscaping"><div class="ind-name">Landscaping</div><div class="ind-desc">Equipment-heavy, seasonal working capital story. Recent volume softening.</div></a>
+                    <a class="ind-card" href="/sba-loans/specialty-trades"><div class="ind-name">Specialty trades</div><div class="ind-desc">Welding, painting, site prep, demolition. Bonding capacity matters.</div></a>
+                    <a class="ind-card" href="/sba-loans/building-services"><div class="ind-name">Building services</div><div class="ind-desc">Commercial cleaning, pest control. +33% YoY, B2B contract revenue.</div></a>
+                </div>
+            </div>
+
+            <div class="scenario-group">
+                <div class="scenario-group-title">Personal, child &amp; pet services</div>
+                <div class="ind-card-grid">
+                    <a class="ind-card" href="/sba-loans/child-care"><div class="ind-name">Child care</div><div class="ind-desc">Facility + licensing heavy. 0.38x charge-off ratio, +17% YoY growth.</div></a>
+                    <a class="ind-card" href="/sba-loans/pet-care"><div class="ind-name">Pet care</div><div class="ind-desc">Boarding, grooming, daycare. 27% franchise-heavy, recession-resistant.</div></a>
+                    <a class="ind-card" href="/sba-loans/personal-care"><div class="ind-name">Personal care (medspa / wellness)</div><div class="ind-desc">Medspas, nail salons, skincare, wellness. 28% franchise, equipment-heavy.</div></a>
+                    <a class="ind-card" href="/sba-loans/beauty-salons"><div class="ind-name">Beauty salons</div><div class="ind-desc">Hair salons specifically. Smaller deals (median $80K); 1.14x charge-off ratio.</div></a>
                 </div>
             </div>
 
             <div class="scenario-group">
                 <div class="scenario-group-title">Professional services</div>
-                <div class="scenario-grid">
-                    <a class="scenario-link" href="/sba-loans/insurance-agencies">Insurance agencies</a>
+                <div class="ind-card-grid">
+                    <a class="ind-card" href="/sba-loans/cpas"><div class="ind-name">CPA firms</div><div class="ind-desc">Licensed-CPA firms. Book-of-business valuation, 0.35x charge-off ratio.</div></a>
+                    <a class="ind-card" href="/sba-loans/accounting"><div class="ind-name">Accounting &amp; bookkeeping</div><div class="ind-desc">Non-CPA services. Fastest-growing category at +49% YoY.</div></a>
+                    <a class="ind-card" href="/sba-loans/insurance-agencies"><div class="ind-name">Insurance agencies</div><div class="ind-desc">Book-of-business acquisitions. Residual-revenue underwriting.</div></a>
                 </div>
             </div>
         </div>
