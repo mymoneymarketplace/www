@@ -1,6 +1,6 @@
 # SBA 7(a) Industry Prioritization Report
 
-_Generated 2026-04-22T17:14:22.400Z from 357,866 loans across FY2020–12/31/2025._
+_Generated 2026-04-22T18:57:16.586Z from 357,866 loans across FY2020–12/31/2025._
 
 ## Baseline (all 7(a))
 
