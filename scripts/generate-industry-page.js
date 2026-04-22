@@ -365,6 +365,19 @@ const CONFIGS = {
 
 '541940': {
     slug: 'veterinarians',
+    industryNoun: 'veterinary practice',
+    industryNounPossessive: "veterinary practice's",
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/6235232/pexels-photo-6235232.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Veterinarian using diagnostic medical equipment on a patient — representative of the clinical veterinary practices that make up SBA\u2019s best-performing lending category',
+        width: 1200,
+        height: 800,
+        photographer: 'Tima Miroshnichenko',
+        photographerUrl: 'https://www.pexels.com/@tima-miroshnichenko/',
+        sourceUrl: 'https://www.pexels.com/photo/6235232/',
+        sourceName: 'Pexels',
+    },
+    highlightLenderNames: ['Live Oak Banking Company'],
     h1: 'SBA Loans for Veterinary Practices',
     title: 'SBA Loan for Veterinary Practice 2026 | My Money Marketplace',
     metaDesc: 'SBA loans for veterinary practices have the LOWEST charge-off rate of any SBA industry category: 0.18%, one-seventh the SBA average. 1,636 veterinary SBA loans approved FY2020-2025. Take the 2-minute quiz.',
