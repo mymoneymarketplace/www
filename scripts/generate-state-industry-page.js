@@ -61,6 +61,18 @@ const CONFIGS = {
     stateName: 'California',
     campaignSlug: 'sba-restaurants-california-quiz',
 
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/32884007/pexels-photo-32884007.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Coastal California restaurant dining patio — Malibu Farm Pier Cafe with ocean view, representative of California restaurants that use SBA financing',
+        width: 1200,
+        height: 800,
+        photographer: 'Abhishek Navlakha',
+        photographerUrl: 'https://www.pexels.com/@navlakha/',
+        sourceUrl: 'https://www.pexels.com/photo/32884007/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: ['Bank of Hope', 'Hanmi Bank', 'PCB Bank'],
+
     title: 'SBA Loans for Restaurants in California 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for California restaurants. 2,062 CA restaurant SBA loans approved FY2020-2025 ($1.24B). Take the 2-minute quiz to match with California-restaurant-experienced SBA lenders.',
     heroSub: 'California is the largest restaurant SBA lending market in the United States &mdash; <strong>12.6% of all restaurant SBA loans nationally</strong>. Deal sizes run larger than the national average, the lender mix has unique California characteristics, and regulatory context meaningfully affects underwriting.',
@@ -225,30 +237,154 @@ function renderStatsBlock(stateStats, nationalStats, overall, stateName, industr
     </section>`;
 }
 
-function renderLendersSection(stateLenders, stateName, industryLabel) {
-    const rows = stateLenders.slice(0, 10).map((l, i) => `
-                <tr>
-                    <td class="rank">${i + 1}</td>
-                    <td class="lender-name">${esc(l.bankname)}</td>
-                    <td class="lender-count">${fmt.num(l.loan_count)}</td>
-                    <td class="lender-avg">${fmt.usdK(l.avg_loan_in_state_industry)}</td>
-                </tr>`).join('');
+function renderLenderChartSvg(stateLenders, communityBankNames, stateName) {
+    const top10 = stateLenders.slice(0, 10);
+    const max = top10[0].loan_count;
+    const width = 640;
+    const topPad = 28;
+    const rowHeight = 36;
+    const labelColEnd = 190;
+    const barStart = 200;
+    const barMaxWidth = 340;
+    const valueGap = 8;
+    const botPad = 16;
+    const totalHeight = topPad + rowHeight * top10.length + botPad;
+
+    const community = new Set(communityBankNames || []);
+    const shortLabel = name => name
+        .replace(', National Association', ', N.A.')
+        .replace(' Corporation', '')
+        .replace(/\s+/g, ' ').trim();
+
+    const rows = top10.map((l, i) => {
+        const rowY = topPad + rowHeight * i + rowHeight / 2;
+        const barW = (l.loan_count / max) * barMaxWidth;
+        const isCommunity = community.has(l.bankname);
+        const barColor = isCommunity ? '#B8741C' : '#2F6BB3';
+        const label = shortLabel(l.bankname);
+        const valueX = barStart + barW + valueGap;
+        return `    <g>
+      <text x="${labelColEnd}" y="${rowY + 4}" text-anchor="end" font-size="13" fill="#444">${esc(label)}</text>
+      <rect x="${barStart}" y="${rowY - 10}" width="${barW.toFixed(1)}" height="20" rx="3" fill="${barColor}"/>
+      <text x="${valueX.toFixed(1)}" y="${rowY + 4}" text-anchor="start" font-size="13" font-weight="600" fill="#111">${l.loan_count}</text>
+    </g>`;
+    }).join('\n');
+
+    const descText = top10.map(l => `${l.bankname} ${l.loan_count} loans`).join('; ');
+    const highlightNote = community.size > 0
+        ? ` Korean-American community banks (${Array.from(community).join(', ')}) highlighted in amber; all other lenders in blue.`
+        : '';
+
+    return `<svg viewBox="0 0 ${width} ${totalHeight}" role="img" aria-labelledby="viz-lenders-title viz-lenders-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
+    <title id="viz-lenders-title">Top 10 SBA restaurant lenders in ${stateName} by loan count</title>
+    <desc id="viz-lenders-desc">Horizontal bar chart: ${descText}.${highlightNote}</desc>
+${rows}
+  </svg>`;
+}
+
+function renderLendersSection(stateLenders, stateName, industryLabel, communityBankNames) {
+    const chartSvg = renderLenderChartSvg(stateLenders, communityBankNames, stateName);
     return `
     <section class="lenders-section">
         <div class="container-narrow">
             <h2>Top SBA lenders for ${stateName} ${industryLabel}</h2>
             <p class="ls-sub">The ten banks that have approved the most SBA 7(a) loans to ${industryLabel} operators in ${stateName} FY2020-2025. Pulled directly from SBA FOIA data. Loan count alone doesn&rsquo;t capture fit for your specific deal &mdash; volume leaders and specialist fit can differ.</p>
-            <div class="lender-table-wrap">
-                <table class="lender-table">
-                    <thead>
-                        <tr><th>Rank</th><th>Lender</th><th>Loans in ${stateName}</th><th>Avg loan</th></tr>
-                    </thead>
-                    <tbody>${rows}
-                    </tbody>
-                </table>
+            <div class="viz-container">${chartSvg}</div>
+        </div>
+    </section>`;
+}
+
+function renderStateComparisonSvg(topStates, highlightStateAbbr, industryLabel) {
+    const top8 = topStates.slice(0, 8);
+    const max = top8[0].loan_count;
+    const width = 640;
+    const topPad = 28;
+    const rowHeight = 36;
+    const labelColEnd = 80;
+    const barStart = 92;
+    const barMaxWidth = 420;
+    const valueGap = 8;
+    const botPad = 16;
+    const totalHeight = topPad + rowHeight * top8.length + botPad;
+
+    const rows = top8.map((s, i) => {
+        const rowY = topPad + rowHeight * i + rowHeight / 2;
+        const barW = (s.loan_count / max) * barMaxWidth;
+        const isHighlight = s.state === highlightStateAbbr;
+        const barColor = isHighlight ? '#008254' : '#c9d0d8';
+        const textColor = isHighlight ? '#111' : '#444';
+        const valueX = barStart + barW + valueGap;
+        return `    <g>
+      <text x="${labelColEnd}" y="${rowY + 4}" text-anchor="end" font-size="13" font-weight="${isHighlight ? '700' : '500'}" fill="${textColor}">${s.state}</text>
+      <rect x="${barStart}" y="${rowY - 10}" width="${barW.toFixed(1)}" height="20" rx="3" fill="${barColor}"/>
+      <text x="${valueX.toFixed(1)}" y="${rowY + 4}" text-anchor="start" font-size="13" font-weight="${isHighlight ? '700' : '500'}" fill="${textColor}">${fmt.num(s.loan_count)} &#8226; ${fmt.pct1(s.pct_of_industry_loans)}</text>
+    </g>`;
+    }).join('\n');
+
+    const descText = top8.map(s => `${s.state} ${fmt.num(s.loan_count)} loans (${fmt.pct1(s.pct_of_industry_loans)})`).join('; ');
+
+    return `<svg viewBox="0 0 ${width} ${totalHeight}" role="img" aria-labelledby="viz-states-title viz-states-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
+    <title id="viz-states-title">Top 8 states for SBA ${industryLabel} loans, ${highlightStateAbbr} highlighted</title>
+    <desc id="viz-states-desc">Horizontal bar chart of the top 8 states by SBA ${industryLabel} loan count: ${descText}. ${highlightStateAbbr} highlighted in green; other states in gray.</desc>
+${rows}
+  </svg>`;
+}
+
+function renderComparisonTiles(stateStats, nationalStats, overall, stateName, industryLabel) {
+    const avgDelta = ((stateStats.avg_loan / nationalStats.avg_loan) - 1) * 100;
+    const chgoffDeltaPP = (stateStats.charge_off_pct - nationalStats.charge_off_pct);
+    const chgoffDeltaLabel = `${chgoffDeltaPP >= 0 ? '+' : ''}${chgoffDeltaPP.toFixed(2)}pp`;
+
+    return `
+    <section class="comparison-tiles">
+        <div class="container">
+            <h2>${stateName} vs national &mdash; at a glance</h2>
+            <div class="ct-grid">
+                <div class="ct-tile">
+                    <div class="ct-delta ${avgDelta >= 0 ? 'ct-up' : 'ct-down'}">${fmt.signedPct(avgDelta)}</div>
+                    <div class="ct-label">Average loan size</div>
+                    <div class="ct-values"><strong>${fmt.usdK(stateStats.avg_loan)}</strong> ${stateName} &nbsp;vs&nbsp; <span>${fmt.usdK(nationalStats.avg_loan)} national</span></div>
+                    <div class="ct-context">Higher average reflects ${stateName} real estate and buildout costs relative to national baseline.</div>
+                </div>
+                <div class="ct-tile">
+                    <div class="ct-delta ct-neutral">${chgoffDeltaLabel}</div>
+                    <div class="ct-label">Charge-off rate</div>
+                    <div class="ct-values"><strong>${fmt.pct(stateStats.charge_off_pct)}</strong> ${stateName} &nbsp;vs&nbsp; <span>${fmt.pct(nationalStats.charge_off_pct)} national ${industryLabel}</span></div>
+                    <div class="ct-context">${chgoffDeltaPP >= 0 ? 'Modestly above' : 'Modestly below'} national ${industryLabel}; ${stateName} cost structure pressures margins.</div>
+                </div>
+                <div class="ct-tile ct-highlight">
+                    <div class="ct-big">${fmt.pct1(stateStats.share_of_industry_loans_pct)}</div>
+                    <div class="ct-label">Of all US ${industryLabel} SBA loans</div>
+                    <div class="ct-context">${stateName} is the largest single-state ${industryLabel} SBA market in the US.</div>
+                </div>
             </div>
         </div>
     </section>`;
+}
+
+function renderStateComparisonSection(topStates, highlightStateAbbr, stateName, industryLabel) {
+    const chartSvg = renderStateComparisonSvg(topStates, highlightStateAbbr, industryLabel);
+    const highlighted = topStates.find(s => s.state === highlightStateAbbr);
+    const second = topStates.find(s => s.state !== highlightStateAbbr);
+    const leadFactor = highlighted && second ? (highlighted.loan_count / second.loan_count).toFixed(2) : '';
+    return `
+    <section class="state-comparison-section">
+        <div class="container-narrow">
+            <h2>How ${stateName} compares to other top ${industryLabel} states</h2>
+            <p class="ls-sub">${stateName} leads the next-largest state (${second ? second.state : ''}) by roughly ${leadFactor}&times; on SBA ${industryLabel} loan count &mdash; the concentration is real, not noise. Top 8 states account for about half of all national ${industryLabel} SBA volume.</p>
+            <div class="viz-container">${chartSvg}</div>
+        </div>
+    </section>`;
+}
+
+function renderHeroPhoto(heroPhoto, stateName, industryLabel) {
+    if (!heroPhoto) return '';
+    return `
+<section class="hero-photo-banner" aria-label="Hero image">
+    <img src="${esc(heroPhoto.src)}" alt="${esc(heroPhoto.alt)}" width="${heroPhoto.width}" height="${heroPhoto.height}" class="hero-photo-img" loading="eager" fetchpriority="high">
+    <div class="hero-photo-overlay"></div>
+    <p class="hero-photo-credit">Photo: <a href="${esc(heroPhoto.photographerUrl)}" rel="noopener" target="_blank">${esc(heroPhoto.photographer)}</a> via <a href="${esc(heroPhoto.sourceUrl)}" rel="noopener" target="_blank">${esc(heroPhoto.sourceName)}</a></p>
+</section>`;
 }
 
 function renderCityLinks(cityLinks, stateName) {
@@ -473,6 +609,39 @@ function renderPage(naicsCode, stateAbbr) {
         .faq-item[open] .faq-marker::after { transform: rotate(0deg); }
         .faq-answer { overflow: hidden; max-height: 0; padding: 0 20px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.75; transition: max-height 0.3s ease, padding 0.3s ease; }
         .faq-item[open] .faq-answer { max-height: 800px; padding: 0 20px 18px 62px; }
+        /* Hero photo banner */
+        .hero-photo-banner { position: relative; margin-top: 64px; background: #1a3a5c; overflow: hidden; height: 320px; }
+        .hero-photo-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-photo-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(247,247,247,0.2) 75%, rgba(247,247,247,1) 100%); pointer-events: none; }
+        .hero-photo-credit { position: absolute; bottom: 8px; right: 14px; font-size: 11px; color: rgba(255,255,255,0.9); text-shadow: 0 1px 3px rgba(0,0,0,0.5); margin: 0; z-index: 2; }
+        .hero-photo-credit a { color: inherit; text-decoration: underline; }
+        .hero-photo-credit a:hover { color: var(--white); }
+        /* When hero-photo-banner is present, the breadcrumb loses its margin-top (photo has it instead) */
+        .hero-photo-banner + .breadcrumb { margin-top: 0; }
+        @media (max-width: 640px) { .hero-photo-banner { height: 220px; } }
+        /* Inline SVG data viz */
+        .viz-container { max-width: 780px; margin: 0 auto; padding: 16px 0; }
+        .data-viz-svg { width: 100%; height: auto; display: block; font-family: 'Inter', sans-serif; }
+        /* Comparison tiles */
+        .comparison-tiles { padding: 48px 0; background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .comparison-tiles h2 { font-size: 22px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 28px; }
+        .ct-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1040px; margin: 0 auto; }
+        .ct-tile { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; display: flex; flex-direction: column; }
+        .ct-tile.ct-highlight { border-left: 3px solid var(--green); background: var(--green-bg); }
+        .ct-delta { display: inline-block; align-self: flex-start; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+        .ct-delta.ct-up { background: #fff4e5; color: var(--accent-amber); }
+        .ct-delta.ct-down { background: #e8f5ef; color: var(--green); }
+        .ct-delta.ct-neutral { background: #eef0f4; color: #555; }
+        .ct-big { font-size: 40px; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+        .ct-label { font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 8px; }
+        .ct-values { font-size: 15px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px; }
+        .ct-values strong { color: var(--text); font-weight: 700; }
+        .ct-values span { color: var(--text-muted); font-size: 13px; }
+        .ct-context { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-top: auto; }
+        @media (max-width: 760px) { .ct-grid { grid-template-columns: 1fr; } }
+        /* State comparison section */
+        .state-comparison-section { padding: 56px 0; background: var(--white); }
+        .state-comparison-section h2 { font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 10px; text-align: center; }
         /* Closing */
         .closing-cta { padding: 64px 0; background: var(--navy); text-align: center; }
         .closing-cta h2 { font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
@@ -506,6 +675,7 @@ function renderPage(naicsCode, stateAbbr) {
         </nav>
     </div>
 </header>
+${renderHeroPhoto(cfg.heroPhoto, cfg.stateName, cfg.industryLabel)}
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
@@ -547,7 +717,11 @@ function renderPage(naicsCode, stateAbbr) {
 <div id="ca-stats"></div>
 ${renderStatsBlock(stateStats, nationalStats, overall, cfg.stateName, cfg.industryLabel)}
 
-${renderLendersSection(stateStats.top_lenders, cfg.stateName, cfg.industryLabel)}
+${renderComparisonTiles(stateStats, nationalStats, overall, cfg.stateName, cfg.industryLabel)}
+
+${renderStateComparisonSection(nationalStats.top_states_by_count, cfg.state, cfg.stateName, cfg.industryLabel)}
+
+${renderLendersSection(stateStats.top_lenders, cfg.stateName, cfg.industryLabel, cfg.communityBankNames)}
 <div class="container-narrow" style="margin-top:-24px;">
     <div class="lender-callout">${cfg.lenderCalloutHtml}</div>
 </div>
