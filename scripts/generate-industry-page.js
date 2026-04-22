@@ -905,6 +905,373 @@ const CONFIGS = {
     ],
 },
 
+'541211': {
+    slug: 'cpas',
+    h1: 'SBA Loans for CPA Firms',
+    title: 'SBA Loan for CPA Firm 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for CPA firm acquisitions and partner buyouts. 2,072 CPA firm SBA loans approved FY2020-2025 with 0.48% charge-off (0.35x SBA average). Take the 2-minute quiz.',
+    breadcrumbName: 'SBA Loans for CPA Firms',
+    campaignSlug: 'sba-cpas-quiz',
+    heroSub: 'CPA firm SBA loans have one of the strongest underwriting profiles in the portfolio &mdash; a <strong>0.48% charge-off rate</strong>, roughly one-third the SBA average. The underlying economics mirror <a class="inline" href="/sba-loans/insurance-agencies">insurance agency lending</a>: recurring-client revenue, book-of-business valuation mechanics, partner-buyout structures.',
+    heroValue: 'Answer 6 questions. Get matched with CPA-firm-experienced SBA lenders.',
+    serviceDescription: 'My Money Marketplace helps CPA firm owners and buyers compare SBA 7(a) options and match with lenders experienced in professional-services practice acquisition underwriting. We do not originate SBA loans.',
+    narrative: {
+        underwritingTitle: 'How lenders evaluate CPA firm files',
+        underwriting: `
+            <p>CPA firm SBA lending sits among the strongest-performing professional services categories in the SBA portfolio. Underwriting runs on <strong>recurring-client revenue math</strong> similar to <a class="inline" href="/sba-loans/insurance-agencies">insurance agency book-of-business valuation</a>: the asset being purchased is a client list with predictable renewal billings, not a traditional operating business. The 0.48% charge-off rate reflects how favorably lenders view this structure.</p>
+            <h3>Book-of-business valuation</h3>
+            <p>CPA firms are typically valued at <strong>0.9x to 1.4x annual revenue</strong> on the acquisition market, with variation driven by client mix (higher-margin tax and advisory vs. lower-margin bookkeeping), retention history, and partner dependency. Lenders underwrite the projected client retention curve (typically 85-95% annual retention on well-run firms) against the debt service coverage requirement. A firm with diversified client base and strong retention history underwrites meaningfully better than a firm with concentrated revenue from a few clients or heavy dependence on the selling partner.</p>
+            <h3>Partner-buyout structures</h3>
+            <p>Multi-partner firms commonly finance transitions through partial purchases &mdash; a partner buys out a retiring senior partner&rsquo;s interest through an SBA 7(a) loan, with the firm continuing under multi-partner ownership. The SBA&rsquo;s May 2023 partial-purchase rule update clarified these transactions qualify for 7(a) financing. Specialist lenders handle these routinely; see our <a class="inline" href="/sba-loans/business-acquisition">SBA acquisition mechanics guide</a> for the broader deal-structuring framework.</p>
+            <h3>Q1 seasonal revenue concentration</h3>
+            <p>CPA firms run concentrated revenue in Q1 tax season. Lenders recognize the pattern and structure loans with appropriate working capital for the remaining three quarters. Firms with advisory practice revenue (CFO services, wealth management, consulting) smooth the seasonal pattern meaningfully; pure tax-return-focused firms show more Q1 concentration that requires more explicit cash-flow planning in the loan structure.</p>
+        `,
+        indepTitle: 'Acquisition patterns and specialist lenders',
+        indep: `
+            <p>Franchise arrangements are essentially absent in CPA firms &mdash; <strong>{franchise_pct}% franchise participation</strong>. Dominant acquisition patterns: senior partner selling to a junior partner or senior associate, multi-partner firm transitioning a retiring partner&rsquo;s interest, or acquisition by a consolidating firm (CPA rollup activity is active). Live Oak Banking leads the CPA firm SBA lending category, with several other specialist lenders running dedicated professional-services lending programs.</p>
+            <p>Generalist banks sometimes miss CPA firm underwriting entirely &mdash; the book-of-business mechanics don&rsquo;t resemble general SBA files, and lenders unfamiliar with the pattern either decline or price punitively. Specialist match is the biggest practical variable.</p>
+        `,
+        failureTitle: 'Why CPA firms outperform on charge-off',
+        failure: `
+            <p>CPA firm charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio. The favorable performance reflects <strong>recurring-client revenue</strong> (clients renew annually for tax, compliance, and advisory services), <strong>professional-licensing supply constraint</strong> (CPA licensure limits competitive pressure), and <strong>high switching costs</strong> (clients don&rsquo;t move CPAs casually). When loans do fail, causes cluster around <strong>client concentration collapse</strong> (major client leaves or reduces scope), <strong>partner-dependency risk</strong> (key partner exits and takes clients), or <strong>overpayment on acquisition multiples</strong> in the active consolidation market.</p>
+            <p>The +25% YoY growth in SBA lending to CPA firms reflects ongoing partner-transition activity &mdash; an aging CPA partner demographic generates consistent acquisition deal flow, with individual-buyer CPAs competing against consolidator bids. SBA 7(a) is the dominant individual-buyer financing path.</p>
+        `,
+    },
+    quiz: {
+        questions: [
+            {q:"What's your situation?",opts:[{v:"associate-buying",l:"Associate CPA buying the firm"},{v:"partner-buyout",l:"Partner buying out a retiring partner"},{v:"acquisition",l:"Acquiring an outside firm"},{v:"expansion",l:"Expanding existing firm"},{v:"new-firm",l:"Starting a new firm"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Firm / book purchase price"},{v:"partner-interest",l:"Partner interest buyout"},{v:"real-estate",l:"Office real estate"},{v:"technology",l:"Technology / practice management"},{v:"multiple",l:"Multiple combined uses"}]},
+            {q:"Your licensing and experience?",opts:[{v:"cpa-experienced",l:"Licensed CPA, 5+ years in public practice"},{v:"cpa-new",l:"Licensed CPA, under 5 years"},{v:"non-cpa-partner",l:"Non-CPA with licensed partner"},{v:"non-cpa-new",l:"Non-CPA / accountant entering space"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-759",l:"720-759"},{v:"760-plus",l:"760+"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-250k",l:"Under $250K"},{v:"250k-500k",l:"$250K - $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-plus",l:"$1M+"}]},
+            {q:"Firm client revenue mix?",opts:[{v:"diversified",l:"Diversified (tax + advisory + bookkeeping)"},{v:"tax-heavy",l:"Tax-prep heavy"},{v:"advisory-heavy",l:"Advisory / CFO services heavy"},{v:"na",l:"Not applicable / new firm"}]},
+        ],
+        profiles: {
+            A: {badge:"Associate-to-owner path",headline:"Buying the firm you work at is the strongest file",body:"Licensed CPA buying the firm you're already part of is the lowest-risk professional-services SBA file type. Specialist lenders — Live Oak Banking leads the category — compete for these deals with competitive pricing and 45-75 day closes. Client retention during transition is the key variable and the file you know best.",ctaLabel:"Match with CPA-firm-experienced SBA lenders",utmContent:"profile-a-associate"},
+            B: {badge:"Partner buyout",headline:"Partial-purchase SBA 7(a) is the path",body:"Partner buyouts qualify for SBA 7(a) since the May 2023 rule clarification. The underwriting differs from full acquisitions — lender evaluates both the firm's ongoing cash flow and the specific partner interest being purchased. See our SBA acquisition guide for broader mechanics.",ctaLabel:"Match with partner-buyout SBA specialists",utmContent:"profile-b-partner"},
+            C: {badge:"Outside firm acquisition",headline:"Standard SBA 7(a) with specialist lender",body:"Acquiring a firm you're not currently part of requires more extensive client-retention diligence and typically includes a transition period with the selling partner. Specialist CPA SBA lenders handle the book-of-business valuation and partner-dependency analysis. Plan 60-90 days.",ctaLabel:"Match with CPA acquisition SBA lenders",utmContent:"profile-c-acquisition"},
+            D: {badge:"New firm / non-CPA path",headline:"Strengthen the file structure before applying",body:"Starting a new CPA firm or acquiring without a licensed-CPA operating partner faces a harder SBA path. Lenders want licensed operator on the team and a defensible client-acquisition plan. Consider partnership with an experienced CPA or a structured mentorship arrangement.",ctaLabel:"Get honest feedback from a CPA-firm SBA specialist",utmContent:"profile-d-new-firm"},
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],lic=a[2],credit=a[3],amount=a[4],mix=a[5];if(lic==='non-cpa-new')return 'D';if(sit==='new-firm')return 'D';if(sit==='partner-buyout')return 'B';if(sit==='associate-buying')return 'A';if(sit==='acquisition')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan to buy a CPA firm?",a:"Yes. CPA firm acquisitions are a primary SBA 7(a) use case — 2,072 loans approved FY2020-2025 with a 0.48% charge-off rate, roughly one-third the SBA average. Loans cover firm purchase price (book of business and goodwill), office buildout, practice management technology, and working capital. Since May 2023, partial purchases (partner buyouts) also qualify."},
+        {q:"How are CPA firms typically valued?",a:"CPA firms commonly value at 0.9x to 1.4x annual revenue, with variation driven by client mix (tax and advisory revenue commands higher multiples than bookkeeping), retention history, and partner dependency. Lenders underwrite to projected client retention post-acquisition, typically 85-95% on well-run firms. A firm with diversified client base and strong retention underwrites better than a firm with concentrated revenue or heavy partner dependency."},
+        {q:"Do I need to be a licensed CPA to buy a CPA firm?",a:"In most states yes, due to state accountancy board rules that restrict firm ownership to licensed CPAs or require a licensed-CPA majority. Non-CPA ownership in some states is allowed through specific structures with a licensed managing CPA. Lenders verify state-compliance of the ownership structure before closing."},
+        {q:"What's the SBA charge-off rate for CPA firms?",a:"CPA firm SBA 7(a) charge-offs run at 0.48%, compared to the all-industry SBA average of 1.36% — roughly one-third the average. Favorable performance reflects recurring-client revenue, CPA licensure supply constraints, and high client switching costs."},
+        {q:"How do partner buyouts work under SBA 7(a)?",a:"The SBA's May 2023 partial-purchase rule clarified that partner buyouts qualify for 7(a) financing. The transaction structures as: SBA 7(a) funds the purchase of the retiring partner's interest at closing; remaining partners continue ownership; buyer partner assumes the debt service. Lender underwrites against the firm's ongoing cash flow rather than just the buyer's individual income."},
+        {q:"How does Q1 tax-season revenue concentration affect underwriting?",a:"Lenders recognize the seasonal pattern and structure working capital appropriately. CPA firms with advisory practice revenue (CFO services, wealth management, consulting) smooth the pattern meaningfully. Pure tax-return-focused firms show more Q1 concentration that requires more explicit cash-flow planning in the loan structure — typically 9-12 months of operating reserves on top of other working capital."},
+        {q:"Is CPA firm SBA lending growing?",a:"Yes. Year-over-year CPA firm SBA lending is up 25%, reflecting ongoing partner-transition activity from an aging CPA partner demographic. Individual-buyer CPAs compete with consolidator bids for retiring-partner firms, and SBA 7(a) is the dominant individual-buyer financing path."},
+    ],
+},
+
+'541219': {
+    slug: 'accounting',
+    h1: 'SBA Loans for Accounting & Bookkeeping Firms',
+    title: 'SBA Loan for Accounting, Bookkeeping & Tax Prep 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for accounting, bookkeeping, tax prep, and payroll firms. 1,722 SBA loans approved FY2020-2025 with +49% YoY growth — fastest-growing industry in the SBA dataset.',
+    breadcrumbName: 'SBA Loans for Accounting & Bookkeeping',
+    campaignSlug: 'sba-accounting-quiz',
+    heroSub: 'Non-CPA accounting services &mdash; bookkeeping, payroll, tax preparation, accounting support &mdash; are the <strong>fastest-growing industry in the SBA dataset at +49% YoY</strong>. Smaller deals than CPA firms (median $110K vs. $270K), but the growth signal is real. Distinct from <a class="inline" href="/sba-loans/cpas">CPA firms</a>.',
+    heroValue: 'Answer 6 questions. Get matched with accounting-services-experienced SBA lenders.',
+    serviceDescription: 'My Money Marketplace helps accounting, bookkeeping, and tax-prep service operators compare SBA 7(a) options and match with lenders experienced in small professional-services underwriting. We do not originate SBA loans.',
+    narrative: {
+        underwritingTitle: 'How lenders evaluate accounting services files',
+        underwriting: `
+            <p>The &ldquo;Other Accounting Services&rdquo; NAICS category covers bookkeeping, payroll services, tax preparation (non-CPA), and accounting support services &mdash; distinct from the <a class="inline" href="/sba-loans/cpas">CPA firm category (NAICS 541211)</a>. The audience tends to be small-business operators rather than licensed-professional firms, with smaller deal sizes and different underwriting patterns.</p>
+            <h3>Smaller deals, different audience</h3>
+            <p>Average accounting services SBA loan runs <strong>$301,000 with a median of $110,000</strong> &mdash; meaningfully smaller than CPA firm deals (median $270K) and reflective of the smaller-operator audience. Typical use cases: bookkeeper or tax preparer acquiring an established small book of clients, franchise tax-prep opening (Liberty Tax, Jackson Hewitt, H&amp;R Block franchise), or small accounting support service expansion.</p>
+            <h3>The distinction from CPA firms matters</h3>
+            <p>CPA firms require licensed CPA ownership in most states and operate under state accountancy board regulation. Non-CPA accounting services (this category) don&rsquo;t have the licensing barrier &mdash; the operator provides bookkeeping, payroll processing, or non-CPA tax preparation that doesn&rsquo;t require CPA licensure. Revenue per client is lower, client count is typically higher, and the economics lean toward <strong>recurring-billing patterns on bookkeeping accounts</strong> or <strong>seasonal volume patterns on tax prep</strong>.</p>
+            <h3>Equipment and capital needs are minimal</h3>
+            <p>Accounting services businesses are capital-light: office space, computers, software subscriptions (QuickBooks, Xero, tax software). SBA loans primarily fund client-book acquisitions and working capital rather than equipment. The small average loan size reflects this; SBA 7(a) Small Loan (up to $500K) covers the bulk of deals in this category.</p>
+        `,
+        indepTitle: 'Independent operators and the growth signal',
+        indep: `
+            <p>Franchise participation is low at <strong>{franchise_pct}% of accounting services SBA loans</strong>. Major franchise concepts exist (Liberty Tax, Jackson Hewitt, H&amp;R Block franchising) but much of the franchise-tax category is owner-operator rather than SBA-financed. The independent operator segment dominates SBA lending in this NAICS.</p>
+            <p>The +49% YoY growth in SBA lending to this category is <strong>the fastest growth in the entire SBA industry dataset we track</strong>. The trajectory is also accelerating: trailing 12-month volume is up 6% from the prior 12 months, suggesting the growth isn&rsquo;t just a one-year anomaly. The dynamic reflects small-business services consolidation &mdash; bookkeepers and tax preparers building client books through acquisition of retiring operators.</p>
+        `,
+        failureTitle: 'Growth signal + moderate charge-off performance',
+        failure: `
+            <p>Accounting services charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio, about half the SBA average. Meaningfully better than the cross-industry baseline, though not as strong as the CPA firm category (0.35x ratio). The difference reflects the less-licensed audience and the higher prevalence of smaller single-operator businesses in this category.</p>
+            <p>What predicts failure: <strong>client concentration</strong> (one or two large accounting clients leaving triggers a revenue collapse the small business can&rsquo;t absorb), <strong>seasonal tax-prep operations misjudging cash flow</strong> through the off-season, and <strong>overpayment on client-book acquisitions</strong> in competitive small-market deals. Specialist lenders address these risks in underwriting through client-diversification review and working-capital sizing.</p>
+        `,
+    },
+    quiz: {
+        questions: [
+            {q:"What's your service type?",opts:[{v:"bookkeeping",l:"Bookkeeping services"},{v:"payroll",l:"Payroll services"},{v:"tax-prep",l:"Tax preparation"},{v:"accounting-support",l:"Accounting / advisory support"},{v:"mixed",l:"Multi-service practice"}]},
+            {q:"What's your situation?",opts:[{v:"acquisition",l:"Acquiring an existing book"},{v:"franchise",l:"Opening a franchise (tax prep)"},{v:"expansion",l:"Expanding current business"},{v:"new",l:"Starting a new business"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Book / business purchase price"},{v:"technology",l:"Technology / software investment"},{v:"working-capital",l:"Working capital / seasonal bridging"},{v:"office",l:"Office buildout"},{v:"multiple",l:"Multiple combined uses"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-759",l:"720-759"},{v:"760-plus",l:"760+"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-100k",l:"Under $100K"},{v:"100k-250k",l:"$100K - $250K"},{v:"250k-500k",l:"$250K - $500K"},{v:"500k-plus",l:"$500K+"}]},
+            {q:"Your experience?",opts:[{v:"5-plus",l:"5+ years in accounting / bookkeeping"},{v:"under-5",l:"Under 5 years experience"},{v:"cpa",l:"Licensed CPA (consider CPA firm page)"},{v:"new-industry",l:"New to accounting services"}]},
+        ],
+        profiles: {
+            A: {badge:"Book acquisition sweet spot",headline:"Experienced operator acquiring established client book",body:"Experienced bookkeeper, payroll operator, or tax preparer acquiring a book from a retiring operator is the strongest accounting-services SBA file. SBA 7(a) Small Loan handles most deals in this category efficiently. Plan 45-75 days to close.",ctaLabel:"Match with accounting-services-experienced SBA lenders",utmContent:"profile-a-book"},
+            B: {badge:"Franchise tax-prep path",headline:"Franchise tax-prep benefits from brand underwriting",body:"Franchise tax-prep operators (Liberty Tax, Jackson Hewitt, H&R Block franchising) benefit from brand-level underwriting shortcut if listed in SBA Franchise Directory. See SBA franchise details for specific mechanics.",ctaLabel:"See SBA franchise details",utmContent:"profile-b-franchise",ctaUrl:"/sba-loans/franchise/"},
+            C: {badge:"Consider CPA firm path",headline:"Licensed CPA? Different SBA category applies",body:"Licensed CPAs acquiring CPA firms should see our SBA CPA firm guide — NAICS 541211 has meaningfully different underwriting dynamics, larger average deal size, and stronger charge-off performance than this category. The dominant SBA lenders also differ.",ctaLabel:"See SBA CPA firm details",utmContent:"profile-c-cpa",ctaUrl:"/sba-loans/cpas/"},
+            D: {badge:"New business / experience gap",headline:"Starting new or entering the industry",body:"Starting a new accounting services business or entering the industry without direct experience faces a harder SBA path. Working capital sizing and client-acquisition plan are the critical file components. Consider acquisition of a small existing book as an alternative entry point.",ctaLabel:"Get honest feedback from an accounting-services SBA specialist",utmContent:"profile-d-new"},
+        },
+        scoringBody: `function score(a){var svc=a[0],sit=a[1],use=a[2],credit=a[3],amount=a[4],exp=a[5];if(exp==='cpa')return 'C';if(sit==='franchise')return 'B';if(sit==='new'||exp==='new-industry')return 'D';return 'A';}`,
+    },
+    faqs: [
+        {q:"What's the difference between the SBA CPA firm and accounting services categories?",a:"The SBA CPA firm category (NAICS 541211) covers licensed-CPA firms regulated by state accountancy boards. The accounting services category (NAICS 541219) covers non-CPA services — bookkeeping, payroll, tax preparation without CPA credentials, accounting support. Average CPA firm SBA loan is $490K; average accounting services loan is $301K. Charge-off performance and lender dynamics differ meaningfully. See our separate CPA firm guide."},
+        {q:"Can I get an SBA loan for a bookkeeping or tax prep business?",a:"Yes. Accounting services is one of the fastest-growing SBA categories at +49% YoY. SBA 7(a) covers acquisitions of client books, franchise tax-prep openings, and working capital for seasonal tax operations. Average loan size is smaller than CPA firm deals — median $110K — reflecting the smaller-operator audience."},
+        {q:"How much can I borrow for a bookkeeping or tax prep business?",a:"Most accounting services SBA deals fall in the $100K to $500K range, handled by SBA 7(a) Small Loan. Larger multi-location operations or established payroll services can reach $1M+. Average loan across the category FY2020-2025 was $301,000."},
+        {q:"Do I need to be certified for an SBA loan for accounting services?",a:"No certification is required for most bookkeeping, payroll, and non-CPA tax-prep services. Operators typically hold professional experience credentials (years in the industry, QuickBooks certification, Enrolled Agent status for tax preparers) that lenders weigh in underwriting. For CPA firm ownership, state accountancy board licensing applies — see our CPA firm guide."},
+        {q:"What's the SBA charge-off rate for accounting services?",a:"Accounting services SBA 7(a) charge-offs run at 0.70%, roughly half the all-industry SBA average of 1.36%. Meaningfully better than cross-industry baseline, though not as strong as the CPA firm category (0.48%). The difference reflects less-licensed audience and higher prevalence of smaller single-operator businesses."},
+        {q:"Is this SBA lending category really growing that fast?",a:"Yes. +49% year-over-year growth is the fastest in the SBA industry dataset we track. Trailing 12-month volume is also up 6% from the prior 12 months, suggesting the growth is sustained rather than a one-year anomaly. Dynamic reflects small-business services consolidation as established bookkeepers and tax preparers sell books to younger operators."},
+        {q:"How do seasonal tax-prep operations handle cash flow?",a:"Tax preparation concentrates revenue in Q1 (January through April), with volume falling meaningfully through the rest of the year. Specialist lenders size working capital into the loan structure to cover 6-9 months of off-season operating costs. Tax-prep operators that maintain year-round bookkeeping or payroll service revenue smooth the seasonal pattern, which lenders view favorably."},
+    ],
+},
+
+'811121': {
+    slug: 'auto-body',
+    h1: 'SBA Loans for Auto Body Shops',
+    title: 'SBA Loan for Auto Body & Collision Repair 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) and 504 loans for auto body and collision repair shops. 1,767 SBA loans approved FY2020-2025 with +23% YoY growth. Distinct from mechanical auto repair — DRP relationships matter.',
+    breadcrumbName: 'SBA Loans for Auto Body',
+    campaignSlug: 'sba-auto-body-quiz',
+    heroSub: 'Auto body and collision repair SBA lending is distinct from <a class="inline" href="/sba-loans/auto-repair">general mechanical auto repair</a>: higher capital intensity, DRP (Direct Repair Program) relationships with insurance carriers as the revenue foundation, and <strong>+23% YoY growth</strong> with trailing-12 still accelerating.',
+    heroValue: 'Answer 6 questions. Get matched with collision-repair-experienced SBA lenders.',
+    serviceDescription: 'My Money Marketplace helps auto body and collision repair shop owners compare SBA 7(a) and 504 options and match with lenders experienced in body-shop underwriting. We do not originate SBA loans.',
+    narrative: {
+        underwritingTitle: 'How lenders evaluate auto body shop files',
+        underwriting: `
+            <p>Auto body SBA underwriting differs meaningfully from <a class="inline" href="/sba-loans/auto-repair">general auto repair</a>. Collision shops carry more specialized equipment, operate on insurance-paid revenue rather than consumer cash-pay, and rely heavily on insurance-carrier relationships for deal flow. The 0.85% charge-off rate reflects favorable underlying economics that lenders recognize.</p>
+            <h3>Equipment-heavy and high-capital</h3>
+            <p>A modern auto body shop requires <strong>$500K to $1.5M in specialized equipment</strong>: spray booths with proper ventilation and paint filtration, frame machines, paint mixing systems, welding equipment rated for modern unibody construction, aluminum repair equipment (separate from steel for many newer vehicles), and diagnostic tools for ADAS (advanced driver assistance systems) recalibration. Equipment value underwrites as strong collateral; recovery on defaulted body shop loans is typically stronger than mechanical repair because the equipment is more specialized and less resellable piecemeal.</p>
+            <h3>DRP relationships are the revenue foundation</h3>
+            <p>Direct Repair Program relationships with insurance carriers (State Farm, Progressive, GEICO, Allstate, and others) drive <strong>50-80% of revenue</strong> at most SBA-scale body shops. DRP certification is carrier-specific and involves passing equipment audits, technician certification requirements (I-CAR training), and performance metrics (cycle time, customer satisfaction). Lenders evaluate which DRP relationships will transfer through an acquisition and what carrier-certification work will be needed post-close.</p>
+            <h3>Technician certification requirements</h3>
+            <p>I-CAR certification for technicians is effectively required for DRP participation at most carriers. OEM-specific certifications (aluminum Ford F-150 repair, Tesla body certification, etc.) open higher-margin work. Lenders want to understand the current certification mix and any certification work needed for the business plan post-acquisition.</p>
+            <h3>Growing faster than general auto repair</h3>
+            <p>Auto body is growing faster than general auto repair &mdash; <strong>+23% YoY vs. general auto repair&rsquo;s +27%</strong>, and trailing-12 volume is still <em>accelerating</em> (+5.8%) unlike general auto repair which is softening. The dynamic reflects increased collision complexity (ADAS adds work per claim) and the aging vehicle fleet driving more repair activity.</p>
+        `,
+        indepTitle: 'Independent shops and franchise concepts',
+        indep: `
+            <p>Franchise operators represent <strong>{franchise_pct}% of auto body SBA loans</strong> &mdash; moderate. Common franchise brands include Maaco, CARSTAR, Fix Auto, and several regional concepts. Franchise operations benefit from brand-level underwriting efficiency and established insurance-carrier relationships. Most auto body deals are independent.</p>
+            <p>Typical acquisition patterns: shop manager buying out owner, multi-generation family transition, or consolidator acquisition (collision-repair consolidation is active, with Caliber Collision, Service King, Gerber and others rolling up independents). SBA 7(a) is the dominant individual-buyer financing path, frequently structured with SBA 504 when real estate is included.</p>
+        `,
+        failureTitle: 'Charge-off performance and the collision-specific risk pattern',
+        failure: `
+            <p>Auto body charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio, meaningfully better than average. Equipment collateral and insurance-paid revenue keep recovery strong when loans fail. What predicts the failures: <strong>DRP relationship loss</strong> (carrier pulls direct-repair certification), <strong>equipment obsolescence</strong> in rapidly evolving repair technologies (aluminum, EV, ADAS), and <strong>facility-constrained cycle time</strong> that can&rsquo;t keep up with volume growth.</p>
+            <p>The practical implication: specialist lenders with body-shop experience recognize the DRP dynamics that generalist lenders often miss. Live Oak and other specialist banks structure deals that account for carrier-certification risk and equipment-refresh cycles; generalist banks sometimes under-weight these factors entirely.</p>
+        `,
+    },
+    quiz: {
+        questions: [
+            {q:"What's your situation?",opts:[{v:"acquisition",l:"Acquiring an existing shop"},{v:"new",l:"Starting a new shop"},{v:"expansion",l:"Expanding current business"},{v:"equipment",l:"Equipment upgrade / replacement"},{v:"drp-expansion",l:"Building DRP capacity"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Shop purchase price"},{v:"equipment-use",l:"Spray booth / frame / paint systems"},{v:"real-estate",l:"Facility real estate"},{v:"certification",l:"I-CAR / OEM certification expansion"},{v:"multiple",l:"Multiple combined uses"}]},
+            {q:"Your experience?",opts:[{v:"experienced-owner",l:"5+ years owning / managing body shops"},{v:"i-car-tech",l:"I-CAR certified technician"},{v:"non-tech-partner",l:"Non-technical with certified partner"},{v:"limited",l:"Limited collision-repair experience"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-759",l:"720-759"},{v:"760-plus",l:"760+"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-2m",l:"$1M - $2M"},{v:"2m-plus",l:"$2M+"}]},
+            {q:"DRP relationships?",opts:[{v:"multiple-drp",l:"Multiple carrier DRP relationships"},{v:"single-drp",l:"Single carrier DRP"},{v:"no-drp",l:"No current DRP / building"},{v:"na",l:"Not applicable / new shop"}]},
+        ],
+        profiles: {
+            A: {badge:"Strong acquisition candidate",headline:"Experienced operator acquiring DRP-certified shop",body:"Experienced body shop operator acquiring an established shop with multiple DRP relationships is a favorable SBA file. Equipment collateral, insurance-paid revenue, and established carrier relationships stack well. Plan 60-90 days with a body-shop-experienced SBA lender.",ctaLabel:"Match with body-shop-experienced SBA lenders",utmContent:"profile-a-acquisition"},
+            B: {badge:"Facility + shop",headline:"504 for the facility, 7(a) for the business",body:"Deals including facility real estate use SBA 504 for the building at fixed long-term rates plus 7(a) for the operating business. Body shops are facility-intensive (spray booths require specific ventilation infrastructure) — owning the facility stabilizes long-term economics.",ctaLabel:"Match with 504 + 7(a) body shop lenders",utmContent:"profile-b-facility"},
+            C: {badge:"Equipment / certification build",headline:"SBA 7(a) for equipment and DRP expansion",body:"Equipment upgrades (ADAS calibration, aluminum repair, EV certification) and DRP-expansion investments qualify for SBA 7(a). For equipment-only deals, non-SBA equipment financing often beats SBA on speed. Specialist lenders structure combined equipment + working capital efficiently.",ctaLabel:"Compare equipment financing vs. SBA",utmContent:"profile-c-equipment"},
+            D: {badge:"Experience gap",headline:"Strengthen operator profile before applying",body:"Limited collision-repair experience on larger deals is the hardest body shop SBA file. Lenders want I-CAR certified operator on the team or documented management agreement with a certified shop lead. Have this conversation upfront.",ctaLabel:"Get honest feedback from a body shop SBA specialist",utmContent:"profile-d-experience"},
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],exp=a[2],credit=a[3],amount=a[4],drp=a[5];if(exp==='limited'&&(amount==='1m-2m'||amount==='2m-plus'))return 'D';if(use==='real-estate'||use==='multiple'&&amount==='2m-plus')return 'B';if(sit==='equipment'||use==='equipment-use'||use==='certification')return 'C';if(sit==='acquisition'&&(exp==='experienced-owner'||exp==='i-car-tech'))return 'A';return 'A';}`,
+    },
+    faqs: [
+        {q:"What's different about auto body SBA loans vs. general auto repair?",a:"Auto body shops are more equipment-intensive ($500K-$1.5M in specialized equipment vs. $200K-$800K for general auto repair), operate on insurance-paid revenue through DRP relationships rather than consumer cash-pay, and have higher average loan size. Charge-off performance is similar (0.85% vs. 1.00% for general auto repair) but the underwriting focuses on different risk factors: DRP relationship quality, technician certifications, and equipment-refresh cycles. See our general auto repair SBA guide for mechanical-repair underwriting."},
+        {q:"How important are DRP relationships in SBA underwriting?",a:"Very important. Direct Repair Program relationships with insurance carriers drive 50-80% of revenue at most SBA-scale body shops. Lenders evaluate which DRP certifications the shop currently holds, which will transfer through an acquisition, and what certification work is planned post-close. Loss of a major DRP relationship can trigger meaningful revenue impact, which lenders size into the underwriting."},
+        {q:"Do I need I-CAR certification to get an SBA loan for a body shop?",a:"Not strictly for the loan, but effectively required to maintain DRP participation at most carriers. Lenders want to see I-CAR certified technicians on the team — either the owner-operator directly or documented management/staff certifications. Non-certified owners typically need a documented management agreement with a certified shop lead."},
+        {q:"How much can I borrow with an SBA loan for an auto body shop?",a:"SBA 7(a) Standard goes up to $5 million; SBA 504 adds capacity for real estate. Average auto body SBA loan FY2020-2025 was $565,000. Most single-shop acquisitions with real estate run $1M to $3M; without real estate, $500K to $1.5M is typical. Equipment-focused upgrades commonly run $100K to $500K."},
+        {q:"What's the SBA charge-off rate for auto body shops?",a:"Auto body SBA 7(a) charge-offs run at 0.85%, meaningfully better than the all-industry SBA average of 1.36%. Equipment collateral and insurance-paid revenue keep recovery strong when loans fail. Main risk factors: DRP relationship loss, equipment obsolescence in rapidly evolving repair technologies (aluminum, EV, ADAS), and facility-constrained cycle time."},
+        {q:"Is auto body SBA lending growing?",a:"Yes. Year-over-year SBA lending to auto body is up about 23%, with trailing 12-month volume still accelerating unlike general auto repair which has softened. Dynamics include increased collision complexity (ADAS adds work per claim), aging vehicle fleet driving more repair activity, and active consolidator activity creating exit markets for independent operators."},
+        {q:"Should I buy the real estate for my body shop?",a:"When possible, yes — SBA 504 was built for exactly that use case. Body shops are facility-intensive because spray booths require specific ventilation, filtration, and environmental controls built into the facility. Relocating is expensive and disruptive. Owning the facility stabilizes long-term economics."},
+    ],
+},
+
+'621310': {
+    slug: 'chiropractors',
+    h1: 'SBA Loans for Chiropractic Practices',
+    title: 'SBA Loan for Chiropractic Practice 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for chiropractic practice acquisitions, buildouts, and equipment. 2,994 chiropractic SBA loans approved FY2020-2025 with 1.00% charge-off (0.74x SBA average).',
+    breadcrumbName: 'SBA Loans for Chiropractors',
+    campaignSlug: 'sba-chiropractors-quiz',
+    heroSub: 'Chiropractic practice SBA lending shares acquisition dynamics with <a class="inline" href="/sba-loans/physicians">physician</a> and <a class="inline" href="/sba-loans/dentists">dental</a> practices &mdash; three categories form the core &ldquo;healthcare practice&rdquo; SBA cluster. Chiropractic deal sizes run smaller (median $150K vs. $270K+ for dental and physician) with distinct practice-acquisition patterns.',
+    heroValue: 'Answer 6 questions. Get matched with chiropractic-practice-experienced SBA lenders.',
+    serviceDescription: 'My Money Marketplace helps chiropractors compare SBA 7(a) options and match with lenders experienced in chiropractic practice acquisition underwriting. We do not originate SBA loans.',
+    narrative: {
+        underwritingTitle: 'How lenders evaluate chiropractic practice files',
+        underwriting: `
+            <p>Chiropractic practice SBA underwriting sits between <a class="inline" href="/sba-loans/dentists">dental</a> and <a class="inline" href="/sba-loans/physicians">physician</a> practice profiles. The three categories share core dynamics &mdash; recurring-patient revenue, licensed-professional barrier to entry, practice-acquisition as the dominant use case &mdash; but chiropractic has meaningfully smaller average deal sizes and a different payer-mix dynamic.</p>
+            <h3>Smaller deal sizes than other healthcare practices</h3>
+            <p>Average chiropractic SBA loan is <strong>$267,000 with a median of $150,000</strong> &mdash; roughly one-third the average dental practice deal ($910K) and half the average physician practice deal ($602K). The smaller scale reflects lower equipment intensity (chiropractic tables, X-ray equipment, and activator instruments are meaningfully cheaper than dental imaging or physician practice equipment) and typically smaller staff counts.</p>
+            <h3>Practice acquisition dominates</h3>
+            <p>Like dental and physician practices, chiropractic SBA deals are overwhelmingly acquisitions: associate chiropractor buying the practice they work at, or acquiring an established practice from a retiring chiropractor. The associate-to-owner transition is the favorable-risk pattern lenders prefer because the buyer knows the patient base, staff, and local market before closing.</p>
+            <h3>Payer mix differs meaningfully</h3>
+            <p>Chiropractic practices typically see <strong>more cash-pay and more workers&rsquo; compensation / personal injury (PI) revenue</strong> than other healthcare practices. Commercial insurance participation varies by state and by insurance plan. Lenders evaluate the payer mix carefully &mdash; high PI concentration can be strong revenue but volatile, while strong workers&rsquo; comp relationships provide stability.</p>
+            <h3>Professional corporation requirements</h3>
+            <p>Chiropractic practices operate as professional corporations (PC) or professional LLCs in most states, with restrictions on non-chiropractor ownership. State rules vary; lenders verify state-compliant ownership structure before closing.</p>
+        `,
+        indepTitle: 'Acquisition patterns and franchise activity',
+        indep: `
+            <p>Franchise arrangements represent <strong>{franchise_pct}% of chiropractic SBA loans</strong> &mdash; meaningful but minority. The Joint Chiropractic and several regional franchise concepts drive this share; The Joint specifically has grown rapidly as a membership-based chiropractic model. Franchise operations close SBA deals routinely when listed in the SBA Franchise Directory.</p>
+            <p>Independent chiropractic practices are the bulk of SBA deals. Typical pattern: associate chiropractor buys the practice of the senior chiropractor they&rsquo;ve been working with, with SBA 7(a) funding the purchase price plus transition working capital. See our <a class="inline" href="/sba-loans/physicians">physician practice</a> and <a class="inline" href="/sba-loans/dentists">dental practice</a> guides for comparable transition-pattern mechanics.</p>
+        `,
+        failureTitle: 'Charge-off performance in context',
+        failure: `
+            <p>Chiropractic practice charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio, modestly better than average. Not as strong as dental (0.20x) or physician (0.50x) practice categories but still meaningfully better than the SBA baseline. The difference reflects the smaller-scale businesses in this category and the more variable payer mix.</p>
+            <p>What predicts the failures: <strong>PI payer concentration collapse</strong> (changes in state workers&rsquo; comp or auto insurance laws reduce PI referral flow), <strong>solo-practitioner dependence</strong> (practices tightly tied to one chiropractor face transition risk), and <strong>local-market competition</strong> (chiropractic is less supply-constrained than dental or physician, allowing faster new-entrant competition). The +13% YoY growth reflects steady partner-transition activity across both independent and franchise models.</p>
+        `,
+    },
+    quiz: {
+        questions: [
+            {q:"What's your situation?",opts:[{v:"associate-buying",l:"Associate buying current practice"},{v:"acquisition",l:"Acquiring an established practice"},{v:"new-practice",l:"Starting a new practice"},{v:"expansion",l:"Expanding current practice"},{v:"franchise",l:"Opening or buying a franchise"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Practice purchase price"},{v:"equipment-use",l:"Tables, X-ray, therapy equipment"},{v:"buildout",l:"Office buildout"},{v:"real-estate",l:"Real estate purchase"},{v:"multiple",l:"Multiple combined uses"}]},
+            {q:"Your licensing?",opts:[{v:"licensed-experienced",l:"Licensed DC, 5+ years practicing"},{v:"licensed-new",l:"Licensed DC, under 5 years"},{v:"non-dc-partner",l:"Non-DC with licensed operating partner"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-759",l:"720-759"},{v:"760-plus",l:"760+"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-150k",l:"Under $150K"},{v:"150k-350k",l:"$150K - $350K"},{v:"350k-750k",l:"$350K - $750K"},{v:"750k-plus",l:"$750K+"}]},
+            {q:"Payer mix?",opts:[{v:"diversified",l:"Diversified (cash + insurance + PI + WC)"},{v:"pi-heavy",l:"Personal injury / workers comp heavy"},{v:"cash-heavy",l:"Cash-pay / membership heavy"},{v:"na",l:"Not applicable / new practice"}]},
+        ],
+        profiles: {
+            A: {badge:"Associate-to-owner sweet spot",headline:"Associate buying current practice — favorable file",body:"Licensed chiropractor buying the practice you're already part of is the lowest-risk chiropractic SBA file. Plan 45-75 days with a chiropractic-practice-experienced SBA lender. Smaller deal sizes relative to dental or physician practices often mean faster underwriting and closing.",ctaLabel:"Match with chiropractic-practice-experienced SBA lenders",utmContent:"profile-a-associate"},
+            B: {badge:"Practice acquisition",headline:"Acquiring an outside practice",body:"Acquiring an established practice you're not currently part of is a standard chiropractic SBA deal. Plan 60-90 days with attention to payer-mix review and transition-period structure with the selling chiropractor.",ctaLabel:"Match with chiropractic acquisition SBA lenders",utmContent:"profile-b-acquisition"},
+            C: {badge:"Franchise path",headline:"The Joint and other franchise concepts",body:"Franchise chiropractic models like The Joint Chiropractic benefit from brand-level underwriting shortcut if listed in SBA Franchise Directory. See our SBA franchise guide.",ctaLabel:"See SBA franchise details",utmContent:"profile-c-franchise",ctaUrl:"/sba-loans/franchise/"},
+            D: {badge:"New practice path",headline:"New chiropractic practice — plan for ramp",body:"Starting a new chiropractic practice faces a harder SBA path than acquisition. Lenders want itemized equipment list, patient-acquisition plan, and working capital for 6-12 months of patient-ramp. Partnership with an existing practice often beats pure startup.",ctaLabel:"Get honest feedback from a chiropractic SBA specialist",utmContent:"profile-d-new-practice"},
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],lic=a[2],credit=a[3],amount=a[4],payer=a[5];if(sit==='franchise')return 'C';if(sit==='new-practice')return 'D';if(sit==='associate-buying')return 'A';if(sit==='acquisition')return 'B';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a chiropractic practice?",a:"Yes. Chiropractic is an active SBA 7(a) category — 2,994 loans approved FY2020-2025. SBA 7(a) covers practice acquisitions, office buildout, equipment (tables, X-ray, therapy equipment), and working capital. Average chiropractic SBA loan was $267,000 with a median of $150,000."},
+        {q:"How does chiropractic SBA underwriting differ from dental or physician practices?",a:"Chiropractic deals are meaningfully smaller — average $267K vs. $910K for dental and $602K for physician practices — reflecting lower equipment intensity and typically smaller staff. Payer mix differs: chiropractic sees more cash-pay, workers' comp, and personal injury revenue than dental or physician. Charge-off performance is modestly worse (1.00% vs. 0.27% dental, 0.68% physician) but still better than the SBA average of 1.36%. See our SBA dental practice and physician practice guides for those specific underwriting patterns."},
+        {q:"Do I need to be a licensed chiropractor to buy a chiropractic practice?",a:"In most states yes, due to state chiropractic practice acts that restrict practice ownership to licensed chiropractors. Some states allow ownership through specific corporate structures with licensed managing chiropractors. Lenders verify state-compliant ownership structure before closing."},
+        {q:"How does payer mix affect chiropractic SBA underwriting?",a:"Lenders evaluate the split across cash-pay / membership, commercial insurance, workers' compensation, and personal injury (PI). High PI concentration can be strong revenue but volatile — state law changes affecting auto insurance or workers' comp can meaningfully reduce PI referral flow. Diversified payer mix underwrites better than heavily concentrated PI or commercial-only revenue."},
+        {q:"What's the SBA charge-off rate for chiropractic practices?",a:"Chiropractic SBA 7(a) charge-offs run at 1.00%, modestly better than the all-industry SBA average of 1.36%. Not as favorable as dental (0.27%) or physician (0.68%) practices but still better than the broader SBA baseline. Difference reflects smaller-scale businesses, more variable payer mix, and less supply-side constraint than dental or physician categories."},
+        {q:"Can I finance chiropractic equipment through SBA?",a:"Yes. SBA 7(a) covers chiropractic equipment either as part of a larger acquisition package or as a standalone equipment loan via SBA 7(a) Small Loan (up to $500K). Equipment intensity in chiropractic is lower than dental or physician practices — typical equipment investment runs $50K to $150K."},
+        {q:"Is chiropractic SBA lending growing?",a:"Yes. Year-over-year SBA lending to chiropractic practices is up about 13%, though trailing 12-month volume is modestly softer than the prior 12 months. Both independent practice transitions and franchise models (The Joint Chiropractic particularly) contribute to steady deal flow."},
+    ],
+},
+
+'812112': {
+    slug: 'beauty-salons',
+    h1: 'SBA Loans for Beauty Salons',
+    title: 'SBA Loan for Beauty Salon 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for beauty salon acquisitions, buildouts, and equipment. 5,033 beauty salon SBA loans approved FY2020-2025. Distinct from medspa/personal care — covers hair and styling salons.',
+    breadcrumbName: 'SBA Loans for Beauty Salons',
+    campaignSlug: 'sba-beauty-salons-quiz',
+    heroSub: 'Beauty salon SBA loans cover hair and styling salons specifically &mdash; NAICS 812112 is distinct from <a class="inline" href="/sba-loans/personal-care">medspa and broader personal care</a> (NAICS 812199). Smaller average deal sizes (median $80K), booth-rental vs. owner-operator revenue models, and performance that runs modestly above the SBA average on charge-offs.',
+    heroValue: 'Answer 6 questions. Get matched with salon-experienced SBA lenders.',
+    serviceDescription: 'My Money Marketplace helps beauty salon owners compare SBA 7(a) options and match with lenders experienced in salon underwriting. We do not originate SBA loans.',
+    narrative: {
+        underwritingTitle: 'How lenders evaluate beauty salon files',
+        underwriting: `
+            <p>Beauty salon SBA underwriting differs from the <a class="inline" href="/sba-loans/personal-care">broader personal care category</a> (NAICS 812199) and from medspa lending specifically. This NAICS (812112) captures hair and styling salons &mdash; cut, color, styling, some barbering &mdash; where the economics run on recurring-client appointment volume rather than equipment-intensive procedure revenue. Deal sizes are materially smaller (average $208K, median $80K) and the audience tilts toward working stylists becoming owners.</p>
+            <h3>Booth-rental vs. owner-operator revenue</h3>
+            <p>Two revenue models dominate, and they underwrite differently. <strong>Booth-rental salons</strong> lease chairs to independent stylists who operate their own businesses &mdash; the salon owner collects booth rent (typically $200-$400/week per chair) and manages the facility. <strong>Owner-operator salons</strong> employ or contract stylists directly, collecting service revenue and paying wages or commissions. Booth-rental is more facility-revenue-like and underwrites on chair-utilization and lease-term economics; owner-operator is more service-business-like and underwrites on stylist retention and service pricing.</p>
+            <h3>Cosmetology licensing requirements</h3>
+            <p>Every state licenses cosmetologists and hairstylists. Salon ownership usually doesn&rsquo;t require the owner to be licensed, but the operating practitioners must be. Lenders verify the staffing structure complies with state cosmetology rules.</p>
+            <h3>Smaller deals, tighter underwriting</h3>
+            <p>With median loan size at $80K, most beauty salon SBA deals fit SBA 7(a) Small Loan. The tight deal size combined with a higher franchise share (10%+) and more variable performance than professional-services categories means lenders pay more attention to cash-flow sensitivity, customer concentration in the stylist team, and lease-term alignment with the loan amortization.</p>
+        `,
+        indepTitle: 'Franchise concepts and independent operators',
+        indep: `
+            <p>Franchise operators account for <strong>{franchise_pct}% of beauty salon SBA loans</strong>. Major concepts include Great Clips, Sport Clips, Supercuts, and Cost Cutters — high-volume, low-service-ticket models that franchise well. Franchise operations benefit from brand recognition and operational playbooks particularly valuable at the entry-level price points these concepts target.</p>
+            <p>Independent salons range widely in scale and positioning &mdash; from small owner-operator shops to larger styling salons with 10+ chairs and developed service menus. Independent SBA files close routinely when the operator has cosmetology background and the salon shows stable client base.</p>
+        `,
+        failureTitle: 'Honest framing: the one industry running above SBA average',
+        failure: `
+            <p>Beauty salon charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio. This is the <em>one industry in the Angle 1 cluster where performance runs modestly above the SBA cross-industry average</em>. It doesn&rsquo;t mean salon SBA lending is a bad bet; it means the category has real underwriting risk factors that deserve honest framing.</p>
+            <p>What predicts the failures: <strong>stylist-team departures</strong> (stylists take clients with them when they leave; a departing key stylist can take 10-40% of client revenue), <strong>overpayment on acquisition multiples</strong> (active salon acquisition market pushes valuations up in some regions), and <strong>lease-term mismatches</strong> (a 7-year loan on a salon with 3 years remaining on the lease creates real refinancing risk). Specialist lenders experienced with salon underwriting look specifically at non-compete structure with key stylists, realistic client-retention assumptions, and lease-term alignment.</p>
+            <p>The +9% YoY growth in SBA lending to salons reflects ongoing acquisition activity in a fragmented industry. Trailing 12-month volume is down 11% from the prior 12 months &mdash; the category has softened recently even as long-term demand holds up.</p>
+        `,
+    },
+    quiz: {
+        questions: [
+            {q:"What's your situation?",opts:[{v:"acquisition",l:"Acquiring an existing salon"},{v:"new-independent",l:"Starting a new independent salon"},{v:"franchise",l:"Opening or buying a franchise"},{v:"expansion",l:"Expanding current salon"},{v:"equipment",l:"Equipment / renovation only"}]},
+            {q:"Revenue model?",opts:[{v:"booth-rental",l:"Booth rental"},{v:"owner-operator",l:"Owner-operator with staff"},{v:"mixed",l:"Mixed model"},{v:"new",l:"New salon / undecided"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Salon purchase price"},{v:"buildout",l:"Buildout / renovation"},{v:"equipment-use",l:"Chairs, stations, equipment"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple combined uses"}]},
+            {q:"Your experience?",opts:[{v:"licensed-stylist",l:"Licensed cosmetologist, 5+ years"},{v:"licensed-new",l:"Licensed cosmetologist, under 5 years"},{v:"non-licensed-partner",l:"Non-licensed with licensed partner"},{v:"first-time",l:"First-time operator"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-759",l:"720-759"},{v:"760-plus",l:"760+"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-100k",l:"Under $100K"},{v:"100k-250k",l:"$100K - $250K"},{v:"250k-500k",l:"$250K - $500K"},{v:"500k-plus",l:"$500K+"}]},
+        ],
+        profiles: {
+            A: {badge:"Standard acquisition",headline:"Licensed stylist acquiring established salon",body:"Experienced licensed cosmetologist acquiring an established salon is the standard SBA file in this category. Key variables: stylist-team retention, lease-term alignment, and realistic client-retention assumptions. Plan 45-75 days with a salon-experienced SBA lender.",ctaLabel:"Match with salon-experienced SBA lenders",utmContent:"profile-a-acquisition"},
+            B: {badge:"Franchise path",headline:"Franchise route streamlines underwriting",body:"Franchise salon concepts — Great Clips, Sport Clips, Supercuts — benefit from brand-level underwriting shortcut if listed in SBA Franchise Directory. Franchise operations close more quickly than independent deals.",ctaLabel:"See SBA franchise details",utmContent:"profile-b-franchise",ctaUrl:"/sba-loans/franchise/"},
+            C: {badge:"Small deal / Small Loan path",headline:"SBA 7(a) Small Loan fits most salon deals",body:"With median salon SBA loan at $80K, most deals fit SBA 7(a) Small Loan. Faster underwriting and closing than Standard 7(a). Key variable: matching with a lender that runs salon Small Loan deals at volume rather than one-off.",ctaLabel:"Match with salon Small Loan lenders",utmContent:"profile-c-small-loan"},
+            D: {badge:"New salon / experience gap",headline:"Strengthen file before applying",body:"First-time salon operators or non-licensed owners face a harder SBA path in a category with modestly above-average charge-off performance. Lenders want licensed operator on the team, realistic ramp-period projections, and stylist recruitment plan. Franchise alternative often beats independent startup.",ctaLabel:"Get honest feedback from a salon SBA specialist",utmContent:"profile-d-new-salon"},
+        },
+        scoringBody: `function score(a){var sit=a[0],model=a[1],use=a[2],exp=a[3],credit=a[4],amount=a[5];if(sit==='franchise')return 'B';if(sit==='new-independent'&&exp==='first-time')return 'D';if(amount==='under-100k'||amount==='100k-250k')return 'C';if(sit==='acquisition')return 'A';return 'A';}`,
+    },
+    faqs: [
+        {q:"What's the difference between beauty salons and personal care SBA loans?",a:"Beauty salons (NAICS 812112) cover hair and styling salons specifically — cut, color, styling, some barbering. Personal care (NAICS 812199) covers medspas, nail salons, skincare, tanning, wellness, and broader personal services. The two NAICS categories have different average deal sizes, different charge-off performance, different franchise concentration, and different underwriting patterns. See our SBA personal care guide for medspa and related service underwriting."},
+        {q:"Can I get an SBA loan for a hair salon?",a:"Yes. Beauty salon is a high-volume SBA category — 5,033 loans approved FY2020-2025. SBA 7(a) covers acquisitions, buildouts, equipment, and working capital. Most deals fit SBA 7(a) Small Loan (up to $500K) given the smaller average deal size — $208K average, $80K median."},
+        {q:"Do I need to be a licensed cosmetologist to own a salon?",a:"Usually no. Most states don't require salon owners to hold cosmetology licenses, but operating stylists do. Some states require a licensed cosmetologist to serve as salon manager. Lenders verify the staffing structure complies with state cosmetology rules before closing."},
+        {q:"What's the SBA charge-off rate for beauty salons?",a:"Beauty salon SBA 7(a) charge-offs run at 1.55%, modestly above the all-industry SBA average of 1.36%. This is the one Angle 1 industry category where performance runs above the SBA baseline. Main risk factors: stylist-team departures (taking clients), overpayment on acquisition multiples in active local markets, and lease-term mismatches with loan amortization. Specialist lenders underwrite specifically around these risks."},
+        {q:"How does booth-rental vs. owner-operator affect underwriting?",a:"Different revenue structures that underwrite differently. Booth-rental salons collect lease revenue from stylists operating their own businesses — underwrites on chair-utilization and lease-term economics. Owner-operator salons collect service revenue and pay wages or commissions — underwrites on stylist retention, service pricing, and client-acquisition economics. Lenders want to see the specific revenue structure and model underwriting appropriately."},
+        {q:"What's the typical SBA loan size for a beauty salon?",a:"Average beauty salon SBA 7(a) loan is $208,000 with a median of $80,000 — meaningfully smaller than most industry categories we cover. Most deals fit SBA 7(a) Small Loan (up to $500K). Larger multi-location or franchise-chain acquisitions can reach $1M+ but are less common in this category."},
+        {q:"Is franchise salon easier to finance through SBA?",a:"Franchise operations (Great Clips, Sport Clips, Supercuts) benefit from brand-level underwriting shortcut when listed in the SBA Franchise Directory. Operational playbook, brand recognition, and established concept reduce ramp-period risk that lenders otherwise weight heavily. Franchise routes are particularly useful for first-time salon operators who benefit from the brand infrastructure."},
+    ],
+},
+
+'561790': {
+    slug: 'building-services',
+    h1: 'SBA Loans for Commercial Cleaning & Building Services',
+    title: 'SBA Loan for Commercial Cleaning & Building Services 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for commercial cleaning and building services — pest control, window cleaning, carpet cleaning, pool maintenance. 1,416 SBA loans approved FY2020-2025 with +33% YoY growth.',
+    breadcrumbName: 'SBA Loans for Building Services',
+    campaignSlug: 'sba-building-services-quiz',
+    heroSub: 'Commercial cleaning and adjacent building services &mdash; pest control, window cleaning, carpet cleaning, pool maintenance &mdash; are among the <strong>fastest-growing SBA lending categories at +33% YoY</strong> with trailing-12 still accelerating (+11%). B2B contract revenue models drive the favorable underwriting.',
+    heroValue: 'Answer 6 questions. Get matched with building-services-experienced SBA lenders.',
+    serviceDescription: 'My Money Marketplace helps commercial cleaning and building services operators compare SBA 7(a) options and match with lenders experienced in B2B service contractor underwriting. We do not originate SBA loans.',
+    narrative: {
+        underwritingTitle: 'How lenders evaluate building services files',
+        underwriting: `
+            <p>The &ldquo;Other Services to Buildings and Dwellings&rdquo; NAICS category is broad but centers on <strong>commercial cleaning</strong> with adjacent services: pest control, window cleaning, carpet cleaning, chimney sweeping, swimming pool maintenance, janitorial services, and other small building-related service businesses. The unifying economic pattern &mdash; B2B contract revenue at scale &mdash; makes the category meaningfully stronger than consumer-facing service businesses on underwriting terms.</p>
+            <h3>B2B contract revenue foundation</h3>
+            <p>The strongest building services SBA files run on <strong>multi-year commercial contracts</strong> with office buildings, retail properties, HOAs, medical facilities, and industrial sites. Recurring monthly contract revenue smooths cash flow in ways that consumer-facing service businesses rarely match. Lenders evaluate the contract portfolio closely: current contracts, remaining term, pricing structure, and renewal history all drive the underwriting conversation.</p>
+            <h3>Equipment and vehicle intensity</h3>
+            <p>Building services are moderately equipment-heavy. A commercial cleaning operation runs commercial-grade equipment (scrubbers, buffers, extractors) and a fleet of service vehicles. Pest control adds specialized equipment and EPA-regulated chemicals. Window cleaning and carpet cleaning have specialized equipment. Fleet and equipment serve as meaningful collateral on SBA loans, supporting recovery economics.</p>
+            <h3>Franchise-heavy category structure</h3>
+            <p>Building services have <strong>{franchise_pct}% franchise participation</strong> &mdash; meaningful share. Major brands include Jan-Pro, JAN-PRO Systems International, Jani-King, Orkin franchise, Mosquito Joe, Chem-Dry, Stanley Steemer franchising, and many others. Franchise operations benefit from brand-level underwriting shortcut, established B2B sales systems, and recognizable customer-facing branding.</p>
+            <h3>The +33% YoY growth is real</h3>
+            <p>Growth in SBA lending to this category is accelerating. +33% year-over-year with trailing-12 volume up 11% over the prior 12 months. The dynamic reflects post-pandemic commercial cleaning investment (buildings upgraded cleaning protocols, creating sustained recurring demand), ongoing pest control expansion (climate change is pushing pest pressure northward in the US), and consolidator activity in commercial cleaning (regional rollups acquiring independents).</p>
+        `,
+        indepTitle: 'Franchise dominance and independent alternatives',
+        indep: `
+            <p>Building services is one of the more franchise-concentrated service categories in SBA. Major franchise operations provide operational playbooks and B2B sales systems that make the category more accessible to first-time operators than many service industries. Commercial cleaning particularly benefits from franchise operational models because the work is repetitive, training is standardized, and customer acquisition runs through established sales pipelines.</p>
+            <p>Independent operators also close SBA deals routinely, typically requiring more documented B2B sales capability and a clearer customer-acquisition plan to compensate for the lack of franchise infrastructure. Experienced operators acquiring established commercial cleaning books with long-term contracts underwrite particularly well.</p>
+        `,
+        failureTitle: 'Charge-off performance and the B2B contract advantage',
+        failure: `
+            <p>Building services charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio, meaningfully better than average. The favorable performance reflects the B2B contract revenue foundation: commercial contracts don&rsquo;t churn the way consumer accounts do, and contract revenue is insulated from consumer discretionary spending swings that affect many service industries.</p>
+            <p>What predicts the failures: <strong>contract-portfolio concentration</strong> (one large commercial account leaving triggers a revenue collapse the business can&rsquo;t absorb), <strong>labor-cost inflation outpacing contract pricing</strong> (fixed-rate contracts don&rsquo;t adjust to rising wage pressure), and <strong>expansion-related over-leverage</strong> (operator scales too fast on multi-location expansion without supporting working capital). Specialist lenders size working capital and contract-diversification review into the underwriting.</p>
+        `,
+    },
+    quiz: {
+        questions: [
+            {q:"What's your service?",opts:[{v:"commercial-cleaning",l:"Commercial cleaning / janitorial"},{v:"pest-control",l:"Pest control"},{v:"window-cleaning",l:"Window cleaning"},{v:"carpet-cleaning",l:"Carpet cleaning"},{v:"pool-maintenance",l:"Pool maintenance"},{v:"other",l:"Other building service"}]},
+            {q:"What's your situation?",opts:[{v:"acquisition",l:"Acquiring an existing business"},{v:"franchise",l:"Opening or buying a franchise"},{v:"new-independent",l:"Starting a new independent business"},{v:"expansion",l:"Expanding current business"},{v:"equipment",l:"Equipment / fleet only"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Business purchase price"},{v:"fleet-equipment",l:"Fleet / equipment"},{v:"real-estate",l:"Facility real estate"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple combined uses"}]},
+            {q:"Revenue mix?",opts:[{v:"b2b-contract",l:"B2B contracts (recurring)"},{v:"b2b-project",l:"B2B project-based"},{v:"consumer",l:"Residential consumer"},{v:"mixed",l:"Mixed B2B and consumer"},{v:"new",l:"New business / no mix yet"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-759",l:"720-759"},{v:"760-plus",l:"760+"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-250k",l:"Under $250K"},{v:"250k-500k",l:"$250K - $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-plus",l:"$1M+"}]},
+        ],
+        profiles: {
+            A: {badge:"Contract-book acquisition",headline:"B2B contract book with recurring revenue",body:"Acquiring a commercial cleaning or building services operation with a strong B2B contract portfolio is the strongest SBA file in this category. Recurring contract revenue underwrites well and equipment collateral supports the loan. Plan 60-90 days with a B2B-service-experienced SBA lender.",ctaLabel:"Match with B2B-service-experienced SBA lenders",utmContent:"profile-a-contract-book"},
+            B: {badge:"Franchise path",headline:"Franchise brands streamline B2B sales",body:"Franchise operations — Jan-Pro, Jani-King, Orkin franchise, Mosquito Joe, Chem-Dry, and others — benefit from brand-level underwriting shortcut and established B2B sales systems. Particularly valuable for first-time operators building customer acquisition. See SBA franchise details.",ctaLabel:"See SBA franchise details",utmContent:"profile-b-franchise",ctaUrl:"/sba-loans/franchise/"},
+            C: {badge:"Equipment / fleet path",headline:"Equipment financing often beats SBA on speed",body:"For equipment and fleet-focused deals, non-SBA equipment financing funds in 3-10 days vs. 45-75 for SBA. Higher rate but the equipment is collateral. SBA 7(a) Small Loan works when timeline allows and the deal combines equipment with other uses.",ctaLabel:"Compare equipment financing vs. SBA",utmContent:"profile-c-equipment"},
+            D: {badge:"New business / consumer-focus",headline:"New business or consumer-only focus",body:"Starting a new building services business or operating consumer-only (residential) rather than B2B contract-based faces a harder SBA path in this category. Lenders strongly prefer B2B contract revenue. Franchise alternative often beats pure independent startup.",ctaLabel:"Get honest feedback from a building-services SBA specialist",utmContent:"profile-d-new-business"},
+        },
+        scoringBody: `function score(a){var svc=a[0],sit=a[1],use=a[2],mix=a[3],credit=a[4],amount=a[5];if(sit==='franchise')return 'B';if(sit==='new-independent'||mix==='consumer')return 'D';if(sit==='equipment'||use==='fleet-equipment')return 'C';if(sit==='acquisition'&&(mix==='b2b-contract'||mix==='mixed'))return 'A';return 'A';}`,
+    },
+    faqs: [
+        {q:"What's covered in the building services SBA category?",a:"The NAICS 561790 category covers commercial cleaning and janitorial services plus pest control, window cleaning, carpet cleaning, chimney sweeping, swimming pool maintenance, and other building-related services. Commercial cleaning is the dominant sub-category, with pest control as the second-largest. 1,416 loans approved in this category FY2020-2025."},
+        {q:"Can I get an SBA loan for a commercial cleaning business?",a:"Yes. Commercial cleaning is the largest sub-category in building services SBA lending, with the category growing at +33% year-over-year — among the fastest-growing SBA industries we track. SBA 7(a) covers acquisitions, equipment, fleet, and working capital. Franchise operations (Jan-Pro, Jani-King, and others) are particularly active in SBA."},
+        {q:"How do B2B contracts affect SBA underwriting?",a:"Meaningfully favorably. B2B contract revenue is more predictable than consumer-facing service revenue, contracts don't churn the way consumer accounts do, and the recurring-monthly pattern smooths cash flow. A building services business with a strong commercial contract portfolio underwrites meaningfully better than a residential-consumer-focused operation of comparable revenue."},
+        {q:"What's the SBA charge-off rate for building services?",a:"Building services SBA 7(a) charge-offs run at 1.06%, meaningfully better than the all-industry SBA average of 1.36%. The favorable performance reflects B2B contract revenue stability, equipment collateral, and the franchise-industry structure that stabilizes operational quality."},
+        {q:"Is pest control SBA lending different from commercial cleaning?",a:"They share the same NAICS (561790) and similar underwriting patterns, but pest control has some distinct factors: EPA-regulated chemicals and state licensing for applicators, specialty equipment and vehicles, and B2C residential revenue mix alongside B2B commercial work. Major pest control franchises (Orkin, Terminix franchise, Mosquito Joe) are active in SBA. The category overall underwrites similarly to commercial cleaning with adjustments for the regulatory and equipment specifics."},
+        {q:"How much can I borrow for a building services business?",a:"SBA 7(a) Standard goes up to $5 million. Average building services SBA loan was $324,000 with a median of $150,000. Most single-location commercial cleaning or pest control acquisitions run $250K to $1M; larger multi-location operations and franchise chains can reach $2M+."},
+        {q:"Is building services SBA lending really growing that fast?",a:"Yes. +33% year-over-year, with trailing 12-month volume up 11% over the prior 12 months — meaning the growth is accelerating. Dynamics include post-pandemic commercial cleaning investment creating sustained recurring demand, pest control expansion (climate change pushing pest pressure northward), and consolidator activity in commercial cleaning acquiring independents."},
+    ],
+},
+
 '722511': {
     slug: 'restaurants',
     h1: 'SBA Loans for Restaurants',
