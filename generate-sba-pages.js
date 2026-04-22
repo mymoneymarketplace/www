@@ -1615,6 +1615,348 @@ const SCENARIOS = [
             buttonLabel: 'See what Lendmate can match you with',
             utmCampaign: 'sba-no-collateral-closing-cta'
         }
+    },
+
+    // ═════════════════════════════ scenario #4 ═════════════════════════════
+    // Audience: someone who has identified a specific franchise (or narrowed
+    // to 2-3) and is planning financing. More sophisticated than the general
+    // SBA searcher — they know what SBA is and want franchise-specific
+    // specifics. Editorial tone is optimistic / action-oriented, not
+    // reassurance-oriented like the startups and bad-credit scenarios.
+    //
+    // Key research finding: "sba loan for franchise" is 1,600/mo LOW (5/100)
+    // competition — the biggest / least competitive Angle 2 cluster. And
+    // sba7a.loans cites "around 10% of all SBA loans go to franchises,"
+    // which anchors the "this is a smooth path" framing.
+    //
+    // Quiz pivots on one question: is the target franchise in the SBA
+    // Franchise Directory? That single signal drives ~80% of routing because
+    // a Directory-listed franchise means brand-level underwriting is already
+    // complete — the lender only evaluates the borrower.
+    {
+        slug: 'sba-loans/franchise',
+        title: 'SBA Loans for Franchises 2026 | My Money Marketplace',
+        metaDesc: 'SBA franchise financing when you already know the brand. See which SBA program fits your franchise fee tier and whether a Directory listing changes your path.',
+        articleHeadline: 'SBA Loans for Franchises: The Smoothest SBA Path — How to Use It',
+        datePublished: '2026-04-22',
+        breadcrumb: [
+            { name: 'Home', url: '/' },
+            { name: 'SBA Loans', url: '/sba-loans' },
+            { name: 'SBA Loans for Franchises', url: '/sba-loans/franchise' }
+        ],
+        h1: 'SBA Loans for Franchises',
+        heroSub: "Franchise is the smoothest SBA path available. Around 10% of all SBA loans go to franchises, and listed brands in the SBA Franchise Directory move through underwriting in days rather than weeks. If you've selected your franchise, the question isn't whether SBA works \u2014 it's which program and which lender.",
+        heroValueProp: 'Answer 6 questions. See which SBA program fits your franchise and fee tier.',
+        financialService: {
+            name: 'SBA Franchise Loan Matching',
+            serviceType: 'SBA loan guidance and lender matching for franchise acquisitions',
+            description: 'My Money Marketplace helps franchise candidates compare SBA 7(a), Community Advantage, and Microloan options and get matched with franchise-experienced SBA lenders who understand Directory status, royalty structures, multi-unit development rights, and franchisor working-capital requirements.'
+        },
+
+        quiz: {
+            utmCampaign: 'sba-franchise-quiz',
+            // Franchise scenario: Directory status is Q1 (dominant signal),
+            // fee tier is Q2 (determines program + amount path). Credit,
+            // experience, liquid capital, multi-unit plans follow.
+            //   ans[0]=directory, ans[1]=fee, ans[2]=credit, ans[3]=experience,
+            //   ans[4]=liquid, ans[5]=multiUnit
+            scoringFnBody: `function(ans) {
+                var dir = ans[0], fee = ans[1], credit = ans[2];
+                var exp = ans[3], liquid = ans[4], multi = ans[5];
+
+                // D override: sub-$50K fee fits Microloan (rare for franchise but possible)
+                if (fee === 'under-50k') return 'D';
+
+                var pts = 0;
+
+                // Q1 Directory status — dominant
+                if (dir === 'listed') pts += 3;
+                else if (dir === 'no-selection-yet') pts += 1;
+                else if (dir === 'unsure') pts += 0;
+                else if (dir === 'unlisted') pts += -1;
+
+                // Q2 fee tier — sweet spot is $50K-$500K for 7(a) Small Loan
+                if (fee === '50-150k') pts += 2;
+                else if (fee === '150-500k') pts += 2;
+                else if (fee === '500k-plus') pts += 1;
+
+                // Q3 credit
+                if (credit === 'below-580') pts += -2;
+                else if (credit === '580-639') pts += -1;
+                else if (credit === '640-679') pts += 0;
+                else if (credit === '680-719') pts += 1;
+                else if (credit === '720-plus') pts += 2;
+
+                // Q4 experience — multi-unit operators are a premium signal
+                if (exp === 'first-time') pts += 0;
+                else if (exp === 'multi-unit') pts += 2;
+
+                // Q5 liquid capital — franchisor minimums usually apply
+                if (liquid === 'under-25k') pts += -2;
+                else if (liquid === '25-75k') pts += 0;
+                else if (liquid === '75-150k') pts += 1;
+                else if (liquid === '150k-plus') pts += 2;
+
+                // Q6 multi-unit plans — sophistication signal but only helps
+                //   if profile is otherwise strong (no penalty if 'no')
+                if (multi === 'yes') pts += 1;
+
+                // A: listed franchise with strong profile — the "franchise-smooth" path
+                if (dir === 'listed' && pts >= 6) return 'A';
+                // C: unlisted with weak profile, or overall very weak
+                if (dir === 'unlisted' && pts < 1) return 'C';
+                if (pts < -2) return 'C';
+                // B default: workable, lender choice matters
+                return 'B';
+            }`,
+            questions: [
+                {
+                    id: 'directory', prompt: 'Is your target franchise in the SBA Franchise Directory?',
+                    options: [
+                        { value: 'listed', label: "Yes \u2014 I've confirmed it's listed" },
+                        { value: 'unlisted', label: "No \u2014 I've checked and it isn't listed" },
+                        { value: 'unsure', label: "I'm not sure; I haven't checked yet" },
+                        { value: 'no-selection-yet', label: "I haven't selected a franchise yet" }
+                    ]
+                },
+                {
+                    id: 'fee', prompt: "What's the franchise fee / initial investment?",
+                    options: [
+                        { value: 'under-50k', label: 'Under $50K' },
+                        { value: '50-150k', label: '$50K-$150K' },
+                        { value: '150-500k', label: '$150K-$500K' },
+                        { value: '500k-plus', label: '$500K or more' }
+                    ]
+                },
+                {
+                    id: 'credit', prompt: "What's your personal credit score?",
+                    options: [
+                        { value: 'below-580', label: 'Below 580' },
+                        { value: '580-639', label: '580-639' },
+                        { value: '640-679', label: '640-679' },
+                        { value: '680-719', label: '680-719' },
+                        { value: '720-plus', label: '720+' }
+                    ]
+                },
+                {
+                    id: 'experience', prompt: 'Are you a first-time franchisee or a multi-unit operator?',
+                    options: [
+                        { value: 'first-time', label: 'First-time franchisee' },
+                        { value: 'multi-unit', label: 'I already own one or more franchise units' }
+                    ]
+                },
+                {
+                    id: 'liquid', prompt: 'How much liquid capital do you have available?',
+                    options: [
+                        { value: 'under-25k', label: 'Under $25K' },
+                        { value: '25-75k', label: '$25K-$75K' },
+                        { value: '75-150k', label: '$75K-$150K' },
+                        { value: '150k-plus', label: '$150K or more' }
+                    ]
+                },
+                {
+                    id: 'multiUnit', prompt: 'Planning to develop multiple units over time?',
+                    options: [
+                        { value: 'yes', label: 'Yes, multi-unit development is the plan' },
+                        { value: 'maybe', label: 'Maybe \u2014 depends how the first unit performs' },
+                        { value: 'no', label: 'No, single unit only' }
+                    ]
+                }
+            ],
+            resultProfiles: {
+                A: {
+                    badge: "SBA's preferred lane",
+                    headline: "Your franchise is in SBA's preferred lane",
+                    body: "A Directory-listed franchise combined with your credit, liquid capital, and fee tier puts you in the smoothest SBA path available. Franchise-experienced 7(a) lenders review these files in days because the brand-level underwriting is already complete \u2014 they focus entirely on you. Expect 45-75 days from application to funding for fees in the $50K-$500K range.",
+                    ctaLabel: 'Get matched with franchise-experienced SBA lenders',
+                    utmContent: 'profile-a-strong'
+                },
+                B: {
+                    badge: 'Franchise-ready with lender-match focus',
+                    headline: 'SBA is within reach; the right franchise lender matters',
+                    body: "Your profile qualifies for SBA franchise financing, but lender experience with franchises makes the difference. Franchise-experienced 7(a) lenders understand the nuances generalist banks often miss: royalty-adjusted DSCR, franchisor approval requirements, multi-unit development rights, working-capital layering. If your franchise isn't yet in the SBA Directory, that's not disqualifying \u2014 but it adds lender review time and narrows the lender pool.",
+                    ctaLabel: 'Get matched with franchise-experienced SBA lenders',
+                    utmContent: 'profile-b-possible'
+                },
+                C: {
+                    badge: 'Harder path for this profile',
+                    headline: 'An unlisted franchise at this profile is a harder path',
+                    body: "SBA loans for unlisted franchises require the lender to do brand-level review from scratch, which adds time, complexity, and denial risk when other factors are also on the margin. Two practical paths: ask the franchisor to submit the brand to the SBA Franchise Directory before you apply (they want this listing as much as you do \u2014 it helps them sell territories), or build the profile and capital needed first, then come back to SBA when the file is stronger.",
+                    ctaLabel: 'See what funding you can access now',
+                    utmContent: 'profile-c-alternative'
+                },
+                D: {
+                    badge: 'Microloan fit for sub-$50K fee',
+                    headline: 'A sub-$50K franchise fee fits SBA Microloan',
+                    body: "Franchise fees under $50K fit SBA Microloan territory (up to $50K via non-profit intermediaries) without collateral requirements. Microloans are uncommon for franchises because most franchisors price above this tier, but when the fee genuinely fits, Microloan is the simplest SBA path. Plan for working capital on top: first-year franchise operations typically need an additional $50K-$150K beyond the initial fee.",
+                    ctaLabel: 'Get matched with the right lender',
+                    utmContent: 'profile-d-microloan'
+                }
+            }
+        },
+
+        programs: {
+            heading: 'Three SBA programs for franchise financing',
+            intro: 'Most franchise fees and build-out costs land squarely in 7(a) Small Loan territory. The other two programs cover specific cases at the edges.',
+            cards: [
+                {
+                    label: 'Franchise sweet spot',
+                    name: 'SBA 7(a) Small Loan',
+                    icon: 'building',
+                    accent: '#B8741C',
+                    amount: '$500K',
+                    timeline: '45-75d',
+                    minCredit: '680+ typical',
+                    fitLead: 'Right for you if:',
+                    fitRest: 'your franchise fee plus initial working capital total between $50K and $500K. This is where most franchise deals land and where 7(a) Small Loan is designed to serve.'
+                },
+                {
+                    label: 'Underserved-market franchises',
+                    name: 'SBA Community Advantage',
+                    icon: 'community',
+                    accent: '#2F6BB3',
+                    amount: '$350K',
+                    timeline: '45-75d',
+                    minCredit: '620+',
+                    fitLead: 'Right for you if:',
+                    fitRest: "you're in an underserved market (HUBZone, Opportunity Zone, low-to-moderate income area) or demographic, and your fee is under $350K. CDC underwriting is often more franchise-friendly than bank 7(a) underwriting."
+                },
+                {
+                    label: 'Small-fee franchises only',
+                    name: 'SBA Microloan',
+                    icon: 'seedling',
+                    accent: '#2D8659',
+                    amount: '$50K',
+                    timeline: '30-45d',
+                    minCredit: '575+',
+                    fitLead: 'Right for you if:',
+                    fitRest: 'your franchise fee is genuinely under $50K. Uncommon in franchising because most franchisors price above this tier, but available when it fits.'
+                }
+            ]
+        },
+
+        // Repurposing the compensating-factors renderer for
+        // "Franchise-specific SBA considerations" — same card shape.
+        compensatingFactors: {
+            heading: 'Franchise-specific SBA considerations',
+            intro: "Franchise SBA files differ from standard 7(a) files in specific ways \u2014 things that trip up borrowers the first time but that franchise-experienced lenders expect.",
+            factors: [
+                {
+                    weight: 'Ongoing obligation',
+                    title: 'Royalty payments eat into DSCR',
+                    body: 'Franchise royalties (typically 4-8% of gross revenue) reduce operating cash flow before debt service. Lenders should model royalty-adjusted DSCR, not raw DSCR, when underwriting your file. Bring the franchise disclosure document (FDD) to the first lender conversation so they can run the right numbers.'
+                },
+                {
+                    weight: 'Financeable project cost',
+                    title: 'The initial franchise fee goes into the loan',
+                    body: 'SBA allows the initial franchise fee to be financed as part of the project cost, alongside build-out, equipment, signage, and working capital. This is settled policy. Structure the loan to cover the full project, not just the fee, so you start operations with working-capital reserves intact.'
+                },
+                {
+                    weight: 'Most commonly underestimated',
+                    title: 'Working capital for months 1-12',
+                    body: 'Most franchisors require borrowers to have liquid capital beyond the franchise fee as a precondition for approval. Plan for an additional $50K-$150K to cover payroll, rent, inventory, and owner draw during ramp-up. Lenders expect this; new borrowers often forget.'
+                },
+                {
+                    weight: 'Structural choice',
+                    title: 'Build-out and multi-unit development',
+                    body: 'For franchises that include significant real estate or equipment build-out, the SBA 504 loan can finance up to 90% of fixed-asset costs at long-term fixed rates \u2014 separate from 7(a) working capital. Multi-unit development rights can be financed, but lenders almost always want to see single-unit performance before funding expansion units.'
+                }
+            ]
+        },
+
+        eligibility: {
+            heading: 'How franchise SBA financing actually works',
+            pullquote: 'Around 10% of all SBA loans go to franchises. A Directory listing cuts underwriting time by weeks, not days.',
+            comparison: {
+                title: 'Directory status changes everything about underwriting',
+                rows: [
+                    { factor: 'Franchise-eligibility review', conv7a: '2-5 days (pre-confirmed)', ca: '3-6 weeks',              micro: 'Lender discretion' },
+                    { factor: 'Lender pool',                   conv7a: 'Wide \u2014 most SBA-preferred', ca: 'Narrower \u2014 specialist lenders only', micro: 'Very narrow' },
+                    { factor: 'Brand-risk evaluation',         conv7a: 'Pre-confirmed by SBA',    ca: 'Lender does it from scratch', micro: 'Case-by-case' },
+                    { factor: 'Typical underwriting focus',    conv7a: 'Borrower profile only',   ca: 'Borrower + brand viability',   micro: 'Borrower + brand + intermediary comfort' },
+                    { factor: 'Overall approval probability',  conv7a: 'Highest',                  ca: 'Meaningfully lower',           micro: 'Case-by-case' }
+                ]
+            },
+            denialCards: [
+                { headline: 'Target franchise not in the Directory', remediation: "Ask the franchisor to submit the brand for SBA review. Franchisors want the listing \u2014 it helps them sell territories. Submission is at sba.gov/franchise-directory; the review typically takes 4-8 weeks." },
+                { headline: 'Weak first-year working-capital plan',   remediation: 'Most franchisors require $50K-$150K in liquid reserves beyond the initial fee. Document your reserves, and structure the SBA loan to include operating capital \u2014 not just the franchise fee.' },
+                { headline: 'DSCR not adjusted for royalties',        remediation: 'Royalties reduce gross margin before debt service. Franchise-experienced lenders model royalty-adjusted DSCR; generalist banks sometimes miss this and either over- or under-approve.' },
+                { headline: 'Multi-unit plan without single-unit operating history', remediation: 'Even sophisticated multi-unit operators typically finance unit one on its own, then use year-1 performance to finance units 2-3. Trying to fund 3 units at once as a first-time franchisee almost always stalls.' }
+            ],
+            sections: [
+                {
+                    h3: 'How the SBA Franchise Directory actually works',
+                    p: [
+                        "The SBA Franchise Directory (sba.gov/franchise-directory) is a database of franchise brands that SBA has reviewed and confirmed meet its eligibility requirements. \u201CListed\u201D means the franchise structure \u2014 affiliation rules, franchisor approval rights, worker classification, corporate structure \u2014 has already been vetted. For a borrower, this means the lender can focus underwriting entirely on you; the brand review is done.",
+                        "Crucially, Directory listing is not an SBA endorsement of the franchise as a good investment. It only confirms the franchise meets SBA\u2019s structural eligibility rules. The business case \u2014 unit economics, territory, franchisor track record, your fit \u2014 is still your and your lender\u2019s job to evaluate.",
+                        "Listing criteria center on whether the franchisor\u2019s control over franchisees crosses into \u201Caffiliation\u201D for SBA purposes. Specific items SBA reviews include: the franchisor\u2019s approval rights over sale of the franchise, territorial protections, non-competes, and whether franchisees are structured as employees or independent operators. Franchisors submit the FDD, the franchise agreement, and corporate structure for review."
+                    ],
+                    after: 'pullquote'
+                },
+                {
+                    h3: 'Why franchise is the smoothest SBA path',
+                    p: [
+                        "Two structural advantages put franchise files at the front of the SBA underwriting line. First, Directory-listed brands have pre-confirmed eligibility \u2014 lender reviews borrower only. Second, franchise operations come with franchisor-validated unit economics (from the FDD\u2019s Item 19 financial performance representations), which lenders can use to build realistic projections. A franchise file delivers a lender two things a typical 7(a) file does not: proof the business model works, and proof the brand is eligible.",
+                        "This is why around 10% of all SBA loans go to franchises despite franchises being a much smaller share of total small-business formation. Franchise underwriting is simply more efficient for everyone involved."
+                    ],
+                    after: 'comparison'
+                },
+                {
+                    h3: 'Franchise-specific underwriting nuances',
+                    p: [
+                        "Royalty-adjusted DSCR is the single most important franchise-specific underwriting adjustment. If the franchisor charges 6% royalty and 2% marketing fund, your operating cash flow for debt service starts 8% below gross revenue. Franchise-experienced lenders model this. Generalist banks sometimes miss it, leading to either over-approval (lender gets surprised later) or under-approval (borrower gets declined at a file a specialist would approve).",
+                        "Franchisor-side underwriting matters too. Most franchisors conduct their own financial review before approving a franchisee \u2014 background check, liquid-capital verification, often an interview. Your SBA application typically runs in parallel with franchisor approval, and most franchisors require an approved buyer before they sign a franchise agreement. Coordinate early: the franchisor and the SBA lender need to talk, not in sequence but concurrently."
+                    ]
+                },
+                {
+                    h3: "What to do when your target franchise isn't in the Directory",
+                    p: [
+                        "A franchise not being in the SBA Directory is a solvable problem, not a dead end. Three realistic options. First: ask the franchisor to submit the brand for review. Franchisors benefit when their brand is listed (it makes selling territories easier), and most established franchisors already have it done. If yours hasn\u2019t, that\u2019s worth a direct conversation with franchise development.",
+                        "Second: some lenders will do brand-level review themselves, treating your file as the first SBA application for that franchise. This is slower (add 3-6 weeks for the brand review) and narrower (only certain lenders take this on), but it\u2019s possible. Ask the lender whether they\u2019ve funded this brand before; if yes, the subsequent review is lighter.",
+                        "Third: consider a comparable listed franchise. If you\u2019re early in brand selection, the Directory becomes a filter \u2014 pre-filter to listed brands, and the financing conversation becomes 5x easier."
+                    ]
+                },
+                {
+                    h3: 'Common reasons franchise SBA applications stall',
+                    p: [
+                        "Most franchise SBA stalls come down to one of four issues, none of them fatal if caught early. The patterns cluster around Directory status, working-capital planning, royalty-adjusted DSCR, and multi-unit pacing."
+                    ],
+                    after: 'denial-cards'
+                }
+            ]
+        },
+
+        process: {
+            heading: 'The franchise SBA process, step by step',
+            intro: "Most franchise SBA closings take 45-75 days when the brand is listed. Unlisted brands add 3-6 weeks for lender-level brand review.",
+            steps: [
+                { title: 'Verify Directory listing first', text: 'Check sba.gov/franchise-directory before anything else. A listed brand opens the wide lender pool; an unlisted brand requires narrower lender matching.' },
+                { title: 'Model the full project cost', text: 'Franchise fee + build-out + equipment + opening inventory + working capital for months 1-12. Lenders want the SBA loan structured to cover the full project, not just the fee.' },
+                { title: 'Document liquid capital', text: 'Franchisors typically require liquid capital minimums separate from SBA requirements. Document cash, brokerage, and home equity. Keep the franchisor and lender aligned on what counts.' },
+                { title: 'Build the application package', text: 'FDD (full document), signed franchise agreement, 3 years of personal tax returns, SBA Form 413, SBA Form 1919, personal resume, detailed franchise-specific 3-year financial projections referencing FDD Item 19.' },
+                { title: 'Model royalty-adjusted DSCR', text: "Show projected DSCR both before and after royalty and marketing fees. Lenders who know franchising will ask for this; providing it up front signals competence." },
+                { title: 'Submit to a franchise-experienced 7(a) lender', text: "Ask candidates \u2018how many franchise deals do you fund per year?\u2019 and \u2018have you funded this brand before?\u2019 Low-volume franchise lenders take longer and miss nuances."},
+                { title: 'Coordinate franchisor and lender concurrently', text: "Most franchisors approve the buyer in parallel with SBA underwriting. Introduce them to each other early \u2014 waiting until one completes before starting the other adds weeks." },
+                { title: 'Plan build-out and opening sequencing', text: 'Closing, franchise agreement signing, and build-out permits often happen within the same 2-4 week window. Build-out funding may draw in tranches. Have your contractor and franchisor training schedule locked before closing.' }
+            ]
+        },
+
+        faqs: [
+            { icon: 'coins',    q: 'Can I get an SBA loan to start a franchise?',                                 a: "Yes \u2014 franchise is one of the most common SBA use cases, representing around 10% of all SBA 7(a) loans. The smoothest path is a franchise listed in the SBA Franchise Directory, where brand-level eligibility review is already complete. Unlisted franchises are still possible but take 3-6 weeks longer while the lender does brand-level review, and the lender pool is narrower." },
+            { icon: 'link',     q: 'What is the SBA Franchise Directory?',                                        a: "The SBA Franchise Directory (sba.gov/franchise-directory) is a database of franchise brands SBA has reviewed and confirmed meet its structural eligibility requirements. Listing means brand-level review is done; the lender focuses on the borrower. Listing is not an SBA endorsement of the franchise as a good investment \u2014 it only confirms the franchise structure qualifies for SBA financing." },
+            { icon: 'refresh',  q: "Can I get an SBA loan if my franchise isn't in the Directory?",              a: "Yes, but it adds time and narrows the lender pool. Three options: (1) ask the franchisor to submit the brand for Directory review (typically 4-8 weeks; franchisors benefit from being listed); (2) work with a lender willing to conduct brand-level review themselves (some PLP lenders specialize in this, but it adds 3-6 weeks); (3) consider a comparable listed franchise if you're early in brand selection." },
+            { icon: 'bank',     q: "What's the 20% rule for SBA franchise loans?",                                a: 'All owners with 20% or more equity in the business must provide an unlimited personal guarantee via SBA Form 148. This applies to franchise loans the same as any other SBA loan. The 20% threshold is a floor, not a ceiling \u2014 many lenders require the PG from all owners regardless of stake size, particularly when the loan is tightly sized to the project.' },
+            { icon: 'chart',    q: 'Can the franchise fee be included in the SBA loan?',                          a: "Yes. SBA allows the initial franchise fee to be financed as part of the project cost, alongside build-out, equipment, signage, opening inventory, and working capital. Structure the loan to cover the full project so you start operations with working-capital reserves intact \u2014 not just the fee, which would leave you under-capitalized on day one." },
+            { icon: 'calendar', q: 'What credit score do I need for an SBA franchise loan?',                      a: "Most SBA-preferred 7(a) lenders want 680 or higher for franchise applications. Scores of 640-679 can qualify with strong compensating factors \u2014 substantial liquid capital, multi-unit franchise experience, or a Directory-listed franchise with Item 19 performance data. SBA Community Advantage lenders often accept 620+ for franchises in underserved markets. Below 640, franchise SBA financing becomes difficult." },
+            { icon: 'clock',    q: 'How long does SBA approval take for a franchise?',                            a: 'Budget 45-75 days from application to funding for a Directory-listed franchise financed through a franchise-experienced 7(a) lender. Unlisted brands add 3-6 weeks for lender-level brand review. SBA Community Advantage timelines are similar. The franchisor-approval process runs in parallel and sometimes becomes the critical path \u2014 coordinate early to avoid sequential delays.' }
+        ],
+
+        closingCta: {
+            heading: 'Know your Directory status. Know your program fit.',
+            bodyHtml: "Franchise is the smoothest SBA path, but franchise-experienced lender matching still matters. Lendmate Capital routes franchise files to 7(a) lenders that understand Directory status, royalty-adjusted DSCR, and multi-unit development. See the broader <a href=\"/sba-loans\">SBA loans hub</a> or compare <a href=\"/business-loans\">traditional business loans</a> if SBA isn't the right fit for your deal.",
+            buttonLabel: 'Get matched with franchise-experienced SBA lenders',
+            utmCampaign: 'sba-franchise-closing-cta'
+        }
     }
 ];
 
