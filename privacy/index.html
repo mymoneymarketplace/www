@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | My Money Marketplace</title>
+    <meta name="description" content="Privacy policy for My Money Marketplace — what information we collect, how we use it, how we share it, and your rights.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mymoneymarketplace.com/privacy">
+    <meta property="og:title" content="Privacy Policy | My Money Marketplace">
+    <meta property="og:description" content="Privacy policy for My Money Marketplace — what information we collect, how we use it, how we share it, and your rights.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mymoneymarketplace.com/privacy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boilerplate content. Review by legal counsel recommended before relying on as authoritative. -->
+    
+<style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --green: #008254; --green-dark: #006b45; --green-bg: #f0faf5; --text: #111111; --text-secondary: #444444; --text-muted: #717171; --border: #e2e2e2; --bg-light: #f7f7f7; --white: #ffffff; --navy: #1a3a5c; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--white); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid var(--border); height: 64px; }
+    .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .header-logo img { height: 32px; }
+    .header-nav { display: flex; align-items: center; gap: 32px; }
+    .header-link { font-size: 14px; font-weight: 500; color: var(--text-secondary); text-decoration: none; }
+    .header-link:hover { color: var(--green); }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; }
+    @media (max-width: 768px) { .header-link { display: none; } .mobile-toggle { display: block; } }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .breadcrumb { padding: 16px 0; margin-top: 64px; background: var(--bg-light); border-bottom: 1px solid var(--border); }
+    .breadcrumb-list { display: flex; align-items: center; gap: 8px; list-style: none; font-size: 13px; flex-wrap: wrap; }
+    .breadcrumb-list a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb-list a:hover { color: var(--green); }
+    .breadcrumb-list .sep { color: var(--text-muted); }
+    .breadcrumb-list .current { color: var(--text-secondary); font-weight: 500; }
+    .page-hero { padding: 48px 0 32px; background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%); }
+    .page-hero h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--text); line-height: 1.15; margin-bottom: 10px; }
+    .page-hero .page-meta { font-size: 13px; color: var(--text-muted); }
+    .page-content { padding: 48px 0 64px; background: var(--white); }
+    .page-content h2 { font-size: 22px; font-weight: 700; color: var(--text); margin: 36px 0 12px; line-height: 1.3; }
+    .page-content h2:first-child { margin-top: 0; }
+    .page-content h3 { font-size: 17px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    .page-content p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+    .page-content ul, .page-content ol { margin: 12px 0 16px 24px; }
+    .page-content li { font-size: 15px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 6px; }
+    .page-content strong { color: var(--text); font-weight: 600; }
+    .page-content a.inline { color: var(--green); font-weight: 500; text-decoration: underline; }
+    .page-content .notice { margin: 24px 0; padding: 18px 22px; background: var(--bg-light); border-left: 3px solid var(--navy); border-radius: 0 6px 6px 0; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+    .contact-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 20px 22px; }
+    .contact-card h3 { font-size: 15px; margin: 0 0 8px; }
+    .contact-card p { font-size: 14px; margin: 0 0 4px; }
+    @media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-form { background: var(--bg-light); border: 1px solid var(--border); border-radius: 8px; padding: 28px; margin: 32px 0; }
+    .contact-form label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin: 12px 0 4px; }
+    .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 14px; }
+    .contact-form textarea { min-height: 100px; resize: vertical; }
+    .contact-form button { margin-top: 16px; background: var(--green); color: var(--white); border: 0; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .contact-form button:hover { background: var(--green-dark); }
+    .faq-list { max-width: 780px; margin: 24px auto; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+    .faq-item[open] { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05); }
+    .faq-item summary { padding: 14px 18px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-answer { padding: 0 18px 14px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .footer { background: #1a1a1a; color: #cccccc; padding: 48px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; margin-bottom: 32px; }
+    .footer-col h4 { color: var(--white); font-size: 13px; font-weight: 600; margin-bottom: 16px; letter-spacing: 0.4px; text-transform: uppercase; }
+    .footer-col a { display: block; font-size: 13px; color: #999999; text-decoration: none; margin-bottom: 10px; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-col p { font-size: 13px; color: #999999; line-height: 1.7; }
+    .footer-bottom { border-top: 1px solid #333333; padding: 20px 0; text-align: center; font-size: 12px; color: #666666; }
+    @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+</style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com","logo":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mymoneymarketplace.com"},{"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://mymoneymarketplace.com/privacy"}]},{"@type":"WebPage","name":"Privacy Policy","description":"Privacy policy for My Money Marketplace — what information we collect, how we use it, how we share it, and your rights.","url":"https://mymoneymarketplace.com/privacy","dateModified":"2026-04-22"},{"@type":"Article","headline":"Privacy Policy","description":"Privacy policy for My Money Marketplace — what information we collect, how we use it, how we share it, and your rights.","author":{"@type":"Organization","name":"My Money Marketplace"},"publisher":{"@type":"Organization","name":"My Money Marketplace","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"}},"datePublished":"2026-04-22","dateModified":"2026-04-22","mainEntityOfPage":"https://mymoneymarketplace.com/privacy"}]}</script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="header-logo"><img src="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png" alt="My Money Marketplace" width="180" height="32"></a>
+        <nav class="header-nav">
+            <a href="/credit-cards" class="header-link">Credit Cards</a>
+            <a href="/personal-loans" class="header-link">Personal Loans</a>
+            <a href="/business-loans" class="header-link">Business Loans</a>
+            <a href="/savings" class="header-link">Savings</a>
+            <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb-list"><li><a href="/">Home</a></li><li class="sep">/</li><li class="current">Privacy Policy</li></ol>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="container-narrow">
+        <h1>Privacy Policy</h1>
+        <p class="page-meta">Last updated: April 22, 2026</p>
+    </div>
+</section>
+
+<section class="page-content">
+    <div class="container-narrow">
+
+        <p>My Money Marketplace (&ldquo;MMM,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your privacy. This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
+
+        <h2>Information we collect</h2>
+        <p>When you use mymoneymarketplace.com, we collect the following categories of information:</p>
+        <ul>
+            <li><strong>Information you provide directly.</strong> When you submit a lead form, request a match with a lender, sign up for emails, or use our interactive tools (including our matching quizzes), you may provide your name, email address, phone number, business name, loan amount, industry, time in business, and similar business details.</li>
+            <li><strong>Analytics and usage data.</strong> We use first-party and third-party analytics tools to understand how visitors use the site. This includes pages visited, time on site, referring URLs, device and browser type, and approximate geographic location derived from IP address.</li>
+            <li><strong>Cookies and similar technologies.</strong> Standard web cookies and tracking pixels allow us to measure campaign performance and improve user experience.</li>
+        </ul>
+
+        <h2>How we use information</h2>
+        <p>The information we collect is used to:</p>
+        <ul>
+            <li><strong>Match you with lenders.</strong> When you submit a lead form or request a match, the information you provide is shared with our primary partner lender (Lendmate Capital) so they can evaluate and respond to your application. This is the core service we provide.</li>
+            <li><strong>Communicate with you.</strong> If you opt in to our email list, we send follow-up emails about loan matching, relevant guides, and site updates. You can unsubscribe at any time.</li>
+            <li><strong>Improve the site.</strong> Aggregate and individual analytics data help us understand what content is useful and where the experience could be better.</li>
+            <li><strong>Comply with legal obligations.</strong> We retain records as required by law.</li>
+        </ul>
+
+        <h2>Information sharing</h2>
+        <p>We do not sell your personal information. We share information only in the following ways:</p>
+        <ul>
+            <li><strong>With Lendmate Capital.</strong> Our primary partner lender receives the information you submit through lead forms so they can contact you about loan options. See our <a class="inline" href="/disclosures">Affiliate Disclosures</a> for more on this relationship.</li>
+            <li><strong>With service providers.</strong> Tools like Zapier (workflow automation), Resend (email delivery), and our analytics providers receive limited information in order to perform functions on our behalf. These providers are bound by their own privacy commitments.</li>
+            <li><strong>For legal reasons.</strong> We may disclose information in response to a subpoena, court order, or to comply with applicable law.</li>
+            <li><strong>In a business transfer.</strong> If MMM is sold or merges with another company, information may be transferred as part of that transaction, with continued protection under this policy (or an equivalent one).</li>
+        </ul>
+
+        <h2>Cookies and tracking</h2>
+        <p>We use first-party cookies to remember your session, track lead-form completion, and improve site performance. Third-party analytics services (such as Google Analytics) set additional cookies for aggregate usage reporting. You can disable cookies in your browser settings; some site features may not work properly without them. You can also opt out of Google Analytics tracking via browser extensions or settings.</p>
+
+        <h2>Your rights</h2>
+        <p>Depending on where you live, you may have specific privacy rights under laws like the California Consumer Privacy Act (CCPA) or the EU General Data Protection Regulation (GDPR). These may include:</p>
+        <ul>
+            <li>The right to know what information we have about you.</li>
+            <li>The right to request correction of inaccurate information.</li>
+            <li>The right to request deletion of your information (subject to legal retention requirements).</li>
+            <li>The right to opt out of certain types of information sharing.</li>
+            <li>The right to non-discrimination for exercising these rights.</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at <a class="inline" href="/contact">our contact page</a> with the specific request. We may need to verify your identity before acting on the request.</p>
+
+        <h2>Data retention</h2>
+        <p>We retain personal information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements. Lead-form submissions are typically retained for the lifecycle of the matching relationship plus a reasonable period after. Analytics data is retained in aggregate form for up to 26 months.</p>
+
+        <h2>Children&rsquo;s policy</h2>
+        <p>MMM is not directed to individuals under 18, and we do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us and we will delete it promptly.</p>
+
+        <h2>Security</h2>
+        <p>We use reasonable technical and organizational measures to protect personal information, including encryption in transit (HTTPS), secure database storage, and access controls. No method of internet transmission is 100% secure, and we cannot guarantee absolute security. In the event of a data breach that affects your personal information, we will notify you as required by applicable law.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will update the &ldquo;Last updated&rdquo; date at the top of the page. If the changes are material, we will notify you through email (if we have your email) or a prominent notice on the site.</p>
+
+        <h2>Contact us</h2>
+        <p>If you have questions about this Privacy Policy or want to exercise a privacy right, please reach us through our <a class="inline" href="/contact">contact page</a> or at:</p>
+        <p>My Money Marketplace<br>
+        Privacy Inquiries<br>
+        [Business Address &mdash; to be confirmed]<br>
+        Email: contact@mymoneymarketplace.com</p>
+
+        <div class="notice">
+            <strong>Note on this policy.</strong> This Privacy Policy will be reviewed by legal counsel. If you have specific privacy concerns or questions about how your information is handled, please contact us before using the site.
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="/personal-loans">Personal Loans</a>
+                <a href="/business-loans">Business Loans</a>
+                <a href="/sba-loans">SBA Loans</a>
+                <a href="/credit-cards">Credit Cards</a>
+                <a href="/savings">Savings</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company &amp; Legal</h4>
+                <p style="margin-bottom:14px;">My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not originate SBA loans; applications are processed through SBA-authorized lenders. We do not provide financial, legal, or tax advice.</p>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/disclosures">Disclosures</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">&copy; 2026 My Money Marketplace. All rights reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>
