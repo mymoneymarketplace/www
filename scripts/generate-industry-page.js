@@ -474,6 +474,19 @@ const CONFIGS = {
 
 '524210': {
     slug: 'insurance-agencies',
+    industryNoun: 'insurance agency',
+    industryNounPossessive: "insurance agency's",
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/8441774/pexels-photo-8441774.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Senior couple discussing contract with insurance consultant in a professional office — representative of the relationship-based book-of-business acquisitions funded through SBA financing',
+        width: 1200,
+        height: 800,
+        photographer: 'Kampus Production',
+        photographerUrl: 'https://www.pexels.com/@kampus/',
+        sourceUrl: 'https://www.pexels.com/photo/8441774/',
+        sourceName: 'Pexels',
+    },
+    highlightLenderNames: ['Live Oak Banking Company'],
     h1: 'SBA Loans for Insurance Agencies',
     title: 'SBA Loan for Insurance Agency 2026 | My Money Marketplace',
     metaDesc: 'SBA 7(a) loans for insurance agency book-of-business acquisitions. 4,249 insurance agency SBA loans approved FY2020-2025, +20% YoY growth. Residual-revenue underwriting. Take the 2-minute quiz.',
