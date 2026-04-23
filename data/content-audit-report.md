@@ -1,24 +1,24 @@
 # Content Audit Report
 
-_Generated: 2026-04-23T18:55:22.411Z · Duration: 1.9s · Pages scanned: 326_
+_Generated: 2026-04-23T19:48:52.721Z · Duration: 2.2s · Pages scanned: 338_
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
-| Pages scanned | 326 |
-| Pages with at least one issue | 40 |
-| Total issues | 73 |
+| Pages scanned | 338 |
+| Pages with at least one issue | 48 |
+| Total issues | 81 |
 | CRITICAL | 1 |
 | HIGH | 5 |
-| MEDIUM | 51 |
+| MEDIUM | 59 |
 | LOW | 16 |
 
 ### Issues per check
 
 | Check | Issue count |
 | --- | ---: |
-| structural | 22 |
+| structural | 30 |
 | cross-page-leakage | 37 |
 | data-traceability | 9 |
 | cta-correctness | 5 |
@@ -104,17 +104,33 @@ _Generated: 2026-04-23T18:55:22.411Z · Duration: 1.9s · Pages scanned: 326_
 
 ## Check: structural
 
-22 issues.
+30 issues.
 
 - **[HIGH]** `/` — Canonical mismatch: "https://mymoneymarketplace.com/" but expected "https://mymoneymarketplace.com"
   - _Fix:_ Correct the canonical URL to match the file path
 - **[MEDIUM]** `/` — Low word count: 379 words (<800)
   - _Fix:_ Expand editorial content or evaluate whether page has enough substance
-- **[MEDIUM]** `/business-loans/chesapeake-va` — Low word count: 799 words (<800)
+- **[MEDIUM]** `/business-loans/bridgeport-ct` — Low word count: 792 words (<800)
   - _Fix:_ Expand editorial content or evaluate whether page has enough substance
-- **[MEDIUM]** `/business-loans/miami-fl` — Low word count: 797 words (<800)
+- **[MEDIUM]** `/business-loans/chesapeake-va` — Low word count: 781 words (<800)
   - _Fix:_ Expand editorial content or evaluate whether page has enough substance
-- **[MEDIUM]** `/business-loans/raleigh-nc` — Low word count: 798 words (<800)
+- **[MEDIUM]** `/business-loans/lincoln-ne` — Low word count: 797 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/little-rock-ar` — Low word count: 787 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/mesa-az` — Low word count: 798 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/miami-fl` — Low word count: 779 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/orlando-fl` — Low word count: 790 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/pittsburgh-pa` — Low word count: 798 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/raleigh-nc` — Low word count: 780 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/richmond-va` — Low word count: 795 words (<800)
+  - _Fix:_ Expand editorial content or evaluate whether page has enough substance
+- **[MEDIUM]** `/business-loans/surprise-az` — Low word count: 798 words (<800)
   - _Fix:_ Expand editorial content or evaluate whether page has enough substance
 - **[MEDIUM]** `/contact` — Low word count: 409 words (<800)
   - _Fix:_ Expand editorial content or evaluate whether page has enough substance
@@ -199,30 +215,30 @@ Top 25 issues to fix first (by severity):
 4. **[HIGH]** `/sba-loans/cpas` _(cross-page-leakage)_ — Industry term "book of business" (from /insurance-agencies/) in program-card text: "Right for: rarely used; CPA firm capital is almost entirely intangible (book of business, staff, technology subscription..."
 5. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) in <h3>: "Distinct from veterinary medicine"
 6. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) in program-card text: "Right for: facility buildouts for boarding and daycare, acquisitions, multi-location expansion...."
-7. **[MEDIUM]** `/business-loans/chesapeake-va` _(structural)_ — Low word count: 799 words (<800)
-8. **[MEDIUM]** `/business-loans/miami-fl` _(structural)_ — Low word count: 797 words (<800)
-9. **[MEDIUM]** `/business-loans/raleigh-nc` _(structural)_ — Low word count: 798 words (<800)
-10. **[MEDIUM]** `/contact` _(structural)_ — Low word count: 409 words (<800)
-11. **[MEDIUM]** `/disclosures` _(structural)_ — Low word count: 775 words (<800)
-12. **[MEDIUM]** `/equipment-financing` _(structural)_ — Low word count: 575 words (<800)
-13. **[MEDIUM]** `/` _(structural)_ — Low word count: 379 words (<800)
-14. **[MEDIUM]** `/line-of-credit` _(structural)_ — Low word count: 590 words (<800)
-15. **[MEDIUM]** `/personal-loans/bad-credit` _(structural)_ — Low word count: 708 words (<800)
-16. **[MEDIUM]** `/personal-loans/debt-consolidation` _(structural)_ — Low word count: 693 words (<800)
-17. **[MEDIUM]** `/personal-loans/home-improvement` _(structural)_ — Low word count: 630 words (<800)
-18. **[MEDIUM]** `/personal-loans/medical` _(structural)_ — Low word count: 588 words (<800)
-19. **[MEDIUM]** `/personal-loans/same-day` _(structural)_ — Low word count: 569 words (<800)
-20. **[MEDIUM]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "cpa firm" (from /cpas/) appears in body prose (outside links and headings)
-21. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) appears in body prose (outside links and headings)
-22. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "mechanical repair" (from /auto-repair/) appears in body prose (outside links and headings)
-23. **[MEDIUM]** `/sba-loans/auto-repair` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
-24. **[MEDIUM]** `/sba-loans/auto-repair/texas` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
-25. **[MEDIUM]** `/sba-loans/bad-credit` _(structural)_ — Missing non-origination disclosure on SBA page
+7. **[MEDIUM]** `/business-loans/bridgeport-ct` _(structural)_ — Low word count: 792 words (<800)
+8. **[MEDIUM]** `/business-loans/chesapeake-va` _(structural)_ — Low word count: 781 words (<800)
+9. **[MEDIUM]** `/business-loans/lincoln-ne` _(structural)_ — Low word count: 797 words (<800)
+10. **[MEDIUM]** `/business-loans/little-rock-ar` _(structural)_ — Low word count: 787 words (<800)
+11. **[MEDIUM]** `/business-loans/mesa-az` _(structural)_ — Low word count: 798 words (<800)
+12. **[MEDIUM]** `/business-loans/miami-fl` _(structural)_ — Low word count: 779 words (<800)
+13. **[MEDIUM]** `/business-loans/orlando-fl` _(structural)_ — Low word count: 790 words (<800)
+14. **[MEDIUM]** `/business-loans/pittsburgh-pa` _(structural)_ — Low word count: 798 words (<800)
+15. **[MEDIUM]** `/business-loans/raleigh-nc` _(structural)_ — Low word count: 780 words (<800)
+16. **[MEDIUM]** `/business-loans/richmond-va` _(structural)_ — Low word count: 795 words (<800)
+17. **[MEDIUM]** `/business-loans/surprise-az` _(structural)_ — Low word count: 798 words (<800)
+18. **[MEDIUM]** `/contact` _(structural)_ — Low word count: 409 words (<800)
+19. **[MEDIUM]** `/disclosures` _(structural)_ — Low word count: 775 words (<800)
+20. **[MEDIUM]** `/equipment-financing` _(structural)_ — Low word count: 575 words (<800)
+21. **[MEDIUM]** `/` _(structural)_ — Low word count: 379 words (<800)
+22. **[MEDIUM]** `/line-of-credit` _(structural)_ — Low word count: 590 words (<800)
+23. **[MEDIUM]** `/personal-loans/bad-credit` _(structural)_ — Low word count: 708 words (<800)
+24. **[MEDIUM]** `/personal-loans/debt-consolidation` _(structural)_ — Low word count: 693 words (<800)
+25. **[MEDIUM]** `/personal-loans/home-improvement` _(structural)_ — Low word count: 630 words (<800)
 
 ## Observations
 
-- Issue distribution: structural: 22, cross-page-leakage: 37, data-traceability: 9, cta-correctness: 5
-- 40 of 326 pages (12.3%) flagged at least one issue.
+- Issue distribution: structural: 30, cross-page-leakage: 37, data-traceability: 9, cta-correctness: 5
+- 48 of 338 pages (14.2%) flagged at least one issue.
 - Pages with the most issues:
   - `/sba-loans/pet-care`: 6 issues
   - `/sba-loans/auto-body`: 4 issues
