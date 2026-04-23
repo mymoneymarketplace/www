@@ -866,6 +866,139 @@ const CONFIGS = {
     ],
 },
 
+'524210_TX': {
+    naicsCode: '524210',
+    state: 'TX',
+    industryParentSlug: 'insurance-agencies',
+    industryLabel: 'insurance agencies',
+    industryLabelCap: 'Insurance Agencies',
+    industryLabelCapSingular: 'Insurance Agency',
+    stateSlug: 'texas',
+    stateName: 'Texas',
+    campaignSlug: 'sba-insurance-agencies-texas-quiz',
+
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/6457568/pexels-photo-6457568.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Insurance agency office with agent reviewing paperwork with client, representative of Texas insurance agencies financed through SBA 7(a) acquisition loans',
+        width: 1200,
+        height: 800,
+        photographer: 'Kampus Production',
+        photographerUrl: 'https://www.pexels.com/@kampus/',
+        sourceUrl: 'https://www.pexels.com/photo/6457568/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: ['Live Oak Banking Company'],
+
+    title: 'SBA Loans for Insurance Agencies in Texas 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Texas insurance agencies. 469 TX agency SBA loans approved FY2020-2025 ($272M), +52% YoY growth. Texas is the #1 state for insurance agency SBA -- the only industry in our cluster where TX beats CA. Take the 2-minute quiz.',
+    heroSub: 'Texas is the <strong>#1 state for insurance agency SBA lending &mdash; the only industry category in our cluster where Texas leads California on volume</strong>. 469 loans approved FY2020-2025 at $272M in total approved capital, and the state is accelerating at +52% YoY. Insurance agency SBA is fundamentally a book-of-business acquisition play; the Texas market dynamics give it a distinctive structure.',
+
+    serviceDescription: 'My Money Marketplace helps Texas insurance agency operators and acquirers compare SBA 7(a) options and get matched with specialist lenders experienced in book-of-business acquisition underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+
+    marketContextHtml: `
+        <p>Texas holds an unusual position in the SBA data: <strong>it&rsquo;s the largest state market for insurance agencies &mdash; the only industry category in our cluster where Texas leads California on loan count</strong>. Texas agencies account for 11.04% of national insurance agency SBA volume (469 loans FY2020-2025, $272M approved), compared to Florida at 10.28% (437 loans) and California at 10.05% (427 loans). The state leadership isn't a rounding error &mdash; Texas consistently beats California year-over-year in this category, and the +52% YoY growth rate compounds the lead.</p>
+        <p>The Texas insurance agency SBA lead has several plausible drivers. First, <strong>Texas has a larger independent-agency market share</strong> than many states &mdash; fewer captive-only markets (GEICO, State Farm direct) and more independent agencies representing multiple carriers. Independent agencies are the SBA-acquisition-ready profile. Second, <strong>Texas population and business growth</strong> drives insurance demand across personal lines (auto, home) and commercial lines (small business, contractor) that supports agency revenue at scale. Third, <strong>the state&rsquo;s insurance regulatory environment is relatively friendly</strong> with straightforward licensing under the Texas Department of Insurance and no state income tax affecting agent personal financial modeling.</p>
+        <h3>Insurance agency SBA is fundamentally an acquisition play</h3>
+        <p>Unlike most SBA categories where acquisitions and expansions split the use cases, insurance agency SBA is <strong>heavily weighted toward book-of-business acquisitions</strong>. When a producer or agency owner wants to retire, sell a book, or exit, a buyer acquiring that book of business via SBA 7(a) is the dominant structure. This is distinct from financing new agency formation (harder to underwrite without a book) or operational working capital (rarely the primary use).</p>
+        <p>What lenders underwrite on these files:</p>
+        <ul>
+            <li><strong>Book retention risk.</strong> Insurance books lose roughly 10-20% of policies in year 1 post-acquisition as clients re-shop during the transition. Specialist lenders model retention curves explicitly into DSCR projections rather than assuming full revenue persistence. Files submitted with flat-revenue assumptions get restructured or repriced.</li>
+            <li><strong>Commission split and revenue quality.</strong> Books heavy in renewal commissions (recurring) underwrite better than books heavy in new-business commissions (one-time). Specialist lenders break down revenue by carrier, by line (personal vs commercial), and by commission type to assess durability.</li>
+            <li><strong>Carrier appointments.</strong> The acquiring agency needs active appointments with the carriers represented in the acquired book. Lenders verify appointment transfers or contingent-agency agreements before closing; non-transferable appointments on a significant carrier block can kill a deal late-stage.</li>
+            <li><strong>Non-compete and transition agreement.</strong> Seller&rsquo;s non-compete (2-5 years typical), defined transition support period, and clear client-communication plan all affect book-retention risk. Lenders review the purchase agreement for these terms.</li>
+        </ul>
+        <h3>Texas agency SBA deal size and performance</h3>
+        <p>Average Texas insurance agency SBA loan is <strong>$579,000 vs. $478,000 nationally (+21%)</strong>. Median is $331,000 vs. $225,000 nationally (+47%). The larger Texas deal sizes reflect the scale of independent agency books available for acquisition in DFW and Houston in particular.</p>
+        <p>Charge-off rate is <strong>1.07% (0.79&times; SBA cross-industry average)</strong>, modestly better than the national insurance agency rate of 1.06% and materially better than the SBA cross-industry baseline. Texas agency SBA performs cleanly because the book-of-business acquisition structure is well-understood by specialist lenders and the recurring-commission revenue underwrites predictably once retention risk is modeled correctly.</p>
+        <h3>Metro distribution</h3>
+        <p>Houston and DFW carry the highest absolute volume of Texas insurance agency SBA. Austin and San Antonio add meaningful secondary volume. The interesting pattern: Texas insurance agency SBA has a broader geographic distribution than many industries &mdash; rural and mid-market Texas (Lubbock, Amarillo, Tyler, Corpus Christi) all carry meaningful volume because independent agencies are embedded across the state&rsquo;s geography rather than concentrated only in major metros.</p>
+    `,
+
+    lenderCalloutHtml: `
+        <p>Texas insurance agency SBA lending has the clearest specialist-lender dominance of any state-industry combination we track in the insurance category: <strong>Live Oak Banking Company holds 89 Texas insurance agency loans &mdash; 19% of all Texas insurance agency SBA volume by count and $82.4 million in approved capital</strong>. Live Oak is the national insurance-agency SBA specialist; their Texas volume reflects that focus applied to the largest state market. Average Live Oak Texas agency loan is $926,000, meaningfully above the Texas average and consistent with their focus on larger book acquisitions.</p>
+        <p>Small-deal specialist platforms hold the #2&ndash;5 positions: U.S. Bank (27 loans), United Midwest Savings (22, an SBA-only platform heavy in smaller-deal agency files), Readycap (21), and BayFirst National Bank (18). <strong>Comerica Bank (16 loans) is the only traditional Texas-connected bank in the top 10</strong> &mdash; Comerica has a Dallas footprint and runs agency SBA programs from that base. Northeast Bank (14), Newtek Bank (14), Byline Bank (13), and Pathward (10) round out the list. <strong>For a Texas insurance agency acquisition, Live Oak is the default first call &mdash; they concentrate book-of-business acquisition expertise at a level no other lender approaches</strong>; United Midwest and BayFirst handle smaller-book files well; Comerica is worth direct approach on deals with an existing Dallas banking relationship.</p>
+    `,
+
+    cityLinks: [
+        { name: 'Houston', href: '/business-loans/houston-tx' },
+        { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Austin', href: '/business-loans/austin-tx' },
+        { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'Arlington', href: '/business-loans/arlington-tx' },
+        { name: 'Corpus Christi', href: '/business-loans/corpus-christi-tx' },
+    ],
+
+    quiz: {
+        questions: [
+            {q:"What's your Texas insurance agency situation?",opts:[
+                {v:"acquisition",l:"Acquiring an existing TX agency / book"},
+                {v:"partial-book",l:"Acquiring a partial book from a retiring producer"},
+                {v:"new-agency",l:"Starting a new agency"},
+                {v:"expansion",l:"Adding a location to an existing TX agency"},
+            ]},
+            {q:"Book revenue profile?",opts:[
+                {v:"personal-lines",l:"Primarily personal lines (auto, home)"},
+                {v:"commercial-lines",l:"Primarily commercial lines"},
+                {v:"mixed",l:"Mixed personal + commercial"},
+                {v:"specialty",l:"Specialty / niche lines"},
+            ]},
+            {q:"Loan amount needed?",opts:[
+                {v:"under-250k",l:"Under $250K"},
+                {v:"250k-500k",l:"$250K - $500K"},
+                {v:"500k-1m",l:"$500K - $1M"},
+                {v:"1m-plus",l:"$1M+"},
+            ]},
+            {q:"Producer / operator experience?",opts:[
+                {v:"experienced",l:"5+ years as a producer or agency operator"},
+                {v:"mid",l:"2-5 years"},
+                {v:"new",l:"New to insurance / first agency"},
+            ]},
+        ],
+        profiles: {
+            A: {
+                badge: "Strong TX agency acquisition",
+                headline: "You're in the #1 insurance-agency SBA state",
+                body: "An experienced Texas producer or agency operator acquiring an established agency or book is exactly the file Live Oak Banking underwrites at scale in Texas. Live Oak holds 19% of Texas insurance-agency SBA by count and concentrates book-of-business acquisition expertise at a level no other lender approaches in this category. Average deal size $579K. Expect 60-90 days to close. Plan for explicit book-retention modeling in projections -- generalist banks often miss the 10-20% year-1 attrition and structure files without adequate working capital.",
+                ctaLabel: "Match with Texas insurance agency SBA lenders",
+                utmContent: "profile-a-tx-insurance-acquisition",
+            },
+            B: {
+                badge: "Smaller book / partial acquisition",
+                headline: "Small-deal specialist platforms fit this file",
+                body: "Partial book acquisitions from a retiring producer and agencies under $500K benefit from small-deal specialist platforms. United Midwest Savings (22 TX agency loans), BayFirst (18), and Newtek Bank (14) handle these files routinely with SBA 7(a) Small Loan (up to $500K, streamlined process, 45-75 day close). Smaller-book files still require book-retention modeling and carrier-appointment verification, but the underwriting process is faster than Standard 7(a).",
+                ctaLabel: "Match with small-deal TX agency SBA lenders",
+                utmContent: "profile-b-tx-insurance-small",
+            },
+            C: {
+                badge: "New agency / limited experience",
+                headline: "New-agency files face the hardest underwriting",
+                body: "Starting a new Texas insurance agency from scratch (no book to acquire) is the hardest insurance SBA file. Lenders typically want documented producer history, active carrier appointments, a detailed business plan with realistic customer acquisition cost assumptions, and meaningfully higher equity injection. Most specialist SBA lenders will push for a partial-book-acquisition structure instead. Have this conversation upfront with a specialist rather than getting declined mid-underwriting.",
+                ctaLabel: "Get honest feedback from a TX insurance SBA specialist",
+                utmContent: "profile-c-tx-insurance-new",
+            },
+        },
+        scoringBody: `
+            function score(a) {
+                var sit=a[0], book=a[1], amount=a[2], exp=a[3];
+                if (sit==='new-agency' || exp==='new') return 'C';
+                if (sit==='partial-book' || amount==='under-250k' || amount==='250k-500k') return 'B';
+                return 'A';
+            }
+        `,
+    },
+
+    faqs: [
+        {q:"Why is Texas the #1 state for insurance agency SBA lending?",a:"Texas leads all states on insurance agency SBA volume at 11.04% national share (469 loans FY2020-2025), ahead of Florida at 10.28% and California at 10.05%. It's the only industry category in our cluster where Texas beats California on volume. Three likely drivers: larger independent-agency market share than many states (fewer captive-only markets), Texas population and business growth driving insurance demand, and a relatively friendly state insurance regulatory environment with straightforward Texas Department of Insurance licensing and no state income tax affecting personal financial modeling."},
+        {q:"What's the typical SBA insurance agency loan size in Texas?",a:"Average Texas insurance agency SBA loan is approximately $579,000 — 21% above the national insurance agency average of $478,000. Median is $331,000 vs. $225,000 nationally (+47%). The larger Texas deal sizes reflect the scale of independent agency books available for acquisition in DFW and Houston particularly."},
+        {q:"What's the primary use case for insurance agency SBA loans?",a:"Book-of-business acquisitions. Unlike most SBA categories where acquisitions and expansions split the use cases, insurance agency SBA is heavily weighted toward acquiring an existing producer's or agency's book of business. When a producer or agency owner wants to retire, sell, or exit, a buyer financing that book acquisition via SBA 7(a) is the dominant structure. New agency formation and operational working capital are rarely the primary use."},
+        {q:"What do lenders underwrite on Texas insurance agency acquisition files?",a:"Four factors receive explicit underwriting: book retention risk (10-20% year-1 attrition is typical, modeled into DSCR), commission split and revenue quality (renewal-heavy books underwrite better than new-business-heavy), carrier appointment transferability (the acquiring agency needs active appointments with the carriers represented in the acquired book), and the non-compete / transition agreement structure with the seller. Files submitted with flat-revenue assumptions routinely get restructured or repriced."},
+        {q:"Which SBA lenders are most active in Texas insurance agency lending?",a:"Live Oak Banking Company dominates with 89 Texas insurance agency loans — 19% of Texas insurance agency SBA volume by count, $82.4 million in approved capital, and a $926K average loan size. Live Oak is the national insurance-agency SBA specialist. U.S. Bank (27 loans) holds #2 with a more generalist-branch profile. Small-deal specialist platforms hold positions 3-5: United Midwest Savings (22), Readycap (21), BayFirst (18). Comerica Bank (16) is the only traditional Texas-connected bank in the top 10, with a Dallas-based agency SBA program."},
+        {q:"How does Texas insurance agency SBA performance compare to national?",a:"Texas insurance agency SBA charges off at 1.07% — a 0.79× ratio against the SBA cross-industry average of 1.36%, and modestly better than the national insurance agency rate of 1.06%. The favorable performance reflects a book-of-business acquisition structure that specialist lenders understand well and recurring-commission revenue that underwrites predictably once retention risk is modeled correctly."},
+        {q:"How long does an SBA loan take to close for a Texas insurance agency acquisition?",a:"60-90 days is typical for a Texas insurance agency acquisition with a specialist lender (Live Oak, U.S. Bank). Smaller book acquisitions under $500K via SBA 7(a) Small Loan typically run 45-75 days given the streamlined process. The main variables affecting timeline: carrier appointment verification (some carriers are slower than others on appointment transfers), non-compete and transition agreement negotiation with the seller, and book retention modeling in projections. Specialist lenders handle these as standard practice; generalist banks routinely extend timelines."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────
