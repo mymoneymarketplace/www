@@ -178,7 +178,7 @@ ${JSON.stringify(schema, null, 4)}
             <a href="/personal-loans" class="header-link">Personal Loans</a>
             <a href="/business-loans" class="header-link">Business Loans</a>
             <a href="/savings" class="header-link">Savings</a>
-            <a href="https://mymoneymarketplace.com/compare" class="header-cta">Compare Rates</a>
+            <a href="/business-loans" class="header-cta">Compare Rates</a>
             <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </div>
@@ -357,6 +357,18 @@ const files = fs.readdirSync(SEO_PAGES)
 
 console.log(`Discovered ${files.length} city parasites`);
 
+// Load inline Tier-1 cities (cities missing from the parasite set — LA, NYC, SF,
+// Fort Worth, DC, Boston, Detroit, OKC, Oakland, Cleveland, Tulsa, El Paso). These
+// supply the same (citySlug, stateAbbr, metaDesc, faqs) shape as parasite
+// extraction, sourced from data/tier1-cities.json so the generator doesn't need
+// a parasite HTML file for each one. See data/city-coverage-audit.md for the
+// discovery context.
+const TIER1_PATH = path.join(ROOT, 'data', 'tier1-cities.json');
+const inlineCities = fs.existsSync(TIER1_PATH)
+    ? JSON.parse(fs.readFileSync(TIER1_PATH, 'utf8')).cities || []
+    : [];
+console.log(`Inline Tier-1 cities: ${inlineCities.length}`);
+
 // Build state grouping first for the related-links resolver
 const byState = {};
 const parsedFiles = [];
@@ -367,6 +379,13 @@ for (const f of files) {
     parsedFiles.push({ file: f, slug, ...parsed });
     byState[parsed.stateAbbr] = byState[parsed.stateAbbr] || [];
     byState[parsed.stateAbbr].push(slug);
+}
+// Add inline Tier-1 cities to byState so the related-links resolver picks them up
+// (both directions: existing cities link to new ones and vice versa).
+for (const c of inlineCities) {
+    const slug = `${c.citySlug}-${c.stateAbbr.toLowerCase()}`;
+    byState[c.stateAbbr] = byState[c.stateAbbr] || [];
+    if (!byState[c.stateAbbr].includes(slug)) byState[c.stateAbbr].push(slug);
 }
 for (const st of Object.keys(byState)) byState[st].sort();
 
@@ -409,6 +428,45 @@ for (const p of parsedFiles) {
         _sourceFile: p.file
     });
 }
+// Process inline Tier-1 cities with the same template pipeline as parasite-sourced cities.
+for (const c of inlineCities) {
+    const citySlug = c.citySlug;
+    const stateAbbr = c.stateAbbr.toUpperCase();
+    const slug = `${citySlug}-${stateAbbr.toLowerCase()}`;
+    const cityDisplay = titleCaseSlug(citySlug);
+    const stateName = STATE_NAMES[stateAbbr] || stateAbbr;
+    const metaDesc = c.metaDesc || `Compare business loans in ${cityDisplay}, ${stateAbbr}. $5K-$5M funding with same-day approval and soft-pull rate checks.`;
+    const faqs = c.faqs || [];
+    if (faqs.length === 0) {
+        errors.push({ file: `tier1-cities.json[${slug}]`, reason: 'no FAQs in inline data' });
+        continue;
+    }
+    pages.push({
+        slug: `business-loans/${slug}`,
+        title: `Business Loans in ${cityDisplay}, ${stateAbbr} 2026 | My Money Marketplace`,
+        metaDesc,
+        breadcrumb: [
+            { name: 'Home', url: '/' },
+            { name: 'Business Loans', url: '/business-loans' },
+            { name: `${cityDisplay}, ${stateAbbr}`, url: `/business-loans/${slug}` }
+        ],
+        h1: `Business Loans in ${cityDisplay}, ${stateAbbr}`,
+        heroSub: `Funding options for small businesses across ${cityDisplay} and ${stateName}, from SBA loans to same-day working capital.`,
+        articleHeadline: `Business Loans in ${cityDisplay}, ${stateAbbr} 2026`,
+        ctaUtm: `business-loans-${slug}-apex`,
+        ctaHeadline: `Need Funding for Your ${cityDisplay} Business?`,
+        ctaSub: `Lendmate Capital offers same-day decisions and funding in 24 hours for businesses across ${stateName}. Soft-pull rate check.`,
+        purposeHeading: `Why ${cityDisplay} Business Owners Compare Here`,
+        purposeCards: purposeCardsFor(cityDisplay, stateName),
+        contentSections: contentSectionsFor(cityDisplay, stateName),
+        faqs,
+        related: relatedFor(slug, stateAbbr, byState),
+        cityDisplay,
+        stateName,
+        _sourceFile: `tier1-cities.json[${slug}]`
+    });
+}
+
 console.log(`Built page data for ${pages.length}, ${errors.length} error(s)`);
 if (errors.length) for (const e of errors) console.log(`  SKIP: ${e.file} (${e.reason})`);
 
