@@ -456,6 +456,140 @@ const CONFIGS = {
     ],
 },
 
+'811111_TX': {
+    naicsCode: '811111',
+    state: 'TX',
+    industryParentSlug: 'auto-repair',
+    industryLabel: 'auto repair',
+    industryLabelCap: 'Auto Repair',
+    industryLabelCapSingular: 'Auto Repair Shop',
+    stateSlug: 'texas',
+    stateName: 'Texas',
+    campaignSlug: 'sba-auto-repair-texas-quiz',
+
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/4480505/pexels-photo-4480505.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Mechanic working on a vehicle in an auto repair shop bay, representative of Texas auto repair shops financed through SBA 7(a) loans',
+        width: 1200,
+        height: 800,
+        photographer: 'Andrea Piacquadio',
+        photographerUrl: 'https://www.pexels.com/@olly/',
+        sourceUrl: 'https://www.pexels.com/photo/4480505/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: [],
+
+    title: 'SBA Loans for Auto Repair Shops in Texas 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Texas auto repair shops. 427 TX auto repair SBA loans approved FY2020-2025 ($307M), +52% YoY growth. Take the 2-minute quiz to match with Texas-auto-repair-experienced SBA lenders.',
+    heroSub: 'Texas auto repair SBA lending compounds the Texas growth story with the auto repair SBA acceleration &mdash; <strong>+52% YoY growth, nearly twice the national auto-repair growth rate of +27%</strong>. Deal sizes run 50% above national average. Second-largest state by auto repair SBA volume behind California.',
+
+    serviceDescription: 'My Money Marketplace helps Texas auto repair shop owners compare SBA 7(a) and 504 options and get matched with lenders experienced in Texas auto repair underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+
+    marketContextHtml: `
+        <p>Texas is the <strong>second-largest state for auto repair SBA lending</strong> behind California (7.89% of national volume, 427 loans approved FY2020-2025, $307 million in total approved capital) &mdash; and it&rsquo;s compounding two distinct growth trends at once. The national auto repair SBA category is up +26.93% year-over-year as the industry undergoes real operator turnover and consolidation. On top of that, <strong>Texas is growing at +52%</strong> &mdash; nearly twice the national auto-repair rate. This mirrors the Texas restaurant SBA pattern where the state compounds industry-level growth with state-level acceleration. See our <a href="/sba-loans/restaurants/texas">Texas restaurants SBA page</a> for the parallel story.</p>
+        <p>Texas auto repair deals run meaningfully larger than national: <strong>$719,000 average vs. $477,000 nationally (+51%)</strong>, with the median loan at $425,000 vs. $225,500 nationally (+88%). The larger deal sizes reflect the combination of Texas commercial real estate costs, the prevalence of larger multi-bay shops in DFW and Houston, and the tendency toward real-estate-combined deals where the operator owns the building.</p>
+        <h3>Charge-off rate: better than SBA average</h3>
+        <p>Texas auto repair SBA charges off at <strong>1.17% &mdash; a 0.86&times; ratio against the SBA cross-industry average of 1.36%</strong>. Modestly above the national auto repair rate of 1.00%, but still favorable versus the cross-industry baseline. The slight state-level elevation reflects the larger average deal sizes in Texas (more dollars at risk per file) and a sector mix that leans toward full-service shops rather than quick-lube or tire-and-service chains.</p>
+        <h3>Metro distribution: DFW, Houston, Austin, San Antonio</h3>
+        <p>The same four major metros driving Texas restaurant SBA volume drive auto repair: <strong>Dallas-Fort Worth, Houston, Austin, and San Antonio</strong>. DFW and Houston carry the highest absolute volume; Austin punches above population weight driven by the tech-employment influx pushing vehicle fleet growth; San Antonio leans more toward franchise-operator files. Secondary Texas markets (Plano, Arlington, Corpus Christi, El Paso, Lubbock, Waco) all have active SBA auto repair lending.</p>
+        <h3>Texas regulatory context for auto repair SBA underwriting</h3>
+        <p>The same Texas business-climate factors that benefit restaurants benefit auto repair, with a few shop-specific notes:</p>
+        <ul>
+            <li><strong>Labor cost structure.</strong> Federal minimum wage applies. Auto repair wages in Texas sit meaningfully below California equivalents, which affects the DSCR projection baseline. Specialist Texas lenders use state-specific wage benchmarks rather than national averages.</li>
+            <li><strong>Zoning and environmental compliance.</strong> Texas auto repair zoning is less restrictive than California; municipalities increasingly regulate where shops can operate but not as aggressively. Environmental compliance around used oil, refrigerant handling, and waste disposal still applies federally regardless of state &mdash; underwriting reviews compliance history on acquisition files.</li>
+            <li><strong>No state income tax on operators.</strong> Personal financial strength of guarantors reads stronger in Texas because of the absence of state income tax compared to California or New York operators, which matters on larger-leverage files.</li>
+            <li><strong>Commercial real estate costs.</strong> Texas real estate runs below California but above national averages in major metros. This shows up in the real-estate-combined deal flow &mdash; a meaningful share of Texas auto repair SBA includes SBA 504 plus a 7(a) companion for the operating business, reflecting operator preference for owning the shop.</li>
+        </ul>
+    `,
+
+    lenderCalloutHtml: `
+        <p>Texas auto repair SBA lending is led by specialist national platforms rather than Texas-native regional banks. <strong>Newtek Bank (36 loans) and Live Oak Banking (28)</strong> &mdash; both specialist SBA platforms rather than traditional branch banks &mdash; lead the Texas auto repair market. Huntington National Bank (20) rounds out the top four. This is distinct from the Texas restaurants pattern where Huntington dominates alone.</p>
+        <p>Five large banks appear in positions 3&ndash;10: PNC Bank (22), JPMorgan Chase (14), Bank of America (12), Wells Fargo (11), and SouthState Bank (11). <strong>BayFirst National Bank (14)</strong> rounds out the top 10 as the small-business-specialist Florida-headquartered bank that runs programs into Texas. Notably absent from the Texas auto repair top 10: Frost Bank and Cadence Bank, the two Texas-headquartered regionals that matter in Texas restaurants. The auto repair file profile (equipment-heavy, collateral-strong, technical-operator reliant) fits specialist platforms better than generalist Texas regionals.</p>
+    `,
+
+    cityLinks: [
+        { name: 'Houston', href: '/business-loans/houston-tx' },
+        { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Austin', href: '/business-loans/austin-tx' },
+        { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'Arlington', href: '/business-loans/arlington-tx' },
+        { name: 'Corpus Christi', href: '/business-loans/corpus-christi-tx' },
+    ],
+
+    quiz: {
+        questions: [
+            {q:"What's your Texas auto repair situation?",opts:[
+                {v:"acquisition",l:"Acquiring an existing TX shop"},
+                {v:"new",l:"Opening a new shop"},
+                {v:"expansion",l:"Expansion or additional TX location"},
+                {v:"equipment-only",l:"Equipment upgrade, established shop"},
+            ]},
+            {q:"Primary loan use?",opts:[
+                {v:"purchase-price",l:"Acquisition purchase price"},
+                {v:"real-estate",l:"Real estate purchase (shop building)"},
+                {v:"equipment",l:"Lifts, alignment, diagnostic equipment"},
+                {v:"buildout",l:"Bay expansion / buildout"},
+                {v:"multiple",l:"Multiple uses combined"},
+            ]},
+            {q:"Operator experience?",opts:[
+                {v:"ase-manager",l:"ASE-certified, 5+ years managing/owning a shop"},
+                {v:"ase-tech",l:"ASE-certified technician"},
+                {v:"partner-tech",l:"Non-tech, with experienced technical partner"},
+                {v:"non-tech",l:"Non-technical operator"},
+            ]},
+            {q:"Loan amount needed?",opts:[
+                {v:"under-500k",l:"Under $500K"},
+                {v:"500k-1m",l:"$500K - $1M"},
+                {v:"1m-3m",l:"$1M - $3M"},
+                {v:"3m-plus",l:"$3M+"},
+            ]},
+        ],
+        profiles: {
+            A: {
+                badge: "Strong TX acquisition candidate",
+                headline: "You're riding the +52% Texas auto repair growth curve",
+                body: "Texas auto repair SBA volume is up 52% year-over-year, nearly twice the national auto-repair rate. Specialist SBA platforms (Newtek, Live Oak, Huntington) are actively deploying capital into Texas auto repair acquisitions. ASE-certified operator acquiring an established Texas shop with meaningful equity is exactly the file these lenders underwrite at scale. Texas deal sizes run 51% above national averages ($719K vs. $477K), which matches the capital these specialist lenders routinely deploy. Plan 60-90 days to close.",
+                ctaLabel: "Match with Texas auto repair SBA lenders",
+                utmContent: "profile-a-tx-auto-acquisition",
+            },
+            B: {
+                badge: "TX real estate + shop",
+                headline: "SBA 504 for the building, 7(a) companion for the business",
+                body: "Texas auto repair deals including the commercial real estate benefit from SBA 504's fixed long-term rates on the real-estate portion. 7(a) companion covers the operating business, equipment, and working capital. Combined structure typically runs 75-120 days to close. Texas real estate ownership is particularly valuable for auto repair because zoning restrictions on shop locations are increasing nationally; owning the site protects against forced relocation.",
+                ctaLabel: "Match with 504 + 7(a) TX auto repair lenders",
+                utmContent: "profile-b-tx-auto-real-estate",
+            },
+            C: {
+                badge: "Experience gap",
+                headline: "Strengthen the operator profile before applying",
+                body: "Non-technical operators on larger Texas auto repair deals face the hardest files. Options that work: a documented management agreement with an experienced shop lead, a partnership with an ASE-certified technical operator holding equity, or meaningfully higher equity injection than the 10% minimum. Have this conversation upfront with a specialist lender rather than getting declined mid-underwriting.",
+                ctaLabel: "Get honest feedback from a TX auto repair SBA specialist",
+                utmContent: "profile-c-tx-auto-experience",
+            },
+        },
+        scoringBody: `
+            function score(a) {
+                var sit=a[0], use=a[1], exp=a[2], amount=a[3];
+                if (exp==='non-tech' && (amount==='1m-3m' || amount==='3m-plus')) return 'C';
+                if (use==='real-estate') return 'B';
+                if (sit==='acquisition') return 'A';
+                return 'A';
+            }
+        `,
+    },
+
+    faqs: [
+        {q:"Why is Texas auto repair SBA lending growing so fast?",a:"Texas auto repair SBA volume is up +52% year-over-year, vs. the national auto-repair rate of +27%. The growth reflects two compounding trends: national operator turnover driven by an aging technician cohort selling shops to younger operators (+27% industry tailwind), plus Texas-specific population and commercial real estate expansion pulling more auto repair capital into SBA financing (+25pp additional Texas-state acceleration). The same pattern drives Texas restaurants at +42.6% YoY."},
+        {q:"Can I get an SBA loan for an auto repair shop in Texas?",a:"Yes. Texas is the second-largest single-state auto repair SBA market in the US — 427 loans approved FY2020-2025 representing 7.9% of all national auto-repair SBA volume. SBA 7(a) covers acquisitions, equipment, buildouts, and working capital; SBA 504 handles real estate when the shop building is part of the deal. Minimum 10% equity injection applies."},
+        {q:"What's the typical SBA auto repair loan size in Texas?",a:"Average SBA auto repair loan in Texas is approximately $719,000 — 51% above the national auto-repair average of $477,000. Median is $425,000 vs. $225,500 nationally (+88%). The larger deal sizes reflect Texas commercial real estate costs, the prevalence of larger multi-bay shops in DFW and Houston, and a tendency toward real-estate-combined deals where the operator owns the shop building."},
+        {q:"Which SBA lenders are most active in Texas auto repair lending?",a:"Specialist SBA platforms lead: Newtek Bank (36 loans) and Live Oak Banking Company (28) top the Texas auto repair lender list. The Huntington National Bank (20) rounds out the top three. Five large banks appear in positions 3-10: PNC Bank (22), JPMorgan Chase (14), Bank of America (12), Wells Fargo (11), and SouthState Bank (11). BayFirst National Bank (14) is the Florida-headquartered small-business-specialist that runs strong programs into Texas."},
+        {q:"How does Texas auto repair charge-off compare to national?",a:"Texas auto repair SBA 7(a) charges off at 1.17% — a 0.86× ratio against the all-industry SBA average of 1.36%. That's modestly above the national auto-repair rate of 1.00%, but materially better than the cross-industry SBA baseline. The state-level elevation versus the industry average reflects the larger deal sizes in Texas (more dollars at risk per file) and a sector mix leaning toward full-service shops over quick-service concepts."},
+        {q:"Does Texas zoning affect SBA auto repair underwriting?",a:"Texas zoning is less restrictive than California for auto repair shops, but municipalities are increasingly regulating where shops can operate. Lenders evaluate site-level zoning stability on acquisition files; sites with long operational history under existing zoning underwrite cleaner than sites in rezoning-exposed areas. Environmental compliance around used oil, refrigerant handling, and waste disposal applies federally regardless of state — underwriting reviews compliance history on acquisition files."},
+        {q:"How long does an SBA loan take to close for a Texas auto repair shop?",a:"60-90 days is typical for a Texas auto repair SBA 7(a) acquisition or equipment-combined deal with a Preferred Lender experienced in auto repair. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days. The main variable is operator experience profile; files with a non-technical operator and no experienced technical partner require extra underwriting detail and typically extend timelines."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────
