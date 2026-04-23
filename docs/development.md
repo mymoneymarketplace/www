@@ -91,3 +91,83 @@ file**. Useful for CI or quick local checks:
 ```
 node scripts/generate-industry-page.js 722511 --preview
 ```
+
+## Indexing API access setup
+
+`scripts/index-pages.js` submits URLs to the Google Indexing API on behalf of
+a service account (`seo-automation@seo-automation-493318.iam.gserviceaccount.com`).
+Every call must come from a principal that Search Console recognizes as an
+**Owner** of the property being submitted against.
+
+### The trap: user permissions ≠ ownership
+
+Search Console has two distinct permission systems that look similar in the
+UI but behave very differently:
+
+| Page | Roles it can grant | Grants Indexing API access? |
+| --- | --- | --- |
+| ⚙️ Settings → **Users and permissions** | Full, Restricted | **No** |
+| ⚙️ Settings → **Ownership verification** | Owner (Verified / Delegated) | **Yes** |
+
+The "Add user" button on Users and permissions only exposes Full and
+Restricted in its dropdown — neither of which satisfies the Indexing API's
+ownership check. Calls from principals added that way come back as:
+
+```
+403 Permission denied. Failed to verify the URL ownership.
+```
+
+This is easy to miss because "Full user" reads as unrestricted access. It
+isn't — for Indexing API purposes, it's the same as having no access at all.
+
+### The correct path
+
+To grant a service account Indexing API access to a property:
+
+1. Search Console → property selector → pick the property.
+2. ⚙️ Settings → **Ownership verification** (the row below Users and permissions).
+3. Scroll to **Verified owners of this property**.
+4. Click **Add an owner** and paste the service account email.
+5. Save.
+
+Confirm the flip by listing the service account's sites:
+
+```sh
+node -e "
+const { google } = require('googleapis');
+const fs = require('fs');
+(async () => {
+  const credentials = JSON.parse(fs.readFileSync('./google-credentials.json','utf8'));
+  const auth = new google.auth.GoogleAuth({ credentials, scopes: ['https://www.googleapis.com/auth/webmasters.readonly'] });
+  const client = await auth.getClient();
+  const res = await client.request({ url: 'https://www.googleapis.com/webmasters/v3/sites', method: 'GET' });
+  for (const s of (res.data.siteEntry || [])) console.log(s.permissionLevel, s.siteUrl);
+})();"
+```
+
+The `permissionLevel` should read `siteOwner`. If it reads `siteFullUser` or
+`siteRestrictedUser`, the entry went to the wrong page and needs to be
+re-added via Ownership verification.
+
+### Caveat: Webmasters API is not authoritative
+
+After adding the owner, the `webmasters/v3/sites` response can stay stale
+for up to ~1 minute — it will continue to report the old permission level
+even though the Indexing API has already flipped over. If the Webmasters
+listing says `siteFullUser` but you believe you added the service account
+as an owner, **attempt an actual Indexing API submission** before assuming
+the grant failed. The Indexing API is authoritative; the Webmasters listing
+is a secondary cache.
+
+### Required for each property
+
+Ownership is per-property. Adding the service account to `sc-domain:example.com`
+does not grant access to `https://example.com/` (URL-prefix property); they
+are separate entries and each needs its own "Add an owner" step.
+
+For this site, the service account currently owns:
+
+```
+siteOwner  sc-domain:mymoneymarketplace.com
+siteOwner  https://mymoneymarketplace.github.io/
+```
