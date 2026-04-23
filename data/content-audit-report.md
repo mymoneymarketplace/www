@@ -1,31 +1,31 @@
 # Content Audit Report
 
-_Generated: 2026-04-22T21:19:40.750Z · Duration: 2.2s · Pages scanned: 320_
+_Generated: 2026-04-23T18:55:22.411Z · Duration: 1.9s · Pages scanned: 326_
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
-| Pages scanned | 320 |
-| Pages with at least one issue | 38 |
-| Total issues | 69 |
+| Pages scanned | 326 |
+| Pages with at least one issue | 40 |
+| Total issues | 73 |
 | CRITICAL | 1 |
 | HIGH | 5 |
-| MEDIUM | 47 |
+| MEDIUM | 51 |
 | LOW | 16 |
 
 ### Issues per check
 
 | Check | Issue count |
 | --- | ---: |
-| cross-page-leakage | 33 |
 | structural | 22 |
-| cta-correctness | 5 |
+| cross-page-leakage | 37 |
 | data-traceability | 9 |
+| cta-correctness | 5 |
 
 ## Check: cross-page-leakage
 
-33 issues.
+37 issues.
 
 - **[CRITICAL]** `/sba-loans/pet-care` — Industry term "daycare" (from /child-care/) appears in <title>: "SBA Loan for Pet Boarding, Grooming &amp; Daycare 2026 | My Money Marketplace"
   - _Fix:_ Rewrite <title> to remove "daycare"
@@ -44,6 +44,8 @@ _Generated: 2026-04-22T21:19:40.750Z · Duration: 2.2s · Pages scanned: 320_
 - **[MEDIUM]** `/sba-loans/auto-body` — Industry term "mechanical repair" (from /auto-repair/) appears in body prose (outside links and headings)
   - _Fix:_ Review context — may be legitimate reference or may need rewording
 - **[MEDIUM]** `/sba-loans/auto-repair` — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/auto-repair/texas` — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
   - _Fix:_ Review context — may be legitimate reference or may need rewording
 - **[MEDIUM]** `/sba-loans/beauty-salons` — Industry term "medspa" (from /personal-care/) appears in body prose (outside links and headings)
   - _Fix:_ Review context — may be legitimate reference or may need rewording
@@ -92,6 +94,12 @@ _Generated: 2026-04-22T21:19:40.750Z · Duration: 2.2s · Pages scanned: 320_
 - **[MEDIUM]** `/sba-loans/specialty-trades` — Industry term "hvac" (from /plumbing-hvac/) appears in body prose (outside links and headings)
   - _Fix:_ Review context — may be legitimate reference or may need rewording
 - **[MEDIUM]** `/sba-loans/veterinarians` — Industry term "daycare" (from /child-care/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/veterinarians/california` — Industry term "dental" (from /dentists/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/veterinarians/california` — Industry term "auto repair" (from /auto-repair/) appears in body prose (outside links and headings)
+  - _Fix:_ Review context — may be legitimate reference or may need rewording
+- **[MEDIUM]** `/sba-loans/veterinarians/california` — Industry term "pet care" (from /pet-care/) appears in body prose (outside links and headings)
   - _Fix:_ Review context — may be legitimate reference or may need rewording
 
 ## Check: structural
@@ -186,35 +194,35 @@ _Generated: 2026-04-22T21:19:40.750Z · Duration: 2.2s · Pages scanned: 320_
 Top 25 issues to fix first (by severity):
 
 1. **[CRITICAL]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) appears in <title>: "SBA Loan for Pet Boarding, Grooming &amp; Daycare 2026 | My Money Marketplace"
-2. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) in <h3>: "Growing faster than general auto repair"
-3. **[HIGH]** `/sba-loans/cpas` _(cross-page-leakage)_ — Industry term "book of business" (from /insurance-agencies/) in program-card text: "Right for: rarely used; CPA firm capital is almost entirely intangible (book of business, staff, technology subscription..."
-4. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) in <h3>: "Distinct from veterinary medicine"
-5. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) in program-card text: "Right for: facility buildouts for boarding and daycare, acquisitions, multi-location expansion...."
-6. **[HIGH]** `/` _(structural)_ — Canonical mismatch: "https://mymoneymarketplace.com/" but expected "https://mymoneymarketplace.com"
-7. **[MEDIUM]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "cpa firm" (from /cpas/) appears in body prose (outside links and headings)
-8. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) appears in body prose (outside links and headings)
-9. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "mechanical repair" (from /auto-repair/) appears in body prose (outside links and headings)
-10. **[MEDIUM]** `/sba-loans/auto-repair` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
-11. **[MEDIUM]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "medspa" (from /personal-care/) appears in body prose (outside links and headings)
-12. **[MEDIUM]** `/sba-loans/beauty-salons` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
-13. **[MEDIUM]** `/sba-loans/child-care` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
-14. **[MEDIUM]** `/sba-loans/chiropractors` _(cross-page-leakage)_ — Industry term "dental" (from /dentists/) appears in body prose (outside links and headings)
-15. **[MEDIUM]** `/sba-loans/chiropractors` _(cross-page-leakage)_ — Industry term "physician" (from /physicians/) appears in body prose (outside links and headings)
-16. **[MEDIUM]** `/sba-loans/chiropractors` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
-17. **[MEDIUM]** `/sba-loans/cpas` _(cross-page-leakage)_ — Industry term "book of business" (from /insurance-agencies/) appears in body prose (outside links and headings)
-18. **[MEDIUM]** `/sba-loans/dentists` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
-19. **[MEDIUM]** `/sba-loans/dentists` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
-20. **[MEDIUM]** `/sba-loans/landscaping` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
-21. **[MEDIUM]** `/sba-loans/personal-care` _(cross-page-leakage)_ — Industry term "physician" (from /physicians/) appears in body prose (outside links and headings)
-22. **[MEDIUM]** `/sba-loans/personal-care` _(cross-page-leakage)_ — Industry term "hair salon" (from /beauty-salons/) appears in body prose (outside links and headings)
-23. **[MEDIUM]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) appears in body prose (outside links and headings)
-24. **[MEDIUM]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) appears in body prose (outside links and headings)
-25. **[MEDIUM]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+2. **[HIGH]** `/` _(structural)_ — Canonical mismatch: "https://mymoneymarketplace.com/" but expected "https://mymoneymarketplace.com"
+3. **[HIGH]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) in <h3>: "Growing faster than general auto repair"
+4. **[HIGH]** `/sba-loans/cpas` _(cross-page-leakage)_ — Industry term "book of business" (from /insurance-agencies/) in program-card text: "Right for: rarely used; CPA firm capital is almost entirely intangible (book of business, staff, technology subscription..."
+5. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "veterinary" (from /veterinarians/) in <h3>: "Distinct from veterinary medicine"
+6. **[HIGH]** `/sba-loans/pet-care` _(cross-page-leakage)_ — Industry term "daycare" (from /child-care/) in program-card text: "Right for: facility buildouts for boarding and daycare, acquisitions, multi-location expansion...."
+7. **[MEDIUM]** `/business-loans/chesapeake-va` _(structural)_ — Low word count: 799 words (<800)
+8. **[MEDIUM]** `/business-loans/miami-fl` _(structural)_ — Low word count: 797 words (<800)
+9. **[MEDIUM]** `/business-loans/raleigh-nc` _(structural)_ — Low word count: 798 words (<800)
+10. **[MEDIUM]** `/contact` _(structural)_ — Low word count: 409 words (<800)
+11. **[MEDIUM]** `/disclosures` _(structural)_ — Low word count: 775 words (<800)
+12. **[MEDIUM]** `/equipment-financing` _(structural)_ — Low word count: 575 words (<800)
+13. **[MEDIUM]** `/` _(structural)_ — Low word count: 379 words (<800)
+14. **[MEDIUM]** `/line-of-credit` _(structural)_ — Low word count: 590 words (<800)
+15. **[MEDIUM]** `/personal-loans/bad-credit` _(structural)_ — Low word count: 708 words (<800)
+16. **[MEDIUM]** `/personal-loans/debt-consolidation` _(structural)_ — Low word count: 693 words (<800)
+17. **[MEDIUM]** `/personal-loans/home-improvement` _(structural)_ — Low word count: 630 words (<800)
+18. **[MEDIUM]** `/personal-loans/medical` _(structural)_ — Low word count: 588 words (<800)
+19. **[MEDIUM]** `/personal-loans/same-day` _(structural)_ — Low word count: 569 words (<800)
+20. **[MEDIUM]** `/sba-loans/accounting` _(cross-page-leakage)_ — Industry term "cpa firm" (from /cpas/) appears in body prose (outside links and headings)
+21. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "auto repair" (from /auto-repair/) appears in body prose (outside links and headings)
+22. **[MEDIUM]** `/sba-loans/auto-body` _(cross-page-leakage)_ — Industry term "mechanical repair" (from /auto-repair/) appears in body prose (outside links and headings)
+23. **[MEDIUM]** `/sba-loans/auto-repair` _(cross-page-leakage)_ — Industry term "sba franchise directory" (from /franchise/) appears in body prose (outside links and headings)
+24. **[MEDIUM]** `/sba-loans/auto-repair/texas` _(cross-page-leakage)_ — Industry term "restaurant" (from /restaurants/) appears in body prose (outside links and headings)
+25. **[MEDIUM]** `/sba-loans/bad-credit` _(structural)_ — Missing non-origination disclosure on SBA page
 
 ## Observations
 
-- Issue distribution across checks: cross-page-leakage: 33, structural: 22, cta-correctness: 5, data-traceability: 9
-- 38 of 320 pages (11.9%) flagged at least one issue.
+- Issue distribution: structural: 22, cross-page-leakage: 37, data-traceability: 9, cta-correctness: 5
+- 40 of 326 pages (12.3%) flagged at least one issue.
 - Pages with the most issues:
   - `/sba-loans/pet-care`: 6 issues
   - `/sba-loans/auto-body`: 4 issues
@@ -222,7 +230,7 @@ Top 25 issues to fix first (by severity):
   - `/sba-loans/chiropractors`: 3 issues
   - `/sba-loans/dentists`: 3 issues
   - `/sba-loans/specialty-trades`: 3 issues
+  - `/sba-loans/veterinarians/california`: 3 issues
+  - `/`: 2 issues
   - `/sba-loans/accounting`: 2 issues
   - `/sba-loans/auto-repair`: 2 issues
-  - `/sba-loans/beauty-salons`: 2 issues
-  - `/sba-loans/cpas`: 2 issues
