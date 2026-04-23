@@ -122,6 +122,24 @@ const STATE_INDUSTRIES = {
           rationale: 'the largest restaurant SBA market in the US by volume (12.6% national share)' },
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/restaurants/texas',
           rationale: 'the fastest-growing restaurant SBA market (+42.6% YoY) and second-largest state by volume' },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/restaurants/florida',
+          rationale: 'the fourth-largest restaurant SBA state with distinctive hurricane, seasonality, and insurance underwriting factors' },
+    ],
+    'auto-repair': [
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/auto-repair/texas',
+          rationale: 'the fastest-growing auto repair SBA state (+52% YoY, nearly 2x the national auto-repair rate) and #2 by volume' },
+    ],
+    'dentists': [
+        { slug: 'california', label: 'California', href: '/sba-loans/dentists/california',
+          rationale: 'the largest dental SBA market in the US (18% national share) and the lowest-risk high-volume combination in the SBA dataset' },
+    ],
+    'veterinarians': [
+        { slug: 'california', label: 'California', href: '/sba-loans/veterinarians/california',
+          rationale: 'the largest state for the best-performing SBA category (zero charge-offs across all 183 CA vet loans, $1.7M average deal size)' },
+    ],
+    'insurance-agencies': [
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/insurance-agencies/texas',
+          rationale: "the #1 state for insurance agency SBA -- the only industry category where Texas beats California on volume" },
     ],
 };
 
