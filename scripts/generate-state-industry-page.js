@@ -185,6 +185,144 @@ const CONFIGS = {
     ],
 },
 
+'722511_TX': {
+    naicsCode: '722511',
+    state: 'TX',
+    industryParentSlug: 'restaurants',
+    industryLabel: 'restaurants',
+    industryLabelCap: 'Restaurants',
+    industryLabelCapSingular: 'Restaurant',
+    stateSlug: 'texas',
+    stateName: 'Texas',
+    campaignSlug: 'sba-restaurants-texas-quiz',
+
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Texas restaurant interior with modern dining room, representative of full-service restaurants that use SBA financing in Texas',
+        width: 1200,
+        height: 800,
+        photographer: 'Life Of Pix',
+        photographerUrl: 'https://www.pexels.com/@life-of-pix/',
+        sourceUrl: 'https://www.pexels.com/photo/1267320/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: ['Frost Bank', 'Cadence Bank', 'PCB Bank', 'Bank of Hope', 'Hanmi Bank'],
+
+    title: 'SBA Loans for Restaurants in Texas 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Texas restaurants. 1,192 TX restaurant SBA loans approved FY2020-2025 ($879.6M), +42.6% YoY growth. Take the 2-minute quiz to match with Texas-restaurant-experienced SBA lenders.',
+    heroSub: 'Texas restaurant SBA lending is the standout growth story in the national data &mdash; <strong>+42.6% YoY growth</strong>, roughly five times the national restaurant rate. Texas is the second-largest restaurant SBA market in the US and deals run notably larger than even California, reflecting the state&rsquo;s major-metro buildout and acquisition pipeline.',
+
+    serviceDescription: 'My Money Marketplace helps Texas restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Texas restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+
+    // Texas-specific editorial content
+    marketContextHtml: `
+        <p>Texas is the single fastest-growing restaurant SBA market in the United States. <strong>TX restaurant SBA lending grew +42.6% year-over-year</strong>, compared to the national restaurant rate of +8.7%. The growth is broad-based rather than concentrated in one metro &mdash; Houston, Dallas-Fort Worth, Austin, and San Antonio each carry meaningful independent volume, and the state&rsquo;s population growth and commercial real estate expansion continue to pull both independent and franchise restaurant capital into the SBA channel.</p>
+        <p>Texas is now the <strong>second-largest single-state restaurant SBA market</strong> at 7.3% of national volume &mdash; 1,192 loans approved FY2020-2025 representing $879.6 million in total approved capital. Only California is larger. And Texas deals run meaningfully bigger than even California&rsquo;s: <strong>$738,000 average vs. $603,000 in California and $528,000 nationally</strong>. Median loan in Texas is $461,000, roughly 81% above the national median of $255,000, reflecting both the scale of DFW and Houston acquisitions and a tilt toward full-service concepts over small quick-service operators.</p>
+        <h3>Metro distribution: DFW, Houston, Austin, San Antonio</h3>
+        <p>Four major metros dominate Texas restaurant SBA volume: <strong>Dallas-Fort Worth, Houston, Austin, and San Antonio</strong>. DFW and Houston carry the highest absolute volume reflecting population and dining-out scale. Austin punches above its population weight driven by both the tech-employment-driven demand base and a dense independent-restaurant culture. San Antonio runs a more franchise-heavy mix than the other three metros. Secondary markets including El Paso, Corpus Christi, and the Rio Grande Valley add meaningful volume, and Texas&rsquo;s mid-sized metros (Plano, Arlington, Waco, Lubbock) have active SBA restaurant lending relative to their size.</p>
+        <h3>Texas charge-off rate: better than SBA average</h3>
+        <p>Texas restaurant SBA 7(a) loans charge off at <strong>1.26% &mdash; a 0.93&times; ratio against the all-industry SBA average of 1.36%</strong>. That&rsquo;s modestly above the national restaurant rate of 1.21% but still materially better than the cross-industry SBA baseline, which is unusual for a restaurant cohort. The favorable performance reflects Texas&rsquo;s lower structural cost baseline (no state income tax, federal minimum wage of $7.25 applies statewide, commercial rent pressures lower than California) combined with a borrower base that leans toward experienced operators on larger-ticket deals.</p>
+        <h3>Texas regulatory context for SBA underwriting</h3>
+        <p>Texas is a meaningfully friendlier regulatory environment than California for restaurant SBA underwriting. The items that routinely come up:</p>
+        <ul>
+            <li><strong>Labor cost structure.</strong> Federal minimum wage ($7.25) applies. Tipped wage is $2.13 federal minimum plus tips. No state overtime beyond federal FLSA. Labor as a percentage of revenue runs materially lower than California baselines, which makes DSCR projections more forgiving and often supports larger leverage on the same unit economics.</li>
+            <li><strong>Liquor licensing (TABC).</strong> The Texas Alcoholic Beverage Commission issues licenses statewide rather than county-by-county, and license transfers on restaurant acquisitions typically run 30-60 days &mdash; faster than California ABC. Lenders coordinate with TABC transfer timing on deals where the liquor license is a material revenue source.</li>
+            <li><strong>No state income tax.</strong> Texas&rsquo;s absence of state income tax affects personal financial modeling on owner-operators &mdash; personal cash flow available to support the loan looks stronger than equivalent income in a high-tax state, which underwriters factor into the personal-side analysis on guarantor strength.</li>
+            <li><strong>Commercial rent and buildout costs.</strong> Texas major-metro rent runs meaningfully below California but above national averages. DFW and Houston CBD buildout costs can approach California levels; suburban and secondary markets are substantially cheaper. Rent-to-sales underwriting remains the standard test; Texas deals hit the 6-10% national benchmark more routinely than California.</li>
+        </ul>
+        <p>The regulatory friendliness is real but not a substitute for deal quality &mdash; lenders still underwrite the operator, the concept, the unit economics, and the location. What Texas provides is a cost baseline that makes marginal files more underwritable than equivalent California files.</p>
+    `,
+
+    lenderCalloutHtml: `
+        <p>Texas&rsquo;s restaurant SBA lender mix is distinctive in two ways. First, <strong>The Huntington National Bank dominates at the top</strong> with 102 Texas restaurant SBA loans &mdash; nearly 2.3x the next lender. Huntington is the national restaurant SBA volume leader, and its Texas presence reflects a deliberate specialty-lending strategy more than a traditional branch footprint. Second, <strong>three Korean-American community banks (PCB Bank, Bank of Hope, Hanmi Bank) each appear in the top five</strong>, collectively accounting for roughly 10% of Texas restaurant SBA volume. The pattern mirrors California&rsquo;s lender mix and reflects the Korean-American restaurant operator network in Houston and DFW.</p>
+        <p>Two Texas-headquartered regional banks complete the picture: <strong>Cadence Bank (Dallas-based, 30 loans) and Frost Bank (San Antonio-based, 26 loans)</strong>. Cadence and Frost both carry strong in-market restaurant SBA relationships particularly for larger acquisition and real-estate-combined deals in the $500K&#8211;$2M range. PNC Bank and Newtek round out the top ten alongside Northeast Bank and Readycap. The takeaway: Texas has more viable lender paths than most single-state markets &mdash; specialist national platforms (Huntington, Newtek, Readycap), Korean-American community banks (PCB, Hope, Hanmi), and Texas regionals (Cadence, Frost). Matching to the right one for your specific deal profile is the practical variable that matters most.</p>
+    `,
+
+    // Cross-links to existing TX city business-loans pages (verified present)
+    cityLinks: [
+        { name: 'Houston', href: '/business-loans/houston-tx' },
+        { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Austin', href: '/business-loans/austin-tx' },
+        { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'Arlington', href: '/business-loans/arlington-tx' },
+        { name: 'Corpus Christi', href: '/business-loans/corpus-christi-tx' },
+    ],
+
+    quiz: {
+        questions: [
+            {q:"What's your Texas restaurant situation?",opts:[
+                {v:"acquisition",l:"Acquiring an existing TX restaurant"},
+                {v:"new-independent",l:"Opening a new independent concept"},
+                {v:"franchise",l:"Franchise concept (TX location)"},
+                {v:"expansion",l:"Expansion or additional TX location"},
+            ]},
+            {q:"Primary loan use?",opts:[
+                {v:"purchase-price",l:"Acquisition purchase price"},
+                {v:"real-estate",l:"Real estate purchase (building)"},
+                {v:"buildout",l:"Buildout / tenant improvements"},
+                {v:"equipment",l:"Kitchen or FOH equipment"},
+                {v:"multiple",l:"Multiple uses combined"},
+            ]},
+            {q:"Loan amount needed?",opts:[
+                {v:"under-500k",l:"Under $500K"},
+                {v:"500k-1m",l:"$500K - $1M"},
+                {v:"1m-3m",l:"$1M - $3M"},
+                {v:"3m-plus",l:"$3M+"},
+            ]},
+            {q:"Personal credit score?",opts:[
+                {v:"below-680",l:"Below 680"},
+                {v:"680-719",l:"680-719"},
+                {v:"720-plus",l:"720+"},
+            ]},
+        ],
+        profiles: {
+            A: {
+                badge: "Strong TX acquisition candidate",
+                headline: "You're riding the +42.6% Texas growth curve",
+                body: "Acquiring an established Texas restaurant with strong credit and meaningful equity is exactly what the Texas restaurant SBA market is doing at scale right now &mdash; volume is up 42.6% year-over-year and specialist lenders (Huntington, Cadence, Frost, PCB, Bank of Hope, Hanmi, Newtek, Readycap) are actively deploying capital into these deals. Texas deals run larger than even California on average ($738K vs. $603K), which matches the capital these lenders routinely deploy. Plan 60-90 days to close with a Texas-experienced SBA lender.",
+                ctaLabel: "Match with Texas restaurant SBA lenders",
+                utmContent: "profile-a-tx-acquisition",
+            },
+            B: {
+                badge: "TX buildout or real estate",
+                headline: "SBA 7(a) or 504 with a Texas-experienced lender",
+                body: "Texas restaurant buildout and real-estate-combined deals benefit from the state's lower cost baseline and faster TABC licensing timelines than higher-regulation states. SBA 504 is the right call when the real estate is part of the deal; 7(a) handles buildouts and equipment-focused files. Texas-headquartered regional lenders (Cadence, Frost) are particularly strong on larger real-estate-combined deals; national specialists (Huntington, Newtek, Readycap) handle buildout and working-capital-heavy files well. Matching to the lender profile that fits your deal shape is the variable that drives close time and pricing.",
+                ctaLabel: "Match with TX-restaurant-experienced SBA lenders",
+                utmContent: "profile-b-tx-buildout",
+            },
+            C: {
+                badge: "Franchise path",
+                headline: "Franchise route &mdash; see the franchise-specific guide",
+                body: "Franchise restaurant SBA files underwrite differently from independent concepts. Texas franchise operators benefit from brand-level underwriting shortcut if the concept is listed in the SBA Franchise Directory, and Texas&rsquo;s franchise-heavy metros (particularly San Antonio and secondary markets) make this a meaningful share of Texas restaurant SBA volume. The lender mix and deal mechanics for franchise restaurant SBA are distinct enough to warrant dedicated coverage &mdash; see our SBA franchise loan guide.",
+                ctaLabel: "See SBA franchise details",
+                utmContent: "profile-c-tx-franchise",
+                ctaUrl: "/sba-loans/franchise/",
+            },
+        },
+        scoringBody: `
+            function score(a) {
+                var sit=a[0], use=a[1], amount=a[2], credit=a[3];
+                if (sit==='franchise') return 'C';
+                if (use==='real-estate' || use==='buildout') return 'B';
+                if (sit==='acquisition' && (credit==='680-719' || credit==='720-plus')) return 'A';
+                if (sit==='acquisition') return 'A';
+                return 'B';
+            }
+        `,
+    },
+
+    faqs: [
+        {q:"Can I get an SBA loan for a restaurant in Texas?",a:"Yes. Texas is the second-largest single-state restaurant SBA market in the US — 1,192 loans approved FY2020-2025 representing 7.3% of all national restaurant SBA volume, and the state is growing at +42.6% year-over-year. SBA 7(a) covers acquisitions, buildouts, equipment, and working capital; SBA 504 handles real estate when the property is part of the deal. Minimum 10% equity injection applies; specialist Texas lenders typically want 15% on larger deals."},
+        {q:"What's the typical SBA restaurant loan size in Texas?",a:"Average SBA restaurant loan in Texas is approximately $738,000 — roughly 40% above the national restaurant average of $528,000 and 22% above California's $603,000. Median is $461,000 vs. $255,000 nationally (+81%). Texas deals run larger because of the scale of DFW and Houston acquisitions, the tilt toward full-service concepts over small quick-service operators, and the larger footprints typical in Texas suburban markets compared to denser California metros."},
+        {q:"How does Texas restaurant SBA charge-off compare to national?",a:"Texas restaurant SBA 7(a) charges off at 1.26% — a 0.93× ratio against the all-industry SBA average of 1.36%. That's modestly above the national restaurant average of 1.21%, but still materially better than the cross-industry SBA baseline. The favorable performance reflects Texas's lower structural cost baseline and a borrower base that leans toward experienced operators on larger deals."},
+        {q:"Which SBA lenders are most active in Texas restaurant lending?",a:"The Huntington National Bank leads by loan count with 102 Texas restaurant SBA loans — roughly 2.3× the next lender. PCB Bank (44), Bank of Hope (36), and Hanmi Bank (36) — three Korean-American community banks — each appear in the top five and collectively hold about 10% of Texas restaurant SBA volume. Two Texas-headquartered regionals are active: Cadence Bank (30 loans, Dallas-based) and Frost Bank (26, San Antonio). PNC, Newtek, Northeast Bank, and Readycap round out the top ten."},
+        {q:"Why is Texas restaurant SBA lending growing so fast?",a:"Texas restaurant SBA volume is up +42.6% year-over-year vs. the national restaurant rate of +8.7%. Three drivers: population growth (Texas continues to gain net domestic migration, expanding the restaurant customer base), major-metro acquisition pipeline (aging operator cohorts in DFW and Houston are selling to younger operators who need financing), and commercial real estate expansion making new restaurant buildouts economically viable. The growth is broad-based across Houston, Dallas-Fort Worth, Austin, and San Antonio rather than concentrated in one metro."},
+        {q:"How does Texas's regulatory environment affect SBA underwriting?",a:"Texas is meaningfully friendlier than California for restaurant SBA underwriting. Federal minimum wage ($7.25) applies with no state overtime beyond FLSA, which makes labor cost modeling more forgiving. TABC liquor license transfers typically run 30-60 days vs. 60-120 in California. No state income tax improves personal financial modeling on guarantors. Commercial rent runs below California baselines so rent-to-sales underwriting is more routine. None of this substitutes for deal quality, but the cost baseline makes marginal files more underwritable than equivalent California files."},
+        {q:"How long does an SBA loan take to close for a Texas restaurant?",a:"60-90 days is typical for an SBA 7(a) acquisition or buildout deal with a Preferred Lender experienced in Texas restaurants. Deals including TABC liquor license transfers add roughly 30-60 days depending on license type. Deals including commercial real estate via SBA 504 plus a 7(a) companion loan typically run 75-120 days for combined closings. Generalist banks unfamiliar with Texas-specific deal mechanics routinely extend these timelines; specialist lenders close on schedule."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────

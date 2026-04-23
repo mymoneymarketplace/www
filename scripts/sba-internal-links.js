@@ -119,7 +119,9 @@ const SCENARIO_RELATED = {
 const STATE_INDUSTRIES = {
     'restaurants': [
         { slug: 'california', label: 'California', href: '/sba-loans/restaurants/california',
-          rationale: 'the largest restaurant SBA market in the US by volume' },
+          rationale: 'the largest restaurant SBA market in the US by volume (12.6% national share)' },
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/restaurants/texas',
+          rationale: 'the fastest-growing restaurant SBA market (+42.6% YoY) and second-largest state by volume' },
     ],
 };
 
