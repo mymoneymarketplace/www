@@ -101,15 +101,15 @@ const CONFIGS = {
         <p>The pattern reflects genuine market dynamics. Korean-American restaurant ownership is a significant segment of California&rsquo;s independent restaurant industry, particularly in Los Angeles, Orange County, and the Bay Area. These community banks were built to serve that customer base and carry deep lending relationships with Korean-American restaurant operators across multiple generations. For buyers outside that network, the lender landscape still includes strong non-community-bank options &mdash; U.S. Bank (#2 in CA), Northeast Bank, Readycap, Newtek, and Bank of America all appear in the top ten. For buyers who are part of the Korean-American restaurant operator network, Bank of Hope, Hanmi, and PCB are well worth direct approach alongside a broader lender-matching search.</p>
     `,
 
-    // Cross-links to existing CA city pages (verified present)
+    // Cross-links to existing CA city pages
     cityLinks: [
+        { name: 'Los Angeles', href: '/business-loans/los-angeles-ca' },
+        { name: 'San Francisco', href: '/business-loans/san-francisco-ca' },
         { name: 'San Diego', href: '/business-loans/san-diego-ca' },
         { name: 'San Jose', href: '/business-loans/san-jose-ca' },
+        { name: 'Oakland', href: '/business-loans/oakland-ca' },
         { name: 'Sacramento', href: '/business-loans/sacramento-ca' },
         { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
-        { name: 'Anaheim', href: '/business-loans/anaheim-ca' },
-        { name: 'Fresno', href: '/business-loans/fresno-ca' },
-        { name: 'Riverside', href: '/business-loans/riverside-ca' },
     ],
 
     quiz: {
@@ -238,15 +238,15 @@ const CONFIGS = {
         <p>Two Texas-headquartered regional banks complete the picture: <strong>Cadence Bank (Dallas-based, 30 loans) and Frost Bank (San Antonio-based, 26 loans)</strong>. Cadence and Frost both carry strong in-market restaurant SBA relationships particularly for larger acquisition and real-estate-combined deals in the $500K&#8211;$2M range. PNC Bank and Newtek round out the top ten alongside Northeast Bank and Readycap. The takeaway: Texas has more viable lender paths than most single-state markets &mdash; specialist national platforms (Huntington, Newtek, Readycap), Korean-American community banks (PCB, Hope, Hanmi), and Texas regionals (Cadence, Frost). Matching to the right one for your specific deal profile is the practical variable that matters most.</p>
     `,
 
-    // Cross-links to existing TX city business-loans pages (verified present)
+    // Cross-links to existing TX city business-loans pages
     cityLinks: [
         { name: 'Houston', href: '/business-loans/houston-tx' },
         { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Fort Worth', href: '/business-loans/fort-worth-tx' },
         { name: 'Austin', href: '/business-loans/austin-tx' },
         { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
         { name: 'Plano', href: '/business-loans/plano-tx' },
         { name: 'Arlington', href: '/business-loans/arlington-tx' },
-        { name: 'Corpus Christi', href: '/business-loans/corpus-christi-tx' },
     ],
 
     quiz: {
@@ -510,11 +510,11 @@ const CONFIGS = {
     cityLinks: [
         { name: 'Houston', href: '/business-loans/houston-tx' },
         { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Fort Worth', href: '/business-loans/fort-worth-tx' },
         { name: 'Austin', href: '/business-loans/austin-tx' },
         { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
-        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'El Paso', href: '/business-loans/el-paso-tx' },
         { name: 'Arlington', href: '/business-loans/arlington-tx' },
-        { name: 'Corpus Christi', href: '/business-loans/corpus-christi-tx' },
     ],
 
     quiz: {
@@ -645,13 +645,13 @@ const CONFIGS = {
     `,
 
     cityLinks: [
+        { name: 'Los Angeles', href: '/business-loans/los-angeles-ca' },
+        { name: 'San Francisco', href: '/business-loans/san-francisco-ca' },
         { name: 'San Diego', href: '/business-loans/san-diego-ca' },
         { name: 'San Jose', href: '/business-loans/san-jose-ca' },
         { name: 'Sacramento', href: '/business-loans/sacramento-ca' },
-        { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
-        { name: 'Anaheim', href: '/business-loans/anaheim-ca' },
         { name: 'Irvine', href: '/business-loans/irvine-ca' },
-        { name: 'Glendale', href: '/business-loans/glendale-ca' },
+        { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
     ],
 
     quiz: {
@@ -786,13 +786,13 @@ const CONFIGS = {
     `,
 
     cityLinks: [
+        { name: 'Los Angeles', href: '/business-loans/los-angeles-ca' },
+        { name: 'San Francisco', href: '/business-loans/san-francisco-ca' },
+        { name: 'Oakland', href: '/business-loans/oakland-ca' },
         { name: 'San Diego', href: '/business-loans/san-diego-ca' },
         { name: 'San Jose', href: '/business-loans/san-jose-ca' },
         { name: 'Sacramento', href: '/business-loans/sacramento-ca' },
-        { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
-        { name: 'Anaheim', href: '/business-loans/anaheim-ca' },
         { name: 'Irvine', href: '/business-loans/irvine-ca' },
-        { name: 'Fremont', href: '/business-loans/fremont-ca' },
     ],
 
     quiz: {
@@ -922,11 +922,11 @@ const CONFIGS = {
     cityLinks: [
         { name: 'Houston', href: '/business-loans/houston-tx' },
         { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Fort Worth', href: '/business-loans/fort-worth-tx' },
         { name: 'Austin', href: '/business-loans/austin-tx' },
         { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'El Paso', href: '/business-loans/el-paso-tx' },
         { name: 'Plano', href: '/business-loans/plano-tx' },
-        { name: 'Arlington', href: '/business-loans/arlington-tx' },
-        { name: 'Corpus Christi', href: '/business-loans/corpus-christi-tx' },
     ],
 
     quiz: {
