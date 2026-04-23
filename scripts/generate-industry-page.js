@@ -25,6 +25,7 @@ const fs = require('fs');
 const path = require('path');
 
 const DATA = require('../data/industry-data.json');
+const LINKS = require('./sba-internal-links.js');
 
 // ─── Formatting helpers ─────────────────────────────────────────────────
 const fmt = {
@@ -1837,6 +1838,57 @@ function renderStatesSection(states, industryNoun) {
     </section>`;
 }
 
+function renderStateIndustriesSection(cfg) {
+    const states = LINKS.stateIndustriesFor(cfg.slug);
+    if (!states || states.length === 0) return '';
+    const industryNoun = cfg.industryNoun || cfg.slug.replace(/-/g, ' ');
+    const nounCap = industryNoun[0].toUpperCase() + industryNoun.slice(1);
+    const lead = states[0];
+    const items = states.map(s =>
+        `<li><a href="${esc(s.href)}"><strong>${esc(s.label)}</strong></a> &mdash; state-specific ${esc(industryNoun)} SBA loan guide.</li>`
+    ).join('\n                ');
+    return `
+    <section class="ed alt" aria-label="${esc(industryNoun)} SBA lending by state">
+        <div class="ed-inner">
+            <h2 style="text-align:left;">${nounCap} SBA lending by state</h2>
+            <p>${esc(lead.label)} is ${esc(lead.rationale)}. More state-specific ${esc(industryNoun)} SBA guides will appear here as volume justifies the depth.</p>
+            <ul class="related-list">
+                ${items}
+            </ul>
+        </div>
+    </section>`;
+}
+
+function renderRelatedGuidesSection(cfg) {
+    const rel = LINKS.relatedForIndustry(cfg.slug);
+    const industries = (rel.industries || []).filter(slug => slug !== cfg.slug);
+    const scenarios = rel.scenarios || [];
+    if (industries.length === 0 && scenarios.length === 0) return '';
+
+    const industryItems = industries.map(slug => {
+        const label = LINKS.industryLabel(slug);
+        return `<li><a href="${esc(LINKS.industryHref(slug))}"><strong>SBA Loans for ${esc(label)}</strong></a> &mdash; adjacent vertical with overlapping underwriting profile.</li>`;
+    });
+
+    const scenarioItems = scenarios.map(slug => {
+        const label = LINKS.scenarioLabel(slug);
+        return `<li><a href="${esc(LINKS.scenarioHref(slug))}"><strong>${esc(label)}</strong></a> &mdash; scenario-specific SBA guidance that applies here.</li>`;
+    });
+
+    const items = industryItems.concat(scenarioItems).join('\n                ');
+
+    return `
+    <section class="ed" aria-label="Related SBA guides">
+        <div class="ed-inner">
+            <h2 style="text-align:left;">Related SBA guides</h2>
+            <p>Adjacent SBA lending pages with shared underwriting mechanics or audience overlap for ${esc(cfg.industryNoun || cfg.slug.replace(/-/g, ' '))} borrowers.</p>
+            <ul class="related-list">
+                ${items}
+            </ul>
+        </div>
+    </section>`;
+}
+
 function renderProgramsSection(cfg) {
     const pc = cfg.programsContext;
     if (!pc || !pc.fits) {
@@ -2275,6 +2327,10 @@ ${renderProgramsSection(cfg)}
 ${renderLendersSection(stats.top_lenders_by_count, cfg.industryNoun || cfg.slug.replace(/-/g, ' '), cfg.industryNounPossessive || '', cfg.highlightLenderNames || [], stats.lender_concentration_top10_pct)}
 
 ${renderStatesSection(stats.top_states_by_count, cfg.industryNoun || cfg.slug.replace(/-/g, ' '))}
+
+${renderStateIndustriesSection(cfg)}
+
+${renderRelatedGuidesSection(cfg)}
 
 <section class="faq-section" id="faq">
     <div class="container">
