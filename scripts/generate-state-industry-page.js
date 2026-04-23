@@ -323,6 +323,139 @@ const CONFIGS = {
     ],
 },
 
+'722511_FL': {
+    naicsCode: '722511',
+    state: 'FL',
+    industryParentSlug: 'restaurants',
+    industryLabel: 'restaurants',
+    industryLabelCap: 'Restaurants',
+    industryLabelCapSingular: 'Restaurant',
+    stateSlug: 'florida',
+    stateName: 'Florida',
+    campaignSlug: 'sba-restaurants-florida-quiz',
+
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Florida coastal restaurant with ocean-facing seating representative of tourism-driven restaurant concepts that use SBA financing',
+        width: 1200,
+        height: 800,
+        photographer: 'Pixabay',
+        photographerUrl: 'https://www.pexels.com/@pixabay/',
+        sourceUrl: 'https://www.pexels.com/photo/2253643/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: ['BayFirst National Bank', 'SouthState Bank, National Association'],
+
+    title: 'SBA Loans for Restaurants in Florida 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Florida restaurants. 975 FL restaurant SBA loans approved FY2020-2025 ($748M). Historical charge-off rate below SBA average, but hurricane, tourism-seasonality, and insurance costs shape underwriting. Take the 2-minute quiz.',
+    heroSub: 'Florida restaurant SBA performance sits below the cross-industry average on charge-offs (<strong>1.13% vs. 1.36% SBA avg &mdash; a 0.83&times; ratio</strong>), but that headline obscures real structural risks lenders actually underwrite to: hurricane exposure, tourism-season revenue swings, and Florida&rsquo;s historically elevated commercial property insurance costs. The honest framing: Florida is a decent aggregate market with meaningfully non-aggregate risk distribution.',
+
+    serviceDescription: 'My Money Marketplace helps Florida restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Florida restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+
+    marketContextHtml: `
+        <p>Florida is the fourth-largest restaurant SBA market in the US behind California, Texas, and New York. <strong>975 loans approved FY2020-2025 representing $748 million in total approved capital</strong>, at 5.96% of national volume. Average loan is the highest in the top-4 states at <strong>$767,000 (46% above the national restaurant average of $528K)</strong>, reflecting Florida&rsquo;s coastal real estate baseline and the scale of major Orlando, Miami, Tampa, and Fort Lauderdale restaurant acquisitions.</p>
+        <p>The aggregate charge-off number looks healthy on paper &mdash; <strong>1.13% charge-off rate, a 0.83&times; ratio to the SBA cross-industry average of 1.36%, and modestly below the national restaurant rate of 1.21%</strong>. This is the first thing an uncritical reader will see. It&rsquo;s also the number that hides the most.</p>
+        <h3>Why the headline number can mislead</h3>
+        <p>Aggregate charge-off percentages average across all Florida restaurants &mdash; tourism-driven coastal concepts, year-round urban independents, franchise-heavy inland operations, seasonal snowbird-dependent restaurants, and everything in between. The distribution across those sub-segments is not uniform. A prospective buyer looking at a single deal benefits far more from understanding which risk factors actually drive charge-off dispersion within Florida than from the state-level average.</p>
+        <h3>The three Florida risk factors lenders underwrite to</h3>
+        <p>Regardless of the favorable headline, specialist Florida restaurant lenders stress-test files against three structural factors that don&rsquo;t exist (or exist meaningfully less) in most other states:</p>
+        <ul>
+            <li><strong>Hurricane exposure.</strong> Coastal Florida is subject to recurring hurricane risk, and the 2024&ndash;2025 insurance-market dislocation has pushed commercial property insurance premiums materially above national baselines. Lenders explicitly model business-interruption insurance adequacy, building-code compliance, and hurricane deductible exposure when underwriting coastal restaurant files. An inland Florida restaurant underwrites differently than an oceanfront Miami Beach concept.</li>
+            <li><strong>Tourism and seasonality.</strong> Restaurants in tourism-dependent metros (Miami Beach, Orlando hospitality corridor, Destin, Key West, Naples) can carry 30-50% revenue swings between peak and off-season. Projections that use flat annual revenue assumptions fail underwriting; lenders want monthly breakdowns showing the operator plans for the shoulder-season working capital gap. Year-round urban independents in Jacksonville, Tampa, Orlando-residential, and the inland metros don&rsquo;t carry this seasonality as sharply.</li>
+            <li><strong>Property insurance cost trajectory.</strong> Florida commercial property insurance has seen double-digit annual premium increases in multiple recent years, and some carriers have exited the market. Lenders now model insurance as a growing rather than flat cost line on multi-year projections. Restaurants in high-exposure zones (coastal, older buildings, wood-frame construction) see insurance costs of 4-6% of revenue in some cases &mdash; materially above the 2-3% national baseline.</li>
+        </ul>
+        <p>None of this makes Florida a bad SBA restaurant market &mdash; the aggregate numbers are favorable and lenders deploy capital at meaningful scale. It does mean that a Florida restaurant deal underwrites differently than an equivalent inland deal, and matching to a lender experienced with Florida-specific risk factors affects both close time and pricing.</p>
+        <h3>Metro distribution</h3>
+        <p>Four Florida metros carry the bulk of restaurant SBA volume: <strong>Miami / Fort Lauderdale, Orlando, Tampa Bay, and Jacksonville</strong>. Miami and Orlando lean toward tourism-dependent concepts; Tampa and Jacksonville are more year-round urban markets. Secondary markets including Naples, Sarasota, West Palm Beach, and the Space Coast add meaningful volume. Florida's mid-sized inland metros (Gainesville, Tallahassee, Lakeland) have active SBA lending relative to their size.</p>
+    `,
+
+    lenderCalloutHtml: `
+        <p>Florida&rsquo;s restaurant SBA lender mix is notably more concentrated in national-platform specialists than California&rsquo;s. <strong>The Huntington National Bank leads with 87 loans</strong> and <strong>Newtek (Bank + Small Business Finance) combined sits at 107 across two entities &mdash; the largest single-bank block in Florida</strong>. National platforms fit Florida well because their underwriting processes are uniform across states and they can redeploy capital into Florida opportunistically when insurance-market dislocations flush less-sophisticated local capital.</p>
+        <p>Two Florida-connected banks appear in the top ten: <strong>BayFirst National Bank (27 loans, Florida-headquartered)</strong> and <strong>SouthState Bank (37 loans, Southeast regional HQ&rsquo;d in Winter Haven, FL)</strong>. TD Bank (46) carries the northeast-tourist snowbird thread. Readycap (35), Northeast Bank (34), Wells Fargo (23), and Bank of America (22) round out the top ten. The takeaway: Florida restaurant SBA has strong lender coverage; matching to a lender that explicitly handles Florida hurricane and insurance exposure models, not one that applies national-baseline underwriting, is the practical variable.</p>
+    `,
+
+    cityLinks: [
+        { name: 'Miami', href: '/business-loans/miami-fl' },
+        { name: 'Tampa', href: '/business-loans/tampa-fl' },
+        { name: 'Jacksonville', href: '/business-loans/jacksonville-fl' },
+        { name: 'Orlando', href: '/business-loans/orlando-fl' },
+        { name: 'St. Petersburg', href: '/business-loans/st-petersburg-fl' },
+        { name: 'Hialeah', href: '/business-loans/hialeah-fl' },
+        { name: 'Cape Coral', href: '/business-loans/cape-coral-fl' },
+    ],
+
+    quiz: {
+        questions: [
+            {q:"What's your Florida restaurant situation?",opts:[
+                {v:"acquisition",l:"Acquiring an existing FL restaurant"},
+                {v:"new-independent",l:"Opening a new independent concept"},
+                {v:"franchise",l:"Franchise concept (FL location)"},
+                {v:"expansion",l:"Expansion or additional FL location"},
+            ]},
+            {q:"Location profile?",opts:[
+                {v:"coastal-tourism",l:"Coastal / tourism-driven location"},
+                {v:"urban-year-round",l:"Year-round urban (Miami, Tampa, Orlando, Jax)"},
+                {v:"suburban-inland",l:"Suburban or inland Florida"},
+                {v:"seasonal",l:"Heavily seasonal / snowbird-dependent"},
+            ]},
+            {q:"Loan amount needed?",opts:[
+                {v:"under-500k",l:"Under $500K"},
+                {v:"500k-1m",l:"$500K - $1M"},
+                {v:"1m-3m",l:"$1M - $3M"},
+                {v:"3m-plus",l:"$3M+"},
+            ]},
+            {q:"Personal credit score?",opts:[
+                {v:"below-680",l:"Below 680"},
+                {v:"680-719",l:"680-719"},
+                {v:"720-plus",l:"720+"},
+            ]},
+        ],
+        profiles: {
+            A: {
+                badge: "Strong FL acquisition candidate",
+                headline: "Standard Florida SBA restaurant file",
+                body: "Acquiring a year-round urban Florida restaurant with strong credit is a standard specialist-SBA-lender file. Huntington, Newtek, Readycap, and Florida-focused lenders (BayFirst, SouthState) underwrite these routinely. Expect 60-90 days to close. The main variable is whether the lender is explicitly modeling Florida-specific insurance cost trajectory and hurricane exposure rather than applying national-baseline underwriting.",
+                ctaLabel: "Match with Florida restaurant SBA lenders",
+                utmContent: "profile-a-fl-acquisition",
+            },
+            B: {
+                badge: "Coastal / seasonal file &mdash; extra underwriting detail",
+                headline: "Match to a Florida-experienced lender who models seasonality explicitly",
+                body: "Coastal, tourism-driven, or heavily seasonal Florida restaurant files carry real underwriting complexity: hurricane exposure modeling, property insurance cost trajectory, shoulder-season working-capital needs, and business-interruption insurance adequacy. Specialist Florida lenders model these explicitly; generalist national banks often apply flat-annual revenue assumptions that underestimate working-capital needs and miss off-season cash flow risk. Expect 75-105 days to close with the extra diligence on insurance and seasonality modeling.",
+                ctaLabel: "Match with FL-coastal-experienced SBA lenders",
+                utmContent: "profile-b-fl-seasonal",
+            },
+            C: {
+                badge: "Franchise path",
+                headline: "Franchise route &mdash; see the franchise-specific guide",
+                body: "Florida franchise restaurant SBA files underwrite differently from independent concepts and benefit from brand-level underwriting shortcut when the concept is in the SBA Franchise Directory. Florida&rsquo;s franchise-restaurant density (particularly in Orlando, Tampa, and secondary metros) makes this a meaningful share of FL restaurant SBA volume. The lender mix and mechanics for franchise files are distinct &mdash; see our SBA franchise loan guide for full treatment.",
+                ctaLabel: "See SBA franchise details",
+                utmContent: "profile-c-fl-franchise",
+                ctaUrl: "/sba-loans/franchise/",
+            },
+        },
+        scoringBody: `
+            function score(a) {
+                var sit=a[0], loc=a[1], amount=a[2], credit=a[3];
+                if (sit==='franchise') return 'C';
+                if (loc==='coastal-tourism' || loc==='seasonal') return 'B';
+                if (sit==='acquisition') return 'A';
+                return 'A';
+            }
+        `,
+    },
+
+    faqs: [
+        {q:"How does Florida restaurant SBA performance compare to national averages?",a:"Florida restaurant SBA loans charge off at 1.13% — below both the national restaurant average of 1.21% and the SBA cross-industry average of 1.36% (a 0.83× ratio). That's a favorable aggregate performance. The caveat: aggregate averages mask real sub-segment risk dispersion. Coastal tourism-driven concepts, seasonal snowbird-dependent restaurants, and year-round urban independents have meaningfully different risk profiles that lenders underwrite to individually, and the structural Florida factors (hurricane exposure, tourism seasonality, property insurance cost trajectory) still matter even on files that look favorable on headline metrics."},
+        {q:"What's the typical SBA restaurant loan size in Florida?",a:"Average SBA restaurant loan in Florida is approximately $767,000 — the highest of any top-4 restaurant SBA state (46% above the national average of $528K, 27% above California's $603K, and modestly above Texas's $738K). Median is $434,000 vs. $255K nationally (+70%). The higher deal sizes reflect Florida commercial real estate costs in coastal markets and the scale of major-metro restaurant acquisitions in Miami, Orlando, Tampa, and Jacksonville."},
+        {q:"How does hurricane risk affect SBA restaurant underwriting in Florida?",a:"Coastal Florida restaurant files receive explicit hurricane-exposure underwriting. Lenders model business-interruption insurance adequacy, building-code compliance year of the structure, hurricane deductible exposure on property insurance, and post-storm working-capital reserves. Specialist Florida lenders treat this as standard practice; generalist banks unfamiliar with Florida insurance markets routinely miss the deductible-exposure issue and the property-insurance premium trajectory, which compresses projected DSCR. Inland Florida restaurants don't carry the same exposure, but the property-insurance cost trajectory still affects files statewide."},
+        {q:"How does Florida's insurance cost trajectory affect SBA underwriting?",a:"Florida commercial property insurance has seen double-digit annual premium increases in several recent years, and some carriers have exited the market. Specialist lenders now model insurance as a growing cost line on multi-year projections rather than assuming flat costs. Restaurants in high-exposure zones (coastal, older buildings, wood-frame construction) can see insurance costs of 4-6% of revenue, materially above the 2-3% national baseline. A restaurant with clean insurance history and a multi-year renewal track record underwrites better than one without; files relying on projected insurance-cost assumptions face harder scrutiny."},
+        {q:"Which SBA lenders are most active in Florida restaurant lending?",a:"The Huntington National Bank leads by loan count (87 FL restaurant loans). Newtek (Bank + Small Business Finance combined) sits at 107, the largest single-bank block in Florida. TD Bank (46 loans) carries the snowbird-markets demographic thread. Two Florida-connected regionals appear: BayFirst National Bank (27 loans, Florida-headquartered) and SouthState Bank (37, Southeastern regional headquartered in Winter Haven FL). Readycap (35), Northeast (34), Wells Fargo (23), and Bank of America (22) round out the top ten."},
+        {q:"How does seasonality affect working-capital underwriting for Florida restaurants?",a:"Tourism-dependent Florida restaurants can carry 30-50% revenue swings between peak and off-season. Lenders want monthly revenue projections rather than annualized averages, and they want to see the operator plan for the shoulder-season working-capital gap — reserves, a working-capital draw line, or seasonal staffing flexibility. Files that submit flat annual revenue assumptions get structured with larger working-capital components or face higher equity injection requirements. Year-round urban markets (Jacksonville, Tampa, Orlando residential corridors, inland metros) don't carry the same seasonality sharpness."},
+        {q:"How long does an SBA loan take to close for a Florida restaurant?",a:"60-90 days is typical for a year-round urban Florida restaurant file with a Preferred Lender experienced in Florida. Coastal, tourism-driven, or heavily seasonal files often run 75-105 days because of the extra underwriting detail around insurance, hurricane exposure, and seasonality. Deals with a Florida commercial real estate component via SBA 504 plus a 7(a) companion loan typically run 90-130 days. Lenders unfamiliar with Florida-specific insurance markets routinely extend these timelines further."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────
