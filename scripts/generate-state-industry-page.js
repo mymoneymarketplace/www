@@ -725,6 +725,147 @@ const CONFIGS = {
     ],
 },
 
+'541940_CA': {
+    naicsCode: '541940',
+    state: 'CA',
+    industryParentSlug: 'veterinarians',
+    industryLabel: 'veterinary practices',
+    industryLabelCap: 'Veterinary Practices',
+    industryLabelCapSingular: 'Veterinary Practice',
+    stateSlug: 'california',
+    stateName: 'California',
+    campaignSlug: 'sba-veterinarians-california-quiz',
+
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/7469232/pexels-photo-7469232.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Veterinarian examining a dog on exam table in a modern clinic, representative of California veterinary practices financed through SBA 7(a) loans',
+        width: 1200,
+        height: 800,
+        photographer: 'Mikhail Nilov',
+        photographerUrl: 'https://www.pexels.com/@mikhail-nilov/',
+        sourceUrl: 'https://www.pexels.com/photo/7469232/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: ['Live Oak Banking Company'],
+
+    title: 'SBA Loans for Veterinary Practices in California 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for California veterinary practices. 183 CA vet SBA loans approved FY2020-2025 ($312M), $1.7M avg loan, 0% charge-offs. Largest state for the best-performing SBA category. Take the 2-minute quiz.',
+    heroSub: 'California veterinary practice SBA lending sits at the intersection of two superlatives: <strong>the best-performing SBA industry category anywhere in the dataset (0.18% national charge-off) and the largest state market for that category</strong>. California vet files average <strong>$1.7 million per loan &mdash; the highest state-industry average deal size we track</strong>. Zero charge-offs on 183 California vet loans FY2020-2025. Live Oak Banking owns the specialist lender position.',
+
+    serviceDescription: 'My Money Marketplace helps California veterinarians and veterinary-practice buyers compare SBA 7(a) and 504 options and get matched with specialist lenders experienced in California veterinary practice acquisition underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+
+    marketContextHtml: `
+        <p>Veterinary practice SBA lending is the cleanest-performing category in our entire dataset. National veterinary charges off at <strong>0.18%</strong> across 1,636 loans FY2020-2025 &mdash; a <strong>0.13&times; ratio versus the SBA cross-industry average of 1.36%</strong>. In plain terms: veterinary SBA files are approximately eight times less likely to charge off than the average SBA 7(a) loan. California doubles down on this credibility story with <strong>zero charge-offs across 183 California veterinary SBA loans totaling $311.8 million in approved capital</strong>.</p>
+        <p>California is the largest single-state veterinary SBA market, accounting for 11.19% of national volume. Florida and Texas follow at 10.64% and 7.58% share respectively. California growth is +15.4% YoY &mdash; healthy but not the state-acceleration story we see with Texas restaurants or auto repair; the national veterinary category is itself up +40.2% YoY, and California is growing below the national rate because its base is already large.</p>
+        <h3>The $1.7M average: what drives it</h3>
+        <p><strong>Average California veterinary SBA loan is approximately $1.7 million &mdash; the highest state-industry average deal size we track</strong>. Median is $1.15 million vs. $654,000 nationally (+75%). Four structural drivers push the number up:</p>
+        <ul>
+            <li><strong>Practice-plus-real-estate combined structure is the default.</strong> California veterinary practices typically own the building. A meaningful share of California vet SBA files are SBA 504 + 7(a) companion structures covering real estate plus the operating business. The combined deal size naturally runs higher than pure practice-acquisition files.</li>
+            <li><strong>Multi-doctor practice prevalence.</strong> California veterinary practice acquisitions skew toward multi-doctor clinics with meaningful revenue scale. Single-doctor rural clinic acquisitions exist but are a smaller share of California vet SBA volume than in states with more rural-veterinary density.</li>
+            <li><strong>Specialty and referral practice scale.</strong> California has a substantial base of specialty veterinary practices (emergency/critical care, oncology, ophthalmology, dermatology). These acquisitions routinely run $2M+ given the specialized equipment and revenue scale.</li>
+            <li><strong>California commercial real estate baseline.</strong> Vet-appropriate commercial real estate in California metros (suburban medical corridors, stand-alone practice buildings) carries California-premium pricing that pushes the combined deal size higher.</li>
+        </ul>
+        <h3>Why veterinary SBA performs so well</h3>
+        <p>Three structural features drive the industry-leading charge-off profile. First, <strong>veterinary services demand is recurring and non-discretionary</strong> &mdash; annual wellness exams, vaccinations, dental cleanings, and chronic condition management create highly predictable revenue. Pet ownership and spending continued to grow through economic cycles. Second, <strong>veterinary practice acquisitions are the dominant use case</strong> &mdash; with existing revenue history to underwrite against, not speculative startups. Third, <strong>veterinarians are licensed professionals with standardized income verification</strong>, which creates operator-side underwriting certainty.</p>
+        <p>California compounds each of these: the state&rsquo;s population density and high per-capita pet spending create strong practice economics, the licensing standards are well-understood by specialist lenders, and the scale of established multi-doctor practices creates a deep pool of acquisition candidates.</p>
+        <h3>Metro distribution</h3>
+        <p>California veterinary SBA volume concentrates in <strong>Los Angeles / Orange County, San Francisco Bay Area, San Diego, Sacramento, and the Inland Empire</strong>. LA-OC carries the highest absolute volume; the Bay Area runs a higher share of specialty and emergency-medicine practice acquisitions. San Diego has meaningful multi-doctor general practice volume. Sacramento and the Central Valley have active lending particularly on practice-plus-real-estate combined deals.</p>
+        <h3>California regulatory context for veterinary SBA underwriting</h3>
+        <p>California has state-specific veterinary practice ownership and operational rules that lenders handle explicitly:</p>
+        <ul>
+            <li><strong>Licensed ownership requirement.</strong> Under California Business and Professions Code Section 4854, only licensed California veterinarians (or professional veterinary corporations owned by licensed veterinarians) can own and operate a veterinary practice. Non-veterinarian operators and non-professional-corp ownership structures don't underwrite cleanly. Specialist lenders confirm licensing and corporate-entity structure upfront.</li>
+            <li><strong>Veterinary Medical Board oversight.</strong> License history, disciplinary actions, and corporate entity registration are reviewed on acquisition files. A clean license history underwrites cleanly; files with open disciplinary matters face extended diligence.</li>
+            <li><strong>Labor cost structure.</strong> California veterinary technicians, assistants, and front-office staff are paid materially above national averages. Specialist lenders model California-specific labor baselines rather than applying national-practice benchmarks.</li>
+            <li><strong>Controlled substance and DEA registration.</strong> Veterinary practices handle controlled substances (ketamine, opioids for surgery, etc.) and require active DEA registration. Underwriting reviews compliance history, particularly on acquisition files where transfer of DEA registration affects deal timing.</li>
+        </ul>
+    `,
+
+    lenderCalloutHtml: `
+        <p>California veterinary SBA lending has the most concentrated specialist-lender pattern in the entire dataset: <strong>Live Oak Banking Company dominates with 57 California vet loans &mdash; 31% of all California veterinary SBA volume by count and $151 million in approved capital</strong>. Live Oak is the national veterinary-practice SBA specialist; their California volume reflects that national leadership applied to the largest state market. Average Live Oak California veterinary loan is <strong>$2.65 million</strong>, the highest of any top-10 lender for any state-industry combination we track. Live Oak&rsquo;s model on veterinary files is well-matched to the category: specialized underwriting templates, industry-specific valuation expertise, and a team that speaks the veterinary language fluently.</p>
+        <p>Wells Fargo (16 loans) holds #2, primarily on existing-customer practice acquisition files. Bank of America (10) and PNC Bank (9) carry additional major-bank volume. Two California-native banks appear in the top 10: <strong>Banc of California (8 loans) and United Community Bank (8)</strong> &mdash; both of which have dedicated veterinary practice banking programs. JPMorgan Chase (4), Colony Bank (4), Enterprise Bank &amp; Trust (4), and CalPrivate Bank (3) round out the list. <strong>For a California veterinary practice buyer, Live Oak is the default first call &mdash; no other lender concentrates this level of veterinary-specific expertise and capital in the California market</strong>; Wells Fargo and Banc of California are strong alternatives on existing-banking-relationship files.</p>
+    `,
+
+    cityLinks: [
+        { name: 'San Diego', href: '/business-loans/san-diego-ca' },
+        { name: 'San Jose', href: '/business-loans/san-jose-ca' },
+        { name: 'Sacramento', href: '/business-loans/sacramento-ca' },
+        { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
+        { name: 'Anaheim', href: '/business-loans/anaheim-ca' },
+        { name: 'Irvine', href: '/business-loans/irvine-ca' },
+        { name: 'Fremont', href: '/business-loans/fremont-ca' },
+    ],
+
+    quiz: {
+        questions: [
+            {q:"What's your California veterinary situation?",opts:[
+                {v:"acquisition",l:"Acquiring an existing CA practice"},
+                {v:"specialty",l:"Acquiring a specialty / emergency practice"},
+                {v:"real-estate",l:"Acquiring practice + real estate"},
+                {v:"startup",l:"Starting a new practice"},
+            ]},
+            {q:"Primary loan use?",opts:[
+                {v:"purchase-price",l:"Practice acquisition purchase price"},
+                {v:"real-estate-use",l:"Real estate purchase (practice building)"},
+                {v:"equipment",l:"Diagnostic / surgical equipment"},
+                {v:"expansion",l:"Expansion / buildout"},
+                {v:"multiple",l:"Multiple uses combined"},
+            ]},
+            {q:"Loan amount needed?",opts:[
+                {v:"under-1m",l:"Under $1M"},
+                {v:"1m-2m",l:"$1M - $2M"},
+                {v:"2m-5m",l:"$2M - $5M"},
+                {v:"5m-plus",l:"$5M+"},
+            ]},
+            {q:"Years in veterinary practice?",opts:[
+                {v:"0-3",l:"0-3 years (associate or new grad)"},
+                {v:"4-10",l:"4-10 years"},
+                {v:"10-plus",l:"10+ years"},
+            ]},
+        ],
+        profiles: {
+            A: {
+                badge: "Classic CA veterinary acquisition",
+                headline: "You're in the best-performing SBA category, largest state market",
+                body: "An experienced California veterinarian acquiring an established practice is the file Live Oak Banking underwrites at scale in California. Live Oak holds 31% of California veterinary SBA volume by count and $151M in approved capital with an average loan of $2.65M per file — the largest average loan size of any top-10 specialist lender we track. Expect 60-90 days to close. Wells Fargo and Banc of California are strong alternatives on existing-banking-relationship files.",
+                ctaLabel: "Match with California veterinary SBA lenders",
+                utmContent: "profile-a-ca-vet-acquisition",
+            },
+            B: {
+                badge: "Specialty or real-estate combined",
+                headline: "Specialty practice or 504 + 7(a) combined structure",
+                body: "California specialty veterinary practices (emergency, critical care, specialty referral) and real-estate-combined files benefit from larger SBA structures: 7(a) Standard for the practice, SBA 504 for the real estate portion, or combined 7(a) up to $5M. Live Oak handles these routinely on California files; Wells Fargo carries strong large-deal volume. Specialty practice files often run $2M-$5M+. Plan 75-120 days to close given combined-structure coordination.",
+                ctaLabel: "Match with CA specialty vet SBA lenders",
+                utmContent: "profile-b-ca-vet-specialty",
+            },
+            C: {
+                badge: "Early-career or startup",
+                headline: "Early-career files require more operator-profile support",
+                body: "California veterinary startup files (new practice, 0-3 years post-graduation) and early-career acquisitions require more underwriting detail than established-practice acquisitions by experienced veterinarians. Lenders want associate experience at an existing practice, a detailed business plan with documented patient-base assumptions, and typically a higher equity injection. Live Oak handles these files; generalist banks routinely decline them. Plan 75-100 days with a specialist who understands veterinary-startup economics.",
+                ctaLabel: "Match with CA vet startup SBA lenders",
+                utmContent: "profile-c-ca-vet-startup",
+            },
+        },
+        scoringBody: `
+            function score(a) {
+                var sit=a[0], use=a[1], amount=a[2], exp=a[3];
+                if (sit==='specialty' || use==='real-estate-use' || sit==='real-estate' || amount==='2m-5m' || amount==='5m-plus') return 'B';
+                if (sit==='startup' || exp==='0-3') return 'C';
+                return 'A';
+            }
+        `,
+    },
+
+    faqs: [
+        {q:"Why is California veterinary SBA lending considered the best-performing category?",a:"National veterinary practice SBA charges off at 0.18% — a 0.13× ratio against the SBA cross-industry average of 1.36%, meaning veterinary SBA files are approximately eight times less likely to charge off than the average SBA 7(a) loan. That's the cleanest category performance in the entire dataset. California goes further: zero charge-offs across all 183 California veterinary SBA loans approved FY2020-2025 ($311.8M in total approved capital). Three structural drivers: recurring non-discretionary demand (pet care), acquisition-dominant use case (verified revenue history), and licensed-professional operator profile."},
+        {q:"How large is the California veterinary SBA market?",a:"California is the largest single-state veterinary SBA market — 183 loans approved FY2020-2025 representing 11.19% of all national veterinary SBA volume and $311.8 million in total approved capital. Florida and Texas follow at 10.64% and 7.58% share. Growth is +15.4% year-over-year, below the national veterinary rate of +40% because California's base is already large."},
+        {q:"Why is the average California vet SBA loan size so high ($1.7M)?",a:"Average California veterinary SBA loan is approximately $1.7 million — the highest state-industry average deal size we track, and median is $1.15 million vs. $654K nationally (+75%). Four drivers push the number up: practice-plus-real-estate combined structure is the default (CA vet practices typically own the building, creating SBA 504 + 7(a) companion files), multi-doctor practice prevalence (CA vet acquisitions skew toward multi-doctor clinics), specialty and referral practice scale (emergency, oncology, ophthalmology practices routinely $2M+), and California commercial real estate pricing."},
+        {q:"Who can own a veterinary practice in California?",a:"Under California Business and Professions Code Section 4854, only licensed California veterinarians (or professional veterinary corporations owned by licensed veterinarians) can own and operate a veterinary practice. Non-veterinarian operators and non-professional-corporation ownership structures don't underwrite cleanly. Specialist California veterinary SBA lenders confirm licensing and corporate-entity structure upfront; generalist banks unfamiliar with California professional-practice ownership rules sometimes miss this and waste significant underwriting time."},
+        {q:"Which SBA lenders are most active in California veterinary lending?",a:"Live Oak Banking Company dominates with 57 California veterinary loans — 31% of California veterinary SBA volume by count, $151 million in total approved capital, and an average loan size of $2.65 million (the highest of any top-10 lender for any state-industry combination). Live Oak is the national veterinary-practice SBA specialist. Wells Fargo (16 loans) holds #2, Bank of America (10) and PNC Bank (9) carry additional major-bank volume. Two California-native banks appear in the top 10: Banc of California (8 loans) and United Community Bank (8)."},
+        {q:"How long does an SBA loan take to close for a California veterinary practice?",a:"60-90 days is typical for a California veterinary practice acquisition with Live Oak or another specialist veterinary lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion loan typically run 75-120 days. Specialty practice files (emergency, critical care, specialty referral) often run on the longer end given the diligence on specialized equipment and operator profile. Early-career or startup files typically run 75-100 days given the extra operator-profile underwriting."},
+        {q:"What California veterinary-specific factors affect SBA underwriting?",a:"Four factors routinely come up: licensed-ownership requirement (CA B&P Code 4854 restricts veterinary practice ownership to licensed veterinarians or professional veterinary corporations), Veterinary Medical Board license history review, California labor cost modeling (veterinary technicians, assistants, and front-office staff in California are paid meaningfully more than national averages), and DEA registration transfer timing on acquisition files (veterinary practices handle controlled substances — DEA registration transfer affects deal close timing). Specialist California veterinary lenders handle all four as standard practice."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────
