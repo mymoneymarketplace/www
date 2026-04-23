@@ -590,6 +590,141 @@ const CONFIGS = {
     ],
 },
 
+'621210_CA': {
+    naicsCode: '621210',
+    state: 'CA',
+    industryParentSlug: 'dentists',
+    industryLabel: 'dental practices',
+    industryLabelCap: 'Dental Practices',
+    industryLabelCapSingular: 'Dental Practice',
+    stateSlug: 'california',
+    stateName: 'California',
+    campaignSlug: 'sba-dentists-california-quiz',
+
+    heroPhoto: {
+        src: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        alt: 'Modern California dental operatory with chair and imaging equipment, representative of dental practices financed through SBA 7(a) loans',
+        width: 1200,
+        height: 800,
+        photographer: 'Daniel Frank',
+        photographerUrl: 'https://www.pexels.com/@fr3nks/',
+        sourceUrl: 'https://www.pexels.com/photo/3845810/',
+        sourceName: 'Pexels',
+    },
+    communityBankNames: ['Live Oak Banking Company'],
+
+    title: 'SBA Loans for Dental Practices in California 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for California dental practices. 732 CA dental SBA loans approved FY2020-2025 ($767M), 18% of national dental volume, 0.27% charge-off (0.2x SBA avg). Take the 2-minute quiz.',
+    heroSub: 'California dental practice SBA lending is the lowest-risk high-volume combination in the entire SBA dataset. <strong>732 loans approved FY2020-2025 representing 18% of all national dental SBA volume</strong>, with a <strong>0.27% charge-off rate &mdash; one-fifth the SBA cross-industry average</strong>. Deal sizes average over $1 million. Live Oak Banking dominates the specialist lender landscape.',
+
+    serviceDescription: 'My Money Marketplace helps California dentists and dental-practice buyers compare SBA 7(a) and 504 options and get matched with specialist lenders experienced in California dental practice acquisition underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+
+    marketContextHtml: `
+        <p>California dental SBA lending occupies an unusual position in the SBA data: <strong>the largest state market for a category that has the lowest charge-off rate in the entire SBA dataset</strong>. 732 loans approved FY2020-2025 at $766.9 million in total approved capital, accounting for 17.99% of national dental SBA volume. Second-place Texas trails at 9.8%. On volume alone, California dental is roughly double the next state.</p>
+        <p>Underwriting performance is the real story. National dental SBA charges off at 0.27% &mdash; the lowest of any SBA industry category we track. California dental matches that nationally-best performance at <strong>0.27% charge-off, a 0.20&times; ratio versus the SBA cross-industry average of 1.36%</strong>. In practical terms: California dental practice files are approximately five times less likely to charge off than the average SBA 7(a) loan, which directly affects lender pricing, file velocity, and equity-injection flexibility.</p>
+        <h3>Why dental practice SBA performs this well</h3>
+        <p>Three structural features drive the favorable charge-off profile. First, <strong>dental practice acquisitions are the dominant use case</strong> &mdash; roughly 75-85% of dental SBA 7(a) files are acquisitions of established practices with verified revenue history, not speculative startups. Second, <strong>dental revenue is recurring and demand is non-discretionary</strong> &mdash; insurance-backed procedures, preventive care cycles, and recall-driven appointment books create highly predictable cash flow. Third, <strong>dentists are licensed professionals with verified income history</strong> &mdash; underwriting has much more operator-side certainty than most small-business SBA categories.</p>
+        <p>California amplifies each of these: the state&rsquo;s scale produces a larger pool of established practices available for acquisition, the demographic base supports strong patient recall volumes in metros across the state, and the licensing standards are well-understood by specialist lenders.</p>
+        <h3>Deal sizes reflect the California-specific cost baseline</h3>
+        <p><strong>Average California dental SBA loan is approximately $1.05 million &mdash; the second-highest state average for dental SBA (behind Colorado at $1.43M)</strong>. Median is $689,000 vs. $510,000 nationally (+35%). The higher deal sizes reflect California commercial real estate costs, the prevalence of practice-plus-real-estate-combined structures, and the scale of larger metropolitan practice acquisitions. +41.7% YoY growth in California dental SBA lending puts the state firmly in the growth acceleration pattern.</p>
+        <h3>California regulatory context for dental SBA underwriting</h3>
+        <p>California has state-specific dental practice ownership rules that lenders handle explicitly:</p>
+        <ul>
+            <li><strong>Licensed ownership requirement.</strong> Under California Business and Professions Code, only licensed California dentists (or professional dental corporations owned by licensed dentists) can own and operate a dental practice. Non-dentist operators and non-professional-corp ownership structures don't underwrite cleanly. Specialist lenders confirm licensing and corporate-entity structure upfront; generalist banks unfamiliar with California professional-practice ownership rules sometimes miss this and waste weeks of underwriting time.</li>
+            <li><strong>Dental Board of California oversight.</strong> License history, disciplinary actions, and corporate entity registration are all reviewed on acquisition files. A clean license history underwrites cleanly; files with open disciplinary matters face extended diligence regardless of underlying practice economics.</li>
+            <li><strong>Labor cost structure.</strong> California dental assistants, hygienists, and front-office staff are paid materially more than national averages. Specialist lenders model California-specific labor baselines in DSCR projections rather than applying national dental-practice cost benchmarks that understate payroll.</li>
+            <li><strong>Real estate vs. lease structure.</strong> California commercial real estate in dental-appropriate locations (medical corridors, established suburban centers) carries premium pricing. A meaningful share of California dental SBA deals include real estate via SBA 504 plus a 7(a) companion. The real-estate-combined structure often pencils better than pure lease files long-term.</li>
+        </ul>
+        <h3>Metro distribution</h3>
+        <p>California dental SBA volume is distributed across <strong>Los Angeles / Orange County, San Diego, San Francisco Bay Area, Sacramento, and the Inland Empire</strong>. The Bay Area and LA-OC carry the highest absolute volume; San Diego runs a higher share of practice-plus-real-estate combined deals. Sacramento has meaningful state-employee-adjacent practice volume. Secondary markets (Fresno, Bakersfield, Central Coast) all have active specialist-lender coverage.</p>
+    `,
+
+    lenderCalloutHtml: `
+        <p>California dental SBA lending has a <strong>clear specialist-lender leader: Live Oak Banking Company</strong> dominates with 120 California dental loans &mdash; 16% of all California dental SBA volume by count and $231 million in total approved capital. Live Oak is the national dental-practice SBA specialist; their California volume reflects that national leadership applied to the largest single-state market. Average Live Oak California dental loan is $1.93 million, the highest of any top-10 lender and reflecting their focus on larger acquisition and real-estate-combined files.</p>
+        <p>U.S. Bank (81 loans) holds a strong #2 position with a more generalist-branch profile. Wells Fargo (44) and Bank of America (39) carry meaningful volume particularly on existing-customer practice acquisition files. Specialist SBA platforms Readycap (26), BayFirst (19), and Newtek (14) appear in the top 10 at the smaller-deal tier. First-Citizens (23) and BMO (19) cover the mid-tier. Bank of Hope (12) appears in the dental top 10 reflecting some overlap with the California Korean-American practice ownership network. <strong>For a California dental practice buyer, Live Oak is the default first call; U.S. Bank is the strong generalist alternative; the specialist platforms handle everything under $500K well.</strong></p>
+    `,
+
+    cityLinks: [
+        { name: 'San Diego', href: '/business-loans/san-diego-ca' },
+        { name: 'San Jose', href: '/business-loans/san-jose-ca' },
+        { name: 'Sacramento', href: '/business-loans/sacramento-ca' },
+        { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
+        { name: 'Anaheim', href: '/business-loans/anaheim-ca' },
+        { name: 'Irvine', href: '/business-loans/irvine-ca' },
+        { name: 'Glendale', href: '/business-loans/glendale-ca' },
+    ],
+
+    quiz: {
+        questions: [
+            {q:"What's your California dental situation?",opts:[
+                {v:"acquisition",l:"Acquiring an existing CA practice"},
+                {v:"startup",l:"Starting a new practice"},
+                {v:"real-estate",l:"Buying the practice building"},
+                {v:"expansion",l:"Expansion or additional location"},
+            ]},
+            {q:"Primary loan use?",opts:[
+                {v:"purchase-price",l:"Acquisition purchase price"},
+                {v:"real-estate-use",l:"Real estate purchase"},
+                {v:"equipment",l:"Equipment / technology upgrade"},
+                {v:"buildout",l:"Buildout / tenant improvements"},
+                {v:"multiple",l:"Multiple uses combined"},
+            ]},
+            {q:"Loan amount needed?",opts:[
+                {v:"under-500k",l:"Under $500K"},
+                {v:"500k-1m",l:"$500K - $1M"},
+                {v:"1m-3m",l:"$1M - $3M"},
+                {v:"3m-plus",l:"$3M+"},
+            ]},
+            {q:"Years since dental school graduation?",opts:[
+                {v:"0-2",l:"0-2 years"},
+                {v:"3-5",l:"3-5 years"},
+                {v:"6-plus",l:"6+ years"},
+            ]},
+        ],
+        profiles: {
+            A: {
+                badge: "Classic CA dental acquisition",
+                headline: "You're in the lowest-risk high-volume SBA category",
+                body: "An experienced California dentist acquiring an established practice is exactly the file that Live Oak, U.S. Bank, Wells Fargo, and the specialist California dental lenders deploy capital into at scale. California dental SBA has the lowest charge-off rate in the entire SBA dataset (0.20x the cross-industry average) and the largest state volume. Expect 60-90 days to close with a specialist dental lender. Live Oak is the default first call; U.S. Bank and Wells Fargo are strong alternatives on existing-banking-relationship files.",
+                ctaLabel: "Match with California dental SBA lenders",
+                utmContent: "profile-a-ca-dental-acquisition",
+            },
+            B: {
+                badge: "Real estate + practice",
+                headline: "SBA 504 for the building, 7(a) companion for the practice",
+                body: "California dental deals including the office real estate benefit from SBA 504's fixed long-term rates on the real-estate portion. 7(a) companion covers the practice purchase, equipment, and working capital. Combined structure typically runs 75-120 days to close. Live Oak handles the combined structure routinely on California dental files; specialist platforms (First-Citizens, BMO) also carry strong combined-deal competence. For long-term economics, real estate ownership in California dental-appropriate corridors often pencils better than pure lease files.",
+                ctaLabel: "Match with 504 + 7(a) CA dental lenders",
+                utmContent: "profile-b-ca-dental-real-estate",
+            },
+            C: {
+                badge: "Startup / recent grad path",
+                headline: "Startup files require more operator-profile support",
+                body: "California dental startup files (new practice, 0-2 years since graduation) require more underwriting detail than established-practice acquisitions. Lenders want associate experience at an existing practice, a detailed patient acquisition plan, documented marketing channels, and typically a higher equity injection than the 10% minimum. Specialist dental lenders (Live Oak, U.S. Bank) handle these files; generalist banks routinely decline them. Plan 75-100 days to close with a specialist who understands dental-startup economics.",
+                ctaLabel: "Match with CA dental startup SBA lenders",
+                utmContent: "profile-c-ca-dental-startup",
+            },
+        },
+        scoringBody: `
+            function score(a) {
+                var sit=a[0], use=a[1], amount=a[2], exp=a[3];
+                if (sit==='real-estate' || use==='real-estate-use') return 'B';
+                if (sit==='startup' || exp==='0-2') return 'C';
+                return 'A';
+            }
+        `,
+    },
+
+    faqs: [
+        {q:"Why is California dental SBA lending considered low risk?",a:"California dental SBA loans charge off at 0.27% — 0.20× the SBA cross-industry average of 1.36%, meaning California dental files are approximately five times less likely to charge off than the average SBA 7(a) loan. This matches the national dental SBA charge-off rate, which is itself the lowest of any SBA industry category. Three structural drivers: dental practice acquisitions (not startups) are the dominant use case with verified revenue history, dental revenue is recurring and non-discretionary, and dentists are licensed professionals with verified income history — all of which create more underwriting certainty than most SBA categories."},
+        {q:"How large is the California dental SBA market?",a:"California is the largest single-state dental SBA market — 732 loans approved FY2020-2025 representing 18% of all national dental SBA volume and $767 million in total approved capital. That's roughly double the next state (Texas at 9.8% share). California dental SBA is growing at +41.7% year-over-year, putting it firmly in the growth-acceleration pattern."},
+        {q:"What's the typical SBA dental loan size in California?",a:"Average California dental SBA loan is approximately $1.05 million — the second-highest state average (behind Colorado at $1.43M). Median is $689,000 vs. $510,000 nationally (+35%). The higher deal sizes reflect California commercial real estate costs, the prevalence of practice-plus-real-estate-combined structures, and the scale of larger metropolitan practice acquisitions particularly in Los Angeles, San Diego, and the Bay Area."},
+        {q:"Who can own a dental practice in California?",a:"Under California Business and Professions Code, only licensed California dentists (or professional dental corporations owned by licensed dentists) can own and operate a dental practice. Non-dentist operators and non-professional-corporation ownership structures don't underwrite cleanly. Specialist California dental SBA lenders confirm licensing and corporate-entity structure upfront; generalist banks unfamiliar with California professional-practice ownership rules sometimes miss this and waste significant underwriting time. All California dental SBA files require current California Dental Board licensure."},
+        {q:"Which SBA lenders are most active in California dental lending?",a:"Live Oak Banking Company dominates with 120 California dental loans — 16% of California dental SBA volume and $231 million in total approved capital. Live Oak is the national dental-practice SBA specialist. U.S. Bank (81 loans) holds #2. Wells Fargo (44) and Bank of America (39) carry strong existing-customer-relationship volume. Specialist SBA platforms Readycap (26), BayFirst (19), and Newtek (14) appear in the top 10 at the smaller-deal tier. First-Citizens (23) and BMO (19) cover the mid-tier."},
+        {q:"How long does an SBA loan take to close for a California dental practice?",a:"60-90 days is typical for a California dental practice acquisition with Live Oak or another specialist dental lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion loan typically run 75-120 days. Startup practice files (dentist in first 0-2 years post-graduation) typically run 75-100 days given the extra operator-profile underwriting. Generalist banks unfamiliar with California professional-practice ownership rules routinely extend these timelines."},
+        {q:"What California dental-specific factors affect SBA underwriting?",a:"Four factors routinely come up: licensed-ownership requirement (California Business and Professions Code restricts dental practice ownership to licensed dentists or professional dental corporations), Dental Board of California license history review (disciplinary actions extend diligence), California labor cost modeling (dental assistants, hygienists, and front-office staff in California are paid meaningfully more than national averages), and commercial real estate pricing (dental-appropriate corridors carry California premium pricing, making real-estate-combined structures common). Specialist California dental lenders handle all four as standard practice."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────
@@ -642,7 +777,7 @@ function renderStatsBlock(stateStats, nationalStats, overall, stateName, industr
     </section>`;
 }
 
-function renderLenderChartSvg(stateLenders, communityBankNames, stateName) {
+function renderLenderChartSvg(stateLenders, communityBankNames, stateName, industryLabel) {
     const top10 = stateLenders.slice(0, 10);
     const max = top10[0].loan_count;
     const width = 640;
@@ -681,14 +816,14 @@ function renderLenderChartSvg(stateLenders, communityBankNames, stateName) {
         : '';
 
     return `<svg viewBox="0 0 ${width} ${totalHeight}" role="img" aria-labelledby="viz-lenders-title viz-lenders-desc" class="data-viz-svg" preserveAspectRatio="xMidYMid meet">
-    <title id="viz-lenders-title">Top 10 SBA restaurant lenders in ${stateName} by loan count</title>
+    <title id="viz-lenders-title">Top 10 SBA ${industryLabel || 'industry'} lenders in ${stateName} by loan count</title>
     <desc id="viz-lenders-desc">Horizontal bar chart: ${descText}.${highlightNote}</desc>
 ${rows}
   </svg>`;
 }
 
 function renderLendersSection(stateLenders, stateName, industryLabel, communityBankNames) {
-    const chartSvg = renderLenderChartSvg(stateLenders, communityBankNames, stateName);
+    const chartSvg = renderLenderChartSvg(stateLenders, communityBankNames, stateName, industryLabel);
     return `
     <section class="lenders-section">
         <div class="container-narrow">
@@ -1153,7 +1288,7 @@ ${shortMechanics}
 <section class="closing-cta">
     <div class="container">
         <h2>Get matched with ${cfg.stateName} ${cfg.industryLabel.replace(/s$/, '')} SBA lenders</h2>
-        <p>${cfg.stateName} ${cfg.industryLabel} SBA is a specialist segment. The top ${cfg.stateName} lenders understand the state's cost structure, labor economics, and (for restaurants specifically) California ABC liquor license mechanics that generalist banks routinely miss. See the broader <a href="/sba-loans/${cfg.industryParentSlug}">SBA ${cfg.industryLabel} guide</a> or <a href="/sba-loans">SBA loans hub</a>.</p>
+        <p>${cfg.stateName} ${cfg.industryLabel} SBA is a specialist segment. The top ${cfg.stateName} lenders understand the state's cost structure, labor economics, and regulatory context that generalist banks routinely miss. See the broader <a href="/sba-loans/${cfg.industryParentSlug}">SBA ${cfg.industryLabel} guide</a> or <a href="/sba-loans">SBA loans hub</a>.</p>
         <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${cfg.campaignSlug}&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with ${cfg.stateName} SBA lenders &rarr;</a>
         <p class="closing-fine">MMM does not originate SBA loans. Applications are processed through SBA-authorized lenders. Statistics above are sourced from the SBA FOIA 7(a) dataset, fiscal years 2020 through December 2025.</p>
     </div>
