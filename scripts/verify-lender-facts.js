@@ -82,6 +82,8 @@ function bankTokens(fullName) {
         .replace(/^The\s+/i, '')
         // Strip corporate suffixes including the trailing period on "Inc."
         .replace(/,\s*(?:National Association|N\.A\.|Division of|Inc\.?|LLC|FSB)\.?(?![A-Za-z])/gi, '')
+        // Strip everything from ", A Division of" onward (e.g. "Zions Bank, A Division of ...")
+        .replace(/,\s*A\s+Division\s+of.*$/gi, '')
         .replace(/\s+Bank\s+National\s+Association/gi, ' Bank')
         .replace(/\s+Banking\s+Company/gi, ' Banking Company')
         .replace(/\s+Bank\s+&\s+Trust,?\s+.*$/gi, ' Bank & Trust')

@@ -138,6 +138,8 @@ const STATE_INDUSTRIES = {
           rationale: 'the largest auto-repair SBA state (12.1% national share) with clean-market performance (0.45x SBA charge-off) and $656K average deal size' },
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/auto-repair/texas/',
           rationale: 'the fastest-growing auto repair SBA state (+52% YoY, nearly 2x the national auto-repair rate) and #2 by volume' },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/auto-repair/florida/',
+          rationale: 'the third-largest auto-repair SBA state with honest framing on 2.08x SBA charge-off average and Florida-specific hurricane, tourism, and rapid-growth-market underwriting' },
     ],
     'child-care': [
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/child-care/texas/',
@@ -176,6 +178,18 @@ const STATE_INDUSTRIES = {
     'insurance-agencies': [
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/insurance-agencies/texas/',
           rationale: "the #1 state for insurance agency SBA -- the only industry category where Texas beats California on volume" },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/insurance-agencies/florida/',
+          rationale: 'the second-largest insurance agency SBA state (10.3% national share) with 0.34x SBA charge-off performance and Florida property-insurance market context' },
+        { slug: 'california', label: 'California', href: '/sba-loans/insurance-agencies/california/',
+          rationale: 'the third-largest insurance agency SBA state (10% national share) with +22.5% YoY growth and California wildfire/property-insurance market context' },
+    ],
+    'landscaping': [
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/landscaping/florida/',
+          rationale: 'the second-largest landscaping SBA state with strong honest framing on 2.82x SBA charge-off average (highest state-industry combo) and Florida hurricane, labor concentration, and equipment cost underwriting' },
+    ],
+    'beauty-salons': [
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/beauty-salons/texas/',
+          rationale: 'the second-largest beauty salon SBA state and fastest-growing state-industry combination in the dataset (+124.5% YoY, 14x national beauty-salon rate)' },
     ],
 };
 
