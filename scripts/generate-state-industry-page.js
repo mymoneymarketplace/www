@@ -999,6 +999,306 @@ const CONFIGS = {
     ],
 },
 
+// ═══════════════════════════════════════════════════════════════════════
+// PHASE 2 EXPANSION — 20 additional state × industry pages
+// DataForSEO-validated (industry signal ≥ 50 gate applied).
+// Honesty framing applied where charge-off ratio > 1.0 vs SBA cross-industry average.
+// ═══════════════════════════════════════════════════════════════════════
+
+'722511_NY': {
+    naicsCode: '722511', state: 'NY', industryParentSlug: 'restaurants',
+    industryLabel: 'restaurants', industryLabelCap: 'Restaurants', industryLabelCapSingular: 'Restaurant',
+    stateSlug: 'new-york', stateName: 'New York', campaignSlug: 'sba-restaurants-new-york-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Restaurant interior with modern dining room, representative of New York restaurants that use SBA financing', width: 1200, height: 800, photographer: 'Life Of Pix', photographerUrl: 'https://www.pexels.com/@life-of-pix/', sourceUrl: 'https://www.pexels.com/photo/1267320/', sourceName: 'Pexels' },
+    communityBankNames: ['NewBank'],
+    title: 'SBA Loans for Restaurants in New York 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for New York restaurants. 1,057 NY restaurant SBA loans FY2020-2025 ($433M). Charge-off runs above SBA average -- honest framing on why and how to match lenders.',
+    heroSub: 'New York is the third-largest restaurant SBA market in the US &mdash; 1,057 loans FY2020-2025 and $433M in approved capital. Deal sizes run smaller than California or Texas, and charge-off performance runs above the SBA cross-industry average, reflecting NYC-specific cost pressures. Honest framing on both.',
+    serviceDescription: 'My Money Marketplace helps New York restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in NY restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>New York is the third-largest state for restaurant SBA lending behind California and Texas, with <strong>1,057 loans approved FY2020-2025 (6.5% national share) totaling $433 million</strong>. Deal sizes run notably smaller than other top states: <strong>$410,000 average vs. $528,000 nationally (-22%)</strong>, with a $150,000 median. The smaller deal profile reflects NYC's dense small-independent-operator base and a tilt toward buildout and equipment files rather than large-scale acquisitions.</p>
+        <p>Growth is running at +10.2% YoY, roughly in line with the national restaurant SBA rate of +8.7%.</p>
+        <h3>Metro distribution: NYC dominates, with meaningful upstate volume</h3>
+        <p>NYC (all five boroughs), Long Island, and Westchester carry the bulk of NY restaurant SBA volume. Upstate markets (Buffalo, Rochester, Syracuse, Albany) add meaningful secondary volume — smaller deal sizes but faster close timelines than NYC files.</p>
+        <h3>Honest framing: charge-off runs 1.25&times; SBA average</h3>
+        <p>NY restaurant SBA charges off at <strong>1.70% -- 1.25&times; the SBA cross-industry average of 1.36% and materially above the national restaurant rate of 1.21%</strong>. The elevated rate reflects genuine NY-specific cost pressures rather than lender mispricing:</p>
+        <ul>
+            <li><strong>NYC commercial rent</strong> pushes rent-to-sales meaningfully above the 6-10% national benchmark, compressing margins on marginal files.</li>
+            <li><strong>NY State labor cost structure</strong> ($15/hr minimum wage in NYC, tip credit and wage-parity requirements) drives labor as a percentage of revenue above national baselines.</li>
+            <li><strong>NY LLC publication requirement</strong> adds $1-2K + 6-10 weeks on newly-formed operating entities, affecting close timelines on acquisition deals.</li>
+            <li><strong>SLA (State Liquor Authority) transfer timing</strong> on acquisition files where liquor licenses are material can extend timelines 60-120 days.</li>
+        </ul>
+        <p>NY restaurant SBA files with strong unit economics, experienced operators, and clean lease/labor documentation still underwrite favorably. The elevated aggregate rate is a state-level average, not a per-file verdict.</p>
+    `,
+    lenderCalloutHtml: `
+        <p>New York restaurant SBA lending has a distinctive top-of-list pattern: <strong>Manufacturers and Traders Trust Company (M&T Bank) leads with 170 loans</strong> at a very small average size ($95K) -- SBA 7(a) Small Loan volume dominating a book of buildout, equipment, and working-capital files. TD Bank (99 loans, $160K avg) holds #2 with a similar small-loan focus. KeyBank (63 loans, $132K avg) rounds out the small-loan-specialist top three.</p>
+        <p><strong>NewBank (55 loans, $796K avg)</strong> is the notable outlier — a Korean-American community bank concentrated in NYC's Korean-restaurant network, running the largest average deal size of any top-5 lender. Northeast Bank (53 loans, $162K avg) rounds out the top five. Takeaway: NY has strong lender coverage across the small-loan and larger-deal tiers, but the mix skews small-loan-heavy compared to CA/TX.</p>
+    `,
+    cityLinks: [
+        { name: 'New York', href: '/business-loans/new-york-ny' },
+        { name: 'Buffalo', href: '/business-loans/buffalo-ny' },
+        { name: 'Rochester', href: '/business-loans/rochester-ny' },
+        { name: 'Yonkers', href: '/business-loans/yonkers-ny' },
+        { name: 'Syracuse', href: '/business-loans/syracuse-ny' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your New York restaurant situation?",opts:[{v:"acquisition",l:"Acquiring an existing NY restaurant"},{v:"new-independent",l:"Opening a new independent concept"},{v:"franchise",l:"Franchise concept (NY location)"},{v:"expansion",l:"Expansion or additional NY location"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"equipment",l:"Kitchen or FOH equipment"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-250k",l:"Under $250K"},{v:"250k-500k",l:"$250K - $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-plus",l:"$1M+"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-plus",l:"720+"}]},
+        ],
+        profiles: {
+            A: { badge: "NY small-loan specialist file", headline: "M&T, TD, KeyBank -- NY's small-loan specialist trio", body: "New York's dominant restaurant SBA lenders (M&T, TD, KeyBank) specialize in sub-$500K deals -- buildout, equipment, and working-capital files closed in 45-75 days via SBA 7(a) Small Loan. NY deal sizes run smaller than CA or TX, and this trio has the process dialed in. Standard 10% equity injection.", ctaLabel: "Match with NY restaurant SBA lenders", utmContent: "profile-a-ny-small" },
+            B: { badge: "Larger NY acquisition or buildout", headline: "Match to a lender comfortable with NY cost baselines", body: "NY restaurant deals above $500K face the state's genuinely elevated cost baseline (rent, labor, compliance). Lenders like NewBank (Korean-American operator network), Northeast Bank, and Readycap handle larger NY files at scale. Files with strong unit economics and lease documentation underwrite around the aggregate 1.70% charge-off rate, but generalist lenders unfamiliar with NY market context sometimes miss cost modeling.", ctaLabel: "Match with NY-experienced SBA lenders", utmContent: "profile-b-ny-larger" },
+            C: { badge: "Franchise path", headline: "Franchise route -- see the franchise-specific guide", body: "NY franchise restaurant SBA files underwrite differently from independents and benefit from brand-level shortcuts if the concept is in the SBA Franchise Directory. NY franchise volume is meaningful in suburban Long Island, Westchester, and upstate metros. See our SBA franchise loan guide for full treatment.", ctaLabel: "See SBA franchise details", utmContent: "profile-c-ny-franchise", ctaUrl: "/sba-loans/franchise/" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],credit=a[3];if(sit==='franchise')return 'C';if(amount==='500k-1m'||amount==='1m-plus')return 'B';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a restaurant in New York?",a:"Yes. New York is the third-largest single-state restaurant SBA market -- 1,057 loans approved FY2020-2025 representing 6.5% of national restaurant SBA volume. Deal sizes skew smaller than CA/TX (average $410K vs. $528K nationally), and the top NY lenders specialize in the sub-$500K SBA 7(a) Small Loan process."},
+        {q:"Why does New York restaurant SBA charge off above the average?",a:"NY restaurant SBA charges off at 1.70% -- 1.25x the SBA cross-industry average and above the national restaurant rate of 1.21%. Three drivers: NYC commercial rent compressing margins, NY state labor cost structure (higher minimum wage, wage-parity requirements), and NY-specific regulatory friction (LLC publication requirement, SLA license transfer timing). Individual files with strong unit economics still underwrite favorably; the aggregate reflects a state-level average across a broad borrower mix."},
+        {q:"Which SBA lenders are most active in New York restaurant lending?",a:"M&T Bank leads with 170 loans (~$95K average -- small-loan specialist), TD Bank second at 99 loans, KeyBank third at 63. NewBank (55 loans, $796K avg) is the notable Korean-American community bank in the NYC market with much larger typical deal size. Northeast Bank rounds out the top five."},
+        {q:"What NY-specific issues affect SBA restaurant underwriting?",a:"Four factors: rent-to-sales ratios (NYC market rents materially above the 6-10% national benchmark), NY state labor costs including tip credit and wage-parity requirements, LLC formation timing (NY publication requirement adds 6-10 weeks + $1-2K on newly-formed operating entities), and SLA liquor license transfer timing on acquisition files (60-120 days depending on license class and county)."},
+        {q:"How long does an SBA loan take to close for a NY restaurant?",a:"45-75 days is typical for smaller SBA 7(a) Small Loan files with M&T, TD, or KeyBank. Larger deals ($500K+) with NewBank, Northeast, or Readycap typically run 60-90 days. Files involving SLA liquor license transfers add 60-120 days to the licensing side (not lender-side). Generalist banks unfamiliar with NY-specific timing routinely extend timelines further."},
+    ],
+},
+
+'722511_IL': {
+    naicsCode: '722511', state: 'IL', industryParentSlug: 'restaurants',
+    industryLabel: 'restaurants', industryLabelCap: 'Restaurants', industryLabelCapSingular: 'Restaurant',
+    stateSlug: 'illinois', stateName: 'Illinois', campaignSlug: 'sba-restaurants-illinois-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Restaurant interior with modern dining room, representative of Illinois restaurants that use SBA financing', width: 1200, height: 800, photographer: 'Life Of Pix', photographerUrl: 'https://www.pexels.com/@life-of-pix/', sourceUrl: 'https://www.pexels.com/photo/1267320/', sourceName: 'Pexels' },
+    communityBankNames: [],
+    title: 'SBA Loans for Restaurants in Illinois 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Illinois restaurants. 696 IL restaurant SBA loans FY2020-2025 ($387M), +32.8% YoY growth. Charge-off runs 1.59x SBA average -- honest framing on Chicago cost pressures.',
+    heroSub: 'Illinois restaurant SBA volume is up <strong>+32.8% year-over-year</strong> -- one of the strongest growth rates in the top-tier states. Deal sizes average $556K, above the national restaurant baseline. But charge-off performance runs meaningfully above SBA average, reflecting Chicago-specific cost structure. Honest framing on both.',
+    serviceDescription: 'My Money Marketplace helps Illinois restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Illinois restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Illinois is the sixth-largest state for restaurant SBA lending. <strong>696 loans FY2020-2025 (4.3% national share), $387M in approved capital, and growing at +32.8% YoY</strong>. Deal sizes run above national at $556K average, reflecting Chicago's higher urban cost baseline plus the increasing share of full-service concept acquisitions.</p>
+        <h3>Metro distribution: Chicago dominates, secondary markets add real volume</h3>
+        <p>Chicago and the surrounding six-county metro carry most of IL restaurant SBA volume. Secondary markets (Rockford, Peoria, Springfield, Naperville, Aurora) add meaningful volume with smaller typical deal sizes and faster close timelines.</p>
+        <h3>Honest framing: charge-off runs 1.59&times; SBA average</h3>
+        <p>Illinois restaurant SBA charges off at <strong>2.16% -- 1.59&times; the SBA cross-industry average of 1.36% and meaningfully above the national restaurant rate of 1.21%</strong>. Illinois has one of the higher restaurant SBA charge-off rates among top states. Drivers:</p>
+        <ul>
+            <li><strong>Chicago commercial rent</strong> pushes rent-to-sales high across neighborhoods with strong dining density, compressing margins on marginal concepts.</li>
+            <li><strong>Illinois state labor costs</strong> ($15/hr minimum wage phased in for Chicago employers of 21+, statewide $15 by 2025) drive labor as a percentage of revenue above national baselines.</li>
+            <li><strong>Chicago and Cook County business taxes</strong> (personal property replacement tax, Cook County head tax historically, Chicago-specific alcohol taxes) create meaningful cost overhead vs. lower-tax neighboring states.</li>
+            <li><strong>Alcohol licensing complexity in Chicago</strong> extends acquisition timelines when liquor licenses are material.</li>
+        </ul>
+        <p>Illinois restaurant files with strong unit economics and disciplined operators still underwrite favorably. The elevated aggregate reflects state-level averaging, not a per-file verdict -- but specialist lenders factor Illinois cost structure into projections rather than applying national baselines.</p>
+    `,
+    lenderCalloutHtml: `
+        <p>Illinois restaurant SBA lending is diverse without a single dominant player. <strong>The Huntington National Bank leads with 62 loans</strong>, reflecting its national restaurant SBA specialty leadership applied to the Illinois market. Byline Bank (43 loans) is the notable Chicago-headquartered player -- a strong regional bank with dedicated Chicago restaurant SBA relationships. Chase (39 loans), M&T (37 loans), and Readycap (33 loans) round out the top five.</p>
+        <p>For Illinois restaurant buyers, the practical takeaway: match to specialist SBA platforms (Huntington, Readycap, Newtek) for national-scale process, or to Byline Bank if the deal fits Chicago-metro relationships and mid-sized deal size. Generalist branches unfamiliar with Illinois restaurant-specific charge-off drivers sometimes miss cost modeling.</p>
+    `,
+    cityLinks: [
+        { name: 'Chicago', href: '/business-loans/chicago-il' },
+        { name: 'Aurora', href: '/business-loans/aurora-il' },
+        { name: 'Naperville', href: '/business-loans/naperville-il' },
+        { name: 'Rockford', href: '/business-loans/rockford-il' },
+        { name: 'Springfield', href: '/business-loans/springfield-il' },
+        { name: 'Peoria', href: '/business-loans/peoria-il' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Illinois restaurant situation?",opts:[{v:"acquisition",l:"Acquiring an existing IL restaurant"},{v:"new-independent",l:"Opening a new independent concept"},{v:"franchise",l:"Franchise concept (IL location)"},{v:"expansion",l:"Expansion or additional IL location"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"equipment",l:"Kitchen or FOH equipment"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-3m",l:"$1M - $3M"},{v:"3m-plus",l:"$3M+"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-plus",l:"720+"}]},
+        ],
+        profiles: {
+            A: { badge: "Strong IL acquisition candidate", headline: "You're in the IL restaurant SBA specialist sweet spot", body: "Acquiring an established Illinois restaurant with strong credit is a standard specialist-SBA-lender file. Huntington, Byline (Chicago-HQ'd), Chase, and Readycap all carry meaningful IL restaurant volume. Match to a lender that models Illinois cost structure explicitly rather than applying national baselines. Plan 60-90 days to close.", ctaLabel: "Match with Illinois restaurant SBA lenders", utmContent: "profile-a-il-acquisition" },
+            B: { badge: "IL buildout or expansion", headline: "SBA 7(a) with an IL-experienced lender", body: "Illinois buildout costs, labor structure, and licensing timelines affect underwriting -- specialist lenders build Illinois baselines into pro formas. Byline Bank is particularly strong on Chicago-metro relationships; Huntington and Readycap handle the SBA-specialist process at scale statewide.", ctaLabel: "Match with IL-restaurant-experienced SBA lenders", utmContent: "profile-b-il-buildout" },
+            C: { badge: "Franchise path", headline: "Franchise route -- see the franchise-specific guide", body: "Illinois franchise restaurant SBA files underwrite differently from independents and benefit from brand-level shortcuts if the concept is in the SBA Franchise Directory. Suburban IL and non-Chicago metros carry meaningful franchise volume. See our SBA franchise loan guide for full treatment.", ctaLabel: "See SBA franchise details", utmContent: "profile-c-il-franchise", ctaUrl: "/sba-loans/franchise/" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],credit=a[3];if(sit==='franchise')return 'C';if(use==='buildout'||use==='multiple'||sit==='expansion')return 'B';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a restaurant in Illinois?",a:"Yes. Illinois is the sixth-largest single-state restaurant SBA market -- 696 loans FY2020-2025 representing 4.3% of national restaurant SBA volume, growing at +32.8% year-over-year. SBA 7(a) covers acquisitions, buildouts, equipment, and working capital. Average IL restaurant SBA loan is approximately $556K."},
+        {q:"Why does Illinois restaurant SBA charge off above the average?",a:"IL restaurant SBA charges off at 2.16% -- 1.59x the SBA cross-industry average and meaningfully above the national restaurant rate of 1.21%. Drivers: Chicago commercial rent pressure, Illinois labor cost structure ($15/hr minimum wage), Cook County and Chicago-specific business taxes, and alcohol licensing complexity on acquisition files. Individual files with strong unit economics still underwrite favorably -- the aggregate reflects state-level averaging."},
+        {q:"Which SBA lenders are most active in Illinois restaurant lending?",a:"The Huntington National Bank leads with 62 IL restaurant loans, Byline Bank (Chicago-headquartered) holds #2 at 43 loans, JPMorgan Chase third at 39, M&T fourth at 37, and Readycap fifth at 33. Byline is the notable regional player -- a Chicago-based bank with dedicated IL restaurant SBA relationships."},
+        {q:"How does Chicago's cost structure affect SBA restaurant underwriting?",a:"Three factors: rent-to-sales ratios in dense Chicago neighborhoods running well above the 6-10% national benchmark; labor costs including $15/hr minimum wage and Chicago-specific fair-workweek scheduling rules; and Cook County / Chicago tax overhead (personal property replacement tax, Chicago liquor tax on gross alcohol sales) that compress margins. Specialist IL lenders model these explicitly; generalist banks unfamiliar with Chicago market context sometimes over-project margins."},
+        {q:"How long does an SBA loan take to close for an Illinois restaurant?",a:"60-90 days is typical for a Standard 7(a) acquisition or buildout with a Preferred Lender experienced in Illinois. Files including Chicago liquor license transfers can add 45-90 days depending on license type and Alderman review requirements in the ward. Byline Bank tends to close Chicago-metro deals on schedule given local relationships; generalist banks unfamiliar with Illinois timing routinely extend timelines."},
+    ],
+},
+
+'722511_GA': {
+    naicsCode: '722511', state: 'GA', industryParentSlug: 'restaurants',
+    industryLabel: 'restaurants', industryLabelCap: 'Restaurants', industryLabelCapSingular: 'Restaurant',
+    stateSlug: 'georgia', stateName: 'Georgia', campaignSlug: 'sba-restaurants-georgia-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Restaurant interior with modern dining room, representative of Georgia restaurants that use SBA financing', width: 1200, height: 800, photographer: 'Life Of Pix', photographerUrl: 'https://www.pexels.com/@life-of-pix/', sourceUrl: 'https://www.pexels.com/photo/1267320/', sourceName: 'Pexels' },
+    communityBankNames: [],
+    title: 'SBA Loans for Restaurants in Georgia 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Georgia restaurants. 612 GA restaurant SBA loans FY2020-2025 ($452M), 0.84x SBA charge-off average. $738K avg deal size -- Atlanta-metro-heavy market.',
+    heroSub: 'Georgia is the eighth-largest state for restaurant SBA lending, with a distinctive profile: <strong>average deal sizes of $738K</strong> (well above the $528K national average) and charge-off performance meaningfully <strong>below</strong> SBA average. Atlanta-metro concentration drives both.',
+    serviceDescription: 'My Money Marketplace helps Georgia restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Georgia restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Georgia restaurant SBA lending shows an unusual profile among the top-tier states: <strong>612 loans FY2020-2025 (3.7% national share) at $738K average deal size -- 40% above the national restaurant baseline of $528K</strong>. The larger typical deal size reflects Atlanta-metro concentration on full-service concepts, higher-ticket acquisitions, and a share of real-estate-combined deals in metro Atlanta commercial corridors.</p>
+        <p>Growth has softened -6.9% YoY from the FY2020-2024 base, but the underlying performance profile is strong.</p>
+        <h3>Metro distribution: Atlanta dominates, secondary markets scale down cleanly</h3>
+        <p>Atlanta and the surrounding metro carry roughly 70% of Georgia restaurant SBA volume. Savannah, Augusta, Columbus, Macon, and Athens add meaningful secondary volume with smaller typical deal sizes and shorter close timelines.</p>
+        <h3>Charge-off runs 0.84&times; SBA average -- a clean-performance market</h3>
+        <p>Georgia restaurant SBA charges off at <strong>1.14% -- 0.84&times; the SBA cross-industry average of 1.36% and slightly below the national restaurant rate of 1.21%</strong>. Drivers of favorable performance: Georgia's business-friendly regulatory environment (federal minimum wage applies, no state overtime beyond FLSA), lower commercial rent than higher-cost states outside downtown Atlanta, and a borrower mix skewing toward experienced operators on larger-ticket deals.</p>
+        <h3>Georgia regulatory context</h3>
+        <ul>
+            <li><strong>Federal minimum wage applies</strong> statewide ($7.25/hr, tipped wage $2.13 minimum plus tips). Labor as a percentage of revenue runs meaningfully below Northeast and West Coast baselines.</li>
+            <li><strong>Alcohol licensing at the local level</strong> (city or county) -- Atlanta license transfers are relatively fast (30-60 days) versus other major markets.</li>
+            <li><strong>Georgia state corporate income tax</strong> at 5.75% on C-corp income; personal income tax on pass-throughs runs 1-5.75%. Reasonable operator personal cash flow modeling.</li>
+            <li><strong>Commercial rent</strong> in downtown Atlanta and highly-desirable neighborhoods (Buckhead, Midtown) reaches high-cost-market levels; suburban Atlanta and secondary metros run substantially cheaper.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>Georgia's restaurant SBA lender mix shows strong national-platform coverage. <strong>The Huntington National Bank leads with 55 Georgia restaurant loans</strong>. Newtek Bank (30 loans), Live Oak (28), and Readycap (25) round out the specialist-SBA-platform top four. Bank of America (23), Wells Fargo (20), and Newtek Small Business Finance (18) provide additional large-bank coverage. Truist (16) and PNC (14) round out the top ten.</p>
+        <p>For Georgia restaurant buyers, the practical takeaway: strong national-specialist SBA platform coverage plus solid major-bank options. Atlanta's larger deal size profile fits specialist lenders well; secondary-market smaller deals can go through the national Small Loan process cleanly.</p>
+    `,
+    cityLinks: [
+        { name: 'Atlanta', href: '/business-loans/atlanta-ga' },
+        { name: 'Savannah', href: '/business-loans/savannah-ga' },
+        { name: 'Columbus', href: '/business-loans/columbus-ga' },
+        { name: 'Macon', href: '/business-loans/macon-ga' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Georgia restaurant situation?",opts:[{v:"acquisition",l:"Acquiring an existing GA restaurant"},{v:"new-independent",l:"Opening a new independent concept"},{v:"franchise",l:"Franchise concept (GA location)"},{v:"expansion",l:"Expansion or additional GA location"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate",l:"Real estate purchase"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"equipment",l:"Kitchen or FOH equipment"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-3m",l:"$1M - $3M"},{v:"3m-plus",l:"$3M+"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-plus",l:"720+"}]},
+        ],
+        profiles: {
+            A: { badge: "Strong GA acquisition candidate", headline: "You're in the Georgia restaurant SBA sweet spot", body: "Georgia restaurant SBA has clean performance economics (1.14% charge-off, well below SBA average) and strong lender coverage. Acquiring an established GA restaurant with meaningful equity fits Huntington, Newtek, Live Oak, and Readycap's underwriting sweet spot. Atlanta metro deals run larger on average; secondary-metro files close faster. Plan 60-90 days.", ctaLabel: "Match with Georgia restaurant SBA lenders", utmContent: "profile-a-ga-acquisition" },
+            B: { badge: "GA real estate + operating business", headline: "504 for the real estate, 7(a) for the business", body: "When the Georgia restaurant deal includes buying the building, SBA 504 handles the real estate portion at fixed long-term rates while 7(a) covers the operating business. Combined structure typical on larger Atlanta-metro deals and often more attractive than conventional financing on both pieces. Plan 75-120 days for combined closings.", ctaLabel: "Match with 504 + 7(a) GA restaurant lenders", utmContent: "profile-b-ga-real-estate" },
+            C: { badge: "Franchise path", headline: "Franchise route -- see the franchise-specific guide", body: "Georgia franchise restaurant SBA files underwrite differently from independents. Atlanta suburbs and secondary-metro Georgia markets carry meaningful franchise volume. Brand-level shortcuts apply if the concept is in the SBA Franchise Directory. See our SBA franchise loan guide.", ctaLabel: "See SBA franchise details", utmContent: "profile-c-ga-franchise", ctaUrl: "/sba-loans/franchise/" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],credit=a[3];if(sit==='franchise')return 'C';if(use==='real-estate')return 'B';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a restaurant in Georgia?",a:"Yes. Georgia is the eighth-largest single-state restaurant SBA market -- 612 loans FY2020-2025 representing 3.7% of national restaurant SBA volume. Deal sizes average $738K (well above the $528K national baseline), reflecting Atlanta-metro concentration on full-service and real-estate-combined concepts. Standard SBA 7(a) minimum 10% equity injection applies."},
+        {q:"Why does Georgia restaurant SBA charge off below the average?",a:"GA restaurant SBA charges off at 1.14% -- 0.84x the SBA cross-industry average and slightly below the national restaurant rate of 1.21%. Drivers: Georgia's business-friendly regulatory environment (federal minimum wage applies, no state overtime beyond FLSA), lower commercial rent than high-cost states outside downtown Atlanta, and a borrower mix skewing toward experienced operators on larger-ticket deals."},
+        {q:"Which SBA lenders are most active in Georgia restaurant lending?",a:"The Huntington National Bank leads with 55 Georgia restaurant loans. Newtek Bank (30), Live Oak Banking (28), and Readycap Lending (25) round out the specialist-SBA-platform top four. Bank of America (23), Wells Fargo (20), Newtek Small Business Finance (18), Truist (16), and PNC (14) fill out the top ten with major-bank coverage."},
+        {q:"How does Atlanta commercial real estate affect SBA restaurant deals?",a:"Downtown Atlanta and highly-desirable neighborhoods (Buckhead, Midtown, Virginia-Highland) reach high-cost-market rent levels that push rent-to-sales toward the top of the 6-10% national benchmark. Suburban Atlanta and secondary Georgia metros run substantially cheaper, giving operators more margin room. SBA 504 real-estate-combined structures are relatively common on larger Atlanta-metro deals as operators pursue building ownership."},
+        {q:"How long does an SBA loan take to close for a Georgia restaurant?",a:"60-90 days is typical for a standard SBA 7(a) acquisition or buildout with a Preferred Lender. Deals including commercial real estate via SBA 504 plus 7(a) companion typically run 75-120 days. Atlanta local-level liquor license transfers add 30-60 days; secondary Georgia markets often faster. Preferred Lenders experienced in Georgia close on schedule."},
+    ],
+},
+
+'722511_NJ': {
+    naicsCode: '722511', state: 'NJ', industryParentSlug: 'restaurants',
+    industryLabel: 'restaurants', industryLabelCap: 'Restaurants', industryLabelCapSingular: 'Restaurant',
+    stateSlug: 'new-jersey', stateName: 'New Jersey', campaignSlug: 'sba-restaurants-new-jersey-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Restaurant interior with modern dining room, representative of New Jersey restaurants that use SBA financing', width: 1200, height: 800, photographer: 'Life Of Pix', photographerUrl: 'https://www.pexels.com/@life-of-pix/', sourceUrl: 'https://www.pexels.com/photo/1267320/', sourceName: 'Pexels' },
+    communityBankNames: [],
+    title: 'SBA Loans for Restaurants in New Jersey 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for New Jersey restaurants. 602 NJ restaurant SBA loans FY2020-2025 ($410M), $681K avg deal size, 0.74x SBA charge-off average. NY-metro-adjacent market with clean performance.',
+    heroSub: 'New Jersey is the ninth-largest state for restaurant SBA lending, with a distinctive profile: <strong>average deal sizes of $681K</strong> (well above national baseline) and charge-off performance <strong>meaningfully below</strong> SBA average. NY-metro-adjacent market with cleaner performance than NY itself.',
+    serviceDescription: 'My Money Marketplace helps New Jersey restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in NJ restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>New Jersey restaurant SBA lending shows an unusually favorable profile among Northeast states: <strong>602 loans FY2020-2025 (3.7% national share), $410M in approved capital, and growing +19% YoY</strong>. Average deal size runs $681K, 29% above the national restaurant baseline of $528K, reflecting NJ's mix of NYC-suburb restaurants, Jersey Shore full-service concepts, and Philadelphia-metro South Jersey markets.</p>
+        <h3>Metro distribution: NYC-metro, Jersey Shore, and Philadelphia-metro all contribute</h3>
+        <p>Northern NJ (NYC-metro adjacent counties: Bergen, Essex, Hudson, Passaic) carries the largest share of NJ restaurant SBA volume, followed by Central NJ (Middlesex, Monmouth, Ocean) with meaningful Jersey Shore restaurant activity. Southern NJ (Camden, Burlington, Gloucester) rounds out the picture with Philadelphia-metro-adjacent operations.</p>
+        <h3>Charge-off runs 0.74&times; SBA average -- clean performance</h3>
+        <p>NJ restaurant SBA charges off at <strong>1.00% -- 0.74&times; the SBA cross-industry average of 1.36% and materially below the national restaurant rate of 1.21%</strong>. This is meaningfully cleaner than neighboring NY (1.70%). Drivers: NJ's more affordable-than-NYC cost structure combined with the same regional demand base, mature operator pool with intergenerational restaurant ownership patterns, and a Jersey Shore seasonal-tourism revenue stream that smooths overall portfolio performance.</p>
+        <h3>New Jersey regulatory context</h3>
+        <ul>
+            <li><strong>NJ minimum wage</strong> at $15.13/hr (2024) drives labor above federal baseline but below NY/CA levels. Tipped wage $5.62 (up from $2.13 federal).</li>
+            <li><strong>Alcohol licensing</strong> handled at the municipal level -- transfer timing 30-90 days depending on town, often faster than NYC.</li>
+            <li><strong>NJ state corporate business tax</strong> at 9% (highest bracket) on C-corp income; pass-through owners pay NJ personal income tax up to 10.75% at high brackets. Meaningful state tax overhead.</li>
+            <li><strong>Commercial rent</strong> in NYC-metro-adjacent counties runs substantially below NYC itself, giving restaurants meaningful margin room; Jersey Shore rents seasonal with peak summer premiums.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>New Jersey's restaurant SBA lender mix leans heavily on national platforms. <strong>Manufacturers and Traders Trust Company (M&T Bank) leads with 60 loans</strong>, reflecting M&T's small-loan-heavy restaurant SBA specialty across the Northeast. TD Bank (48 loans) and Northeast Bank (36) round out the specialist top three. The Huntington National Bank (35) and Readycap (24) add specialist-platform coverage.</p>
+        <p>Two NJ-connected regional banks appear meaningfully: <strong>Columbia Bank (13 loans) and Cross River Bank (10 loans)</strong>, both NJ-headquartered. For NJ restaurant buyers, national-specialist SBA platforms handle sub-$500K files well; the two NJ-based regionals fit relationship-driven larger files better.</p>
+    `,
+    cityLinks: [
+        { name: 'Newark', href: '/business-loans/newark-nj' },
+        { name: 'Jersey City', href: '/business-loans/jersey-city-nj' },
+        { name: 'Paterson', href: '/business-loans/paterson-nj' },
+        { name: 'Trenton', href: '/business-loans/trenton-nj' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your New Jersey restaurant situation?",opts:[{v:"acquisition",l:"Acquiring an existing NJ restaurant"},{v:"new-independent",l:"Opening a new independent concept"},{v:"franchise",l:"Franchise concept (NJ location)"},{v:"expansion",l:"Expansion or additional NJ location"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"equipment",l:"Kitchen or FOH equipment"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-3m",l:"$1M - $3M"},{v:"3m-plus",l:"$3M+"}]},
+            {q:"Personal credit score?",opts:[{v:"below-680",l:"Below 680"},{v:"680-719",l:"680-719"},{v:"720-plus",l:"720+"}]},
+        ],
+        profiles: {
+            A: { badge: "Strong NJ acquisition candidate", headline: "You're in the NJ restaurant SBA specialist sweet spot", body: "New Jersey restaurant SBA has clean performance economics (1.00% charge-off, well below SBA average) and strong specialist-platform coverage. M&T Bank, TD Bank, Northeast Bank, Huntington, and Readycap all carry meaningful NJ restaurant volume. Deal sizes run above national baselines. Plan 60-90 days to close.", ctaLabel: "Match with New Jersey restaurant SBA lenders", utmContent: "profile-a-nj-acquisition" },
+            B: { badge: "Larger NJ deal or NJ regional relationship", headline: "Columbia Bank or Cross River for relationship-driven files", body: "Larger NJ restaurant SBA files ($1M+) or files with existing NJ regional banking relationships benefit from Columbia Bank or Cross River Bank -- both NJ-headquartered with restaurant SBA programs. National specialists (Huntington, Newtek, Readycap) still work well; the NJ regionals add local underwriting knowledge and often close on schedule.", ctaLabel: "Match with NJ-restaurant-experienced SBA lenders", utmContent: "profile-b-nj-larger" },
+            C: { badge: "Franchise path", headline: "Franchise route -- see the franchise-specific guide", body: "NJ franchise restaurant SBA volume is meaningful across Northern, Central, and Southern NJ suburbs. Brand-level shortcuts apply if the concept is in the SBA Franchise Directory. See our SBA franchise loan guide for full treatment.", ctaLabel: "See SBA franchise details", utmContent: "profile-c-nj-franchise", ctaUrl: "/sba-loans/franchise/" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],credit=a[3];if(sit==='franchise')return 'C';if(amount==='1m-3m'||amount==='3m-plus')return 'B';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a restaurant in New Jersey?",a:"Yes. New Jersey is the ninth-largest single-state restaurant SBA market -- 602 loans FY2020-2025 representing 3.7% of national restaurant SBA volume. Deal sizes average $681K (29% above national baseline). Standard SBA 7(a) minimum 10% equity injection applies. NJ's charge-off performance is meaningfully cleaner than neighboring NY."},
+        {q:"Why does New Jersey restaurant SBA charge off below the average?",a:"NJ restaurant SBA charges off at 1.00% -- 0.74x the SBA cross-industry average and materially below the national restaurant rate of 1.21%. This is significantly cleaner than neighboring NY (1.70%). Drivers: more affordable-than-NYC cost structure combined with NY-metro demand, mature operator pool with intergenerational ownership, and Jersey Shore seasonal-tourism revenue that smooths portfolio performance."},
+        {q:"Which SBA lenders are most active in New Jersey restaurant lending?",a:"M&T Bank leads with 60 NJ restaurant loans. TD Bank second (48), Northeast Bank third (36), Huntington fourth (35), Readycap fifth (24). Two NJ-headquartered regionals appear meaningfully: Columbia Bank (13) and Cross River Bank (10). National specialists dominate sub-$500K files; NJ regionals fit relationship-driven larger files."},
+        {q:"What NJ-specific factors affect SBA restaurant underwriting?",a:"Three factors: NJ state corporate business tax at 9% (highest bracket) plus NJ personal income tax up to 10.75% on pass-through owners, requiring careful post-close cash flow modeling; NJ minimum wage at $15.13/hr; and municipal-level alcohol licensing where transfer timing varies widely by town (30-90 days). Commercial rent runs meaningfully below NYC in adjacent NJ counties, giving NJ files meaningful margin room."},
+        {q:"How does the Jersey Shore seasonality affect SBA restaurant underwriting?",a:"Jersey Shore restaurants (Ocean, Monmouth, Cape May counties) run peak-summer revenue concentrations similar to Florida coastal patterns. Lenders model shoulder-season working-capital needs explicitly on shore files. Files that budget for the off-season gap underwrite cleanly; files assuming flat annual revenue face restructuring."},
+    ],
+},
+
+'621210_TX': {
+    naicsCode: '621210', state: 'TX', industryParentSlug: 'dentists',
+    industryLabel: 'dental practices', industryLabelCap: 'Dental Practices', industryLabelCapSingular: 'Dental Practice',
+    stateSlug: 'texas', stateName: 'Texas', campaignSlug: 'sba-dentists-texas-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Modern dental operatory with chair and imaging equipment, representative of Texas dental practices financed through SBA 7(a) loans', width: 1200, height: 800, photographer: 'Daniel Frank', photographerUrl: 'https://www.pexels.com/@fr3nks/', sourceUrl: 'https://www.pexels.com/photo/3845810/', sourceName: 'Pexels' },
+    communityBankNames: ['Live Oak Banking Company'],
+    title: 'SBA Loans for Dental Practices in Texas 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Texas dental practices. 399 TX dental SBA loans approved FY2020-2025 ($413M), $1.04M avg loan, ZERO charge-offs across the entire portfolio.',
+    heroSub: 'Texas dental practice SBA lending has one of the strongest performance profiles in the entire SBA dataset: <strong>zero charge-offs across 399 loans FY2020-2025</strong>, $1.04 million average loan size, and +16% YoY growth. Second-largest state for dental SBA behind California.',
+    serviceDescription: 'My Money Marketplace helps Texas dentists and dental-practice buyers compare SBA 7(a) and 504 options and get matched with specialist lenders experienced in Texas dental practice acquisition underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Texas dental practice SBA lending is the second-largest single-state dental market behind California, with a distinctive performance profile: <strong>399 loans approved FY2020-2025 representing 9.8% of national dental SBA volume, $413 million in total approved capital, and zero charge-offs</strong>. Average deal size is approximately $1.04 million, roughly in line with California's $1.05M and reflecting the acquisition-heavy nature of dental SBA lending.</p>
+        <h3>Why Texas dental SBA performs so well</h3>
+        <p>The zero-charge-off performance reflects three structural drivers: dental practice acquisitions (with verified revenue history) are the dominant use case, recurring insurance-backed revenue creates predictable cash flow, and licensed-professional operators with standardized income verification provide operator-side underwriting certainty. Texas amplifies each: population growth expanding patient base, no state income tax improving operator personal financial modeling, and business-friendly regulatory environment.</p>
+        <h3>Metro distribution: DFW, Houston, Austin, San Antonio dominate</h3>
+        <p>The same four major metros driving Texas SBA volume in other industries drive dental: Dallas-Fort Worth, Houston, Austin, and San Antonio. Austin punches above its population weight driven by tech-employment-fueled patient base growth. Secondary markets (El Paso, Corpus Christi, Rio Grande Valley, Lubbock) add meaningful volume with smaller typical deal sizes.</p>
+        <h3>Texas regulatory context for dental practice SBA</h3>
+        <ul>
+            <li><strong>Texas State Board of Dental Examiners</strong> handles licensing statewide; license transfers on acquisition files are relatively fast. Only licensed Texas dentists (or professional dental corporations owned by licensed dentists) can own and operate Texas dental practices.</li>
+            <li><strong>No state income tax</strong> improves personal financial modeling on operator-guarantors -- personal cash flow available to support the loan looks stronger than equivalent income in a high-tax state.</li>
+            <li><strong>Texas Franchise Tax</strong> applies above $2.47M revenue at 0.375% (retail/wholesale) or 0.75% (most other industries) on taxable margin. Below threshold, no franchise tax due. Most dental practices under the threshold.</li>
+            <li><strong>Commercial real estate</strong> for medical-corridor dental offices runs meaningfully below California; DFW and Houston medical-district rent is real but manageable.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>Texas dental SBA lending is dominated by <strong>Live Oak Banking Company</strong>, the national dental-practice SBA specialist: <strong>Live Oak carries 89 Texas dental loans</strong> -- 22% of state volume by count -- with an average deal size of $1.79 million, well above the state average. Live Oak's Texas dental market share reflects their national leadership applied to a growing market.</p>
+        <p>U.S. Bank (37 loans), Wells Fargo (26), and BMO (22) hold the major-bank #2-#4 positions. Bank of America (21), PNC (15), and Readycap (14) round out the top ten. For a Texas dental practice buyer, Live Oak is the default specialist first call; U.S. Bank and Wells Fargo are strong alternatives on existing-banking-relationship files; specialist SBA platforms handle sub-$500K files well.</p>
+    `,
+    cityLinks: [
+        { name: 'Houston', href: '/business-loans/houston-tx' },
+        { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Austin', href: '/business-loans/austin-tx' },
+        { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'Fort Worth', href: '/business-loans/fort-worth-tx' },
+        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'Arlington', href: '/business-loans/arlington-tx' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Texas dental situation?",opts:[{v:"acquisition",l:"Acquiring an existing TX practice"},{v:"startup",l:"Starting a new practice"},{v:"real-estate",l:"Buying the practice building"},{v:"expansion",l:"Expansion or additional location"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate-use",l:"Real estate purchase"},{v:"equipment",l:"Equipment / technology upgrade"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-3m",l:"$1M - $3M"},{v:"3m-plus",l:"$3M+"}]},
+            {q:"Years since dental school graduation?",opts:[{v:"0-2",l:"0-2 years"},{v:"3-5",l:"3-5 years"},{v:"6-plus",l:"6+ years"}]},
+        ],
+        profiles: {
+            A: { badge: "Classic TX dental acquisition", headline: "Zero-charge-off market, strong lender coverage", body: "Texas dental SBA has zero charge-offs across the entire FY2020-2025 portfolio -- one of the cleanest markets in the SBA dataset. Live Oak Banking dominates as the national dental-specialty leader (89 TX loans, $1.79M average). U.S. Bank and Wells Fargo add strong major-bank alternatives. Plan 60-90 days to close.", ctaLabel: "Match with Texas dental SBA lenders", utmContent: "profile-a-tx-dental-acquisition" },
+            B: { badge: "Real estate + practice", headline: "SBA 504 for the building, 7(a) for the practice", body: "Texas dental deals including the office real estate benefit from SBA 504's fixed long-term rates on the real-estate portion. 7(a) companion covers the practice purchase, equipment, and working capital. Combined structure typical on larger TX deals. Plan 75-120 days to close.", ctaLabel: "Match with 504 + 7(a) TX dental lenders", utmContent: "profile-b-tx-dental-real-estate" },
+            C: { badge: "Startup / recent grad path", headline: "Startup files require more operator-profile support", body: "Texas dental startup files (new practice, 0-2 years post-graduation) require more underwriting detail than established-practice acquisitions. Lenders want associate experience at an existing practice, a detailed patient acquisition plan, and typically higher equity injection. Specialist dental lenders (Live Oak, U.S. Bank) handle these files.", ctaLabel: "Match with TX dental startup SBA lenders", utmContent: "profile-c-tx-dental-startup" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],exp=a[3];if(sit==='real-estate'||use==='real-estate-use')return 'B';if(sit==='startup'||exp==='0-2')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a dental practice in Texas?",a:"Yes. Texas is the second-largest single-state dental SBA market -- 399 loans FY2020-2025 representing 9.8% of national dental SBA volume and $413 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Texas dental SBA has zero charge-offs across the entire portfolio -- one of the cleanest performance profiles in the SBA dataset."},
+        {q:"Why does Texas dental SBA perform so well?",a:"National dental SBA charges off at 0.27% -- the lowest of any SBA industry category. Texas dental goes further with zero charge-offs across all 399 loans. Three structural drivers: dental practice acquisitions (verified revenue history, not speculative startups) dominate use cases, insurance-backed recurring revenue creates predictable cash flow, and licensed-professional operators provide underwriting certainty. Texas adds population growth expanding patient base and no state income tax improving operator financial modeling."},
+        {q:"What's the typical SBA dental loan size in Texas?",a:"Average Texas dental SBA loan is approximately $1.04 million, roughly in line with California's $1.05M. Deal sizes reflect the acquisition-heavy nature of dental SBA lending and the prevalence of practice-plus-real-estate combined structures in Texas medical-corridor commercial real estate."},
+        {q:"Which SBA lenders are most active in Texas dental lending?",a:"Live Oak Banking Company dominates with 89 Texas dental loans -- 22% of TX dental SBA volume by count -- with an average deal size of $1.79 million. Live Oak is the national dental-practice SBA specialist. U.S. Bank (37 loans), Wells Fargo (26), and BMO (22) hold the major-bank positions. Bank of America (21) and PNC (15) round out the top ten with generalist-branch coverage."},
+        {q:"Who can own a dental practice in Texas?",a:"Under Texas dental licensing law, only licensed Texas dentists (or professional dental corporations owned by licensed dentists) can own and operate Texas dental practices. Non-dentist operators and non-professional-corp ownership structures don't underwrite cleanly. Specialist Texas dental lenders confirm licensing and corporate-entity structure upfront."},
+        {q:"How long does an SBA loan take to close for a Texas dental practice?",a:"60-90 days is typical for a Texas dental practice acquisition with Live Oak or another specialist dental lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days. Startup practice files (recent grad, 0-2 years post-graduation) typically run 75-100 days given the extra operator-profile underwriting."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────

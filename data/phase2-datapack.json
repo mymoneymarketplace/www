@@ -1,0 +1,802 @@
+{
+  "restaurants/NY": {
+    "loans": 1057,
+    "total_m": "433.0",
+    "avg_k": 410,
+    "median_k": 150,
+    "co": 1.7,
+    "co_ratio": 1.25,
+    "share": 6.46,
+    "yoy": 10.17,
+    "nat_loans": 16355,
+    "nat_avg_k": 528,
+    "nat_co": 1.21,
+    "top_lenders": [
+      {
+        "name": "Manufacturers and Traders Trust Company",
+        "count": 170,
+        "avg": 95
+      },
+      {
+        "name": "TD Bank, National Association",
+        "count": 99,
+        "avg": 160
+      },
+      {
+        "name": "KeyBank National Association",
+        "count": 63,
+        "avg": 132
+      },
+      {
+        "name": "NewBank",
+        "count": 55,
+        "avg": 796
+      },
+      {
+        "name": "Northeast Bank",
+        "count": 53,
+        "avg": 162
+      }
+    ]
+  },
+  "restaurants/IL": {
+    "loans": 696,
+    "total_m": "386.8",
+    "avg_k": 556,
+    "median_k": 250,
+    "co": 2.16,
+    "co_ratio": 1.59,
+    "share": 4.26,
+    "yoy": 32.82,
+    "nat_loans": 16355,
+    "nat_avg_k": 528,
+    "nat_co": 1.21,
+    "top_lenders": [
+      {
+        "name": "The Huntington National Bank",
+        "count": 209,
+        "avg": 249
+      },
+      {
+        "name": "Byline Bank",
+        "count": 43,
+        "avg": 1148
+      },
+      {
+        "name": "Northeast Bank",
+        "count": 34,
+        "avg": 144
+      },
+      {
+        "name": "U.S. Bank, National Association",
+        "count": 33,
+        "avg": 137
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 32,
+        "avg": 335
+      }
+    ]
+  },
+  "restaurants/GA": {
+    "loans": 612,
+    "total_m": "451.7",
+    "avg_k": 738,
+    "median_k": 500,
+    "co": 1.14,
+    "co_ratio": 0.84,
+    "share": 3.74,
+    "yoy": -6.92,
+    "nat_loans": 16355,
+    "nat_avg_k": 528,
+    "nat_co": 1.21,
+    "top_lenders": [
+      {
+        "name": "Metro City Bank",
+        "count": 31,
+        "avg": 1119
+      },
+      {
+        "name": "Readycap Lending, LLC",
+        "count": 27,
+        "avg": 539
+      },
+      {
+        "name": "Bank of Hope",
+        "count": 26,
+        "avg": 977
+      },
+      {
+        "name": "Cadence Bank",
+        "count": 25,
+        "avg": 512
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 25,
+        "avg": 290
+      }
+    ]
+  },
+  "restaurants/NJ": {
+    "loans": 602,
+    "total_m": "409.8",
+    "avg_k": 681,
+    "median_k": 350,
+    "co": 1,
+    "co_ratio": 0.74,
+    "share": 3.68,
+    "yoy": 18.97,
+    "nat_loans": 16355,
+    "nat_avg_k": 528,
+    "nat_co": 1.21,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 75,
+        "avg": 202
+      },
+      {
+        "name": "Manufacturers and Traders Trust Company",
+        "count": 36,
+        "avg": 87
+      },
+      {
+        "name": "Wilmington Savings Fund Society FSB",
+        "count": 30,
+        "avg": 963
+      },
+      {
+        "name": "Northeast Bank",
+        "count": 29,
+        "avg": 175
+      },
+      {
+        "name": "Brookline Bank, a Division of Beacon Bank and Trust",
+        "count": 28,
+        "avg": 1414
+      }
+    ]
+  },
+  "dentists/TX": {
+    "loans": 399,
+    "total_m": "413.0",
+    "avg_k": 1035,
+    "median_k": 634,
+    "co": 0,
+    "co_ratio": 0,
+    "share": 9.8,
+    "yoy": 16.13,
+    "nat_loans": 4070,
+    "nat_avg_k": 910,
+    "nat_co": 0.27,
+    "top_lenders": [
+      {
+        "name": "Live Oak Banking Company",
+        "count": 48,
+        "avg": 2315
+      },
+      {
+        "name": "United Community Bank",
+        "count": 35,
+        "avg": 1258
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 34,
+        "avg": 759
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 18,
+        "avg": 165
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 17,
+        "avg": 582
+      }
+    ]
+  },
+  "dentists/FL": {
+    "loans": 304,
+    "total_m": "288.5",
+    "avg_k": 949,
+    "median_k": 638,
+    "co": 0.33,
+    "co_ratio": 0.24,
+    "share": 7.47,
+    "yoy": -6.25,
+    "nat_loans": 4070,
+    "nat_avg_k": 910,
+    "nat_co": 0.27,
+    "top_lenders": [
+      {
+        "name": "Live Oak Banking Company",
+        "count": 43,
+        "avg": 1664
+      },
+      {
+        "name": "Bank of America, National Association",
+        "count": 40,
+        "avg": 700
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 31,
+        "avg": 1178
+      },
+      {
+        "name": "TD Bank, National Association",
+        "count": 25,
+        "avg": 332
+      },
+      {
+        "name": "United Community Bank",
+        "count": 20,
+        "avg": 1610
+      }
+    ]
+  },
+  "physicians/CA": {
+    "loans": 549,
+    "total_m": "471.2",
+    "avg_k": 858,
+    "median_k": 500,
+    "co": 0.36,
+    "co_ratio": 0.26,
+    "share": 13.77,
+    "yoy": 32.63,
+    "nat_loans": 3986,
+    "nat_avg_k": 602,
+    "nat_co": 0.68,
+    "top_lenders": [
+      {
+        "name": "U.S. Bank, National Association",
+        "count": 69,
+        "avg": 925
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 48,
+        "avg": 949
+      },
+      {
+        "name": "JPMorgan Chase Bank, National Association",
+        "count": 39,
+        "avg": 497
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 26,
+        "avg": 646
+      },
+      {
+        "name": "Bank of America, National Association",
+        "count": 24,
+        "avg": 863
+      }
+    ]
+  },
+  "physicians/TX": {
+    "loans": 444,
+    "total_m": "344.8",
+    "avg_k": 777,
+    "median_k": 400,
+    "co": 1.35,
+    "co_ratio": 0.99,
+    "share": 11.14,
+    "yoy": 9.89,
+    "nat_loans": 3986,
+    "nat_avg_k": 602,
+    "nat_co": 0.68,
+    "top_lenders": [
+      {
+        "name": "The Huntington National Bank",
+        "count": 36,
+        "avg": 423
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 33,
+        "avg": 457
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 29,
+        "avg": 988
+      },
+      {
+        "name": "Bank of America, National Association",
+        "count": 22,
+        "avg": 587
+      },
+      {
+        "name": "PNC Bank, National Association",
+        "count": 21,
+        "avg": 1634
+      }
+    ]
+  },
+  "physicians/FL": {
+    "loans": 415,
+    "total_m": "313.0",
+    "avg_k": 754,
+    "median_k": 425,
+    "co": 1.69,
+    "co_ratio": 1.24,
+    "share": 10.41,
+    "yoy": -11.34,
+    "nat_loans": 3986,
+    "nat_avg_k": 602,
+    "nat_co": 0.68,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 48,
+        "avg": 409
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 41,
+        "avg": 879
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 28,
+        "avg": 366
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 18,
+        "avg": 604
+      },
+      {
+        "name": "JPMorgan Chase Bank, National Association",
+        "count": 16,
+        "avg": 257
+      }
+    ]
+  },
+  "plumbing-hvac/CA": {
+    "loans": 652,
+    "total_m": "321.6",
+    "avg_k": 493,
+    "median_k": 200,
+    "co": 1.53,
+    "co_ratio": 1.13,
+    "share": 10.64,
+    "yoy": 0,
+    "nat_loans": 6128,
+    "nat_avg_k": 438,
+    "nat_co": 1.32,
+    "top_lenders": [
+      {
+        "name": "U.S. Bank, National Association",
+        "count": 166,
+        "avg": 168
+      },
+      {
+        "name": "JPMorgan Chase Bank, National Association",
+        "count": 53,
+        "avg": 299
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 38,
+        "avg": 1029
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 29,
+        "avg": 295
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 29,
+        "avg": 810
+      }
+    ]
+  },
+  "plumbing-hvac/FL": {
+    "loans": 552,
+    "total_m": "294.8",
+    "avg_k": 534,
+    "median_k": 241,
+    "co": 2.36,
+    "co_ratio": 1.74,
+    "share": 9.01,
+    "yoy": -10.87,
+    "nat_loans": 6128,
+    "nat_avg_k": 438,
+    "nat_co": 1.32,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 78,
+        "avg": 100
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 41,
+        "avg": 889
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 36,
+        "avg": 300
+      },
+      {
+        "name": "Bank of America, National Association",
+        "count": 25,
+        "avg": 406
+      },
+      {
+        "name": "United Midwest Savings Bank National Association",
+        "count": 24,
+        "avg": 339
+      }
+    ]
+  },
+  "plumbing-hvac/TX": {
+    "loans": 448,
+    "total_m": "229.1",
+    "avg_k": 511,
+    "median_k": 250,
+    "co": 1.34,
+    "co_ratio": 0.99,
+    "share": 7.31,
+    "yoy": 9.28,
+    "nat_loans": 6128,
+    "nat_avg_k": 438,
+    "nat_co": 1.32,
+    "top_lenders": [
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 29,
+        "avg": 215
+      },
+      {
+        "name": "JPMorgan Chase Bank, National Association",
+        "count": 26,
+        "avg": 195
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 26,
+        "avg": 382
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 25,
+        "avg": 670
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 23,
+        "avg": 878
+      }
+    ]
+  },
+  "child-care/TX": {
+    "loans": 575,
+    "total_m": "676.7",
+    "avg_k": 1177,
+    "median_k": 565,
+    "co": 0.17,
+    "co_ratio": 0.13,
+    "share": 11.32,
+    "yoy": 14.91,
+    "nat_loans": 5081,
+    "nat_avg_k": 807,
+    "nat_co": 0.51,
+    "top_lenders": [
+      {
+        "name": "Readycap Lending, LLC",
+        "count": 42,
+        "avg": 1455
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 27,
+        "avg": 850
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 27,
+        "avg": 3454
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 23,
+        "avg": 865
+      },
+      {
+        "name": "Bank Five Nine",
+        "count": 18,
+        "avg": 864
+      }
+    ]
+  },
+  "child-care/FL": {
+    "loans": 446,
+    "total_m": "404.9",
+    "avg_k": 908,
+    "median_k": 610,
+    "co": 0.22,
+    "co_ratio": 0.16,
+    "share": 8.78,
+    "yoy": 22.5,
+    "nat_loans": 5081,
+    "nat_avg_k": 807,
+    "nat_co": 0.51,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 31,
+        "avg": 358
+      },
+      {
+        "name": "American Momentum Bank",
+        "count": 17,
+        "avg": 1144
+      },
+      {
+        "name": "Gulf Coast Bank and Trust Company",
+        "count": 17,
+        "avg": 666
+      },
+      {
+        "name": "Bank of America, National Association",
+        "count": 16,
+        "avg": 609
+      },
+      {
+        "name": "Citizens Bank",
+        "count": 14,
+        "avg": 1080
+      }
+    ]
+  },
+  "auto-repair/CA": {
+    "loans": 656,
+    "total_m": "430.0",
+    "avg_k": 656,
+    "median_k": 400,
+    "co": 0.61,
+    "co_ratio": 0.45,
+    "share": 12.12,
+    "yoy": 13.04,
+    "nat_loans": 5413,
+    "nat_avg_k": 477,
+    "nat_co": 1,
+    "top_lenders": [
+      {
+        "name": "U.S. Bank, National Association",
+        "count": 93,
+        "avg": 432
+      },
+      {
+        "name": "Harvest Small Business Finance, LLC",
+        "count": 43,
+        "avg": 1054
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 42,
+        "avg": 1271
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 32,
+        "avg": 496
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 26,
+        "avg": 479
+      }
+    ]
+  },
+  "auto-repair/FL": {
+    "loans": 318,
+    "total_m": "175.8",
+    "avg_k": 553,
+    "median_k": 268,
+    "co": 2.83,
+    "co_ratio": 2.08,
+    "share": 5.87,
+    "yoy": 21.21,
+    "nat_loans": 5413,
+    "nat_avg_k": 477,
+    "nat_co": 1,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 55,
+        "avg": 154
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 39,
+        "avg": 268
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 16,
+        "avg": 601
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 15,
+        "avg": 1861
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 11,
+        "avg": 312
+      }
+    ]
+  },
+  "insurance-agencies/FL": {
+    "loans": 437,
+    "total_m": "267.2",
+    "avg_k": 611,
+    "median_k": 285,
+    "co": 0.46,
+    "co_ratio": 0.34,
+    "share": 10.28,
+    "yoy": 17.44,
+    "nat_loans": 4249,
+    "nat_avg_k": 478,
+    "nat_co": 1.06,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 50,
+        "avg": 103
+      },
+      {
+        "name": "Readycap Lending, LLC",
+        "count": 34,
+        "avg": 360
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 29,
+        "avg": 186
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 27,
+        "avg": 1107
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 21,
+        "avg": 330
+      }
+    ]
+  },
+  "insurance-agencies/CA": {
+    "loans": 427,
+    "total_m": "246.2",
+    "avg_k": 576,
+    "median_k": 300,
+    "co": 1.17,
+    "co_ratio": 0.86,
+    "share": 10.05,
+    "yoy": 22.5,
+    "nat_loans": 4249,
+    "nat_avg_k": 478,
+    "nat_co": 1.06,
+    "top_lenders": [
+      {
+        "name": "U.S. Bank, National Association",
+        "count": 48,
+        "avg": 470
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 30,
+        "avg": 173
+      },
+      {
+        "name": "Live Oak Banking Company",
+        "count": 29,
+        "avg": 978
+      },
+      {
+        "name": "Readycap Lending, LLC",
+        "count": 23,
+        "avg": 380
+      },
+      {
+        "name": "United Midwest Savings Bank National Association",
+        "count": 19,
+        "avg": 786
+      }
+    ]
+  },
+  "landscaping/FL": {
+    "loans": 417,
+    "total_m": "196.2",
+    "avg_k": 471,
+    "median_k": 222,
+    "co": 3.84,
+    "co_ratio": 2.82,
+    "share": 6.99,
+    "yoy": -1.15,
+    "nat_loans": 5962,
+    "nat_avg_k": 303,
+    "nat_co": 1.22,
+    "top_lenders": [
+      {
+        "name": "TD Bank, National Association",
+        "count": 51,
+        "avg": 77
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 37,
+        "avg": 383
+      },
+      {
+        "name": "United Midwest Savings Bank National Association",
+        "count": 26,
+        "avg": 185
+      },
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 25,
+        "avg": 306
+      },
+      {
+        "name": "BayFirst National Bank",
+        "count": 21,
+        "avg": 293
+      }
+    ]
+  },
+  "beauty-salons/TX": {
+    "loans": 369,
+    "total_m": "106.1",
+    "avg_k": 288,
+    "median_k": 161,
+    "co": 1.08,
+    "co_ratio": 0.79,
+    "share": 7.33,
+    "yoy": 124.53,
+    "nat_loans": 5033,
+    "nat_avg_k": 208,
+    "nat_co": 1.55,
+    "top_lenders": [
+      {
+        "name": "Newtek Bank, National Association",
+        "count": 27,
+        "avg": 381
+      },
+      {
+        "name": "The Huntington National Bank",
+        "count": 24,
+        "avg": 219
+      },
+      {
+        "name": "Readycap Lending, LLC",
+        "count": 24,
+        "avg": 67
+      },
+      {
+        "name": "Wells Fargo Bank National Association",
+        "count": 22,
+        "avg": 170
+      },
+      {
+        "name": "Northeast Bank",
+        "count": 22,
+        "avg": 65
+      }
+    ]
+  }
+}

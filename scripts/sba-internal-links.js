@@ -124,6 +124,14 @@ const STATE_INDUSTRIES = {
           rationale: 'the fastest-growing restaurant SBA market (+42.6% YoY) and second-largest state by volume' },
         { slug: 'florida',    label: 'Florida',    href: '/sba-loans/restaurants/florida',
           rationale: 'the fourth-largest restaurant SBA state with distinctive hurricane, seasonality, and insurance underwriting factors' },
+        { slug: 'new-york',   label: 'New York',   href: '/sba-loans/restaurants/new-york',
+          rationale: 'the third-largest restaurant SBA market by volume, with honest framing on above-average charge-off and NYC cost pressures' },
+        { slug: 'illinois',   label: 'Illinois',   href: '/sba-loans/restaurants/illinois',
+          rationale: 'the sixth-largest restaurant SBA state with +33% YoY growth and honest framing on 1.59x SBA charge-off average' },
+        { slug: 'georgia',    label: 'Georgia',    href: '/sba-loans/restaurants/georgia',
+          rationale: 'the eighth-largest restaurant SBA state with clean performance (0.84x SBA charge-off) and $738K average deal size' },
+        { slug: 'new-jersey', label: 'New Jersey', href: '/sba-loans/restaurants/new-jersey',
+          rationale: 'the ninth-largest restaurant SBA state with the cleanest Northeast performance (0.74x SBA average charge-off)' },
     ],
     'auto-repair': [
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/auto-repair/texas',
@@ -132,6 +140,8 @@ const STATE_INDUSTRIES = {
     'dentists': [
         { slug: 'california', label: 'California', href: '/sba-loans/dentists/california',
           rationale: 'the largest dental SBA market in the US (18% national share) and the lowest-risk high-volume combination in the SBA dataset' },
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/dentists/texas',
+          rationale: 'the second-largest dental SBA state with zero charge-offs across all 399 loans FY2020-2025' },
     ],
     'veterinarians': [
         { slug: 'california', label: 'California', href: '/sba-loans/veterinarians/california',
