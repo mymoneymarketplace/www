@@ -21,6 +21,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const audit = require('./audit-module.js');
+const verifyLenderFacts = require('./verify-lender-facts.js').verifyPage;
 
 const ROOT = path.resolve(__dirname, '..');
 const BASELINE_PATH = path.join(ROOT, 'data', 'audit-baseline.json');
@@ -66,10 +67,39 @@ function main() {
 
     let totalBlockers = 0;
     let totalWarnings = 0;
+    let totalLenderFactErrors = 0;
 
     for (const abs of files) {
         const urlPath = audit.fileToUrlPath(abs, ROOT);
         const html = readStagedBlob(abs);
+
+        // Lender-fact verification for state × industry pages (any mismatch
+        // is a blocker — every bank name + count in the narrative must
+        // resolve against the FOIA top_lenders roster for the combo).
+        // Verifies the on-disk file rather than the staged blob; the two
+        // match in practice since pages get generated and staged in the
+        // same step. See scripts/verify-lender-facts.js for the extraction
+        // rules.
+        if (/^\/sba-loans\/[^/]+\/[^/]+\/?$/.test(urlPath)) {
+            try {
+                const lenderResult = verifyLenderFacts(abs, path.join(ROOT, 'data', 'industry-data.json'));
+                if (lenderResult.errors && lenderResult.errors.length > 0) {
+                    console.error(`\n[pre-commit-audit] LENDER FACT ERRORS on ${urlPath}:`);
+                    for (const e of lenderResult.errors) {
+                        if (e.kind === 'unknown-lender') {
+                            console.error(`  - ${e.token} (${e.claimed} loans): NOT in FOIA top_lenders roster`);
+                        } else {
+                            console.error(`  - ${e.token}: claimed ${e.claimed}, actual FOIA ${e.actual}`);
+                        }
+                        console.error(`    context: "…${e.context}…"`);
+                    }
+                    totalLenderFactErrors += lenderResult.errors.length;
+                }
+            } catch (e) {
+                console.warn(`[pre-commit-audit] lender-fact check skipped on ${urlPath}: ${e.message}`);
+            }
+        }
+
         const findings = audit.runChecks(html, {
             urlPath,
             urlSet,
@@ -92,8 +122,8 @@ function main() {
         }
     }
 
-    if (totalBlockers > 0) {
-        console.error(`\n[pre-commit-audit] Commit rejected. ${totalBlockers} blocking finding(s) across ${files.length} staged HTML file(s).`);
+    if (totalBlockers > 0 || totalLenderFactErrors > 0) {
+        console.error(`\n[pre-commit-audit] Commit rejected. ${totalBlockers} audit blocker(s) + ${totalLenderFactErrors} lender-fact error(s) across ${files.length} staged HTML file(s).`);
         console.error('Fix the issues above, re-stage, and commit again.');
         console.error('To bypass (dev only): SKIP_AUDIT=1 git commit ..., or git commit --no-verify.');
         return 1;
