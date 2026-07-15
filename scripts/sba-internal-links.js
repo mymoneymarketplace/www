@@ -142,6 +142,20 @@ const STATE_INDUSTRIES = {
           rationale: 'the largest dental SBA market in the US (18% national share) and the lowest-risk high-volume combination in the SBA dataset' },
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/dentists/texas/',
           rationale: 'the second-largest dental SBA state with zero charge-offs across all 399 loans FY2020-2025' },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/dentists/florida/',
+          rationale: 'the third-largest dental SBA state (7.5% national share) with $949K average deal size and 0.24x SBA charge-off performance' },
+    ],
+    'physicians': [
+        { slug: 'california', label: 'California', href: '/sba-loans/physicians/california/',
+          rationale: 'the largest physician SBA market in the US (13.8% national share) with 0.26x SBA charge-off performance and +32.6% YoY growth' },
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/physicians/texas/',
+          rationale: 'the second-largest physician SBA state (11.1% national share) with strong specialist lender coverage and no state income tax on operator personal-side underwriting' },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/physicians/florida/',
+          rationale: 'the third-largest physician SBA state (10.4% national share) with honest framing on 1.24x SBA charge-off average and Florida-specific payer-mix and insurance-cost underwriting' },
+    ],
+    'plumbing-hvac': [
+        { slug: 'california', label: 'California', href: '/sba-loans/plumbing-hvac/california/',
+          rationale: 'the largest plumbing/HVAC SBA state (10.6% national share) with U.S. Bank dominant (25% of state volume) and California-specific CSLB, labor, and workers-comp underwriting' },
     ],
     'veterinarians': [
         { slug: 'california', label: 'California', href: '/sba-loans/veterinarians/california/',
