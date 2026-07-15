@@ -80,7 +80,8 @@ const AMBIGUOUS_TOKENS = new Set(['Northeast', 'Chase', 'PNC']);
 function bankTokens(fullName) {
     const clean = fullName
         .replace(/^The\s+/i, '')
-        .replace(/,\s*(?:National Association|N\.A\.|Division of|Inc\.?|LLC|FSB)\b/gi, '')
+        // Strip corporate suffixes including the trailing period on "Inc."
+        .replace(/,\s*(?:National Association|N\.A\.|Division of|Inc\.?|LLC|FSB)\.?(?![A-Za-z])/gi, '')
         .replace(/\s+Bank\s+National\s+Association/gi, ' Bank')
         .replace(/\s+Banking\s+Company/gi, ' Banking Company')
         .replace(/\s+Bank\s+&\s+Trust,?\s+.*$/gi, ' Bank & Trust')

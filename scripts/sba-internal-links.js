@@ -134,8 +134,16 @@ const STATE_INDUSTRIES = {
           rationale: 'the ninth-largest restaurant SBA state with the cleanest Northeast performance (0.74x SBA average charge-off)' },
     ],
     'auto-repair': [
+        { slug: 'california', label: 'California', href: '/sba-loans/auto-repair/california/',
+          rationale: 'the largest auto-repair SBA state (12.1% national share) with clean-market performance (0.45x SBA charge-off) and $656K average deal size' },
         { slug: 'texas',      label: 'Texas',      href: '/sba-loans/auto-repair/texas/',
           rationale: 'the fastest-growing auto repair SBA state (+52% YoY, nearly 2x the national auto-repair rate) and #2 by volume' },
+    ],
+    'child-care': [
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/child-care/texas/',
+          rationale: 'the largest child care SBA market (11.3% national share) with 0.13x SBA charge-off performance and $1.18M average deal size' },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/child-care/florida/',
+          rationale: 'the second-largest child care SBA state with +22.5% YoY growth and 0.16x SBA charge-off performance' },
     ],
     'dentists': [
         { slug: 'california', label: 'California', href: '/sba-loans/dentists/california/',
@@ -156,6 +164,10 @@ const STATE_INDUSTRIES = {
     'plumbing-hvac': [
         { slug: 'california', label: 'California', href: '/sba-loans/plumbing-hvac/california/',
           rationale: 'the largest plumbing/HVAC SBA state (10.6% national share) with U.S. Bank dominant (25% of state volume) and California-specific CSLB, labor, and workers-comp underwriting' },
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/plumbing-hvac/florida/',
+          rationale: 'the second-largest plumbing/HVAC SBA state with honest framing on 1.74x SBA charge-off average and Florida-specific hurricane and DBPR licensing underwriting' },
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/plumbing-hvac/texas/',
+          rationale: 'the third-largest plumbing/HVAC SBA state with +9.3% YoY growth and charge-off right at the SBA cross-industry average' },
     ],
     'veterinarians': [
         { slug: 'california', label: 'California', href: '/sba-loans/veterinarians/california/',

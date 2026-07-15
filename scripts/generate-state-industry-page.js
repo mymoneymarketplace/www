@@ -1624,6 +1624,323 @@ const CONFIGS = {
     ],
 },
 
+'238220_FL': {
+    naicsCode: '238220', state: 'FL', industryParentSlug: 'plumbing-hvac',
+    industryLabel: 'plumbing and HVAC contractors', industryLabelCap: 'Plumbing and HVAC Contractors', industryLabelCapSingular: 'Plumbing / HVAC Contractor',
+    stateSlug: 'florida', stateName: 'Florida', campaignSlug: 'sba-plumbing-hvac-florida-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/8486951/pexels-photo-8486951.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'HVAC technician working on air conditioning equipment, representative of Florida plumbing and HVAC contractors financed through SBA 7(a) loans', width: 1200, height: 800, photographer: 'Nataliya Vaitkevich', photographerUrl: 'https://www.pexels.com/@n-voitkevich/', sourceUrl: 'https://www.pexels.com/photo/8486951/', sourceName: 'Pexels' },
+    communityBankNames: ['BayFirst National Bank'],
+    title: 'SBA Loans for Plumbing and HVAC Contractors in Florida 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Florida plumbing and HVAC contractors. 552 FL loans FY2020-2025 ($295M), 9% of national volume. Charge-off 1.74x SBA average -- honest framing on elevated performance and -10.9% YoY.',
+    heroSub: 'Florida is the <strong>second-largest single-state market for plumbing and HVAC SBA lending</strong> behind California, but the honest framing has to lead: <strong>charge-off runs 2.36% -- 1.74&times; the SBA cross-industry average</strong> and volume has declined -10.9% YoY. This is a real market with meaningful structural risks lenders explicitly underwrite to.',
+    serviceDescription: 'My Money Marketplace helps Florida plumbing and HVAC contractors compare SBA 7(a) and 504 options and get matched with lenders experienced in Florida contractor acquisition and equipment underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Florida is the second-largest state for plumbing and HVAC contractor SBA lending: <strong>552 loans FY2020-2025 (9.01% national share), $295 million in total approved capital, and $534K average deal size</strong>. Deal sizes run 22% above the national plumbing/HVAC baseline of $438K, with median loan at $241,350 vs. $150,000 nationally (+61%). Volume has softened -- YoY growth ran -10.9%, compared to +3.6% at the national plumbing/HVAC level.</p>
+        <h3>Metro distribution</h3>
+        <p>Four Florida metros carry the bulk of plumbing/HVAC SBA volume: <strong>Miami / Fort Lauderdale, Orlando, Tampa Bay, and Jacksonville</strong>. HVAC demand is a year-round Florida constant (contrast with seasonal Northeast HVAC), which supports contractor cash flow more consistently. New construction volume in Florida growth corridors (Orlando exurbs, Tampa Bay suburbs, Southwest Florida) supports contractor scale-up files.</p>
+        <h3>Honest framing: charge-off runs 1.74&times; SBA average</h3>
+        <p>Florida plumbing/HVAC SBA charges off at <strong>2.36% -- a 1.74&times; ratio versus the SBA cross-industry average of 1.36% and 1.79&times; the national plumbing/HVAC rate of 1.32%</strong>. This is one of the more elevated state-industry combinations in the SBA dataset. Drivers of the elevated performance:</p>
+        <ul>
+            <li><strong>Hurricane exposure on receivables cycles.</strong> Coastal Florida contractors face hurricane-related revenue disruption, delayed insurance-driven repair payments, and post-storm working-capital gaps that stress DSCR.</li>
+            <li><strong>Rapid-growth-market instability.</strong> Florida's rapid population growth has drawn many contractors into ownership without established customer bases or referral patterns. Files with less-established books charge off at elevated rates.</li>
+            <li><strong>Licensing complexity.</strong> Florida DBPR licensing (Certified Plumbing Contractor CFC, Certified Air Conditioning Contractor CAC, County-level Registered options) has specific requirements. License-based bonding and workers' compensation compliance affect acquisition files.</li>
+            <li><strong>Property insurance cost trajectory.</strong> Florida commercial property insurance premium increases compress DSCR on files with meaningful facility cost lines (shop, yard, fleet parking).</li>
+        </ul>
+        <p>Individual files with clean DBPR history, established residential and commercial customer bases, hurricane-preparedness plans, and disciplined operators still underwrite favorably. Specialist Florida contractor lenders factor these structural risks into projections rather than applying national contractor benchmarks that miss Florida's reality.</p>
+        <h3>Florida regulatory context for plumbing/HVAC SBA underwriting</h3>
+        <ul>
+            <li><strong>DBPR licensing.</strong> Florida Department of Business and Professional Regulation issues Certified (statewide) and Registered (county-only) plumbing and HVAC contractor licenses. Certified licenses transfer more cleanly on acquisition files.</li>
+            <li><strong>EPA Section 608 certification</strong> required for HVAC refrigerant handling.</li>
+            <li><strong>No state income tax</strong> improves personal financial modeling on contractor-guarantors.</li>
+            <li><strong>Hurricane preparedness</strong> factors into business-continuity underwriting particularly for files with meaningful facility exposure or fleet vehicles.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>Florida plumbing/HVAC SBA lending is <strong>led by TD Bank</strong> with 78 Florida plumbing/HVAC loans -- reflecting TD's Florida branch presence combined with existing-customer contractor volume. Live Oak Banking Company (41 loans, $889K avg) leads on the larger-deal tier -- higher-ticket commercial contractor acquisitions. BayFirst National Bank (36 loans, Florida-headquartered) rounds out the top three with strong small-and-mid-tier volume.</p>
+        <p>Bank of America (25 loans) and United Midwest Savings Bank (24 loans) share the mid-tier. First Internet Bank of Indiana (19 loans, $1.13M avg), Wells Fargo (19 loans), Northeast Bank (18 loans), Newtek Bank (18 loans), and Readycap Lending (15 loans) round out the top ten. For a Florida contractor buyer: TD Bank for small-and-mid-ticket files with existing branch relationships, Live Oak for larger-ticket commercial contractor acquisitions, BayFirst for Florida-focused small-tier files, and Newtek or Readycap for specialist SBA platform process -- with lender selection weighted toward institutions that explicitly model Florida hurricane exposure, DBPR licensing structure, and property-insurance trajectory.</p>
+    `,
+    cityLinks: [
+        { name: 'Miami', href: '/business-loans/miami-fl' },
+        { name: 'Tampa', href: '/business-loans/tampa-fl' },
+        { name: 'Jacksonville', href: '/business-loans/jacksonville-fl' },
+        { name: 'Orlando', href: '/business-loans/orlando-fl' },
+        { name: 'Fort Lauderdale', href: '/business-loans/fort-lauderdale-fl' },
+        { name: 'St. Petersburg', href: '/business-loans/st-petersburg-fl' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Florida plumbing / HVAC situation?",opts:[{v:"acquisition",l:"Acquiring an existing FL contractor"},{v:"expansion",l:"Expansion or additional territory"},{v:"equipment",l:"Trucks, equipment, or working capital"},{v:"real-estate",l:"Buying the shop / yard"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate-use",l:"Real estate purchase"},{v:"equipment-use",l:"Trucks / equipment"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-250k",l:"Under $250K"},{v:"250k-750k",l:"$250K - $750K"},{v:"750k-2m",l:"$750K - $2M"},{v:"2m-plus",l:"$2M+"}]},
+            {q:"DBPR license status?",opts:[{v:"certified",l:"Certified (statewide) license"},{v:"registered",l:"Registered (county-only) license"},{v:"buying-licensed-entity",l:"Buying an already-licensed entity"}]},
+        ],
+        profiles: {
+            A: { badge: "Standard FL contractor acquisition", headline: "Match to a lender that models Florida structural risks explicitly", body: "Florida plumbing/HVAC SBA charge-off runs 1.74x SBA average. Files that succeed do so with established customer bases, hurricane-preparedness plans, and lenders who model Florida-specific structural risks. TD Bank, Live Oak, BayFirst, and Bank of America all carry meaningful FL contractor volume. Plan 60-90 days.", ctaLabel: "Match with Florida plumbing/HVAC SBA lenders", utmContent: "profile-a-fl-plumbing-hvac-acquisition" },
+            B: { badge: "Real estate + shop / yard", headline: "SBA 504 for the property, 7(a) for the business", body: "Florida contractor deals including the shop or yard real estate benefit from SBA 504 fixed long-term rates. Coastal Florida real-estate deals get explicit hurricane and property-insurance underwriting from specialist 504 lenders. BayFirst and Live Oak are strong on Florida real-estate-combined deals. Plan 75-120 days.", ctaLabel: "Match with 504 + 7(a) FL contractor lenders", utmContent: "profile-b-fl-plumbing-hvac-real-estate" },
+            C: { badge: "Equipment / smaller-ticket path", headline: "SBA 7(a) working capital or equipment-focused", body: "Florida plumbing and HVAC contractors adding trucks, equipment, or working capital benefit from smaller-tier specialist SBA platforms. BayFirst, Newtek, and Readycap all handle sub-$500K files well. Plan 45-70 days.", ctaLabel: "Match with FL contractor equipment SBA lenders", utmContent: "profile-c-fl-plumbing-hvac-equipment" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],lic=a[3];if(sit==='real-estate'||use==='real-estate-use')return 'B';if(sit==='equipment'||use==='equipment-use'||amount==='under-250k')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a plumbing or HVAC contractor in Florida?",a:"Yes. Florida is the second-largest single-state plumbing/HVAC SBA market -- 552 loans FY2020-2025 representing 9% of national volume and $295 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Files require verified DBPR licensing (Certified Plumbing Contractor CFC, Certified Air Conditioning Contractor CAC, or County-level Registered options)."},
+        {q:"Why does Florida plumbing/HVAC SBA charge off above the average?",a:"Florida plumbing/HVAC SBA charges off at 2.36% -- 1.74x the SBA cross-industry average and 1.79x the national plumbing/HVAC rate. Drivers include hurricane exposure on receivables cycles and post-storm working-capital gaps, rapid-growth-market instability (newer contractors without established books), DBPR licensing complexity affecting acquisition files, and Florida property insurance cost trajectory compressing DSCR on files with meaningful facility exposure. Individual files with established customer bases and hurricane preparedness still underwrite favorably."},
+        {q:"What's the typical SBA plumbing/HVAC loan size in Florida?",a:"Average Florida plumbing/HVAC SBA loan is approximately $534,000 -- 22% above the national plumbing/HVAC baseline of $438K. Median is $241,350 vs. $150,000 nationally (+61%). Deal sizes reflect Florida's mix of larger commercial-focused contractor acquisitions and mid-sized residential contractor acquisitions."},
+        {q:"Which SBA lenders are most active in Florida plumbing/HVAC lending?",a:"TD Bank leads with 78 Florida plumbing/HVAC loans -- reflecting TD's Florida branch presence combined with existing-customer contractor volume. Live Oak Banking Company (41, $889K avg) leads on the larger-deal tier. BayFirst National Bank (36, Florida-headquartered) rounds out the top three. Bank of America (25), United Midwest Savings (24), First Internet Bank of Indiana (19), Wells Fargo (19), Northeast Bank (18), Newtek Bank (18), and Readycap Lending (15) fill positions 4-10."},
+        {q:"How does Florida DBPR licensing affect SBA underwriting?",a:"Florida DBPR issues Certified (statewide) and Registered (county-only) plumbing and HVAC contractor licenses. Certified licenses transfer more cleanly on acquisition files; Registered licenses require verification of the buyer's local county qualifications. Acquisition files require either verified license transfer or a documented plan for new-owner qualification. Clean DBPR history and no open disciplinary matters underwrite cleanly."},
+        {q:"How does hurricane exposure affect Florida contractor underwriting?",a:"Coastal Florida contractors face hurricane-related revenue disruption, delayed insurance-driven repair payments, and post-storm working-capital gaps. Specialist Florida lenders explicitly model hurricane-preparedness plans, business-interruption insurance adequacy, and post-storm continuity of operations. Contractors with documented hurricane response plans and adequate insurance underwrite better than those without."},
+        {q:"How long does an SBA loan take to close for a Florida plumbing/HVAC contractor?",a:"60-90 days is typical for a Florida contractor acquisition with TD Bank, Live Oak, BayFirst, or another specialist lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days -- coastal Florida deals often longer given the added property-insurance and hurricane-exposure underwriting. Smaller-tier equipment and working-capital files often close in 45-70 days."},
+    ],
+},
+
+'238220_TX': {
+    naicsCode: '238220', state: 'TX', industryParentSlug: 'plumbing-hvac',
+    industryLabel: 'plumbing and HVAC contractors', industryLabelCap: 'Plumbing and HVAC Contractors', industryLabelCapSingular: 'Plumbing / HVAC Contractor',
+    stateSlug: 'texas', stateName: 'Texas', campaignSlug: 'sba-plumbing-hvac-texas-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/8486951/pexels-photo-8486951.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'HVAC technician working on air conditioning equipment, representative of Texas plumbing and HVAC contractors financed through SBA 7(a) loans', width: 1200, height: 800, photographer: 'Nataliya Vaitkevich', photographerUrl: 'https://www.pexels.com/@n-voitkevich/', sourceUrl: 'https://www.pexels.com/photo/8486951/', sourceName: 'Pexels' },
+    communityBankNames: ['Comerica Bank'],
+    title: 'SBA Loans for Plumbing and HVAC Contractors in Texas 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Texas plumbing and HVAC contractors. 448 TX loans FY2020-2025 ($229M), 7.3% of national volume, $511K avg deal size, +9.3% YoY growth. Charge-off right at SBA average.',
+    heroSub: 'Texas is the <strong>third-largest single-state market for plumbing and HVAC SBA lending</strong> -- 448 loans FY2020-2025 representing 7.3% of national volume, $511K average deal size, and +9.3% YoY growth. Charge-off performance runs right at the SBA cross-industry average, with strong specialist-lender coverage.',
+    serviceDescription: 'My Money Marketplace helps Texas plumbing and HVAC contractors compare SBA 7(a) and 504 options and get matched with lenders experienced in Texas contractor acquisition and equipment underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Texas is the third-largest state for plumbing and HVAC contractor SBA lending: <strong>448 loans FY2020-2025 (7.31% national share), $229 million in total approved capital, and $511K average deal size</strong>. Deal sizes run 17% above the national plumbing/HVAC baseline of $438K, with median loan at $250,000 vs. $150,000 nationally (+67%). YoY volume growth is +9.3%, well above the national plumbing/HVAC rate of +3.6%.</p>
+        <h3>Metro distribution: DFW, Houston, Austin, San Antonio</h3>
+        <p>Four major metros dominate Texas plumbing/HVAC SBA volume: <strong>Dallas-Fort Worth, Houston, Austin, and San Antonio</strong>. Texas's population growth continues to drive new construction, replacement HVAC systems (aging inventory), and existing contractor acquisition activity. Austin has particularly strong growth in HVAC-heavy multifamily and commercial buildout. Secondary markets (El Paso, Corpus Christi, Rio Grande Valley, Lubbock) add meaningful volume with smaller typical deal sizes.</p>
+        <h3>Charge-off performance: right at SBA average</h3>
+        <p>Texas plumbing/HVAC SBA charges off at <strong>1.34% -- a 0.99&times; ratio versus the SBA cross-industry average of 1.36% and roughly matching the national plumbing/HVAC rate of 1.32%</strong>. Texas is squarely at the SBA baseline on this category. Drivers of the balanced performance: population growth expanding contractor demand, no-state-income-tax cost advantage for operator-guarantors, moderate labor costs relative to California, and a mature contractor licensing framework (TDLR).</p>
+        <h3>Texas regulatory context for plumbing/HVAC SBA underwriting</h3>
+        <ul>
+            <li><strong>TSBPE and TDLR licensing.</strong> Texas State Board of Plumbing Examiners licenses plumbers (Master Plumber, Responsible Master Plumber); Texas Department of Licensing and Regulation licenses HVAC contractors (Air Conditioning and Refrigeration Contractor License, Class A or B). Acquisition files require verified license transfer or new-owner qualification plans.</li>
+            <li><strong>EPA Section 608 certification</strong> required for HVAC refrigerant handling.</li>
+            <li><strong>No state income tax</strong> improves personal financial modeling on contractor-guarantors -- personal cash flow available to support the loan looks stronger than equivalent income in a high-tax state.</li>
+            <li><strong>Texas Franchise Tax</strong> applies above $2.47M revenue.</li>
+            <li><strong>Bonding requirements</strong> vary by classification and municipality; larger commercial project files require additional performance bonding.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>Texas plumbing/HVAC SBA lending has a distributed lender mix at the top rather than one dominant player. <strong>Wells Fargo leads with 29 Texas plumbing/HVAC loans</strong>, reflecting the bank's existing-customer contractor volume across Texas metros. JPMorgan Chase (26 loans) and Newtek Bank (26 loans) share #2 with strong specialist SBA platform coverage. The Huntington National Bank (25 loans, $670K avg) rounds out the top four. Live Oak Banking Company (23 loans, $878K avg) leads on the larger-deal tier -- higher-ticket commercial contractor acquisitions.</p>
+        <p>Northeast Bank (20 loans), United Midwest Savings Bank (20 loans), and Comerica Bank (20 loans, Dallas-headquartered) share position #6-8, giving Texas contractors both specialist SBA platform and Texas-regional-bank options. BayFirst National Bank (18 loans) and First Internet Bank of Indiana (14 loans, $1.23M avg on larger-tier deals) round out the top ten. For a Texas contractor buyer: Wells Fargo and Chase for existing-major-bank customers, Huntington and Newtek for specialist SBA platform process, Live Oak for larger-ticket commercial contractor acquisitions, and Comerica for Texas-regional-relationship files.</p>
+    `,
+    cityLinks: [
+        { name: 'Houston', href: '/business-loans/houston-tx' },
+        { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Fort Worth', href: '/business-loans/fort-worth-tx' },
+        { name: 'Austin', href: '/business-loans/austin-tx' },
+        { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'Arlington', href: '/business-loans/arlington-tx' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Texas plumbing / HVAC situation?",opts:[{v:"acquisition",l:"Acquiring an existing TX contractor"},{v:"expansion",l:"Expansion or additional territory"},{v:"equipment",l:"Trucks, equipment, or working capital"},{v:"real-estate",l:"Buying the shop / yard"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate-use",l:"Real estate purchase"},{v:"equipment-use",l:"Trucks / equipment"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-250k",l:"Under $250K"},{v:"250k-750k",l:"$250K - $750K"},{v:"750k-2m",l:"$750K - $2M"},{v:"2m-plus",l:"$2M+"}]},
+            {q:"License status?",opts:[{v:"master-plumber",l:"TSBPE Master / Responsible Master Plumber"},{v:"hvac-class-a-b",l:"TDLR Class A or B HVAC"},{v:"buying-licensed-entity",l:"Buying an already-licensed entity"}]},
+        ],
+        profiles: {
+            A: { badge: "Classic TX contractor acquisition", headline: "Growing +9.3% YoY, charge-off at SBA average", body: "Texas plumbing/HVAC SBA has balanced performance and distributed lender coverage. Wells Fargo, Chase, Newtek, Huntington, and Live Oak all carry meaningful Texas contractor volume. Match to a lender that handles TSBPE / TDLR licensing structure and no-state-income-tax personal-side underwriting. Plan 60-90 days.", ctaLabel: "Match with Texas plumbing/HVAC SBA lenders", utmContent: "profile-a-tx-plumbing-hvac-acquisition" },
+            B: { badge: "Real estate + shop / yard", headline: "SBA 504 for the property, 7(a) for the business", body: "Texas contractor deals including the shop or yard real estate benefit from SBA 504's fixed long-term rates. Comerica and Live Oak are strong on larger real-estate-combined deals; national specialists handle the smaller-tier files. Plan 75-120 days.", ctaLabel: "Match with 504 + 7(a) TX contractor lenders", utmContent: "profile-b-tx-plumbing-hvac-real-estate" },
+            C: { badge: "Equipment / smaller-ticket path", headline: "SBA 7(a) working capital or equipment-focused", body: "Texas plumbing and HVAC contractors adding trucks, equipment, or working capital benefit from specialist SBA platforms. BayFirst, Newtek, Northeast, and United Midwest Savings all handle sub-$500K files well. Plan 45-70 days.", ctaLabel: "Match with TX contractor equipment SBA lenders", utmContent: "profile-c-tx-plumbing-hvac-equipment" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],lic=a[3];if(sit==='real-estate'||use==='real-estate-use')return 'B';if(sit==='equipment'||use==='equipment-use'||amount==='under-250k')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a plumbing or HVAC contractor in Texas?",a:"Yes. Texas is the third-largest single-state plumbing/HVAC SBA market -- 448 loans FY2020-2025 representing 7.3% of national volume and $229 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Files require verified TSBPE (plumbing) or TDLR (HVAC) licensing. Texas volume is growing at +9.3% YoY vs. +3.6% nationally."},
+        {q:"How does Texas plumbing/HVAC SBA perform vs. national?",a:"Texas plumbing/HVAC SBA charges off at 1.34% -- right at the SBA cross-industry average of 1.36% (a 0.99x ratio) and roughly matching the national plumbing/HVAC rate of 1.32%. Texas is squarely at the SBA baseline on this category. Drivers of the balanced performance: population growth expanding contractor demand, no-state-income-tax cost advantage, moderate labor costs relative to California, and a mature contractor licensing framework."},
+        {q:"What's the typical SBA plumbing/HVAC loan size in Texas?",a:"Average Texas plumbing/HVAC SBA loan is approximately $511,000 -- 17% above the national plumbing/HVAC baseline of $438K. Median is $250,000 vs. $150,000 nationally (+67%). Deal sizes reflect Texas's mix of larger commercial-focused DFW and Houston contractor acquisitions and mid-sized residential contractor deals in Austin and San Antonio."},
+        {q:"Which SBA lenders are most active in Texas plumbing/HVAC lending?",a:"Wells Fargo leads with 29 Texas plumbing/HVAC loans. JPMorgan Chase (26) and Newtek Bank (26) share #2. The Huntington National Bank (25) and Live Oak Banking Company (23, $878K avg) round out the top five. Northeast Bank (20), United Midwest Savings (20), and Comerica Bank (20, Dallas-headquartered) share positions 6-8. BayFirst National Bank (18) and First Internet Bank of Indiana (14) fill positions 9-10."},
+        {q:"How do TSBPE and TDLR licensing affect SBA underwriting?",a:"Texas State Board of Plumbing Examiners licenses plumbers (Master Plumber, Responsible Master Plumber); Texas Department of Licensing and Regulation licenses HVAC contractors (Air Conditioning and Refrigeration Contractor License, Class A or B). Acquisition files require either verified license transfer or a documented plan for new-owner qualification. Clean licensing history underwrites cleanly."},
+        {q:"How long does an SBA loan take to close for a Texas plumbing/HVAC contractor?",a:"60-90 days is typical for a Texas contractor acquisition with Wells Fargo, Chase, Huntington, Newtek, Live Oak, or another specialist lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days. Smaller-tier equipment and working-capital files with specialist SBA platforms often close in 45-70 days."},
+    ],
+},
+
+'624410_TX': {
+    naicsCode: '624410', state: 'TX', industryParentSlug: 'child-care',
+    industryLabel: 'child care centers', industryLabelCap: 'Child Care Centers', industryLabelCapSingular: 'Child Care Center',
+    stateSlug: 'texas', stateName: 'Texas', campaignSlug: 'sba-child-care-texas-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Child care center classroom with learning materials, representative of Texas child care centers financed through SBA 7(a) loans', width: 1200, height: 800, photographer: 'Pavel Danilyuk', photographerUrl: 'https://www.pexels.com/@pavel-danilyuk/', sourceUrl: 'https://www.pexels.com/photo/8613089/', sourceName: 'Pexels' },
+    communityBankNames: ['Frost Bank'],
+    title: 'SBA Loans for Child Care Centers in Texas 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Texas child care centers. 575 TX child-care SBA loans FY2020-2025 ($677M), 11.3% of national volume, $1.18M avg, 0.17% charge-off (0.13x SBA avg). Largest state market.',
+    heroSub: 'Texas is the <strong>largest single-state market for child care SBA lending</strong> -- 575 loans FY2020-2025 representing 11.3% of national volume, <strong>$1.18M average deal size</strong>, and <strong>0.17% charge-off -- 0.13&times; the SBA cross-industry average</strong>. Growth continues at +14.9% YoY on top of a large base.',
+    serviceDescription: 'My Money Marketplace helps Texas child care operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Texas child care acquisition and buildout underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Texas is the largest state market for child care SBA lending: <strong>575 loans FY2020-2025 (11.32% national share), $677 million in total approved capital, and $1.18M average deal size</strong>. Deal sizes run 46% above the national child-care baseline of $807K, with median loan at $564,500 vs. $410,000 nationally (+38%). YoY volume growth is +14.9%, close to the national child-care rate of +17.4% on a much larger base.</p>
+        <h3>Metro distribution: DFW, Houston, Austin, San Antonio</h3>
+        <p>Four major metros dominate Texas child care SBA volume: <strong>Dallas-Fort Worth, Houston, Austin, and San Antonio</strong>. Texas's population growth combined with high dual-earner household rates drives strong child care demand across metros. Austin and DFW carry particularly strong volumes reflecting family-formation demographics. Franchise-brand center acquisitions (Kiddie Academy, Primrose, Goddard, La Petite, and others) account for a meaningful share of Texas child-care SBA volume.</p>
+        <h3>Charge-off runs 0.13&times; SBA average &mdash; top-tier clean performance</h3>
+        <p>Texas child care SBA charges off at <strong>0.17% -- a 0.13&times; ratio versus the SBA cross-industry average of 1.36% and 0.33&times; the national child-care rate of 0.51%</strong>. Texas is in the top tier of any state-industry combination in the SBA dataset for underwriting cleanness. Structural drivers: child care revenue is highly recurring and payment cycles are tuition-based rather than variable, licensed operators face state licensing scrutiny (which acts as a quality filter), and franchise-brand center acquisitions carry stronger operator-side certainty.</p>
+        <h3>Texas regulatory context for child care SBA underwriting</h3>
+        <ul>
+            <li><strong>HHSC Child Care Licensing.</strong> Texas Health and Human Services Commission licenses child care centers. Licensing requirements include staff-to-child ratios by age, facility standards, background checks, and ongoing compliance. Clean licensing history underwrites cleanly.</li>
+            <li><strong>Franchise brand certification.</strong> Franchise-brand acquisitions where the concept is in the SBA Franchise Directory benefit from brand-level underwriting shortcuts.</li>
+            <li><strong>No state income tax</strong> improves personal financial modeling on operator-guarantors.</li>
+            <li><strong>CCS (Child Care Services) subsidy program participation.</strong> Files with meaningful CCS-subsidy tuition share underwrite differently than pure private-pay files -- payment reliability is strong but rate structures require modeling.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>Texas child care SBA lending is <strong>led by Readycap Lending</strong> with 42 Texas child care loans -- reflecting Readycap's specialist SBA platform strength on larger-ticket child care files. The Huntington National Bank (27 loans) and Live Oak Banking Company (27 loans, $3.45M avg) share #2 -- Live Oak's much larger average deal size reflects their focus on multi-center and real-estate-combined acquisitions. Wells Fargo (23 loans) rounds out the top four with existing-customer center acquisition volume.</p>
+        <p>Bank Five Nine (18 loans) and First Bank of the Lake (18 loans) share position #5-6 as specialist child care SBA lenders. Regions Bank (16 loans, $1.81M avg -- highest-tier files) and Frost Bank (16 loans, San Antonio-headquartered) share position #7-8. Newtek Bank (15 loans) and Customers Bank (14 loans) round out the top ten. For a Texas child care buyer: Readycap and Huntington for the specialist SBA platform process, Live Oak for larger multi-center or real-estate-combined acquisitions, and Frost Bank for Texas-regional-relationship files. Match to a lender that handles Texas HHSC licensing verification and franchise-brand underwriting explicitly.</p>
+    `,
+    cityLinks: [
+        { name: 'Houston', href: '/business-loans/houston-tx' },
+        { name: 'Dallas', href: '/business-loans/dallas-tx' },
+        { name: 'Austin', href: '/business-loans/austin-tx' },
+        { name: 'San Antonio', href: '/business-loans/san-antonio-tx' },
+        { name: 'Fort Worth', href: '/business-loans/fort-worth-tx' },
+        { name: 'Plano', href: '/business-loans/plano-tx' },
+        { name: 'Arlington', href: '/business-loans/arlington-tx' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Texas child care situation?",opts:[{v:"acquisition",l:"Acquiring an existing TX center"},{v:"franchise",l:"Franchise concept (TX location)"},{v:"startup",l:"Opening a new independent center"},{v:"real-estate",l:"Buying the center building"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate-use",l:"Real estate purchase"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"equipment",l:"Furnishings / equipment"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-3m",l:"$1M - $3M"},{v:"3m-plus",l:"$3M+"}]},
+            {q:"Licensing / operator experience?",opts:[{v:"experienced",l:"Existing licensed operator"},{v:"first-center",l:"First center (industry experience)"},{v:"new-to-industry",l:"New to child care industry"}]},
+        ],
+        profiles: {
+            A: { badge: "Classic TX child care acquisition", headline: "Largest state market, top-tier clean performance", body: "Texas child care SBA has 0.17% charge-off (0.13x SBA avg) and $1.18M average deal size. Acquiring an established Texas center with meaningful equity fits Readycap, Huntington, Live Oak, and Wells Fargo's specialist child-care lending. Franchise-brand acquisitions benefit from SBA Franchise Directory shortcuts. Plan 60-90 days.", ctaLabel: "Match with Texas child care SBA lenders", utmContent: "profile-a-tx-child-care-acquisition" },
+            B: { badge: "Real estate + center", headline: "SBA 504 for the building, 7(a) for the business", body: "Texas child care deals including the facility real estate benefit from SBA 504's fixed long-term rates. Live Oak, Regions Bank, and Frost Bank are strong on Texas real-estate-combined child care deals. Plan 75-120 days for combined closings.", ctaLabel: "Match with 504 + 7(a) TX child care lenders", utmContent: "profile-b-tx-child-care-real-estate" },
+            C: { badge: "Startup / new-to-industry path", headline: "Startup files require more operator-profile support", body: "Texas child care startup files (new independent center, or operator new to the industry) require more underwriting detail than established-center acquisitions. Lenders want operational experience documentation, detailed enrollment ramp plans, and typically higher equity injection. Franchise-brand paths often more underwritable than pure independent startups.", ctaLabel: "Match with TX child care startup SBA lenders", utmContent: "profile-c-tx-child-care-startup" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],exp=a[3];if(sit==='real-estate'||use==='real-estate-use')return 'B';if(sit==='startup'||exp==='new-to-industry')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a child care center in Texas?",a:"Yes. Texas is the largest single-state child care SBA market -- 575 loans FY2020-2025 representing 11.3% of national child-care SBA volume and $677 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Texas child care SBA charges off at 0.17% (0.13x the SBA cross-industry average) -- top-tier clean performance."},
+        {q:"How does Texas child care SBA perform vs. national?",a:"Texas child care SBA charges off at 0.17% -- 0.13x the SBA cross-industry average of 1.36% and 0.33x the national child-care rate of 0.51%. Texas is in the top tier of any state-industry combination in the SBA dataset for underwriting cleanness. Drivers: recurring tuition-based revenue, licensed-operator quality filter, and franchise-brand acquisition mix."},
+        {q:"What's the typical SBA child care loan size in Texas?",a:"Average Texas child care SBA loan is approximately $1.18 million -- 46% above the national child-care baseline of $807K. Median is $564,500 vs. $410,000 nationally (+38%). Deal sizes reflect Texas metro child care center scale, multi-center acquisitions in DFW and Houston, and real-estate-combined deals."},
+        {q:"Which SBA lenders are most active in Texas child care lending?",a:"Readycap Lending leads with 42 Texas child care loans, reflecting Readycap's specialist SBA platform strength. The Huntington National Bank (27) and Live Oak Banking Company (27, $3.45M avg) share #2. Wells Fargo (23) rounds out the top four. Bank Five Nine (18) and First Bank of the Lake (18) share #5-6 as specialist child care lenders. Regions Bank (16, $1.81M avg) and Frost Bank (16, San Antonio-headquartered) share #7-8. Newtek Bank (15) and Customers Bank (14) round out the top ten."},
+        {q:"How does Texas HHSC licensing affect SBA child care underwriting?",a:"Texas Health and Human Services Commission licenses child care centers with requirements including staff-to-child ratios by age, facility standards, background checks, and ongoing compliance. Acquisition files require verified license transfer or new-owner qualification. Clean HHSC licensing history underwrites cleanly; files with open compliance matters extend diligence."},
+        {q:"How do franchise-brand acquisitions affect underwriting?",a:"Franchise-brand child care center acquisitions (Kiddie Academy, Primrose, Goddard, La Petite, and others) where the concept is in the SBA Franchise Directory benefit from brand-level underwriting shortcuts. Corporate-approved acquisition candidates and brand-provided operator training programs strengthen underwriting. Franchise-brand paths often more underwritable than independent startups."},
+        {q:"How long does an SBA loan take to close for a Texas child care center?",a:"60-90 days is typical for a Texas child care center acquisition with Readycap, Huntington, Live Oak, or another specialist lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days. Startup and new-to-industry files typically run 75-100 days given the extra operator-profile underwriting."},
+    ],
+},
+
+'624410_FL': {
+    naicsCode: '624410', state: 'FL', industryParentSlug: 'child-care',
+    industryLabel: 'child care centers', industryLabelCap: 'Child Care Centers', industryLabelCapSingular: 'Child Care Center',
+    stateSlug: 'florida', stateName: 'Florida', campaignSlug: 'sba-child-care-florida-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Child care center classroom with learning materials, representative of Florida child care centers financed through SBA 7(a) loans', width: 1200, height: 800, photographer: 'Pavel Danilyuk', photographerUrl: 'https://www.pexels.com/@pavel-danilyuk/', sourceUrl: 'https://www.pexels.com/photo/8613089/', sourceName: 'Pexels' },
+    communityBankNames: ['BayFirst National Bank', 'SouthState Bank, National Association'],
+    title: 'SBA Loans for Child Care Centers in Florida 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for Florida child care centers. 446 FL child-care SBA loans FY2020-2025 ($405M), 8.8% of national volume, $908K avg, 0.22% charge-off (0.16x SBA avg). +22.5% YoY growth.',
+    heroSub: 'Florida is the <strong>second-largest single-state market for child care SBA lending</strong> -- 446 loans FY2020-2025 representing 8.8% of national volume, $908K average deal size, and <strong>+22.5% YoY growth</strong> (well above national). Charge-off runs 0.22% -- 0.16&times; the SBA cross-industry average. Strong specialist lender coverage.',
+    serviceDescription: 'My Money Marketplace helps Florida child care operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Florida child care acquisition and buildout underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>Florida is the second-largest state market for child care SBA lending: <strong>446 loans FY2020-2025 (8.78% national share), $405 million in total approved capital, and $908K average deal size</strong>. Deal sizes run 12% above the national child-care baseline of $807K, with median loan at $610,000 vs. $410,000 nationally (+49%). YoY volume growth is +22.5%, above the national child-care rate of +17.4% -- Florida is one of the growth-acceleration state-industry combinations in the SBA dataset.</p>
+        <h3>Metro distribution: Miami, Orlando, Tampa, Jacksonville</h3>
+        <p>Four Florida metros drive child care SBA volume: <strong>Miami / Fort Lauderdale, Orlando, Tampa Bay, and Jacksonville</strong>. Florida's population growth combined with strong in-migration of families to Central Florida (Orlando, Tampa) and Southwest Florida (Naples, Sarasota) drives child care demand. Franchise-brand center acquisitions account for a meaningful share of Florida child-care SBA volume.</p>
+        <h3>Charge-off runs 0.16&times; SBA average &mdash; top-tier clean performance</h3>
+        <p>Florida child care SBA charges off at <strong>0.22% -- a 0.16&times; ratio versus the SBA cross-industry average of 1.36% and 0.43&times; the national child-care rate of 0.51%</strong>. Florida is in the top tier of any state-industry combination for cleanness. Drivers mirror the national child-care story: recurring tuition revenue, licensed-operator quality filter (Florida DCF licensing acts as a strong pre-qualification), and franchise-brand center acquisition mix.</p>
+        <h3>Florida regulatory context for child care SBA underwriting</h3>
+        <ul>
+            <li><strong>Florida DCF licensing.</strong> Florida Department of Children and Families licenses child care centers. Licensing requirements include staff-to-child ratios by age, facility standards, background checks, and ongoing compliance. Clean DCF licensing history underwrites cleanly.</li>
+            <li><strong>Franchise brand certification.</strong> Franchise-brand acquisitions in the SBA Franchise Directory benefit from brand-level underwriting shortcuts.</li>
+            <li><strong>No state income tax</strong> improves personal financial modeling on operator-guarantors.</li>
+            <li><strong>School Readiness / VPK subsidy participation.</strong> Files with meaningful School Readiness subsidy tuition share or VPK (Voluntary Prekindergarten) participation underwrite differently than pure private-pay files -- payment reliability is strong but reimbursement rates require modeling.</li>
+            <li><strong>Hurricane preparedness.</strong> Coastal Florida centers face hurricane-related closure risk. Specialist lenders factor business-interruption insurance and post-storm continuity plans into underwriting.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>Florida child care SBA lending is <strong>led by TD Bank</strong> with 31 Florida child care loans -- reflecting TD's Florida branch presence combined with existing-customer center acquisition volume. American Momentum Bank (17 loans, $1.14M avg) and Gulf Coast Bank and Trust Company (17 loans) share #2 -- both regional-bank presences with strong Florida child care coverage. Bank of America (16 loans) rounds out the top four.</p>
+        <p>Citizens Bank (14 loans, $1.08M avg) and BayFirst National Bank (14 loans, Florida-headquartered) share #5-6. SouthState Bank (13 loans, Winter Haven FL-headquartered) and Harvest Small Business Finance (13 loans, $1.09M avg) share #7-8. Newtek Small Business Finance (12 loans) and Wells Fargo (11 loans, $1.35M avg on higher-tier deals) round out the top ten. For a Florida child care buyer: TD Bank for existing-major-bank customers, American Momentum and Gulf Coast for Florida-regional-relationship files, BayFirst and SouthState for Florida-focused small-and-mid-tier files, and Harvest or Newtek for specialist SBA platform process on larger deals.</p>
+    `,
+    cityLinks: [
+        { name: 'Miami', href: '/business-loans/miami-fl' },
+        { name: 'Tampa', href: '/business-loans/tampa-fl' },
+        { name: 'Jacksonville', href: '/business-loans/jacksonville-fl' },
+        { name: 'Orlando', href: '/business-loans/orlando-fl' },
+        { name: 'Fort Lauderdale', href: '/business-loans/fort-lauderdale-fl' },
+        { name: 'St. Petersburg', href: '/business-loans/st-petersburg-fl' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your Florida child care situation?",opts:[{v:"acquisition",l:"Acquiring an existing FL center"},{v:"franchise",l:"Franchise concept (FL location)"},{v:"startup",l:"Opening a new independent center"},{v:"real-estate",l:"Buying the center building"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate-use",l:"Real estate purchase"},{v:"buildout",l:"Buildout / tenant improvements"},{v:"equipment",l:"Furnishings / equipment"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-500k",l:"Under $500K"},{v:"500k-1m",l:"$500K - $1M"},{v:"1m-3m",l:"$1M - $3M"},{v:"3m-plus",l:"$3M+"}]},
+            {q:"Licensing / operator experience?",opts:[{v:"experienced",l:"Existing licensed operator"},{v:"first-center",l:"First center (industry experience)"},{v:"new-to-industry",l:"New to child care industry"}]},
+        ],
+        profiles: {
+            A: { badge: "Classic FL child care acquisition", headline: "Second-largest state market, top-tier clean performance", body: "Florida child care SBA has 0.22% charge-off (0.16x SBA avg) and +22.5% YoY growth. Acquiring an established Florida center with meaningful equity fits TD Bank, American Momentum, Gulf Coast Bank, and BayFirst's Florida child care lending. Franchise-brand acquisitions benefit from SBA Franchise Directory shortcuts. Plan 60-90 days.", ctaLabel: "Match with Florida child care SBA lenders", utmContent: "profile-a-fl-child-care-acquisition" },
+            B: { badge: "Real estate + center", headline: "SBA 504 for the building, 7(a) for the business", body: "Florida child care deals including the facility real estate benefit from SBA 504's fixed long-term rates. Coastal Florida real-estate-combined deals get explicit hurricane and property-insurance underwriting from specialist 504 lenders. American Momentum, Citizens Bank, and Harvest are strong on Florida real-estate-combined child care deals. Plan 75-120 days.", ctaLabel: "Match with 504 + 7(a) FL child care lenders", utmContent: "profile-b-fl-child-care-real-estate" },
+            C: { badge: "Startup / new-to-industry path", headline: "Startup files require more operator-profile support", body: "Florida child care startup files (new independent center, or operator new to the industry) require more underwriting detail than established-center acquisitions. Lenders want operational experience documentation, detailed enrollment ramp plans, and typically higher equity injection. Franchise-brand paths often more underwritable than pure independent startups.", ctaLabel: "Match with FL child care startup SBA lenders", utmContent: "profile-c-fl-child-care-startup" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],exp=a[3];if(sit==='real-estate'||use==='real-estate-use')return 'B';if(sit==='startup'||exp==='new-to-industry')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for a child care center in Florida?",a:"Yes. Florida is the second-largest single-state child care SBA market -- 446 loans FY2020-2025 representing 8.8% of national child-care SBA volume and $405 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Florida child care SBA charges off at 0.22% (0.16x the SBA cross-industry average) -- top-tier clean performance, and volume is growing at +22.5% YoY."},
+        {q:"How does Florida child care SBA perform vs. national?",a:"Florida child care SBA charges off at 0.22% -- 0.16x the SBA cross-industry average of 1.36% and 0.43x the national child-care rate of 0.51%. Florida is in the top tier of any state-industry combination for cleanness. Drivers: recurring tuition revenue, Florida DCF licensing quality filter, and franchise-brand center acquisition mix."},
+        {q:"What's the typical SBA child care loan size in Florida?",a:"Average Florida child care SBA loan is approximately $908,000 -- 12% above the national child-care baseline of $807K. Median is $610,000 vs. $410,000 nationally (+49%). Deal sizes reflect Florida metro child care center scale, real-estate-combined deals in growth corridors, and the mix of multi-classroom centers typical of Florida's metros."},
+        {q:"Which SBA lenders are most active in Florida child care lending?",a:"TD Bank leads with 31 Florida child care loans, reflecting TD's Florida branch presence. American Momentum Bank (17, $1.14M avg) and Gulf Coast Bank and Trust Company (17) share #2. Bank of America (16) rounds out the top four. Citizens Bank (14), BayFirst National Bank (14), SouthState Bank (13), Harvest Small Business Finance (13), Newtek Small Business Finance (12), and Wells Fargo (11) round out positions 5-10."},
+        {q:"How does Florida DCF licensing affect SBA child care underwriting?",a:"Florida Department of Children and Families licenses child care centers with requirements including staff-to-child ratios by age, facility standards, background checks, and ongoing compliance. Acquisition files require verified license transfer or new-owner qualification. Clean DCF licensing history underwrites cleanly."},
+        {q:"How does hurricane exposure affect Florida child care underwriting?",a:"Coastal Florida child care centers face hurricane-related closure risk. Specialist Florida lenders factor business-interruption insurance adequacy, post-storm continuity plans, and building-code compliance into underwriting. Centers with documented hurricane response plans and adequate insurance underwrite better than those without."},
+        {q:"How long does an SBA loan take to close for a Florida child care center?",a:"60-90 days is typical for a Florida child care center acquisition with TD Bank, American Momentum, BayFirst, or another specialist lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days -- coastal Florida deals often longer given the added property-insurance and hurricane-exposure underwriting."},
+    ],
+},
+
+'811111_CA': {
+    naicsCode: '811111', state: 'CA', industryParentSlug: 'auto-repair',
+    industryLabel: 'auto repair', industryLabelCap: 'Auto Repair', industryLabelCapSingular: 'Auto Repair Shop',
+    stateSlug: 'california', stateName: 'California', campaignSlug: 'sba-auto-repair-california-quiz',
+    heroPhoto: { src: 'https://images.pexels.com/photos/4480505/pexels-photo-4480505.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Mechanic working on a vehicle in an auto repair shop bay, representative of California auto repair shops financed through SBA 7(a) loans', width: 1200, height: 800, photographer: 'Andrea Piacquadio', photographerUrl: 'https://www.pexels.com/@olly/', sourceUrl: 'https://www.pexels.com/photo/4480505/', sourceName: 'Pexels' },
+    communityBankNames: [],
+    title: 'SBA Loans for Auto Repair Shops in California 2026 | My Money Marketplace',
+    metaDesc: 'SBA 7(a) loans for California auto repair shops. 656 CA auto-repair SBA loans FY2020-2025 ($430M), 12.1% of national volume, $656K avg, 0.61% charge-off (0.45x SBA avg). Largest state market.',
+    heroSub: 'California is the <strong>largest single-state market for auto repair SBA lending</strong> -- 656 loans FY2020-2025 representing 12.1% of national volume, $656K average deal size, and <strong>0.61% charge-off -- 0.45&times; the SBA cross-industry average</strong>. Clean-market performance with strong specialist lender coverage.',
+    serviceDescription: 'My Money Marketplace helps California auto repair shop operators compare SBA 7(a) and 504 options and get matched with lenders experienced in California shop acquisition and real-estate-combined underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
+    marketContextHtml: `
+        <p>California is the largest state market for auto repair SBA lending: <strong>656 loans FY2020-2025 (12.12% national share), $430 million in total approved capital, and $656K average deal size</strong>. Deal sizes run 37% above the national auto repair baseline of $477K, with median loan at $400,000 vs. $225,500 nationally (+77%). YoY volume growth is +13%, below the national auto-repair rate of +27% but still solidly in growth territory on a large base.</p>
+        <h3>Metro distribution</h3>
+        <p>California auto repair SBA volume is distributed across <strong>Los Angeles / Orange County, San Diego, San Francisco Bay Area, Sacramento, and the Inland Empire</strong>. LA-OC carries the highest absolute volume with a mix of independent-shop acquisitions and franchise (Midas, Meineke, Big O Tires, AAMCO, etc.) files. The Bay Area runs a higher share of larger commercial-focused shop acquisitions. Central Valley, Inland Empire, and secondary markets (Fresno, Bakersfield, Central Coast) add meaningful volume with smaller typical deal sizes.</p>
+        <h3>Charge-off runs 0.45&times; SBA average &mdash; clean-market performance</h3>
+        <p>California auto repair SBA charges off at <strong>0.61% -- a 0.45&times; ratio versus the SBA cross-industry average of 1.36% and 0.61&times; the national auto-repair rate of 1.00%</strong>. California is meaningfully cleaner than the national auto-repair average on both cross-industry and category baselines. Drivers: California vehicle count creates strong recurring service demand, mature independent shop ecosystem with established customer bases, franchise-brand acquisitions carrying operator-side certainty, and specialist lender coverage that filters weaker files.</p>
+        <h3>California regulatory context for auto repair SBA underwriting</h3>
+        <ul>
+            <li><strong>BAR licensing.</strong> California Bureau of Automotive Repair (BAR) licenses auto repair shops (Automotive Repair Dealer registration). Shops performing Smog Check inspections need Smog Check station licensing separately. Acquisition files require verified BAR transfer or new-owner qualification.</li>
+            <li><strong>Smog Check station requirements.</strong> California Smog Check stations face specific equipment, technician certification (Smog Check Inspector, Smog Check Repair Technician), and compliance requirements. Smog Check volume adds revenue but also compliance overhead.</li>
+            <li><strong>Air Resources Board (CARB) refrigerant and hazardous-waste rules</strong> add compliance overhead on refrigerant work.</li>
+            <li><strong>Labor cost structure.</strong> California mechanic wages and workers' compensation costs above national baselines. Specialist lenders model California labor structure explicitly.</li>
+            <li><strong>Real estate.</strong> California commercial real estate for auto-repair-appropriate locations (with bay space, adequate parking) runs meaningfully above national averages. SBA 504 real-estate-combined deals common on larger California shop acquisitions.</li>
+        </ul>
+    `,
+    lenderCalloutHtml: `
+        <p>California auto repair SBA lending is <strong>led by U.S. Bank</strong> with 93 California auto repair loans -- reflecting U.S. Bank's traditional strength in mechanic-and-auto-services lending applied to the largest state market. Harvest Small Business Finance (43 loans, $1.05M avg) leads the specialist SBA platform tier with larger-ticket file coverage. Live Oak Banking Company (42 loans, $1.27M avg) follows closely on the larger-deal tier, focused on higher-ticket acquisition and real-estate-combined files.</p>
+        <p>Newtek Bank (32 loans) leads the smaller-tier specialist SBA platform coverage. Wells Fargo (26 loans) rounds out the top five with existing-customer shop acquisition volume. JPMorgan Chase (25 loans), Enterprise Bank &amp; Trust (21 loans, $1.04M avg), BayFirst National Bank (21 loans), Northeast Bank (19 loans), and CDC Small Business Finance Corp. (17 loans, California-focused CDFI) round out the top ten. For a California auto repair shop buyer: U.S. Bank is the dominant default; Live Oak and Harvest for larger-ticket commercial shop acquisitions; Newtek and Enterprise for mid-tier specialist SBA platform files; CDC Small Business Finance adds a California-focused CDFI option particularly relevant for smaller-deal or MDI-eligible files.</p>
+    `,
+    cityLinks: [
+        { name: 'Los Angeles', href: '/business-loans/los-angeles-ca' },
+        { name: 'San Francisco', href: '/business-loans/san-francisco-ca' },
+        { name: 'San Diego', href: '/business-loans/san-diego-ca' },
+        { name: 'San Jose', href: '/business-loans/san-jose-ca' },
+        { name: 'Sacramento', href: '/business-loans/sacramento-ca' },
+        { name: 'Long Beach', href: '/business-loans/long-beach-ca' },
+        { name: 'Fresno', href: '/business-loans/fresno-ca' },
+    ],
+    quiz: {
+        questions: [
+            {q:"What's your California auto repair situation?",opts:[{v:"acquisition",l:"Acquiring an existing CA shop"},{v:"franchise",l:"Franchise concept (CA location)"},{v:"expansion",l:"Expansion or additional location"},{v:"real-estate",l:"Buying the shop / property"}]},
+            {q:"Primary loan use?",opts:[{v:"purchase-price",l:"Acquisition purchase price"},{v:"real-estate-use",l:"Real estate purchase"},{v:"equipment-use",l:"Lifts / equipment / tools"},{v:"working-capital",l:"Working capital"},{v:"multiple",l:"Multiple uses combined"}]},
+            {q:"Loan amount needed?",opts:[{v:"under-250k",l:"Under $250K"},{v:"250k-750k",l:"$250K - $750K"},{v:"750k-2m",l:"$750K - $2M"},{v:"2m-plus",l:"$2M+"}]},
+            {q:"Shop type?",opts:[{v:"general-repair",l:"General auto repair"},{v:"smog-check",l:"Includes Smog Check"},{v:"specialty",l:"Specialty (transmission, brakes, etc.)"},{v:"franchise-brand",l:"Franchise brand"}]},
+        ],
+        profiles: {
+            A: { badge: "Classic CA auto repair acquisition", headline: "Largest state market, clean performance profile", body: "California auto repair SBA has 0.61% charge-off (0.45x SBA avg) and $656K average deal size. Acquiring an established California shop with meaningful equity fits U.S. Bank's dominant coverage, Live Oak and Harvest on larger-ticket commercial acquisitions, and Newtek's specialist SBA platform. Franchise-brand acquisitions benefit from SBA Franchise Directory shortcuts. Plan 60-90 days.", ctaLabel: "Match with California auto repair SBA lenders", utmContent: "profile-a-ca-auto-repair-acquisition" },
+            B: { badge: "Real estate + shop", headline: "SBA 504 for the property, 7(a) for the business", body: "California auto repair deals including the shop real estate benefit from SBA 504's fixed long-term rates. Live Oak, Harvest, and Enterprise Bank & Trust are strong on California real-estate-combined shop acquisitions. Combined structure common on larger LA-OC and Bay Area deals. Plan 75-120 days.", ctaLabel: "Match with 504 + 7(a) CA auto repair lenders", utmContent: "profile-b-ca-auto-repair-real-estate" },
+            C: { badge: "Equipment / smaller-ticket path", headline: "SBA 7(a) working capital or equipment-focused", body: "California auto repair shops adding lifts, diagnostic equipment, or working capital benefit from smaller-tier specialist SBA platforms. BayFirst, Newtek, Northeast, and CDC Small Business Finance all handle sub-$500K files well. Plan 45-70 days.", ctaLabel: "Match with CA auto repair equipment SBA lenders", utmContent: "profile-c-ca-auto-repair-equipment" },
+        },
+        scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],type=a[3];if(sit==='real-estate'||use==='real-estate-use')return 'B';if(use==='equipment-use'||amount==='under-250k')return 'C';return 'A';}`,
+    },
+    faqs: [
+        {q:"Can I get an SBA loan for an auto repair shop in California?",a:"Yes. California is the largest single-state auto repair SBA market -- 656 loans FY2020-2025 representing 12.1% of national auto-repair SBA volume and $430 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Files require verified California BAR (Bureau of Automotive Repair) registration; shops performing Smog Check need station licensing separately."},
+        {q:"How does California auto repair SBA perform vs. national?",a:"California auto repair SBA charges off at 0.61% -- 0.45x the SBA cross-industry average of 1.36% and 0.61x the national auto-repair rate of 1.00%. California is meaningfully cleaner than the national auto-repair average on both cross-industry and category baselines. Drivers: strong recurring service demand from California's vehicle count, mature independent shop ecosystem, and specialist lender coverage."},
+        {q:"What's the typical SBA auto repair loan size in California?",a:"Average California auto repair SBA loan is approximately $656,000 -- 37% above the national auto-repair baseline of $477K. Median is $400,000 vs. $225,500 nationally (+77%). Deal sizes reflect California commercial real estate costs, a mix of larger commercial-focused shop acquisitions in LA-OC and the Bay Area, and franchise-brand center files."},
+        {q:"Which SBA lenders are most active in California auto repair lending?",a:"U.S. Bank leads with 93 California auto repair loans, reflecting U.S. Bank's traditional strength in mechanic-and-auto-services lending. Harvest Small Business Finance (43, $1.05M avg) and Live Oak Banking Company (42, $1.27M avg) share #2-3, both focused on larger-ticket files. Newtek Bank (32) leads smaller-tier specialist coverage. Wells Fargo (26), JPMorgan Chase (25), Enterprise Bank & Trust (21), BayFirst National Bank (21), Northeast Bank (19), and CDC Small Business Finance Corp. (17) round out positions 5-10."},
+        {q:"How does California BAR licensing affect SBA underwriting?",a:"California Bureau of Automotive Repair (BAR) licenses auto repair shops via Automotive Repair Dealer registration. Shops performing Smog Check inspections need separate Smog Check station licensing. Acquisition files require either verified BAR transfer or new-owner qualification. Clean BAR history and no open disciplinary matters underwrite cleanly; open citations or open Smog Check violations extend diligence."},
+        {q:"How does California workers' comp cost affect auto repair underwriting?",a:"California workers' compensation for auto repair mechanics is meaningfully more expensive than national baselines, and experience-modifier volatility on shop files affects DSCR projections. Specialist California lenders model workers' comp as a specific line item rather than folding it into general overhead. Shops with clean claim history and lower experience modifiers underwrite better."},
+        {q:"How long does an SBA loan take to close for a California auto repair shop?",a:"60-90 days is typical for a California auto repair shop acquisition with U.S. Bank, Live Oak, Harvest, Newtek, or another specialist lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days. Smaller-tier equipment and working-capital files with specialist SBA platforms (BayFirst, Northeast, CDC Small Business Finance) often close in 45-70 days."},
+    ],
+},
+
 };
 
 // ─── Rendering helpers ──────────────────────────────────────────────────
