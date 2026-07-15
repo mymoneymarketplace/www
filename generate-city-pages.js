@@ -352,7 +352,7 @@ function relatedFor(slug, stateAbbr, allByState) {
         const stAbbr = m[2].toUpperCase();
         return {
             title: `${cityDisplay}, ${stAbbr}`,
-            url: `/business-loans/${s}`,
+            url: `/business-loans/${s}/`,
             sub: 'Get Funding'
         };
     }).filter(Boolean);
@@ -417,8 +417,8 @@ for (const p of parsedFiles) {
         metaDesc,
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Business Loans', url: '/business-loans' },
-            { name: `${cityDisplay}, ${p.stateAbbr}`, url: `/business-loans/${p.slug}` }
+            { name: 'Business Loans', url: '/business-loans/' },
+            { name: `${cityDisplay}, ${p.stateAbbr}`, url: `/business-loans/${p.slug}/` }
         ],
         h1: `Business Loans in ${cityDisplay}, ${p.stateAbbr}`,
         heroSub: `Funding options for small businesses across ${cityDisplay} and ${stateName}, from SBA loans to same-day working capital.`,
@@ -455,8 +455,8 @@ for (const c of inlineCities) {
         metaDesc,
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Business Loans', url: '/business-loans' },
-            { name: `${cityDisplay}, ${stateAbbr}`, url: `/business-loans/${slug}` }
+            { name: 'Business Loans', url: '/business-loans/' },
+            { name: `${cityDisplay}, ${stateAbbr}`, url: `/business-loans/${slug}/` }
         ],
         h1: `Business Loans in ${cityDisplay}, ${stateAbbr}`,
         heroSub: `Funding options for small businesses across ${cityDisplay} and ${stateName}, from SBA loans to same-day working capital.`,

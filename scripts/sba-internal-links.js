@@ -118,45 +118,45 @@ const SCENARIO_RELATED = {
  */
 const STATE_INDUSTRIES = {
     'restaurants': [
-        { slug: 'california', label: 'California', href: '/sba-loans/restaurants/california',
+        { slug: 'california', label: 'California', href: '/sba-loans/restaurants/california/',
           rationale: 'the largest restaurant SBA market in the US by volume (12.6% national share)' },
-        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/restaurants/texas',
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/restaurants/texas/',
           rationale: 'the fastest-growing restaurant SBA market (+42.6% YoY) and second-largest state by volume' },
-        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/restaurants/florida',
+        { slug: 'florida',    label: 'Florida',    href: '/sba-loans/restaurants/florida/',
           rationale: 'the fourth-largest restaurant SBA state with distinctive hurricane, seasonality, and insurance underwriting factors' },
-        { slug: 'new-york',   label: 'New York',   href: '/sba-loans/restaurants/new-york',
+        { slug: 'new-york',   label: 'New York',   href: '/sba-loans/restaurants/new-york/',
           rationale: 'the third-largest restaurant SBA market by volume, with honest framing on above-average charge-off and NYC cost pressures' },
-        { slug: 'illinois',   label: 'Illinois',   href: '/sba-loans/restaurants/illinois',
+        { slug: 'illinois',   label: 'Illinois',   href: '/sba-loans/restaurants/illinois/',
           rationale: 'the sixth-largest restaurant SBA state with +33% YoY growth and honest framing on 1.59x SBA charge-off average' },
-        { slug: 'georgia',    label: 'Georgia',    href: '/sba-loans/restaurants/georgia',
+        { slug: 'georgia',    label: 'Georgia',    href: '/sba-loans/restaurants/georgia/',
           rationale: 'the eighth-largest restaurant SBA state with clean performance (0.84x SBA charge-off) and $738K average deal size' },
-        { slug: 'new-jersey', label: 'New Jersey', href: '/sba-loans/restaurants/new-jersey',
+        { slug: 'new-jersey', label: 'New Jersey', href: '/sba-loans/restaurants/new-jersey/',
           rationale: 'the ninth-largest restaurant SBA state with the cleanest Northeast performance (0.74x SBA average charge-off)' },
     ],
     'auto-repair': [
-        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/auto-repair/texas',
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/auto-repair/texas/',
           rationale: 'the fastest-growing auto repair SBA state (+52% YoY, nearly 2x the national auto-repair rate) and #2 by volume' },
     ],
     'dentists': [
-        { slug: 'california', label: 'California', href: '/sba-loans/dentists/california',
+        { slug: 'california', label: 'California', href: '/sba-loans/dentists/california/',
           rationale: 'the largest dental SBA market in the US (18% national share) and the lowest-risk high-volume combination in the SBA dataset' },
-        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/dentists/texas',
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/dentists/texas/',
           rationale: 'the second-largest dental SBA state with zero charge-offs across all 399 loans FY2020-2025' },
     ],
     'veterinarians': [
-        { slug: 'california', label: 'California', href: '/sba-loans/veterinarians/california',
+        { slug: 'california', label: 'California', href: '/sba-loans/veterinarians/california/',
           rationale: 'the largest state for the best-performing SBA category (zero charge-offs across all 183 CA vet loans, $1.7M average deal size)' },
     ],
     'insurance-agencies': [
-        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/insurance-agencies/texas',
+        { slug: 'texas',      label: 'Texas',      href: '/sba-loans/insurance-agencies/texas/',
           rationale: "the #1 state for insurance agency SBA -- the only industry category where Texas beats California on volume" },
     ],
 };
 
 // ─── Helpers ───────────────────────────────────────────────────────────
 
-function industryHref(slug) { return `/sba-loans/${slug}`; }
-function scenarioHref(slug) { return `/sba-loans/${slug}`; }
+function industryHref(slug) { return `/sba-loans/${slug}/`; }
+function scenarioHref(slug) { return `/sba-loans/${slug}/`; }
 
 function industryLabel(slug) { return INDUSTRY_LABELS[slug] || slug; }
 function scenarioLabel(slug) { return SCENARIO_LABELS[slug] || slug; }

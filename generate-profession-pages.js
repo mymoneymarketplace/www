@@ -419,7 +419,7 @@ function relatedFor(slug) {
     }
     return picks.slice(0, 3).map(s => ({
         title: `Cards for ${titleCase(s)}`,
-        url: `/credit-cards/${s}`,
+        url: `/credit-cards/${s}/`,
         sub: 'See Picks'
     }));
 }
@@ -498,8 +498,8 @@ for (const f of files) {
         metaDesc,
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Credit Cards', url: '/credit-cards' },
-            { name: pro, url: `/credit-cards/${slug}` }
+            { name: 'Credit Cards', url: '/credit-cards/' },
+            { name: pro, url: `/credit-cards/${slug}/` }
         ],
         h1: `Best Credit Cards for ${pro}`,
         heroSub: `Expert picks for ${pro.toLowerCase()} based on real spending patterns, welcome-bonus value, and long-term rewards math.`,

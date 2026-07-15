@@ -17,8 +17,8 @@ const PAGES = [
         metaDesc: 'Compare personal loans for bad credit. See lenders that accept scores from 550, with prequalification that does not affect your credit score.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Personal Loans', url: '/personal-loans' },
-            { name: 'Bad Credit', url: '/personal-loans/bad-credit' }
+            { name: 'Personal Loans', url: '/personal-loans/' },
+            { name: 'Bad Credit', url: '/personal-loans/bad-credit/' }
         ],
         h1: 'Personal Loans for Bad Credit',
         heroSub: 'Compare lenders that work with credit scores from 550. Check your rate without affecting your credit.',
@@ -47,9 +47,9 @@ const PAGES = [
             { q: 'Should I use a co-signer?', a: 'A co-signer with stronger credit can help you qualify for lower rates and larger amounts, but they are legally responsible for the debt if you miss payments. Use a co-signer only if both parties fully understand the risk.' }
         ],
         related: [
-            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation', sub: 'Compare Loans' },
-            { title: 'Same-Day Loans', url: '/personal-loans/same-day', sub: 'See Fast Options' },
-            { title: 'All Personal Loans', url: '/personal-loans', sub: 'Browse All' }
+            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation/', sub: 'Compare Loans' },
+            { title: 'Same-Day Loans', url: '/personal-loans/same-day/', sub: 'See Fast Options' },
+            { title: 'All Personal Loans', url: '/personal-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -58,8 +58,8 @@ const PAGES = [
         metaDesc: 'Consolidate credit card debt into one lower fixed payment. Compare debt consolidation loans from top lenders with soft-pull rate checks.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Personal Loans', url: '/personal-loans' },
-            { name: 'Debt Consolidation', url: '/personal-loans/debt-consolidation' }
+            { name: 'Personal Loans', url: '/personal-loans/' },
+            { name: 'Debt Consolidation', url: '/personal-loans/debt-consolidation/' }
         ],
         h1: 'Debt Consolidation Loans',
         heroSub: 'Roll multiple high-rate balances into one fixed monthly payment. Check your rate in minutes.',
@@ -88,9 +88,9 @@ const PAGES = [
             { q: 'How long does it take?', a: 'Most online lenders fund consolidation loans within one to three business days of final approval. Some pay lenders directly on your behalf if you choose that option.' }
         ],
         related: [
-            { title: 'Bad Credit Loans', url: '/personal-loans/bad-credit', sub: 'See Options' },
-            { title: 'Same-Day Loans', url: '/personal-loans/same-day', sub: 'Fast Funding' },
-            { title: 'All Personal Loans', url: '/personal-loans', sub: 'Browse All' }
+            { title: 'Bad Credit Loans', url: '/personal-loans/bad-credit/', sub: 'See Options' },
+            { title: 'Same-Day Loans', url: '/personal-loans/same-day/', sub: 'Fast Funding' },
+            { title: 'All Personal Loans', url: '/personal-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -99,8 +99,8 @@ const PAGES = [
         metaDesc: 'Finance renovations with a fixed-rate home improvement loan. Compare options up to $100,000 with soft-pull rate checks.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Personal Loans', url: '/personal-loans' },
-            { name: 'Home Improvement', url: '/personal-loans/home-improvement' }
+            { name: 'Personal Loans', url: '/personal-loans/' },
+            { name: 'Home Improvement', url: '/personal-loans/home-improvement/' }
         ],
         h1: 'Home Improvement Loans',
         heroSub: 'Fund kitchen, bath, roof, or full remodel projects with predictable fixed monthly payments.',
@@ -129,9 +129,9 @@ const PAGES = [
             { q: 'Should I use a credit card instead?', a: 'Only for small projects you can pay off within a few months. Credit card APRs of 22-29% far exceed personal loan rates for any project lasting beyond a billing cycle or two.' }
         ],
         related: [
-            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation', sub: 'Compare Loans' },
-            { title: 'Medical Loans', url: '/personal-loans/medical', sub: 'See Options' },
-            { title: 'All Personal Loans', url: '/personal-loans', sub: 'Browse All' }
+            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation/', sub: 'Compare Loans' },
+            { title: 'Medical Loans', url: '/personal-loans/medical/', sub: 'See Options' },
+            { title: 'All Personal Loans', url: '/personal-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -140,8 +140,8 @@ const PAGES = [
         metaDesc: 'Get a personal loan funded the same day. Compare lenders offering same-day or next-day deposits with soft-pull rate checks.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Personal Loans', url: '/personal-loans' },
-            { name: 'Same Day', url: '/personal-loans/same-day' }
+            { name: 'Personal Loans', url: '/personal-loans/' },
+            { name: 'Same Day', url: '/personal-loans/same-day/' }
         ],
         h1: 'Same-Day Personal Loans',
         heroSub: 'Compare lenders that can fund approved loans the same business day.',
@@ -170,9 +170,9 @@ const PAGES = [
             { q: 'What slows down funding?', a: 'Missing or mismatched documents, hard-to-verify income (new jobs, 1099s), large loan amounts, and applying after the daily cutoff time are the most common delays.' }
         ],
         related: [
-            { title: 'Bad Credit Loans', url: '/personal-loans/bad-credit', sub: 'See Options' },
-            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation', sub: 'Compare Loans' },
-            { title: 'All Personal Loans', url: '/personal-loans', sub: 'Browse All' }
+            { title: 'Bad Credit Loans', url: '/personal-loans/bad-credit/', sub: 'See Options' },
+            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation/', sub: 'Compare Loans' },
+            { title: 'All Personal Loans', url: '/personal-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -181,8 +181,8 @@ const PAGES = [
         metaDesc: 'Finance medical, dental, or surgery bills with a fixed-rate personal loan. Compare medical loan options with soft-pull rate checks.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Personal Loans', url: '/personal-loans' },
-            { name: 'Medical', url: '/personal-loans/medical' }
+            { name: 'Personal Loans', url: '/personal-loans/' },
+            { name: 'Medical', url: '/personal-loans/medical/' }
         ],
         h1: 'Medical Loans',
         heroSub: 'Cover medical, dental, surgery, or fertility bills with a fixed-rate personal loan.',
@@ -211,9 +211,9 @@ const PAGES = [
             { q: 'How fast can I get the money?', a: 'Most medical loans fund within one to three business days. Same-day is possible from select lenders if documents are ready early.' }
         ],
         related: [
-            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation', sub: 'Compare Loans' },
-            { title: 'Same-Day Loans', url: '/personal-loans/same-day', sub: 'Fast Funding' },
-            { title: 'All Personal Loans', url: '/personal-loans', sub: 'Browse All' }
+            { title: 'Debt Consolidation', url: '/personal-loans/debt-consolidation/', sub: 'Compare Loans' },
+            { title: 'Same-Day Loans', url: '/personal-loans/same-day/', sub: 'Fast Funding' },
+            { title: 'All Personal Loans', url: '/personal-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -222,7 +222,7 @@ const PAGES = [
         metaDesc: 'Finance business equipment with rates from 6%. Compare equipment loans and leases -- the equipment itself serves as collateral.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Equipment Financing', url: '/equipment-financing' }
+            { name: 'Equipment Financing', url: '/equipment-financing/' }
         ],
         h1: 'Equipment Financing',
         heroSub: 'Finance trucks, machinery, tech, and gear -- the equipment secures the loan so approval is easier.',
@@ -251,9 +251,9 @@ const PAGES = [
             { q: 'Do I need a down payment?', a: 'Many lenders offer $0-down equipment financing for qualified borrowers. Lower credit or specialty equipment may require 10-25% down.' }
         ],
         related: [
-            { title: 'Working Capital', url: '/working-capital', sub: 'See Options' },
-            { title: 'Line of Credit', url: '/line-of-credit', sub: 'Compare' },
-            { title: 'All Business Loans', url: '/business-loans', sub: 'Browse All' }
+            { title: 'Working Capital', url: '/working-capital/', sub: 'See Options' },
+            { title: 'Line of Credit', url: '/line-of-credit/', sub: 'Compare' },
+            { title: 'All Business Loans', url: '/business-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -262,7 +262,7 @@ const PAGES = [
         metaDesc: 'Get a revolving business line of credit for cash flow, inventory, or unexpected expenses. Draw what you need, pay interest only on what you use.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Line of Credit', url: '/line-of-credit' }
+            { name: 'Line of Credit', url: '/line-of-credit/' }
         ],
         h1: 'Business Line of Credit',
         heroSub: 'Revolving capital for cash flow, inventory, or unexpected costs. Pay interest only on what you draw.',
@@ -291,9 +291,9 @@ const PAGES = [
             { q: 'Can I pay off a draw early?', a: 'Yes. Lines of credit typically have no prepayment penalty. Paying down the balance immediately frees up that portion of the limit for future draws.' }
         ],
         related: [
-            { title: 'Working Capital', url: '/working-capital', sub: 'See Options' },
-            { title: 'Equipment Financing', url: '/equipment-financing', sub: 'Compare' },
-            { title: 'All Business Loans', url: '/business-loans', sub: 'Browse All' }
+            { title: 'Working Capital', url: '/working-capital/', sub: 'See Options' },
+            { title: 'Equipment Financing', url: '/equipment-financing/', sub: 'Compare' },
+            { title: 'All Business Loans', url: '/business-loans/', sub: 'Browse All' }
         ]
     },
     {
@@ -302,7 +302,7 @@ const PAGES = [
         metaDesc: 'Fund payroll, inventory, and day-to-day operations with working capital loans. Compare term loans, lines, and advances with same-day approval.',
         breadcrumb: [
             { name: 'Home', url: '/' },
-            { name: 'Working Capital', url: '/working-capital' }
+            { name: 'Working Capital', url: '/working-capital/' }
         ],
         h1: 'Working Capital Loans',
         heroSub: 'Fund payroll, inventory, and operations. Fast term loans, lines of credit, and revenue-based advances.',
@@ -331,9 +331,9 @@ const PAGES = [
             { q: 'Are payments daily, weekly, or monthly?', a: 'Varies by product. Merchant cash advances and some short-term loans take daily ACH. Lines of credit and term loans are usually weekly or monthly. Match the payment cadence to your revenue cycle.' }
         ],
         related: [
-            { title: 'Line of Credit', url: '/line-of-credit', sub: 'Compare' },
-            { title: 'Equipment Financing', url: '/equipment-financing', sub: 'See Options' },
-            { title: 'All Business Loans', url: '/business-loans', sub: 'Browse All' }
+            { title: 'Line of Credit', url: '/line-of-credit/', sub: 'Compare' },
+            { title: 'Equipment Financing', url: '/equipment-financing/', sub: 'See Options' },
+            { title: 'All Business Loans', url: '/business-loans/', sub: 'Browse All' }
         ]
     }
 ];

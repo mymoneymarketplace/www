@@ -1,12 +1,12 @@
 # Content Audit Report
 
-_Generated: 2026-07-15T20:44:10.960Z · Duration: 2.2s · Pages scanned: 338_
+_Generated: 2026-07-15T21:58:27.985Z · Duration: 2.4s · Pages scanned: 343_
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
-| Pages scanned | 338 |
+| Pages scanned | 343 |
 | Pages with at least one issue | 48 |
 | Total issues | 80 |
 | CRITICAL | 1 |
@@ -236,7 +236,7 @@ Top 25 issues to fix first (by severity):
 ## Observations
 
 - Issue distribution: structural: 29, cross-page-leakage: 37, data-traceability: 9, cta-correctness: 5
-- 48 of 338 pages (14.2%) flagged at least one issue.
+- 48 of 343 pages (14.0%) flagged at least one issue.
 - Pages with the most issues:
   - `/sba-loans/pet-care`: 6 issues
   - `/sba-loans/auto-body`: 4 issues

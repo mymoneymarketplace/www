@@ -252,6 +252,9 @@ function checkInternalLinkValidity(html, { urlPath, urlSet }) {
     if (!urlSet) return findings;
     const hrefs = extractAllHrefs(html);
     const seen = new Set();
+    const seenSlash = new Set();
+    // Assets that legitimately end in an extension — skip slash check.
+    const EXT_RE = /\.(?:html|pdf|png|jpe?g|gif|svg|ico|css|js|xml|txt|webp)$/i;
     for (const raw of hrefs) {
         let href = raw.trim();
         if (!href || href === '#' || href.startsWith('#')) continue;
@@ -262,11 +265,28 @@ function checkInternalLinkValidity(html, { urlPath, urlSet }) {
             href = absUrl[2] || '/';
         }
         if (!href.startsWith('/')) continue;
-        href = href.split('#')[0].split('?')[0];
-        if (!href) continue;
-        if (seen.has(href)) continue;
-        seen.add(href);
-        if (!urlSet.has(href)) findings.push({ check: 'internal-link-validity', page: urlPath, severity: 'HIGH', finding: `Dead internal link: "${href}"`, fix: 'Fix the link target or remove' });
+        const bare = href.split('#')[0].split('?')[0];
+        if (!bare) continue;
+
+        // Trailing-slash body-link check: canonical form for on-site paths
+        // is /path/ (except when the path targets a file with an extension).
+        // Fires once per unique bare URL per page.
+        if (!seenSlash.has(bare)) {
+            seenSlash.add(bare);
+            if (bare !== '/' && !bare.endsWith('/') && !EXT_RE.test(bare)) {
+                findings.push({
+                    check: 'internal-link-validity',
+                    page: urlPath,
+                    severity: 'HIGH',
+                    finding: `Internal link missing trailing slash: "${bare}"`,
+                    fix: 'Change to "' + bare + '/" — GitHub Pages 301s the non-slash form; the served URL is trailing-slash.'
+                });
+            }
+        }
+
+        if (seen.has(bare)) continue;
+        seen.add(bare);
+        if (!urlSet.has(bare)) findings.push({ check: 'internal-link-validity', page: urlPath, severity: 'HIGH', finding: `Dead internal link: "${bare}"`, fix: 'Fix the link target or remove' });
     }
     return findings;
 }

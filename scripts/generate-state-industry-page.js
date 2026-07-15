@@ -1012,8 +1012,8 @@ const CONFIGS = {
     heroPhoto: { src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Restaurant interior with modern dining room, representative of New York restaurants that use SBA financing', width: 1200, height: 800, photographer: 'Life Of Pix', photographerUrl: 'https://www.pexels.com/@life-of-pix/', sourceUrl: 'https://www.pexels.com/photo/1267320/', sourceName: 'Pexels' },
     communityBankNames: ['NewBank'],
     title: 'SBA Loans for Restaurants in New York 2026 | My Money Marketplace',
-    metaDesc: 'SBA 7(a) loans for New York restaurants. 1,057 NY restaurant SBA loans FY2020-2025 ($433M). Charge-off runs above SBA average -- honest framing on why and how to match lenders.',
-    heroSub: 'New York is the third-largest restaurant SBA market in the US &mdash; 1,057 loans FY2020-2025 and $433M in approved capital. Deal sizes run smaller than California or Texas, and charge-off performance runs above the SBA cross-industry average, reflecting NYC-specific cost pressures. Honest framing on both.',
+    metaDesc: 'SBA 7(a) loans for New York restaurants. 1,057 NY restaurant SBA loans FY2020-2025 ($433M). Charge-off runs 1.25x SBA average; NYC cost drivers explained. Match with NY-experienced lenders.',
+    heroSub: 'New York is the third-largest restaurant SBA market in the US &mdash; 1,057 loans FY2020-2025 and $433M in approved capital. Deal sizes run smaller than California or Texas, and charge-off performance runs 1.25&times; the SBA cross-industry average -- driven by NYC-specific rent, labor, and regulatory costs the page walks through in detail.',
     serviceDescription: 'My Money Marketplace helps New York restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in NY restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
     marketContextHtml: `
         <p>New York is the third-largest state for restaurant SBA lending behind California and Texas, with <strong>1,057 loans approved FY2020-2025 (6.5% national share) totaling $433 million</strong>. Deal sizes run notably smaller than other top states: <strong>$410,000 average vs. $528,000 nationally (-22%)</strong>, with a $150,000 median. The smaller deal profile reflects NYC's dense small-independent-operator base and a tilt toward buildout and equipment files rather than large-scale acquisitions.</p>
@@ -1024,7 +1024,7 @@ const CONFIGS = {
         <p>NY restaurant SBA charges off at <strong>1.70% -- 1.25&times; the SBA cross-industry average of 1.36% and materially above the national restaurant rate of 1.21%</strong>. The elevated rate reflects genuine NY-specific cost pressures rather than lender mispricing:</p>
         <ul>
             <li><strong>NYC commercial rent</strong> pushes rent-to-sales meaningfully above the 6-10% national benchmark, compressing margins on marginal files.</li>
-            <li><strong>NY State labor cost structure</strong> ($15/hr minimum wage in NYC, tip credit and wage-parity requirements) drives labor as a percentage of revenue above national baselines.</li>
+            <li><strong>NY State labor cost structure</strong> ($16/hr NYC/Long Island/Westchester minimum wage in 2024, $15/hr rest of state, tiered wage-parity requirements) drives labor as a percentage of revenue above national baselines.</li>
             <li><strong>NY LLC publication requirement</strong> adds $1-2K + 6-10 weeks on newly-formed operating entities, affecting close timelines on acquisition deals.</li>
             <li><strong>SLA (State Liquor Authority) transfer timing</strong> on acquisition files where liquor licenses are material can extend timelines 60-120 days.</li>
         </ul>
@@ -1050,7 +1050,7 @@ const CONFIGS = {
         ],
         profiles: {
             A: { badge: "NY small-loan specialist file", headline: "M&T, TD, KeyBank -- NY's small-loan specialist trio", body: "New York's dominant restaurant SBA lenders (M&T, TD, KeyBank) specialize in sub-$500K deals -- buildout, equipment, and working-capital files closed in 45-75 days via SBA 7(a) Small Loan. NY deal sizes run smaller than CA or TX, and this trio has the process dialed in. Standard 10% equity injection.", ctaLabel: "Match with NY restaurant SBA lenders", utmContent: "profile-a-ny-small" },
-            B: { badge: "Larger NY acquisition or buildout", headline: "Match to a lender comfortable with NY cost baselines", body: "NY restaurant deals above $500K face the state's genuinely elevated cost baseline (rent, labor, compliance). Lenders like NewBank (Korean-American operator network), Northeast Bank, and Readycap handle larger NY files at scale. Files with strong unit economics and lease documentation underwrite around the aggregate 1.70% charge-off rate, but generalist lenders unfamiliar with NY market context sometimes miss cost modeling.", ctaLabel: "Match with NY-experienced SBA lenders", utmContent: "profile-b-ny-larger" },
+            B: { badge: "Larger NY acquisition or buildout", headline: "Match to a lender comfortable with NY cost baselines", body: "NY restaurant deals above $500K face the state's genuinely elevated cost baseline (rent, labor, compliance). Lenders like NewBank (Korean-American operator network, $796K average deal size), Northeast Bank, and Newtek handle larger NY files at scale. Files with strong unit economics and lease documentation underwrite around the aggregate 1.70% charge-off rate, but generalist lenders unfamiliar with NY market context sometimes miss cost modeling.", ctaLabel: "Match with NY-experienced SBA lenders", utmContent: "profile-b-ny-larger" },
             C: { badge: "Franchise path", headline: "Franchise route -- see the franchise-specific guide", body: "NY franchise restaurant SBA files underwrite differently from independents and benefit from brand-level shortcuts if the concept is in the SBA Franchise Directory. NY franchise volume is meaningful in suburban Long Island, Westchester, and upstate metros. See our SBA franchise loan guide for full treatment.", ctaLabel: "See SBA franchise details", utmContent: "profile-c-ny-franchise", ctaUrl: "/sba-loans/franchise/" },
         },
         scoringBody: `function score(a){var sit=a[0],use=a[1],amount=a[2],credit=a[3];if(sit==='franchise')return 'C';if(amount==='500k-1m'||amount==='1m-plus')return 'B';return 'A';}`,
@@ -1059,8 +1059,8 @@ const CONFIGS = {
         {q:"Can I get an SBA loan for a restaurant in New York?",a:"Yes. New York is the third-largest single-state restaurant SBA market -- 1,057 loans approved FY2020-2025 representing 6.5% of national restaurant SBA volume. Deal sizes skew smaller than CA/TX (average $410K vs. $528K nationally), and the top NY lenders specialize in the sub-$500K SBA 7(a) Small Loan process."},
         {q:"Why does New York restaurant SBA charge off above the average?",a:"NY restaurant SBA charges off at 1.70% -- 1.25x the SBA cross-industry average and above the national restaurant rate of 1.21%. Three drivers: NYC commercial rent compressing margins, NY state labor cost structure (higher minimum wage, wage-parity requirements), and NY-specific regulatory friction (LLC publication requirement, SLA license transfer timing). Individual files with strong unit economics still underwrite favorably; the aggregate reflects a state-level average across a broad borrower mix."},
         {q:"Which SBA lenders are most active in New York restaurant lending?",a:"M&T Bank leads with 170 loans (~$95K average -- small-loan specialist), TD Bank second at 99 loans, KeyBank third at 63. NewBank (55 loans, $796K avg) is the notable Korean-American community bank in the NYC market with much larger typical deal size. Northeast Bank rounds out the top five."},
-        {q:"What NY-specific issues affect SBA restaurant underwriting?",a:"Four factors: rent-to-sales ratios (NYC market rents materially above the 6-10% national benchmark), NY state labor costs including tip credit and wage-parity requirements, LLC formation timing (NY publication requirement adds 6-10 weeks + $1-2K on newly-formed operating entities), and SLA liquor license transfer timing on acquisition files (60-120 days depending on license class and county)."},
-        {q:"How long does an SBA loan take to close for a NY restaurant?",a:"45-75 days is typical for smaller SBA 7(a) Small Loan files with M&T, TD, or KeyBank. Larger deals ($500K+) with NewBank, Northeast, or Readycap typically run 60-90 days. Files involving SLA liquor license transfers add 60-120 days to the licensing side (not lender-side). Generalist banks unfamiliar with NY-specific timing routinely extend timelines further."},
+        {q:"What NY-specific issues affect SBA restaurant underwriting?",a:"Four factors: rent-to-sales ratios (NYC market rents materially above the 6-10% national benchmark), NY state labor costs ($16/hr NYC/LI/Westchester, $15/hr rest of state, tiered wage-parity requirements), LLC formation timing (NY publication requirement adds 6-10 weeks + $1-2K on newly-formed operating entities), and SLA liquor license transfer timing on acquisition files (60-120 days depending on license class and county)."},
+        {q:"How long does an SBA loan take to close for a NY restaurant?",a:"45-75 days is typical for smaller SBA 7(a) Small Loan files with M&T, TD, or KeyBank. Larger deals ($500K+) with NewBank (Korean-American community bank, $796K average deal size), Northeast Bank, or Newtek typically run 60-90 days. Files involving SLA liquor license transfers add 60-120 days to the licensing side (not lender-side). Generalist banks unfamiliar with NY-specific timing routinely extend timelines further."},
     ],
 },
 
@@ -1071,7 +1071,7 @@ const CONFIGS = {
     heroPhoto: { src: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Restaurant interior with modern dining room, representative of Illinois restaurants that use SBA financing', width: 1200, height: 800, photographer: 'Life Of Pix', photographerUrl: 'https://www.pexels.com/@life-of-pix/', sourceUrl: 'https://www.pexels.com/photo/1267320/', sourceName: 'Pexels' },
     communityBankNames: [],
     title: 'SBA Loans for Restaurants in Illinois 2026 | My Money Marketplace',
-    metaDesc: 'SBA 7(a) loans for Illinois restaurants. 696 IL restaurant SBA loans FY2020-2025 ($387M), +32.8% YoY growth. Charge-off runs 1.59x SBA average -- honest framing on Chicago cost pressures.',
+    metaDesc: 'SBA 7(a) loans for Illinois restaurants. 696 IL restaurant SBA loans FY2020-2025 ($387M), +32.8% YoY growth. Charge-off 1.59x SBA average; Chicago cost drivers explained. Match with IL-experienced lenders.',
     heroSub: 'Illinois restaurant SBA volume is up <strong>+32.8% year-over-year</strong> -- one of the strongest growth rates in the top-tier states. Deal sizes average $556K, above the national restaurant baseline. But charge-off performance runs meaningfully above SBA average, reflecting Chicago-specific cost structure. Honest framing on both.',
     serviceDescription: 'My Money Marketplace helps Illinois restaurant operators compare SBA 7(a) and 504 options and get matched with lenders experienced in Illinois restaurant underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
     marketContextHtml: `
@@ -1089,8 +1089,8 @@ const CONFIGS = {
         <p>Illinois restaurant files with strong unit economics and disciplined operators still underwrite favorably. The elevated aggregate reflects state-level averaging, not a per-file verdict -- but specialist lenders factor Illinois cost structure into projections rather than applying national baselines.</p>
     `,
     lenderCalloutHtml: `
-        <p>Illinois restaurant SBA lending is diverse without a single dominant player. <strong>The Huntington National Bank leads with 62 loans</strong>, reflecting its national restaurant SBA specialty leadership applied to the Illinois market. Byline Bank (43 loans) is the notable Chicago-headquartered player -- a strong regional bank with dedicated Chicago restaurant SBA relationships. Chase (39 loans), M&T (37 loans), and Readycap (33 loans) round out the top five.</p>
-        <p>For Illinois restaurant buyers, the practical takeaway: match to specialist SBA platforms (Huntington, Readycap, Newtek) for national-scale process, or to Byline Bank if the deal fits Chicago-metro relationships and mid-sized deal size. Generalist branches unfamiliar with Illinois restaurant-specific charge-off drivers sometimes miss cost modeling.</p>
+        <p>Illinois restaurant SBA lending is <strong>dominated by a single lender</strong>: The Huntington National Bank with 209 loans -- roughly 5&times; the next-largest lender -- reflecting Huntington's national restaurant SBA specialty leadership applied at scale to Illinois. Byline Bank (43 loans) is the notable Chicago-headquartered player with dedicated Chicago restaurant SBA relationships. Northeast Bank (34), U.S. Bank (33), and Newtek Bank (32) round out the top five.</p>
+        <p>Fifth Third Bank (15), Village Bank and Trust (15), FWBank (14), Harvest Small Business Finance (14), and First Mid Bank & Trust (12) round out the top ten. For Illinois restaurant buyers: Huntington is the default first call given their overwhelming volume and Illinois cost-modeling experience; Byline fits Chicago-metro relationship-driven files; specialist SBA platforms handle the smaller-deal tier well.</p>
     `,
     cityLinks: [
         { name: 'Chicago', href: '/business-loans/chicago-il' },
@@ -1117,7 +1117,7 @@ const CONFIGS = {
     faqs: [
         {q:"Can I get an SBA loan for a restaurant in Illinois?",a:"Yes. Illinois is the sixth-largest single-state restaurant SBA market -- 696 loans FY2020-2025 representing 4.3% of national restaurant SBA volume, growing at +32.8% year-over-year. SBA 7(a) covers acquisitions, buildouts, equipment, and working capital. Average IL restaurant SBA loan is approximately $556K."},
         {q:"Why does Illinois restaurant SBA charge off above the average?",a:"IL restaurant SBA charges off at 2.16% -- 1.59x the SBA cross-industry average and meaningfully above the national restaurant rate of 1.21%. Drivers: Chicago commercial rent pressure, Illinois labor cost structure ($15/hr minimum wage), Cook County and Chicago-specific business taxes, and alcohol licensing complexity on acquisition files. Individual files with strong unit economics still underwrite favorably -- the aggregate reflects state-level averaging."},
-        {q:"Which SBA lenders are most active in Illinois restaurant lending?",a:"The Huntington National Bank leads with 62 IL restaurant loans, Byline Bank (Chicago-headquartered) holds #2 at 43 loans, JPMorgan Chase third at 39, M&T fourth at 37, and Readycap fifth at 33. Byline is the notable regional player -- a Chicago-based bank with dedicated IL restaurant SBA relationships."},
+        {q:"Which SBA lenders are most active in Illinois restaurant lending?",a:"The Huntington National Bank dominates with 209 IL restaurant loans -- roughly 5x the next-largest lender. Byline Bank (Chicago-headquartered) holds #2 at 43 loans. Northeast Bank (34), U.S. Bank (33), and Newtek Bank (32) round out the top five. Fifth Third, Village Bank and Trust, FWBank, Harvest Small Business Finance, and First Mid Bank & Trust fill positions 6-10."},
         {q:"How does Chicago's cost structure affect SBA restaurant underwriting?",a:"Three factors: rent-to-sales ratios in dense Chicago neighborhoods running well above the 6-10% national benchmark; labor costs including $15/hr minimum wage and Chicago-specific fair-workweek scheduling rules; and Cook County / Chicago tax overhead (personal property replacement tax, Chicago liquor tax on gross alcohol sales) that compress margins. Specialist IL lenders model these explicitly; generalist banks unfamiliar with Chicago market context sometimes over-project margins."},
         {q:"How long does an SBA loan take to close for an Illinois restaurant?",a:"60-90 days is typical for a Standard 7(a) acquisition or buildout with a Preferred Lender experienced in Illinois. Files including Chicago liquor license transfers can add 45-90 days depending on license type and Alderman review requirements in the ward. Byline Bank tends to close Chicago-metro deals on schedule given local relationships; generalist banks unfamiliar with Illinois timing routinely extend timelines."},
     ],
@@ -1149,8 +1149,8 @@ const CONFIGS = {
         </ul>
     `,
     lenderCalloutHtml: `
-        <p>Georgia's restaurant SBA lender mix shows strong national-platform coverage. <strong>The Huntington National Bank leads with 55 Georgia restaurant loans</strong>. Newtek Bank (30 loans), Live Oak (28), and Readycap (25) round out the specialist-SBA-platform top four. Bank of America (23), Wells Fargo (20), and Newtek Small Business Finance (18) provide additional large-bank coverage. Truist (16) and PNC (14) round out the top ten.</p>
-        <p>For Georgia restaurant buyers, the practical takeaway: strong national-specialist SBA platform coverage plus solid major-bank options. Atlanta's larger deal size profile fits specialist lenders well; secondary-market smaller deals can go through the national Small Loan process cleanly.</p>
+        <p>Georgia's restaurant SBA lender mix has a distinctive Korean-American community bank presence. <strong>Metro City Bank leads with 31 loans</strong> -- a notable Atlanta-area Korean-American community bank pattern. Readycap Lending (27), Bank of Hope (26 -- Korean-American), Cadence Bank (25 -- Dallas-headquartered with strong SE coverage), and The Huntington National Bank (25) round out the top five. Two Korean-American community banks in the top three reflects the Korean-American restaurant operator network in metro Atlanta.</p>
+        <p>Newtek Bank (22), SouthState Bank (21), Renasant Bank (21), Pinnacle Bank (17), and PromiseOne Bank (16) round out the top ten. For Georgia restaurant buyers: Metro City Bank and Bank of Hope for Korean-American operator files, Cadence Bank for larger deals with Southeastern relationships, and Huntington plus Newtek for national-specialist SBA platform process.</p>
     `,
     cityLinks: [
         { name: 'Atlanta', href: '/business-loans/atlanta-ga' },
@@ -1175,7 +1175,7 @@ const CONFIGS = {
     faqs: [
         {q:"Can I get an SBA loan for a restaurant in Georgia?",a:"Yes. Georgia is the eighth-largest single-state restaurant SBA market -- 612 loans FY2020-2025 representing 3.7% of national restaurant SBA volume. Deal sizes average $738K (well above the $528K national baseline), reflecting Atlanta-metro concentration on full-service and real-estate-combined concepts. Standard SBA 7(a) minimum 10% equity injection applies."},
         {q:"Why does Georgia restaurant SBA charge off below the average?",a:"GA restaurant SBA charges off at 1.14% -- 0.84x the SBA cross-industry average and slightly below the national restaurant rate of 1.21%. Drivers: Georgia's business-friendly regulatory environment (federal minimum wage applies, no state overtime beyond FLSA), lower commercial rent than high-cost states outside downtown Atlanta, and a borrower mix skewing toward experienced operators on larger-ticket deals."},
-        {q:"Which SBA lenders are most active in Georgia restaurant lending?",a:"The Huntington National Bank leads with 55 Georgia restaurant loans. Newtek Bank (30), Live Oak Banking (28), and Readycap Lending (25) round out the specialist-SBA-platform top four. Bank of America (23), Wells Fargo (20), Newtek Small Business Finance (18), Truist (16), and PNC (14) fill out the top ten with major-bank coverage."},
+        {q:"Which SBA lenders are most active in Georgia restaurant lending?",a:"Metro City Bank leads with 31 GA restaurant loans -- a notable Atlanta-area Korean-American community bank. Readycap Lending (27), Bank of Hope (26), Cadence Bank (25), and The Huntington National Bank (25) round out the top five. Newtek Bank (22), SouthState Bank (21), Renasant Bank (21), Pinnacle Bank (17), and PromiseOne Bank (16) fill positions 6-10."},
         {q:"How does Atlanta commercial real estate affect SBA restaurant deals?",a:"Downtown Atlanta and highly-desirable neighborhoods (Buckhead, Midtown, Virginia-Highland) reach high-cost-market rent levels that push rent-to-sales toward the top of the 6-10% national benchmark. Suburban Atlanta and secondary Georgia metros run substantially cheaper, giving operators more margin room. SBA 504 real-estate-combined structures are relatively common on larger Atlanta-metro deals as operators pursue building ownership."},
         {q:"How long does an SBA loan take to close for a Georgia restaurant?",a:"60-90 days is typical for a standard SBA 7(a) acquisition or buildout with a Preferred Lender. Deals including commercial real estate via SBA 504 plus 7(a) companion typically run 75-120 days. Atlanta local-level liquor license transfers add 30-60 days; secondary Georgia markets often faster. Preferred Lenders experienced in Georgia close on schedule."},
     ],
@@ -1206,8 +1206,8 @@ const CONFIGS = {
         </ul>
     `,
     lenderCalloutHtml: `
-        <p>New Jersey's restaurant SBA lender mix leans heavily on national platforms. <strong>Manufacturers and Traders Trust Company (M&T Bank) leads with 60 loans</strong>, reflecting M&T's small-loan-heavy restaurant SBA specialty across the Northeast. TD Bank (48 loans) and Northeast Bank (36) round out the specialist top three. The Huntington National Bank (35) and Readycap (24) add specialist-platform coverage.</p>
-        <p>Two NJ-connected regional banks appear meaningfully: <strong>Columbia Bank (13 loans) and Cross River Bank (10 loans)</strong>, both NJ-headquartered. For NJ restaurant buyers, national-specialist SBA platforms handle sub-$500K files well; the two NJ-based regionals fit relationship-driven larger files better.</p>
+        <p>New Jersey's restaurant SBA lender mix is distinctive: <strong>TD Bank leads with 75 loans</strong> (2&times; the next-largest), reflecting TD's dense Northeast branch footprint. Manufacturers and Traders Trust Company (M&T, 36 loans) holds #2. Wilmington Savings Fund Society (WSFS, 30 loans) and Northeast Bank (29) round out positions 3-4. Brookline Bank (28) rounds out the top five.</p>
+        <p>Two Korean-American community banks appear in the top ten: <strong>NewBank (23 loans) and New Millennium Bank (20 loans)</strong>, reflecting the Korean-American restaurant operator network across northern NJ (Bergen County, Palisades Park corridor). Fulton Bank (27, PA-headquartered with NJ coverage), PNC (22), and Unity Bank (19, NJ-headquartered) round out the top ten. For NJ restaurant buyers: TD Bank handles the largest small-loan volume; NewBank and New Millennium fit Korean-American operator files; NJ regionals fit relationship-driven files.</p>
     `,
     cityLinks: [
         { name: 'Newark', href: '/business-loans/newark-nj' },
@@ -1232,7 +1232,7 @@ const CONFIGS = {
     faqs: [
         {q:"Can I get an SBA loan for a restaurant in New Jersey?",a:"Yes. New Jersey is the ninth-largest single-state restaurant SBA market -- 602 loans FY2020-2025 representing 3.7% of national restaurant SBA volume. Deal sizes average $681K (29% above national baseline). Standard SBA 7(a) minimum 10% equity injection applies. NJ's charge-off performance is meaningfully cleaner than neighboring NY."},
         {q:"Why does New Jersey restaurant SBA charge off below the average?",a:"NJ restaurant SBA charges off at 1.00% -- 0.74x the SBA cross-industry average and materially below the national restaurant rate of 1.21%. This is significantly cleaner than neighboring NY (1.70%). Drivers: more affordable-than-NYC cost structure combined with NY-metro demand, mature operator pool with intergenerational ownership, and Jersey Shore seasonal-tourism revenue that smooths portfolio performance."},
-        {q:"Which SBA lenders are most active in New Jersey restaurant lending?",a:"M&T Bank leads with 60 NJ restaurant loans. TD Bank second (48), Northeast Bank third (36), Huntington fourth (35), Readycap fifth (24). Two NJ-headquartered regionals appear meaningfully: Columbia Bank (13) and Cross River Bank (10). National specialists dominate sub-$500K files; NJ regionals fit relationship-driven larger files."},
+        {q:"Which SBA lenders are most active in New Jersey restaurant lending?",a:"TD Bank leads with 75 NJ restaurant loans -- 2x the next-largest. M&T (36) holds #2, WSFS (30) #3, Northeast Bank (29) #4, Brookline Bank (28) #5. Two Korean-American community banks appear meaningfully: NewBank (23) and New Millennium Bank (20). Fulton Bank (27), PNC (22), and Unity Bank (19, NJ-headquartered) round out the top ten."},
         {q:"What NJ-specific factors affect SBA restaurant underwriting?",a:"Three factors: NJ state corporate business tax at 9% (highest bracket) plus NJ personal income tax up to 10.75% on pass-through owners, requiring careful post-close cash flow modeling; NJ minimum wage at $15.13/hr; and municipal-level alcohol licensing where transfer timing varies widely by town (30-90 days). Commercial rent runs meaningfully below NYC in adjacent NJ counties, giving NJ files meaningful margin room."},
         {q:"How does the Jersey Shore seasonality affect SBA restaurant underwriting?",a:"Jersey Shore restaurants (Ocean, Monmouth, Cape May counties) run peak-summer revenue concentrations similar to Florida coastal patterns. Lenders model shoulder-season working-capital needs explicitly on shore files. Files that budget for the off-season gap underwrite cleanly; files assuming flat annual revenue face restructuring."},
     ],
@@ -1263,8 +1263,8 @@ const CONFIGS = {
         </ul>
     `,
     lenderCalloutHtml: `
-        <p>Texas dental SBA lending is dominated by <strong>Live Oak Banking Company</strong>, the national dental-practice SBA specialist: <strong>Live Oak carries 89 Texas dental loans</strong> -- 22% of state volume by count -- with an average deal size of $1.79 million, well above the state average. Live Oak's Texas dental market share reflects their national leadership applied to a growing market.</p>
-        <p>U.S. Bank (37 loans), Wells Fargo (26), and BMO (22) hold the major-bank #2-#4 positions. Bank of America (21), PNC (15), and Readycap (14) round out the top ten. For a Texas dental practice buyer, Live Oak is the default specialist first call; U.S. Bank and Wells Fargo are strong alternatives on existing-banking-relationship files; specialist SBA platforms handle sub-$500K files well.</p>
+        <p>Texas dental SBA lending is led by <strong>Live Oak Banking Company</strong>, the national dental-practice SBA specialist: <strong>Live Oak carries 48 Texas dental loans</strong> -- 12% of state volume by count -- reflecting Live Oak's national leadership applied to the second-largest state dental market. United Community Bank (35 loans, GA-headquartered with strong dental practice-lending relationships) holds #2, and The Huntington National Bank (34) rounds out the specialist top three.</p>
+        <p>BayFirst National Bank (18) and Newtek Bank (17) hold #4-5 as small-business-specialist platforms. Wells Fargo (16), PNC Bank (16), Bank of America (13), and United Midwest Savings (13) provide major-bank and specialist-platform coverage in positions 6-9. Zions Bank rounds out the top ten. For a Texas dental practice buyer, Live Oak is the default specialist first call given their national dental focus; United Community Bank is a strong alternative particularly on files with existing SE-region banking relationships.</p>
     `,
     cityLinks: [
         { name: 'Houston', href: '/business-loans/houston-tx' },
@@ -1293,7 +1293,7 @@ const CONFIGS = {
         {q:"Can I get an SBA loan for a dental practice in Texas?",a:"Yes. Texas is the second-largest single-state dental SBA market -- 399 loans FY2020-2025 representing 9.8% of national dental SBA volume and $413 million in total approved capital. Standard SBA 7(a) minimum 10% equity injection applies. Texas dental SBA has zero charge-offs across the entire portfolio -- one of the cleanest performance profiles in the SBA dataset."},
         {q:"Why does Texas dental SBA perform so well?",a:"National dental SBA charges off at 0.27% -- the lowest of any SBA industry category. Texas dental goes further with zero charge-offs across all 399 loans. Three structural drivers: dental practice acquisitions (verified revenue history, not speculative startups) dominate use cases, insurance-backed recurring revenue creates predictable cash flow, and licensed-professional operators provide underwriting certainty. Texas adds population growth expanding patient base and no state income tax improving operator financial modeling."},
         {q:"What's the typical SBA dental loan size in Texas?",a:"Average Texas dental SBA loan is approximately $1.04 million, roughly in line with California's $1.05M. Deal sizes reflect the acquisition-heavy nature of dental SBA lending and the prevalence of practice-plus-real-estate combined structures in Texas medical-corridor commercial real estate."},
-        {q:"Which SBA lenders are most active in Texas dental lending?",a:"Live Oak Banking Company dominates with 89 Texas dental loans -- 22% of TX dental SBA volume by count -- with an average deal size of $1.79 million. Live Oak is the national dental-practice SBA specialist. U.S. Bank (37 loans), Wells Fargo (26), and BMO (22) hold the major-bank positions. Bank of America (21) and PNC (15) round out the top ten with generalist-branch coverage."},
+        {q:"Which SBA lenders are most active in Texas dental lending?",a:"Live Oak Banking Company leads with 48 Texas dental loans -- 12% of state volume by count -- reflecting Live Oak's national dental-practice SBA specialty. United Community Bank (35) holds #2, The Huntington National Bank (34) #3. BayFirst National Bank (18) and Newtek Bank (17) round out the top five. Wells Fargo (16), PNC (16), Bank of America (13), United Midwest Savings (13), and Zions Bank (9) fill positions 6-10."},
         {q:"Who can own a dental practice in Texas?",a:"Under Texas dental licensing law, only licensed Texas dentists (or professional dental corporations owned by licensed dentists) can own and operate Texas dental practices. Non-dentist operators and non-professional-corp ownership structures don't underwrite cleanly. Specialist Texas dental lenders confirm licensing and corporate-entity structure upfront."},
         {q:"How long does an SBA loan take to close for a Texas dental practice?",a:"60-90 days is typical for a Texas dental practice acquisition with Live Oak or another specialist dental lender. Deals including commercial real estate via SBA 504 plus a 7(a) companion typically run 75-120 days. Startup practice files (recent grad, 0-2 years post-graduation) typically run 75-100 days given the extra operator-profile underwriting."},
     ],
@@ -1444,10 +1444,47 @@ ${rows}
   </svg>`;
 }
 
-function renderComparisonTiles(stateStats, nationalStats, overall, stateName, industryLabel) {
+// Ordinal helpers for rank-aware phrasing.
+function ordinal(n) {
+    const s = ["th","st","nd","rd"], v = n % 100;
+    return n + (s[(v-20)%10] || s[v] || s[0]);
+}
+function stateRankIn(topStates, stateAbbr) {
+    if (!Array.isArray(topStates)) return null;
+    const idx = topStates.findIndex(s => s.state === stateAbbr);
+    return idx >= 0 ? idx + 1 : null;
+}
+
+function renderComparisonTiles(stateStats, nationalStats, overall, stateName, industryLabel, stateAbbr, industryLabelSingular) {
     const avgDelta = ((stateStats.avg_loan / nationalStats.avg_loan) - 1) * 100;
     const chgoffDeltaPP = (stateStats.charge_off_pct - nationalStats.charge_off_pct);
     const chgoffDeltaLabel = `${chgoffDeltaPP >= 0 ? '+' : ''}${chgoffDeltaPP.toFixed(2)}pp`;
+    // Singular form for attributive use ("restaurant SBA market", not "restaurants SBA market").
+    const singular = industryLabelSingular || industryLabel;
+
+    // Direction-conditional avg-loan context.
+    const avgAbove = avgDelta >= 0;
+    const avgContext = avgAbove
+        ? `Higher average reflects ${stateName} real estate and buildout costs relative to national baseline.`
+        : `Smaller average reflects a mix that skews toward smaller-deal files vs. the national ${singular} baseline.`;
+
+    // Direction-conditional charge-off context.
+    const chgoffContext = chgoffDeltaPP >= 0
+        ? `Above national ${singular} rate. ${stateName}-specific cost structure and market factors compress margins on marginal files.`
+        : `Below national ${singular} rate. ${stateName} cohort performs cleaner than the national baseline for this industry.`;
+
+    // Rank-aware share tile: only claim "largest" when actually largest.
+    const rank = stateAbbr ? stateRankIn(nationalStats.top_states_by_count, stateAbbr) : null;
+    let shareContext;
+    if (rank === 1) {
+        shareContext = `${stateName} is the largest single-state ${singular} SBA market in the US.`;
+    } else if (rank && rank <= 10) {
+        shareContext = `${stateName} is the ${ordinal(rank)}-largest single-state ${singular} SBA market in the US.`;
+    } else if (rank) {
+        shareContext = `${stateName} ranks ${ordinal(rank)} nationally for ${industryLabel} SBA volume.`;
+    } else {
+        shareContext = `${stateName}'s share of national ${industryLabel} SBA volume.`;
+    }
 
     return `
     <section class="comparison-tiles">
@@ -1458,18 +1495,18 @@ function renderComparisonTiles(stateStats, nationalStats, overall, stateName, in
                     <div class="ct-delta ${avgDelta >= 0 ? 'ct-up' : 'ct-down'}">${fmt.signedPct(avgDelta)}</div>
                     <div class="ct-label">Average loan size</div>
                     <div class="ct-values"><strong>${fmt.usdK(stateStats.avg_loan)}</strong> ${stateName} &nbsp;vs&nbsp; <span>${fmt.usdK(nationalStats.avg_loan)} national</span></div>
-                    <div class="ct-context">Higher average reflects ${stateName} real estate and buildout costs relative to national baseline.</div>
+                    <div class="ct-context">${avgContext}</div>
                 </div>
                 <div class="ct-tile">
                     <div class="ct-delta ct-neutral">${chgoffDeltaLabel}</div>
                     <div class="ct-label">Charge-off rate</div>
                     <div class="ct-values"><strong>${fmt.pct(stateStats.charge_off_pct)}</strong> ${stateName} &nbsp;vs&nbsp; <span>${fmt.pct(nationalStats.charge_off_pct)} national ${industryLabel}</span></div>
-                    <div class="ct-context">${chgoffDeltaPP >= 0 ? 'Modestly above' : 'Modestly below'} national ${industryLabel}; ${stateName} cost structure pressures margins.</div>
+                    <div class="ct-context">${chgoffContext}</div>
                 </div>
                 <div class="ct-tile ct-highlight">
                     <div class="ct-big">${fmt.pct1(stateStats.share_of_industry_loans_pct)}</div>
                     <div class="ct-label">Of all US ${industryLabel} SBA loans</div>
-                    <div class="ct-context">${stateName} is the largest single-state ${industryLabel} SBA market in the US.</div>
+                    <div class="ct-context">${shareContext}</div>
                 </div>
             </div>
         </div>
@@ -1478,14 +1515,29 @@ function renderComparisonTiles(stateStats, nationalStats, overall, stateName, in
 
 function renderStateComparisonSection(topStates, highlightStateAbbr, stateName, industryLabel) {
     const chartSvg = renderStateComparisonSvg(topStates, highlightStateAbbr, industryLabel);
+    const rank = stateRankIn(topStates, highlightStateAbbr);
     const highlighted = topStates.find(s => s.state === highlightStateAbbr);
-    const second = topStates.find(s => s.state !== highlightStateAbbr);
-    const leadFactor = highlighted && second ? (highlighted.loan_count / second.loan_count).toFixed(2) : '';
+    const leader = topStates[0];
+
+    let subCopy;
+    if (rank === 1) {
+        const second = topStates[1];
+        const leadFactor = highlighted && second ? (highlighted.loan_count / second.loan_count).toFixed(2) : '';
+        subCopy = `${stateName} leads the next-largest state (${second ? second.state : ''}) by roughly ${leadFactor}&times; on SBA ${industryLabel} loan count &mdash; the concentration is real, not noise. Top 8 states account for about half of all national ${industryLabel} SBA volume.`;
+    } else if (rank && rank <= 10 && highlighted && leader) {
+        const ratioToLeader = (leader.loan_count / highlighted.loan_count).toFixed(2);
+        subCopy = `${stateName} ranks ${ordinal(rank)} nationally for ${industryLabel} SBA volume. The leader (${leader.state}) carries roughly ${ratioToLeader}&times; ${stateName}'s loan count. Top 8 states account for about half of all national ${industryLabel} SBA volume.`;
+    } else if (highlighted && leader) {
+        subCopy = `${stateName} is one of the meaningful state markets for ${industryLabel} SBA lending. The leader (${leader.state}) carries ${leader.loan_count} loans; top 8 states account for about half of all national ${industryLabel} SBA volume.`;
+    } else {
+        subCopy = `Top 8 states account for about half of all national ${industryLabel} SBA volume.`;
+    }
+
     return `
     <section class="state-comparison-section">
         <div class="container-narrow">
             <h2>How ${stateName} compares to other top ${industryLabel} states</h2>
-            <p class="ls-sub">${stateName} leads the next-largest state (${second ? second.state : ''}) by roughly ${leadFactor}&times; on SBA ${industryLabel} loan count &mdash; the concentration is real, not noise. Top 8 states account for about half of all national ${industryLabel} SBA volume.</p>
+            <p class="ls-sub">${subCopy}</p>
             <div class="viz-container">${chartSvg}</div>
         </div>
     </section>`;
@@ -1501,9 +1553,22 @@ function renderHeroPhoto(heroPhoto, stateName, industryLabel) {
 </section>`;
 }
 
+// Ensure a link href to an on-site path uses trailing-slash form (canonical URL rule).
+function withTrailingSlash(href) {
+    if (!href) return href;
+    if (href.endsWith('/')) return href;
+    if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return href;
+    if (/\.(?:html|pdf|png|jpe?g|gif|svg|ico|css|js|xml|txt|webp)$/i.test(href.split(/[?#]/)[0])) return href;
+    if (href.startsWith('/') || href.startsWith('https://mymoneymarketplace.com')) {
+        const [path, ...rest] = href.split(/([?#])/);
+        return path + '/' + rest.join('');
+    }
+    return href;
+}
+
 function renderCityLinks(cityLinks, stateName) {
     if (!cityLinks || cityLinks.length === 0) return '';
-    const items = cityLinks.map(c => `<a class="city-link" href="${c.href}">${esc(c.name)}</a>`).join('');
+    const items = cityLinks.map(c => `<a class="city-link" href="${withTrailingSlash(c.href)}">${esc(c.name)}</a>`).join('');
     return `
     <section class="city-links-section">
         <div class="container">
@@ -1812,7 +1877,7 @@ ${renderHeroPhoto(cfg.heroPhoto, cfg.stateName, cfg.industryLabel)}
                 <h1>SBA Loans for ${cfg.industryLabelCap} in ${cfg.stateName}</h1>
                 <p class="sub">${cfg.heroSub}</p>
                 <p class="hero-value">Answer 4 questions. Get matched with ${cfg.stateName}-${cfg.industryLabel.replace(/s$/, '')}-experienced SBA lenders.</p>
-                <a href="#ca-stats" class="hero-skip">Skip to ${cfg.stateName} stats &rarr;</a>
+                <a href="#state-stats" class="hero-skip">Skip to ${cfg.stateName} stats &rarr;</a>
                 <p class="basics-link">See the national picture at the <a href="/sba-loans/${cfg.industryParentSlug}/">SBA ${cfg.industryLabel} guide</a>.</p>
             </div>
             <div class="hero-right" id="quiz">
@@ -1836,10 +1901,10 @@ ${renderHeroPhoto(cfg.heroPhoto, cfg.stateName, cfg.industryLabel)}
     </div>
 </section>
 
-<div id="ca-stats"></div>
+<div id="state-stats"></div>
 ${renderStatsBlock(stateStats, nationalStats, overall, cfg.stateName, cfg.industryLabel)}
 
-${renderComparisonTiles(stateStats, nationalStats, overall, cfg.stateName, cfg.industryLabel)}
+${renderComparisonTiles(stateStats, nationalStats, overall, cfg.stateName, cfg.industryLabel, cfg.state, (cfg.industryLabelCapSingular || '').toLowerCase())}
 
 ${renderStateComparisonSection(nationalStats.top_states_by_count, cfg.state, cfg.stateName, cfg.industryLabel)}
 
