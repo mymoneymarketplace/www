@@ -349,7 +349,7 @@ function buildBreadcrumbSchema(breadcrumb) {
         '@type': 'ListItem',
         position: i + 1,
         name: b.name,
-        item: b.url === '/' ? 'https://mymoneymarketplace.com' : 'https://mymoneymarketplace.com' + b.url
+        item: b.url === '/' ? 'https://mymoneymarketplace.com/' : ('https://mymoneymarketplace.com' + (b.url.endsWith('/') ? b.url : b.url + '/'))
     }));
 }
 
@@ -404,7 +404,7 @@ function renderRelated(related) {
 }
 
 function buildPage(p) {
-    const canonical = `https://mymoneymarketplace.com/${p.slug}`;
+    const canonical = `https://mymoneymarketplace.com/${p.slug}/`;
     const ctaUrl = `https://lendmatecapital.com?utm_source=mmm&utm_medium=hub&utm_campaign=${p.ctaUtm}`;
     const schema = {
         '@context': 'https://schema.org',
@@ -412,7 +412,7 @@ function buildPage(p) {
             {
                 '@type': 'Organization',
                 name: 'My Money Marketplace',
-                url: 'https://mymoneymarketplace.com',
+                url: 'https://mymoneymarketplace.com/',
                 logo: LOGO
             },
             {
@@ -576,11 +576,11 @@ ${JSON.stringify(schema, null, 4)}
     <div class="header-inner">
         <a href="/" class="header-logo"><img src="${LOGO}" alt="My Money Marketplace" width="180" height="32"></a>
         <nav class="header-nav">
-            <a href="/credit-cards" class="header-link">Credit Cards</a>
-            <a href="/personal-loans" class="header-link">Personal Loans</a>
-            <a href="/business-loans" class="header-link">Business Loans</a>
-            <a href="/savings" class="header-link">Savings</a>
-            <a href="https://mymoneymarketplace.com/compare" class="header-cta">Compare Rates</a>
+            <a href="/credit-cards/" class="header-link">Credit Cards</a>
+            <a href="/personal-loans/" class="header-link">Personal Loans</a>
+            <a href="/business-loans/" class="header-link">Business Loans</a>
+            <a href="/savings/" class="header-link">Savings</a>
+            <a href="/business-loans/" class="header-cta">Compare Rates</a>
             <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </div>
@@ -651,11 +651,11 @@ ${JSON.stringify(schema, null, 4)}
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Products</h4>
-                <a href="/personal-loans">Personal Loans</a>
-                <a href="/business-loans">Business Loans</a>
-                <a href="/sba-loans">SBA Loans</a>
-                <a href="/credit-cards">Credit Cards</a>
-                <a href="/savings">Savings</a>
+                <a href="/personal-loans/">Personal Loans</a>
+                <a href="/business-loans/">Business Loans</a>
+                <a href="/sba-loans/">SBA Loans</a>
+                <a href="/credit-cards/">Credit Cards</a>
+                <a href="/savings/">Savings</a>
             </div>
             <div class="footer-col">
                 <h4>About</h4>

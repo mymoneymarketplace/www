@@ -35,7 +35,7 @@ function esc(s) {
 function buildBreadcrumbSchema(breadcrumb) {
     return breadcrumb.map((b, i) => ({
         '@type': 'ListItem', position: i + 1, name: b.name,
-        item: b.url === '/' ? 'https://mymoneymarketplace.com' : 'https://mymoneymarketplace.com' + b.url
+        item: b.url === '/' ? 'https://mymoneymarketplace.com/' : ('https://mymoneymarketplace.com' + (b.url.endsWith('/') ? b.url : b.url + '/'))
     }));
 }
 function buildFaqSchema(faqs) {
@@ -48,12 +48,12 @@ function renderFaqs(f) { return f.map(x => `\n            <details><summary>${es
 function renderRelated(r) { return r.map(x => `\n            <a href="${x.url}" class="related-card"><div class="related-title">${esc(x.title)}</div><span class="related-link">${esc(x.sub)} &rarr;</span></a>`).join(''); }
 
 function buildPage(p) {
-    const canonical = `https://mymoneymarketplace.com/${p.slug}`;
+    const canonical = `https://mymoneymarketplace.com/${p.slug}/`;
     const ctaUrl = `https://lendmatecapital.com?utm_source=mmm&utm_medium=hub&utm_campaign=${p.ctaUtm}`;
     const schema = {
         '@context': 'https://schema.org',
         '@graph': [
-            { '@type': 'Organization', name: 'My Money Marketplace', url: 'https://mymoneymarketplace.com', logo: LOGO },
+            { '@type': 'Organization', name: 'My Money Marketplace', url: 'https://mymoneymarketplace.com/', logo: LOGO },
             { '@type': 'BreadcrumbList', itemListElement: buildBreadcrumbSchema(p.breadcrumb) },
             {
                 '@type': 'LocalBusiness',
@@ -174,11 +174,11 @@ ${JSON.stringify(schema, null, 4)}
     <div class="header-inner">
         <a href="/" class="header-logo"><img src="${LOGO}" alt="My Money Marketplace" width="180" height="32"></a>
         <nav class="header-nav">
-            <a href="/credit-cards" class="header-link">Credit Cards</a>
-            <a href="/personal-loans" class="header-link">Personal Loans</a>
-            <a href="/business-loans" class="header-link">Business Loans</a>
-            <a href="/savings" class="header-link">Savings</a>
-            <a href="/business-loans" class="header-cta">Compare Rates</a>
+            <a href="/credit-cards/" class="header-link">Credit Cards</a>
+            <a href="/personal-loans/" class="header-link">Personal Loans</a>
+            <a href="/business-loans/" class="header-link">Business Loans</a>
+            <a href="/savings/" class="header-link">Savings</a>
+            <a href="/business-loans/" class="header-cta">Compare Rates</a>
             <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </div>
@@ -231,7 +231,7 @@ ${JSON.stringify(schema, null, 4)}
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-col"><h4>Products</h4><a href="/personal-loans">Personal Loans</a><a href="/business-loans">Business Loans</a><a href="/sba-loans">SBA Loans</a><a href="/credit-cards">Credit Cards</a><a href="/savings">Savings</a></div>
+            <div class="footer-col"><h4>Products</h4><a href="/personal-loans/">Personal Loans</a><a href="/business-loans/">Business Loans</a><a href="/sba-loans/">SBA Loans</a><a href="/credit-cards/">Credit Cards</a><a href="/savings/">Savings</a></div>
             <div class="footer-col"><h4>About</h4><p>My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not provide financial, legal, or tax advice.</p></div>
         </div>
     </div>

@@ -452,7 +452,7 @@ const CONFIGS = {
             <p>Veterinary practice charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio. This is the <em>lowest charge-off rate of any major industry category in the SBA 7(a) portfolio</em>. Combined with the +40% YoY growth and the highest-in-category average loan size, veterinary practices represent one of the most attractive lending opportunities in the SBA universe.</p>
             <p>The practical implication for borrowers: specialist veterinary lenders actively compete for deals. Live Oak Banking leads the category by loan count, with several other banks (including bank-of-america-scale institutions) running dedicated veterinary practice lending programs. Matching to a specialist lender is less about gatekeeping and more about getting competitive pricing and fast closing. Generalist banks sometimes under-price these deals because they don&rsquo;t recognize the category&rsquo;s performance, but they also sometimes add unnecessary friction that a specialist wouldn&rsquo;t.</p>
             <p>What predicts the rare failures: <strong>inexperienced operators buying solo without a practice handoff</strong>, <strong>practices with heavy client concentration around the departing owner</strong> (clients leave when the selling vet does), and <strong>geographic markets where corporate consolidators have built reputational competitive advantages</strong>. Specialist lenders underwrite specifically around these risks.</p>
-            <p>For adjacent businesses: see our <a class="inline" href="/sba-loans/pet-care">SBA pet care guide</a> for boarding, grooming, daycare, and training operations &mdash; related to veterinary but with distinct underwriting (no veterinary licensure required, different facility patterns, higher franchise concentration).</p>
+            <p>For adjacent businesses: see our <a class="inline" href="/sba-loans/pet-care/">SBA pet care guide</a> for boarding, grooming, daycare, and training operations &mdash; related to veterinary but with distinct underwriting (no veterinary licensure required, different facility patterns, higher franchise concentration).</p>
         `,
     },
     quiz: {
@@ -569,7 +569,7 @@ const CONFIGS = {
         failure: `
             <p>Insurance agency SBA 7(a) charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio. Meaningfully better than average, driven by the underlying economics: renewing policies generate recurring commission revenue that&rsquo;s more predictable than most small-business cash flow. When loans do fail, it&rsquo;s usually because projected book retention materially underperformed &mdash; key customers left, a carrier pulled its appointment, or the seller violated the non-compete and recruited clients away.</p>
             <p>The +20% YoY growth in insurance agency SBA lending reflects a multi-year consolidation cycle. An aging independent-agent demographic is selling books to younger agents and to consolidating agencies. PE-backed and strategic-buyer consolidators (Hub International, Alera Group, Brown &amp; Brown, many others) are competing with individual-agent buyers for the same books, which pushes valuations up but also creates competitive alternatives for sellers. SBA 7(a) is the dominant financing path for individual-agent buyers competing against corporate bidders.</p>
-            <p>For buyers evaluating a specific book: the standard diligence includes reviewing 3-5 years of commission reports, client retention history, any existing claims-related issues on the book, and the carrier appointment structure. SBA lenders use this information to model post-acquisition cash flow and size the loan against projected debt service coverage. A book that looks strong on a single year of commission data but shows declining retention over three years underwrites very differently than a steady or growing book. See our <a class="inline" href="/sba-loans/business-acquisition">SBA business acquisition mechanics</a> guide for broader acquisition structuring.</p>
+            <p>For buyers evaluating a specific book: the standard diligence includes reviewing 3-5 years of commission reports, client retention history, any existing claims-related issues on the book, and the carrier appointment structure. SBA lenders use this information to model post-acquisition cash flow and size the loan against projected debt service coverage. A book that looks strong on a single year of commission data but shows declining retention over three years underwrites very differently than a steady or growing book. See our <a class="inline" href="/sba-loans/business-acquisition/">SBA business acquisition mechanics</a> guide for broader acquisition structuring.</p>
         `,
     },
     quiz: {
@@ -758,7 +758,7 @@ const CONFIGS = {
         `,
         indepTitle: 'Franchise vs. independent centers',
         indep: `
-            <p>Franchise operators represent <strong>{franchise_pct}% of child care SBA loans</strong> &mdash; meaningfully higher than most professional-services industries. Major franchise brands in the SBA data include the Primrose / KinderCare / Goddard / Kiddie Academy category and multiple regional concepts. Franchise centers get a brand-level underwriting shortcut if the franchise is listed in the SBA Franchise Directory, and they benefit from established curriculum, marketing, and operational systems. See our <a class="inline" href="/sba-loans/franchise">SBA franchise guide</a> for franchise-specific mechanics.</p>
+            <p>Franchise operators represent <strong>{franchise_pct}% of child care SBA loans</strong> &mdash; meaningfully higher than most professional-services industries. Major franchise brands in the SBA data include the Primrose / KinderCare / Goddard / Kiddie Academy category and multiple regional concepts. Franchise centers get a brand-level underwriting shortcut if the franchise is listed in the SBA Franchise Directory, and they benefit from established curriculum, marketing, and operational systems. See our <a class="inline" href="/sba-loans/franchise/">SBA franchise guide</a> for franchise-specific mechanics.</p>
             <p>Independent centers take the full underwriting path: licensing verification, facility diligence, enrollment and retention review, and operator experience evaluation. Experienced independent operators with a proven track record at prior centers underwrite well. First-time operators face a harder path without a franchise curriculum backbone or without a state-recognized certification in early childhood education on the ownership team.</p>
         `,
         failureTitle: 'Why child care outperforms on SBA charge-off',
@@ -954,13 +954,13 @@ const CONFIGS = {
     metaDesc: 'SBA 7(a) and 504 loans for pet care businesses — boarding, grooming, and training services. 2,865 SBA loans approved FY2020-2025 with strong performance and +11% YoY growth.',
     breadcrumbName: 'SBA Loans for Pet Care',
     campaignSlug: 'sba-pet-care-quiz',
-    heroSub: 'Pet care businesses &mdash; boarding, grooming, daycare, and training &mdash; benefit from the same <strong>recession-resistant pet spending</strong> dynamic that makes <a class="inline" href="/sba-loans/veterinarians">veterinary SBA lending</a> the strongest industry category in the portfolio. Charge-offs run at 0.70%, roughly half the SBA average.',
+    heroSub: 'Pet care businesses &mdash; boarding, grooming, daycare, and training &mdash; benefit from the same <strong>recession-resistant pet spending</strong> dynamic that makes <a class="inline" href="/sba-loans/veterinarians/">veterinary SBA lending</a> the strongest industry category in the portfolio. Charge-offs run at 0.70%, roughly half the SBA average.',
     heroValue: 'Answer 6 questions. Get matched with pet-care-experienced SBA lenders.',
     serviceDescription: 'My Money Marketplace helps pet care business owners compare SBA 7(a) and 504 options and match with specialist lenders experienced in pet care facility underwriting. We do not originate SBA loans.',
     narrative: {
         underwritingTitle: 'How lenders evaluate pet care business files',
         underwriting: `
-            <p>Pet care SBA lending &mdash; boarding, grooming, daycare, training, and related services &mdash; sits in the same favorable structural territory as veterinary medicine (covered in our <a class="inline" href="/sba-loans/veterinarians">veterinary SBA guide</a>). Pet spending is non-discretionary in ways most consumer categories are not, and the franchise-heavy industry structure creates clearer underwriting patterns than many small-business categories.</p>
+            <p>Pet care SBA lending &mdash; boarding, grooming, daycare, training, and related services &mdash; sits in the same favorable structural territory as veterinary medicine (covered in our <a class="inline" href="/sba-loans/veterinarians/">veterinary SBA guide</a>). Pet spending is non-discretionary in ways most consumer categories are not, and the franchise-heavy industry structure creates clearer underwriting patterns than many small-business categories.</p>
             <h3>Facility-heavy capital requirements</h3>
             <p>A boarding or daycare facility requires <strong>3,000 to 15,000 square feet</strong> depending on capacity, plus outdoor run space, dedicated bathing and grooming areas, climate control for animal welfare, and noise containment for neighbors. New facility buildouts run $400K to $1.5M in tenant improvements on top of any real estate acquisition. SBA 504 frequently handles the real estate portion while SBA 7(a) covers the operating business.</p>
             <h3>Franchise-heavy industry structure</h3>
@@ -968,7 +968,7 @@ const CONFIGS = {
             <h3>Revenue mix and recurring service patterns</h3>
             <p>Lenders evaluate the mix across <strong>boarding</strong> (high margin, seasonal peaks around holidays), <strong>daycare</strong> (recurring weekly revenue, stable cash flow), <strong>grooming</strong> (recurring 4-8 week cycles, strong retention), and <strong>training</strong> (package-based, higher margin, variable cash flow). Daycare-heavy operations with recurring weekly clients underwrite with unusually predictable cash flow; pure boarding operations show more seasonal variance.</p>
             <h3>Distinct from veterinary medicine</h3>
-            <p>Pet care businesses don&rsquo;t require veterinary licensure, which differentiates underwriting from veterinary practices. Some overlap exists &mdash; many boarding and daycare operations maintain veterinary relationships for emergency care or medicated boarding &mdash; but the businesses are economically distinct. See our <a class="inline" href="/sba-loans/veterinarians">SBA veterinary practice guide</a> for the veterinary-side mechanics.</p>
+            <p>Pet care businesses don&rsquo;t require veterinary licensure, which differentiates underwriting from veterinary practices. Some overlap exists &mdash; many boarding and daycare operations maintain veterinary relationships for emergency care or medicated boarding &mdash; but the businesses are economically distinct. See our <a class="inline" href="/sba-loans/veterinarians/">SBA veterinary practice guide</a> for the veterinary-side mechanics.</p>
         `,
         indepTitle: 'Franchise dominance and independent alternatives',
         indep: `
@@ -979,7 +979,7 @@ const CONFIGS = {
         failure: `
             <p>Pet care charge-offs run at <strong>{cost_off_pct}%</strong>, compared to the SBA average of <strong>{sba_avg_chgoff}%</strong> &mdash; a <strong>{chgoff_ratio_label}</strong> ratio, roughly half the SBA average. The favorable performance reflects the same pet-spending-is-non-discretionary dynamics that drive veterinary performance, plus the stabilizing effect of franchise-industry structure on operational quality.</p>
             <p>The +11% YoY growth in SBA lending to pet care reflects the broader pet-industry expansion: pet ownership increased meaningfully through the pandemic, pet-spending grew even as general consumer spending weakened, and consolidation activity has created exit markets for independent operators. Corporate pet-care consolidators (PE-backed rollups in boarding/daycare) actively acquire independent operations at competitive valuations, which both pushes prices up and creates SBA-financed individual-buyer alternatives.</p>
-            <p>For cross-reference: <a class="inline" href="/sba-loans/veterinarians">veterinary practices</a> show even stronger performance (0.18% charge-off, +40% YoY) with higher-dollar average deals. Pet care and veterinary are complementary categories with different underwriting but shared industry tailwinds.</p>
+            <p>For cross-reference: <a class="inline" href="/sba-loans/veterinarians/">veterinary practices</a> show even stronger performance (0.18% charge-off, +40% YoY) with higher-dollar average deals. Pet care and veterinary are complementary categories with different underwriting but shared industry tailwinds.</p>
         `,
     },
     quiz: {
@@ -1103,17 +1103,17 @@ const CONFIGS = {
     metaDesc: 'SBA 7(a) loans for CPA firm acquisitions and partner buyouts. 2,072 CPA firm SBA loans approved FY2020-2025 with 0.48% charge-off (0.35x SBA average). Take the 2-minute quiz.',
     breadcrumbName: 'SBA Loans for CPA Firms',
     campaignSlug: 'sba-cpas-quiz',
-    heroSub: 'CPA firm SBA loans have one of the strongest underwriting profiles in the portfolio &mdash; a <strong>0.48% charge-off rate</strong>, roughly one-third the SBA average. The underlying economics mirror <a class="inline" href="/sba-loans/insurance-agencies">insurance agency lending</a>: recurring-client revenue, book-of-business valuation mechanics, partner-buyout structures.',
+    heroSub: 'CPA firm SBA loans have one of the strongest underwriting profiles in the portfolio &mdash; a <strong>0.48% charge-off rate</strong>, roughly one-third the SBA average. The underlying economics mirror <a class="inline" href="/sba-loans/insurance-agencies/">insurance agency lending</a>: recurring-client revenue, book-of-business valuation mechanics, partner-buyout structures.',
     heroValue: 'Answer 6 questions. Get matched with CPA-firm-experienced SBA lenders.',
     serviceDescription: 'My Money Marketplace helps CPA firm owners and buyers compare SBA 7(a) options and match with lenders experienced in professional-services practice acquisition underwriting. We do not originate SBA loans.',
     narrative: {
         underwritingTitle: 'How lenders evaluate CPA firm files',
         underwriting: `
-            <p>CPA firm SBA lending sits among the strongest-performing professional services categories in the SBA portfolio. Underwriting runs on <strong>recurring-client revenue math</strong> similar to <a class="inline" href="/sba-loans/insurance-agencies">insurance agency book-of-business valuation</a>: the asset being purchased is a client list with predictable renewal billings, not a traditional operating business. The 0.48% charge-off rate reflects how favorably lenders view this structure.</p>
+            <p>CPA firm SBA lending sits among the strongest-performing professional services categories in the SBA portfolio. Underwriting runs on <strong>recurring-client revenue math</strong> similar to <a class="inline" href="/sba-loans/insurance-agencies/">insurance agency book-of-business valuation</a>: the asset being purchased is a client list with predictable renewal billings, not a traditional operating business. The 0.48% charge-off rate reflects how favorably lenders view this structure.</p>
             <h3>Book-of-business valuation</h3>
             <p>CPA firms are typically valued at <strong>0.9x to 1.4x annual revenue</strong> on the acquisition market, with variation driven by client mix (higher-margin tax and advisory vs. lower-margin bookkeeping), retention history, and partner dependency. Lenders underwrite the projected client retention curve (typically 85-95% annual retention on well-run firms) against the debt service coverage requirement. A firm with diversified client base and strong retention history underwrites meaningfully better than a firm with concentrated revenue from a few clients or heavy dependence on the selling partner.</p>
             <h3>Partner-buyout structures</h3>
-            <p>Multi-partner firms commonly finance transitions through partial purchases &mdash; a partner buys out a retiring senior partner&rsquo;s interest through an SBA 7(a) loan, with the firm continuing under multi-partner ownership. The SBA&rsquo;s May 2023 partial-purchase rule update clarified these transactions qualify for 7(a) financing. Specialist lenders handle these routinely; see our <a class="inline" href="/sba-loans/business-acquisition">SBA acquisition mechanics guide</a> for the broader deal-structuring framework.</p>
+            <p>Multi-partner firms commonly finance transitions through partial purchases &mdash; a partner buys out a retiring senior partner&rsquo;s interest through an SBA 7(a) loan, with the firm continuing under multi-partner ownership. The SBA&rsquo;s May 2023 partial-purchase rule update clarified these transactions qualify for 7(a) financing. Specialist lenders handle these routinely; see our <a class="inline" href="/sba-loans/business-acquisition/">SBA acquisition mechanics guide</a> for the broader deal-structuring framework.</p>
             <h3>Q1 seasonal revenue concentration</h3>
             <p>CPA firms run concentrated revenue in Q1 tax season. Lenders recognize the pattern and structure loans with appropriate working capital for the remaining three quarters. Firms with advisory practice revenue (CFO services, wealth management, consulting) smooth the seasonal pattern meaningfully; pure tax-return-focused firms show more Q1 concentration that requires more explicit cash-flow planning in the loan structure.</p>
         `,
@@ -1182,13 +1182,13 @@ const CONFIGS = {
     metaDesc: 'SBA 7(a) loans for accounting, bookkeeping, tax prep, and payroll firms. 1,722 SBA loans approved FY2020-2025 with +49% YoY growth — fastest-growing industry in the SBA dataset.',
     breadcrumbName: 'SBA Loans for Accounting & Bookkeeping',
     campaignSlug: 'sba-accounting-quiz',
-    heroSub: 'Non-CPA accounting services &mdash; bookkeeping, payroll, tax preparation, accounting support &mdash; are the <strong>fastest-growing industry in the SBA dataset at +49% YoY</strong>. Smaller deals than CPA firms (median $110K vs. $270K), but the growth signal is real. Distinct from <a class="inline" href="/sba-loans/cpas">CPA firms</a>.',
+    heroSub: 'Non-CPA accounting services &mdash; bookkeeping, payroll, tax preparation, accounting support &mdash; are the <strong>fastest-growing industry in the SBA dataset at +49% YoY</strong>. Smaller deals than CPA firms (median $110K vs. $270K), but the growth signal is real. Distinct from <a class="inline" href="/sba-loans/cpas/">CPA firms</a>.',
     heroValue: 'Answer 6 questions. Get matched with accounting-services-experienced SBA lenders.',
     serviceDescription: 'My Money Marketplace helps accounting, bookkeeping, and tax-prep service operators compare SBA 7(a) options and match with lenders experienced in small professional-services underwriting. We do not originate SBA loans.',
     narrative: {
         underwritingTitle: 'How lenders evaluate accounting services files',
         underwriting: `
-            <p>The &ldquo;Other Accounting Services&rdquo; NAICS category covers bookkeeping, payroll services, tax preparation (non-CPA), and accounting support services &mdash; distinct from the <a class="inline" href="/sba-loans/cpas">CPA firm category (NAICS 541211)</a>. The audience tends to be small-business operators rather than licensed-professional firms, with smaller deal sizes and different underwriting patterns.</p>
+            <p>The &ldquo;Other Accounting Services&rdquo; NAICS category covers bookkeeping, payroll services, tax preparation (non-CPA), and accounting support services &mdash; distinct from the <a class="inline" href="/sba-loans/cpas/">CPA firm category (NAICS 541211)</a>. The audience tends to be small-business operators rather than licensed-professional firms, with smaller deal sizes and different underwriting patterns.</p>
             <h3>Smaller deals, different audience</h3>
             <p>Average accounting services SBA loan runs <strong>$301,000 with a median of $110,000</strong> &mdash; meaningfully smaller than CPA firm deals (median $270K) and reflective of the smaller-operator audience. Typical use cases: bookkeeper or tax preparer acquiring an established small book of clients, franchise tax-prep opening (Liberty Tax, Jackson Hewitt, H&amp;R Block franchise), or small accounting support service expansion.</p>
             <h3>The distinction from CPA firms matters</h3>
@@ -1251,13 +1251,13 @@ const CONFIGS = {
     metaDesc: 'SBA 7(a) and 504 loans for auto body and collision repair shops. 1,767 SBA loans approved FY2020-2025 with +23% YoY growth. DRP relationships with insurance carriers drive the revenue foundation.',
     breadcrumbName: 'SBA Loans for Auto Body',
     campaignSlug: 'sba-auto-body-quiz',
-    heroSub: 'Auto body and collision repair SBA lending is distinct from <a class="inline" href="/sba-loans/auto-repair">general mechanical auto repair</a>: higher capital intensity, DRP (Direct Repair Program) relationships with insurance carriers as the revenue foundation, and <strong>+23% YoY growth</strong> with trailing-12 still accelerating.',
+    heroSub: 'Auto body and collision repair SBA lending is distinct from <a class="inline" href="/sba-loans/auto-repair/">general mechanical auto repair</a>: higher capital intensity, DRP (Direct Repair Program) relationships with insurance carriers as the revenue foundation, and <strong>+23% YoY growth</strong> with trailing-12 still accelerating.',
     heroValue: 'Answer 6 questions. Get matched with collision-repair-experienced SBA lenders.',
     serviceDescription: 'My Money Marketplace helps auto body and collision repair shop owners compare SBA 7(a) and 504 options and match with lenders experienced in body-shop underwriting. We do not originate SBA loans.',
     narrative: {
         underwritingTitle: 'How lenders evaluate auto body shop files',
         underwriting: `
-            <p>Auto body SBA underwriting differs meaningfully from <a class="inline" href="/sba-loans/auto-repair">general auto repair</a>. Collision shops carry more specialized equipment, operate on insurance-paid revenue rather than consumer cash-pay, and rely heavily on insurance-carrier relationships for deal flow. The 0.85% charge-off rate reflects favorable underlying economics that lenders recognize.</p>
+            <p>Auto body SBA underwriting differs meaningfully from <a class="inline" href="/sba-loans/auto-repair/">general auto repair</a>. Collision shops carry more specialized equipment, operate on insurance-paid revenue rather than consumer cash-pay, and rely heavily on insurance-carrier relationships for deal flow. The 0.85% charge-off rate reflects favorable underlying economics that lenders recognize.</p>
             <h3>Equipment-heavy and high-capital</h3>
             <p>A modern auto body shop requires <strong>$500K to $1.5M in specialized equipment</strong>: spray booths with proper ventilation and paint filtration, frame machines, paint mixing systems, welding equipment rated for modern unibody construction, aluminum repair equipment (separate from steel for many newer vehicles), and diagnostic tools for ADAS (advanced driver assistance systems) recalibration. Equipment value underwrites as strong collateral; recovery on defaulted body shop loans is typically stronger than mechanical repair because the equipment is more specialized and less resellable piecemeal.</p>
             <h3>DRP relationships are the revenue foundation</h3>
@@ -1322,13 +1322,13 @@ const CONFIGS = {
     metaDesc: 'SBA 7(a) loans for chiropractic practice acquisitions, buildouts, and equipment. 2,994 chiropractic SBA loans approved FY2020-2025 with 1.00% charge-off (0.74x SBA average).',
     breadcrumbName: 'SBA Loans for Chiropractors',
     campaignSlug: 'sba-chiropractors-quiz',
-    heroSub: 'Chiropractic practice SBA lending shares acquisition dynamics with <a class="inline" href="/sba-loans/physicians">physician</a> and <a class="inline" href="/sba-loans/dentists">dental</a> practices &mdash; three categories form the core &ldquo;healthcare practice&rdquo; SBA cluster. Chiropractic deal sizes run smaller (median $150K vs. $270K+ for dental and physician) with distinct practice-acquisition patterns.',
+    heroSub: 'Chiropractic practice SBA lending shares acquisition dynamics with <a class="inline" href="/sba-loans/physicians/">physician</a> and <a class="inline" href="/sba-loans/dentists/">dental</a> practices &mdash; three categories form the core &ldquo;healthcare practice&rdquo; SBA cluster. Chiropractic deal sizes run smaller (median $150K vs. $270K+ for dental and physician) with distinct practice-acquisition patterns.',
     heroValue: 'Answer 6 questions. Get matched with chiropractic-practice-experienced SBA lenders.',
     serviceDescription: 'My Money Marketplace helps chiropractors compare SBA 7(a) options and match with lenders experienced in chiropractic practice acquisition underwriting. We do not originate SBA loans.',
     narrative: {
         underwritingTitle: 'How lenders evaluate chiropractic practice files',
         underwriting: `
-            <p>Chiropractic practice SBA underwriting sits between <a class="inline" href="/sba-loans/dentists">dental</a> and <a class="inline" href="/sba-loans/physicians">physician</a> practice profiles. The three categories share core dynamics &mdash; recurring-patient revenue, licensed-professional barrier to entry, practice-acquisition as the dominant use case &mdash; but chiropractic has meaningfully smaller average deal sizes and a different payer-mix dynamic.</p>
+            <p>Chiropractic practice SBA underwriting sits between <a class="inline" href="/sba-loans/dentists/">dental</a> and <a class="inline" href="/sba-loans/physicians/">physician</a> practice profiles. The three categories share core dynamics &mdash; recurring-patient revenue, licensed-professional barrier to entry, practice-acquisition as the dominant use case &mdash; but chiropractic has meaningfully smaller average deal sizes and a different payer-mix dynamic.</p>
             <h3>Smaller deal sizes than other healthcare practices</h3>
             <p>Average chiropractic SBA loan is <strong>$267,000 with a median of $150,000</strong> &mdash; roughly one-third the average dental practice deal ($910K) and half the average physician practice deal ($602K). The smaller scale reflects lower equipment intensity (chiropractic tables, X-ray equipment, and activator instruments are meaningfully cheaper than dental imaging or physician practice equipment) and typically smaller staff counts.</p>
             <h3>Practice acquisition dominates</h3>
@@ -1341,7 +1341,7 @@ const CONFIGS = {
         indepTitle: 'Acquisition patterns and franchise activity',
         indep: `
             <p>Franchise arrangements represent <strong>{franchise_pct}% of chiropractic SBA loans</strong> &mdash; meaningful but minority. The Joint Chiropractic and several regional franchise concepts drive this share; The Joint specifically has grown rapidly as a membership-based chiropractic model. Franchise operations close SBA deals routinely when listed in the SBA Franchise Directory.</p>
-            <p>Independent chiropractic practices are the bulk of SBA deals. Typical pattern: associate chiropractor buys the practice of the senior chiropractor they&rsquo;ve been working with, with SBA 7(a) funding the purchase price plus transition working capital. See our <a class="inline" href="/sba-loans/physicians">physician practice</a> and <a class="inline" href="/sba-loans/dentists">dental practice</a> guides for comparable transition-pattern mechanics.</p>
+            <p>Independent chiropractic practices are the bulk of SBA deals. Typical pattern: associate chiropractor buys the practice of the senior chiropractor they&rsquo;ve been working with, with SBA 7(a) funding the purchase price plus transition working capital. See our <a class="inline" href="/sba-loans/physicians/">physician practice</a> and <a class="inline" href="/sba-loans/dentists/">dental practice</a> guides for comparable transition-pattern mechanics.</p>
         `,
         failureTitle: 'Charge-off performance in context',
         failure: `
@@ -1393,13 +1393,13 @@ const CONFIGS = {
     metaDesc: 'SBA 7(a) loans for beauty salon acquisitions, buildouts, and equipment. 5,033 beauty salon SBA loans approved FY2020-2025 covering hair and styling salons.',
     breadcrumbName: 'SBA Loans for Beauty Salons',
     campaignSlug: 'sba-beauty-salons-quiz',
-    heroSub: 'Beauty salon SBA loans cover hair and styling salons specifically &mdash; NAICS 812112 is distinct from <a class="inline" href="/sba-loans/personal-care">medspa and broader personal care</a> (NAICS 812199). Smaller average deal sizes (median $80K), booth-rental vs. owner-operator revenue models, and performance that runs modestly above the SBA average on charge-offs.',
+    heroSub: 'Beauty salon SBA loans cover hair and styling salons specifically &mdash; NAICS 812112 is distinct from <a class="inline" href="/sba-loans/personal-care/">medspa and broader personal care</a> (NAICS 812199). Smaller average deal sizes (median $80K), booth-rental vs. owner-operator revenue models, and performance that runs modestly above the SBA average on charge-offs.',
     heroValue: 'Answer 6 questions. Get matched with salon-experienced SBA lenders.',
     serviceDescription: 'My Money Marketplace helps beauty salon owners compare SBA 7(a) options and match with lenders experienced in salon underwriting. We do not originate SBA loans.',
     narrative: {
         underwritingTitle: 'How lenders evaluate beauty salon files',
         underwriting: `
-            <p>Beauty salon SBA underwriting differs from the <a class="inline" href="/sba-loans/personal-care">broader personal care category</a> (NAICS 812199) and from medspa lending specifically. This NAICS (812112) captures hair and styling salons &mdash; cut, color, styling, some barbering &mdash; where the economics run on recurring-client appointment volume rather than equipment-intensive procedure revenue. Deal sizes are materially smaller (average $208K, median $80K) and the audience tilts toward working stylists becoming owners.</p>
+            <p>Beauty salon SBA underwriting differs from the <a class="inline" href="/sba-loans/personal-care/">broader personal care category</a> (NAICS 812199) and from medspa lending specifically. This NAICS (812112) captures hair and styling salons &mdash; cut, color, styling, some barbering &mdash; where the economics run on recurring-client appointment volume rather than equipment-intensive procedure revenue. Deal sizes are materially smaller (average $208K, median $80K) and the audience tilts toward working stylists becoming owners.</p>
             <h3>Booth-rental vs. owner-operator revenue</h3>
             <p>Two revenue models dominate, and they underwrite differently. <strong>Booth-rental salons</strong> lease chairs to independent stylists who operate their own businesses &mdash; the salon owner collects booth rent (typically $200-$400/week per chair) and manages the facility. <strong>Owner-operator salons</strong> employ or contract stylists directly, collecting service revenue and paying wages or commissions. Booth-rental is more facility-revenue-like and underwrites on chair-utilization and lease-term economics; owner-operator is more service-business-like and underwrites on stylist retention and service pricing.</p>
             <h3>Cosmetology licensing requirements</h3>
@@ -1574,7 +1574,7 @@ const CONFIGS = {
         indep: `
             <p>Franchise restaurants made up <strong>{franchise_pct}% of restaurant SBA loans</strong> FY2020-2025. Independent concepts are the bulk of the market, but franchises underwrite meaningfully differently. When the franchise is listed in the SBA Franchise Directory, most of the brand-level underwriting is already done &mdash; lenders evaluate the specific operator, unit economics for that brand, and site selection rather than proving out the concept itself.</p>
             <p>The top franchise brands in the SBA restaurant data are a mix of fast-casual QSR and emerging full-service concepts. Subway leads by count; Eggs Up Grill and other regional chains appear further down the list. This distribution reflects buyer demand more than lender preference &mdash; franchisees tend to choose SBA 7(a) because it stretches the equity farther than conventional restaurant financing does.</p>
-            <p>Independent concepts don&rsquo;t get the franchise shortcut. They take the full underwriting path: concept proof, location validation, operator experience, and conservative projections with sensitivity analysis. Independent restaurant files close, they just take longer and require deeper editorial on every lender question. Lenders who specialize in independent restaurant lending are different from lenders who specialize in franchise 7(a) &mdash; matching matters. See our <a class="inline" href="/sba-loans/franchise">SBA franchise loan guide</a> for the franchise-specific path.</p>
+            <p>Independent concepts don&rsquo;t get the franchise shortcut. They take the full underwriting path: concept proof, location validation, operator experience, and conservative projections with sensitivity analysis. Independent restaurant files close, they just take longer and require deeper editorial on every lender question. Lenders who specialize in independent restaurant lending are different from lenders who specialize in franchise 7(a) &mdash; matching matters. See our <a class="inline" href="/sba-loans/franchise/">SBA franchise loan guide</a> for the franchise-specific path.</p>
         `,
 
         failureTitle: 'The restaurant failure-rate reality',
@@ -2051,7 +2051,7 @@ function renderPage(naicsCode) {
     const stats = industry.stats;
     const overall = DATA.metadata.overall_sba_stats;
 
-    const canonicalUrl = `https://mymoneymarketplace.com/sba-loans/${cfg.slug}`;
+    const canonicalUrl = `https://mymoneymarketplace.com/sba-loans/${cfg.slug}/`;
 
     // Compute narrative substitutions — apply UNIFORMLY across all narrative
     // sections so any {token} placeholder resolves regardless of which section
@@ -2077,14 +2077,14 @@ function renderPage(naicsCode) {
 
     // JSON-LD
     const ldGraph = [
-        {"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com","logo":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"},
+        {"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com/","logo":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"},
         {"@type":"BreadcrumbList","itemListElement":[
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://mymoneymarketplace.com"},
-            {"@type":"ListItem","position":2,"name":"SBA Loans","item":"https://mymoneymarketplace.com/sba-loans"},
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://mymoneymarketplace.com/"},
+            {"@type":"ListItem","position":2,"name":"SBA Loans","item":"https://mymoneymarketplace.com/sba-loans/"},
             {"@type":"ListItem","position":3,"name":cfg.breadcrumbName,"item":canonicalUrl},
         ]},
         {"@type":"Article","headline":cfg.title.replace(/ \| My Money Marketplace$/,''),"description":cfg.metaDesc,"author":{"@type":"Organization","name":"My Money Marketplace"},"publisher":{"@type":"Organization","name":"My Money Marketplace","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"}},"datePublished":"2026-04-22","dateModified":"2026-04-22","mainEntityOfPage":canonicalUrl},
-        {"@type":"FinancialService","name":`SBA Loan Matching for ${industry.naics_description}`,"serviceType":`SBA loan guidance and lender matching for ${industry.naics_description.toLowerCase()}`,"description":cfg.serviceDescription,"areaServed":{"@type":"Country","name":"United States"},"provider":{"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com"}},
+        {"@type":"FinancialService","name":`SBA Loan Matching for ${industry.naics_description}`,"serviceType":`SBA loan guidance and lender matching for ${industry.naics_description.toLowerCase()}`,"description":cfg.serviceDescription,"areaServed":{"@type":"Country","name":"United States"},"provider":{"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com/"}},
         {"@type":"FAQPage","mainEntity":JSON.parse(faqSchema)},
     ];
     const ldJson = JSON.stringify({"@context":"https://schema.org","@graph":ldGraph});
@@ -2280,10 +2280,10 @@ function renderPage(naicsCode) {
     <div class="header-inner">
         <a href="/" class="header-logo"><img src="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png" alt="My Money Marketplace" width="180" height="32"></a>
         <nav class="header-nav">
-            <a href="/credit-cards" class="header-link">Credit Cards</a>
-            <a href="/personal-loans" class="header-link">Personal Loans</a>
-            <a href="/business-loans" class="header-link">Business Loans</a>
-            <a href="/savings" class="header-link">Savings</a>
+            <a href="/credit-cards/" class="header-link">Credit Cards</a>
+            <a href="/personal-loans/" class="header-link">Personal Loans</a>
+            <a href="/business-loans/" class="header-link">Business Loans</a>
+            <a href="/savings/" class="header-link">Savings</a>
             <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </div>
@@ -2292,7 +2292,7 @@ ${renderHeroPhoto(cfg.heroPhoto)}
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-        <ol class="breadcrumb-list"><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/sba-loans">SBA Loans</a></li><li class="sep">/</li><li class="current">${cfg.breadcrumbName}</li></ol>
+        <ol class="breadcrumb-list"><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/sba-loans/">SBA Loans</a></li><li class="sep">/</li><li class="current">${cfg.breadcrumbName}</li></ol>
     </div>
 </nav>
 
@@ -2304,7 +2304,7 @@ ${renderHeroPhoto(cfg.heroPhoto)}
                 <p class="sub">${cfg.heroSub}</p>
                 <p class="hero-value">${cfg.heroValue}</p>
                 <a href="#programs" class="hero-skip">Skip to program details &rarr;</a>
-                <p class="basics-link">New to SBA? Start with <a href="/sba-loans/requirements">SBA loan requirements</a>.</p>
+                <p class="basics-link">New to SBA? Start with <a href="/sba-loans/requirements/">SBA loan requirements</a>.</p>
             </div>
             <div class="hero-right" id="quiz">
                 <div class="quiz-card" id="quizCard">
@@ -2373,7 +2373,7 @@ ${renderRelatedGuidesSection(cfg)}
 <section class="closing-cta">
     <div class="container">
         <h2>Get matched with ${cfg.industryNoun || cfg.slug.replace(/-/g, ' ')}-experienced SBA lenders</h2>
-        <p>${cfg.industryNoun ? cfg.industryNoun.charAt(0).toUpperCase() + cfg.industryNoun.slice(1) : 'This'} SBA is a narrow specialty. The top ten lenders above handle a meaningful share of all ${cfg.industryNoun || 'industry'} 7(a) volume &mdash; matching there vs. a generalist branch is the difference between a clean 60-day close and a stalled file. See the broader <a href="/sba-loans">SBA loans hub</a> or <a href="/sba-loans/business-acquisition">SBA acquisition mechanics</a>.</p>
+        <p>${cfg.industryNoun ? cfg.industryNoun.charAt(0).toUpperCase() + cfg.industryNoun.slice(1) : 'This'} SBA is a narrow specialty. The top ten lenders above handle a meaningful share of all ${cfg.industryNoun || 'industry'} 7(a) volume &mdash; matching there vs. a generalist branch is the difference between a clean 60-day close and a stalled file. See the broader <a href="/sba-loans/">SBA loans hub</a> or <a href="/sba-loans/business-acquisition/">SBA acquisition mechanics</a>.</p>
         <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${cfg.campaignSlug}&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with ${cfg.industryNoun || cfg.slug.replace(/-/g, ' ')} SBA lenders &rarr;</a>
         <p class="closing-fine">MMM does not originate SBA loans. Applications are processed through SBA-authorized lenders. Statistics above are sourced from the SBA FOIA 7(a) dataset, fiscal years 2020 through December 2025.</p>
     </div>
@@ -2382,7 +2382,7 @@ ${renderRelatedGuidesSection(cfg)}
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-col"><h4>Products</h4><a href="/personal-loans">Personal Loans</a><a href="/business-loans">Business Loans</a><a href="/sba-loans">SBA Loans</a><a href="/credit-cards">Credit Cards</a><a href="/savings">Savings</a></div>
+            <div class="footer-col"><h4>Products</h4><a href="/personal-loans/">Personal Loans</a><a href="/business-loans/">Business Loans</a><a href="/sba-loans/">SBA Loans</a><a href="/credit-cards/">Credit Cards</a><a href="/savings/">Savings</a></div>
             <div class="footer-col"><h4>About</h4><p>My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not originate SBA loans; applications are processed through SBA-authorized lenders. We do not provide financial, legal, or tax advice.</p></div>
         </div>
     </div>

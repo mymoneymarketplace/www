@@ -486,7 +486,7 @@ const CONFIGS = {
     serviceDescription: 'My Money Marketplace helps Texas auto repair shop owners compare SBA 7(a) and 504 options and get matched with lenders experienced in Texas auto repair underwriting. We do not originate SBA loans; applications are processed through SBA-authorized lenders.',
 
     marketContextHtml: `
-        <p>Texas is the <strong>second-largest state for auto repair SBA lending</strong> behind California (7.89% of national volume, 427 loans approved FY2020-2025, $307 million in total approved capital) &mdash; and it&rsquo;s compounding two distinct growth trends at once. The national auto repair SBA category is up +26.93% year-over-year as the industry undergoes real operator turnover and consolidation. On top of that, <strong>Texas is growing at +52%</strong> &mdash; nearly twice the national auto-repair rate. This mirrors the Texas restaurant SBA pattern where the state compounds industry-level growth with state-level acceleration. See our <a href="/sba-loans/restaurants/texas">Texas restaurants SBA page</a> for the parallel story.</p>
+        <p>Texas is the <strong>second-largest state for auto repair SBA lending</strong> behind California (7.89% of national volume, 427 loans approved FY2020-2025, $307 million in total approved capital) &mdash; and it&rsquo;s compounding two distinct growth trends at once. The national auto repair SBA category is up +26.93% year-over-year as the industry undergoes real operator turnover and consolidation. On top of that, <strong>Texas is growing at +52%</strong> &mdash; nearly twice the national auto-repair rate. This mirrors the Texas restaurant SBA pattern where the state compounds industry-level growth with state-level acceleration. See our <a href="/sba-loans/restaurants/texas/">Texas restaurants SBA page</a> for the parallel story.</p>
         <p>Texas auto repair deals run meaningfully larger than national: <strong>$719,000 average vs. $477,000 nationally (+51%)</strong>, with the median loan at $425,000 vs. $225,500 nationally (+88%). The larger deal sizes reflect the combination of Texas commercial real estate costs, the prevalence of larger multi-bay shops in DFW and Houston, and the tendency toward real-estate-combined deals where the operator owns the building.</p>
         <h3>Charge-off rate: better than SBA average</h3>
         <p>Texas auto repair SBA charges off at <strong>1.17% &mdash; a 0.86&times; ratio against the SBA cross-industry average of 1.36%</strong>. Modestly above the national auto repair rate of 1.00%, but still favorable versus the cross-industry baseline. The slight state-level elevation reflects the larger average deal sizes in Texas (more dollars at risk per file) and a sector mix that leans toward full-service shops rather than quick-lube or tire-and-service chains.</p>
@@ -1263,7 +1263,7 @@ function renderPage(naicsCode, stateAbbr) {
     const overall = DATA.metadata.overall_sba_stats;
     const stateRef = DATA.state_reference && DATA.state_reference[stateAbbr];
 
-    const canonicalUrl = `https://mymoneymarketplace.com/sba-loans/${cfg.industryParentSlug}/${cfg.stateSlug}`;
+    const canonicalUrl = `https://mymoneymarketplace.com/sba-loans/${cfg.industryParentSlug}/${cfg.stateSlug}/`;
 
     const { questionsHtml, profilesJson, scoringBody, total } = renderQuiz(cfg);
     const faqSchema = renderFaqSchema(cfg.faqs);
@@ -1271,14 +1271,14 @@ function renderPage(naicsCode, stateAbbr) {
 
     // JSON-LD
     const ldGraph = [
-        {"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com","logo":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"},
+        {"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com/","logo":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"},
         {"@type":"BreadcrumbList","itemListElement":[
-            {"@type":"ListItem","position":1,"name":"SBA Loans","item":"https://mymoneymarketplace.com/sba-loans"},
-            {"@type":"ListItem","position":2,"name":cfg.industryLabelCap,"item":`https://mymoneymarketplace.com/sba-loans/${cfg.industryParentSlug}`},
+            {"@type":"ListItem","position":1,"name":"SBA Loans","item":"https://mymoneymarketplace.com/sba-loans/"},
+            {"@type":"ListItem","position":2,"name":cfg.industryLabelCap,"item":`https://mymoneymarketplace.com/sba-loans/${cfg.industryParentSlug}/`},
             {"@type":"ListItem","position":3,"name":cfg.stateName,"item":canonicalUrl},
         ]},
         {"@type":"Article","headline":cfg.title.replace(/ \| My Money Marketplace$/,''),"description":cfg.metaDesc,"author":{"@type":"Organization","name":"My Money Marketplace"},"publisher":{"@type":"Organization","name":"My Money Marketplace","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png"}},"datePublished":"2026-04-22","dateModified":"2026-04-22","mainEntityOfPage":canonicalUrl},
-        {"@type":"FinancialService","name":`SBA Loan Matching for ${cfg.stateName} ${cfg.industryLabelCap}`,"serviceType":`SBA loan guidance and lender matching for ${cfg.industryLabel} operators in ${cfg.stateName}`,"description":cfg.serviceDescription,"areaServed":{"@type":"State","name":cfg.stateName},"provider":{"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com"}},
+        {"@type":"FinancialService","name":`SBA Loan Matching for ${cfg.stateName} ${cfg.industryLabelCap}`,"serviceType":`SBA loan guidance and lender matching for ${cfg.industryLabel} operators in ${cfg.stateName}`,"description":cfg.serviceDescription,"areaServed":{"@type":"State","name":cfg.stateName},"provider":{"@type":"Organization","name":"My Money Marketplace","url":"https://mymoneymarketplace.com/"}},
         {"@type":"FAQPage","mainEntity":faqSchema},
     ];
     const ldJson = JSON.stringify({"@context":"https://schema.org","@graph":ldGraph});
@@ -1289,7 +1289,7 @@ function renderPage(naicsCode, stateAbbr) {
         <div class="ed-inner">
             <h2 style="text-align:left;">${cfg.industryLabelCapSingular} SBA mechanics &mdash; the short version</h2>
             <p>SBA 7(a) is the dominant path for ${cfg.industryLabel} acquisitions, buildouts, equipment, and working capital. Standard 7(a) goes up to $5 million; 7(a) Small Loan streamlines deals under $500K. SBA 504 handles real estate and heavy fixed-asset purchases when the deal includes the property. Minimum 10% equity injection applies; specialist lenders typically want 15-20% on ${cfg.stateName} ${cfg.industryLabel} deals given the higher cost structure. Up to 5% of equity can come from seller financing on full-standby terms.</p>
-            <p>For the full SBA ${cfg.industryLabel} lending guide &mdash; including program details, independent vs. franchise dynamics, the ${cfg.industryLabel} charge-off context, and the complete national picture &mdash; see our <a class="inline" href="/sba-loans/${cfg.industryParentSlug}">SBA ${cfg.industryLabel} loan guide</a>. This state page focuses on the ${cfg.stateName}-specific data and market context on top of that national foundation.</p>
+            <p>For the full SBA ${cfg.industryLabel} lending guide &mdash; including program details, independent vs. franchise dynamics, the ${cfg.industryLabel} charge-off context, and the complete national picture &mdash; see our <a class="inline" href="/sba-loans/${cfg.industryParentSlug}/">SBA ${cfg.industryLabel} loan guide</a>. This state page focuses on the ${cfg.stateName}-specific data and market context on top of that national foundation.</p>
         </div>
     </section>`;
 
@@ -1481,10 +1481,10 @@ function renderPage(naicsCode, stateAbbr) {
     <div class="header-inner">
         <a href="/" class="header-logo"><img src="https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png" alt="My Money Marketplace" width="180" height="32"></a>
         <nav class="header-nav">
-            <a href="/credit-cards" class="header-link">Credit Cards</a>
-            <a href="/personal-loans" class="header-link">Personal Loans</a>
-            <a href="/business-loans" class="header-link">Business Loans</a>
-            <a href="/savings" class="header-link">Savings</a>
+            <a href="/credit-cards/" class="header-link">Credit Cards</a>
+            <a href="/personal-loans/" class="header-link">Personal Loans</a>
+            <a href="/business-loans/" class="header-link">Business Loans</a>
+            <a href="/savings/" class="header-link">Savings</a>
             <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </div>
@@ -1493,7 +1493,7 @@ ${renderHeroPhoto(cfg.heroPhoto, cfg.stateName, cfg.industryLabel)}
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-        <ol class="breadcrumb-list"><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/sba-loans">SBA Loans</a></li><li class="sep">/</li><li><a href="/sba-loans/${cfg.industryParentSlug}">${cfg.industryLabelCap}</a></li><li class="sep">/</li><li class="current">${cfg.stateName}</li></ol>
+        <ol class="breadcrumb-list"><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/sba-loans/">SBA Loans</a></li><li class="sep">/</li><li><a href="/sba-loans/${cfg.industryParentSlug}/">${cfg.industryLabelCap}</a></li><li class="sep">/</li><li class="current">${cfg.stateName}</li></ol>
     </div>
 </nav>
 
@@ -1505,7 +1505,7 @@ ${renderHeroPhoto(cfg.heroPhoto, cfg.stateName, cfg.industryLabel)}
                 <p class="sub">${cfg.heroSub}</p>
                 <p class="hero-value">Answer 4 questions. Get matched with ${cfg.stateName}-${cfg.industryLabel.replace(/s$/, '')}-experienced SBA lenders.</p>
                 <a href="#ca-stats" class="hero-skip">Skip to ${cfg.stateName} stats &rarr;</a>
-                <p class="basics-link">See the national picture at the <a href="/sba-loans/${cfg.industryParentSlug}">SBA ${cfg.industryLabel} guide</a>.</p>
+                <p class="basics-link">See the national picture at the <a href="/sba-loans/${cfg.industryParentSlug}/">SBA ${cfg.industryLabel} guide</a>.</p>
             </div>
             <div class="hero-right" id="quiz">
                 <div class="quiz-card" id="quizCard">
@@ -1562,7 +1562,7 @@ ${shortMechanics}
 <section class="closing-cta">
     <div class="container">
         <h2>Get matched with ${cfg.stateName} ${cfg.industryLabel.replace(/s$/, '')} SBA lenders</h2>
-        <p>${cfg.stateName} ${cfg.industryLabel} SBA is a specialist segment. The top ${cfg.stateName} lenders understand the state's cost structure, labor economics, and regulatory context that generalist banks routinely miss. See the broader <a href="/sba-loans/${cfg.industryParentSlug}">SBA ${cfg.industryLabel} guide</a> or <a href="/sba-loans">SBA loans hub</a>.</p>
+        <p>${cfg.stateName} ${cfg.industryLabel} SBA is a specialist segment. The top ${cfg.stateName} lenders understand the state's cost structure, labor economics, and regulatory context that generalist banks routinely miss. See the broader <a href="/sba-loans/${cfg.industryParentSlug}/">SBA ${cfg.industryLabel} guide</a> or <a href="/sba-loans/">SBA loans hub</a>.</p>
         <a href="https://lendmatecapital.com/?utm_source=mmm&utm_medium=referral&utm_campaign=${cfg.campaignSlug}&utm_content=closing-cta" class="closing-cta-btn" rel="nofollow sponsored">Match with ${cfg.stateName} SBA lenders &rarr;</a>
         <p class="closing-fine">MMM does not originate SBA loans. Applications are processed through SBA-authorized lenders. Statistics above are sourced from the SBA FOIA 7(a) dataset, fiscal years 2020 through December 2025.</p>
     </div>
@@ -1571,7 +1571,7 @@ ${shortMechanics}
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-col"><h4>Products</h4><a href="/personal-loans">Personal Loans</a><a href="/business-loans">Business Loans</a><a href="/sba-loans">SBA Loans</a><a href="/credit-cards">Credit Cards</a><a href="/savings">Savings</a></div>
+            <div class="footer-col"><h4>Products</h4><a href="/personal-loans/">Personal Loans</a><a href="/business-loans/">Business Loans</a><a href="/sba-loans/">SBA Loans</a><a href="/credit-cards/">Credit Cards</a><a href="/savings/">Savings</a></div>
             <div class="footer-col"><h4>About</h4><p>My Money Marketplace helps consumers and small business owners compare financial products and get matched with lenders. We may receive compensation from partners when you click links on our site. We do not originate SBA loans; applications are processed through SBA-authorized lenders. We do not provide financial, legal, or tax advice.</p></div>
         </div>
     </div>

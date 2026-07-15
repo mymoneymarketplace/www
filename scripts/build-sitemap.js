@@ -68,7 +68,10 @@ function fileToPath(absPath) {
 
 function fileToUrl(absPath) {
     const p = fileToPath(absPath);
-    return p === '/' ? `${SITE_BASE}/` : `${SITE_BASE}${p}`;
+    // Trailing-slash canonical form. GitHub Pages 301s /path -> /path/, so /path/
+    // is the served URL and must be what we advertise in sitemap + canonicals.
+    if (p === '/') return `${SITE_BASE}/`;
+    return `${SITE_BASE}${p}/`;
 }
 
 // ─────────── classification ───────────

@@ -210,8 +210,11 @@ function checkStructural(html, { urlPath }) {
     const findings = [];
     const canonical = extractCanonical(html);
     const ogUrl = extractOgUrl(html);
-    const expectedCanonPath = urlPath === '/' ? '' : urlPath;
-    const expectedCanon = `https://mymoneymarketplace.com${expectedCanonPath}`;
+    // Trailing-slash canonical form. GitHub Pages 301s /path -> /path/, so the
+    // served URL is always /path/ (and root is /). Match that in canonicals.
+    const expectedCanon = urlPath === '/'
+        ? 'https://mymoneymarketplace.com/'
+        : `https://mymoneymarketplace.com${urlPath}${urlPath.endsWith('/') ? '' : '/'}`;
 
     if (!canonical) findings.push({ check: 'structural', page: urlPath, severity: 'HIGH', finding: 'Missing canonical link', fix: 'Add <link rel="canonical" href="..."> to <head>' });
     else if (canonical !== expectedCanon) findings.push({ check: 'structural', page: urlPath, severity: 'HIGH', finding: `Canonical mismatch: "${canonical}" but expected "${expectedCanon}"`, fix: 'Correct the canonical URL to match the file path' });
