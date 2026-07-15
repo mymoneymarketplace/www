@@ -27,6 +27,11 @@ const path = require('path');
 const DATA = require('../data/industry-data.json');
 const LINKS = require('./sba-internal-links.js');
 
+// Freshness year used in generated titles/metas. One-line update each January.
+// Individual per-NAICS configs may reference it via template literals (see
+// e.g. the restaurants config below).
+const YEAR = '2026';
+
 // ─── Formatting helpers ─────────────────────────────────────────────────
 const fmt = {
     num: n => Math.round(n).toLocaleString('en-US'),
@@ -1542,8 +1547,12 @@ const CONFIGS = {
     },
     highlightLenderNames: [],
     h1: 'SBA Loans for Restaurants',
-    title: 'SBA Loan for Restaurant 2026 | My Money Marketplace',
-    metaDesc: 'SBA 7(a) and 504 loans for restaurant acquisitions, buildouts, and equipment. Proprietary stats on 16,355 restaurant SBA loans approved FY2020-2025. Take the 2-minute quiz.',
+    // CTR-optimized title/meta for the SBA restaurants page: leads with the
+    // primary query, includes the FOIA loan count as a differentiator hook,
+    // brand suffix dropped (60-char cap on titles). YEAR is variable so
+    // January updates are a one-line change at the top of this file.
+    title: `SBA Loans for Restaurants ${YEAR}: 16,355-Loan Data Guide`,
+    metaDesc: 'SBA 7(a) restaurant lending analyzed with FY2020-2025 FOIA data: 16,355 loans, top 10 lenders, +8.7% YoY. Match with restaurant-experienced lenders.',
     breadcrumbName: 'SBA Loans for Restaurants',
     campaignSlug: 'sba-restaurants-quiz',
     heroSub: 'SBA 7(a) and 504 are the dominant financing paths for restaurant acquisitions, buildouts, and equipment. Here&rsquo;s what the data shows about restaurant SBA lending &mdash; and how lenders actually underwrite concepts.',
@@ -2094,6 +2103,14 @@ function renderPage(naicsCode) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "xmyn125cca");
+    </script>
     <title>${esc(cfg.title)}</title>
     <meta name="description" content="${esc(cfg.metaDesc)}">
     <meta name="robots" content="index, follow">

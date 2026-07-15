@@ -25,6 +25,53 @@ const SEO_PAGES = path.resolve(ROOT, '..', 'seo-pages');
 const LOGO = 'https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png';
 const TODAY = new Date().toISOString().slice(0, 10);
 
+// Freshness year used in titles/meta/articleHeadline. One-line update each January.
+const YEAR = '2026';
+
+// Per-page CTR-focused overrides for page-1 profession pages that need better
+// titles/metas to convert impressions into clicks. Slug -> {title, metaDesc}.
+// Both strings may reference {YEAR} which gets substituted at render time.
+// Any slug not in this map falls through to the default formula.
+const CTR_OVERRIDES = {
+    'photographers': {
+        title: `Best Credit Cards for Photographers {YEAR}: Gear Rewards Guide`,
+        metaDesc: 'Compared on 4 factors: gear purchases, travel to shoots, editing subscriptions, and startup spend. 8 FAQs on photography credit. Compare picks.',
+    },
+    'remote-workers': {
+        title: `Best Credit Cards for Remote Workers {YEAR}: Home-Office Picks`,
+        metaDesc: 'Home-office setups, subscriptions, coworking, and travel — the 4 factors we compare. 8 FAQs cover remote-worker and freelance business cards.',
+    },
+    'gamers': {
+        title: `Best Credit Cards for Gamers {YEAR}: Streaming & Hardware`,
+        metaDesc: 'Ranked by 4 factors: subscription rewards, hardware, esports travel, and streaming. 8 FAQs on gaming cards with no annual fee. Compare picks.',
+    },
+    'salon-owners': {
+        title: `Best Credit Cards for Salon Owners {YEAR}: Cash Back Guide`,
+        metaDesc: '4 factors compared for salon owners: supplies, POS fees, staff perks, and marketing. 8 FAQs on salon-business credit and cash flow options.',
+    },
+    'plumbers': {
+        title: `Best Credit Cards for Plumbers {YEAR}: Fuel & Parts Rewards`,
+        metaDesc: 'Fleet fuel, parts, tools, and service-call travel — 4 factors compared for plumbing operators. 8 FAQs on business credit and card qualifications.',
+    },
+    'food-truck-owners': {
+        title: `Best Credit Cards for Food Truck Owners {YEAR}: Business Picks`,
+        metaDesc: 'Inventory, fuel, event fees, and startup spend — 4 factors compared. 8 FAQs on food-truck business credit and small-operator qualifications.',
+    },
+    'landscapers': {
+        title: `Best Credit Cards for Landscapers {YEAR}: Fuel & Equipment`,
+        metaDesc: 'Equipment, fleet fuel, supplies, and seasonal cash flow — 4 factors compared for landscapers. 8 FAQs on business credit and financing. Compare picks.',
+    },
+    'etsy-sellers': {
+        title: `Best Credit Cards for Etsy Sellers {YEAR}: Shipping Rewards`,
+        metaDesc: 'Shipping, inventory, platform fees, and ads — 4 factors compared for Etsy sellers. 8 FAQs on new-seller credit and startup cash flow.',
+    },
+    'attorneys': {
+        title: `Best Credit Cards for Attorneys {YEAR}: Premium Card Guide`,
+        metaDesc: 'Travel, client entertainment, research subscriptions, and premium perks — 4 factors compared for attorneys. 8 FAQs on high-earner cards.',
+    },
+};
+function applyYear(str) { return str.replace(/\{YEAR\}/g, YEAR); }
+
 // Semantic buckets for related-links. Within each bucket, each page links to
 // four sibling slugs (rotated so no two pages have identical "related" lists).
 const BUCKETS = {
@@ -122,6 +169,14 @@ function buildPage(p) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "xmyn125cca");
+    </script>
     <title>${esc(p.title)}</title>
     <meta name="description" content="${esc(p.metaDesc)}">
     <meta name="robots" content="index, follow">
@@ -421,16 +476,25 @@ for (const f of files) {
     // Use the parasite's declared canonical slug when present; otherwise fall
     // back to the filename-derived slug.
     const slug = extractCanonicalSlug(html) || filenameSlug;
-    const metaDesc = extractMeta(html, 'description') || `Compare the best credit cards for ${titleCase(slug).toLowerCase()} in 2026.`;
+    const parasiteMeta = extractMeta(html, 'description');
     const faqs = extractFaqs(html);
     if (faqs.length === 0) {
         errors.push({ file: f, reason: 'no FAQs extracted' });
         continue;
     }
     const pro = titleCase(slug);
+    // Per-slug CTR overrides win over the default formula. Both title and
+    // metaDesc are honored independently.
+    const override = CTR_OVERRIDES[slug] || {};
+    const title = override.title
+        ? applyYear(override.title)
+        : `Best Credit Cards for ${pro} of ${YEAR} | My Money Marketplace`;
+    const metaDesc = override.metaDesc
+        || parasiteMeta
+        || `Compare the best credit cards for ${pro.toLowerCase()} in ${YEAR}.`;
     pages.push({
         slug: `credit-cards/${slug}`,
-        title: `Best Credit Cards for ${pro} of 2026 | My Money Marketplace`,
+        title,
         metaDesc,
         breadcrumb: [
             { name: 'Home', url: '/' },
@@ -439,7 +503,7 @@ for (const f of files) {
         ],
         h1: `Best Credit Cards for ${pro}`,
         heroSub: `Expert picks for ${pro.toLowerCase()} based on real spending patterns, welcome-bonus value, and long-term rewards math.`,
-        articleHeadline: `Best Credit Cards for ${pro} in 2026`,
+        articleHeadline: `Best Credit Cards for ${pro} in ${YEAR}`,
         ctaUtm: `credit-cards-${slug}-apex`,
         ctaHeadline: `Compare Top Cards for ${pro}`,
         ctaSub: `See side-by-side rates, rewards, and welcome bonuses curated for ${pro.toLowerCase()} -- no application required to browse.`,

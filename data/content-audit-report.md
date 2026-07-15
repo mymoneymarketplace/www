@@ -1,6 +1,6 @@
 # Content Audit Report
 
-_Generated: 2026-07-15T19:34:34.430Z · Duration: 2.5s · Pages scanned: 338_
+_Generated: 2026-07-15T20:44:10.960Z · Duration: 2.2s · Pages scanned: 338_
 
 ## Summary
 
