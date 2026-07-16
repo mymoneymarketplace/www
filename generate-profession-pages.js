@@ -1,5 +1,7 @@
 // Generate apex credit-cards/<profession>/index.html pages for every parasite
-// file at ../seo-pages/best-credit-cards-for-<profession>-2026.html.
+// profession whose FAQ/meta content is vendored in
+// data/profession-parasite-content.json (originally sourced from
+// ../seo-pages/best-credit-cards-for-<profession>-2026.html).
 //
 // Strategy:
 //  - Real FAQ content (the most SEO-valuable block) is extracted directly
@@ -21,7 +23,14 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const SEO_PAGES = path.resolve(ROOT, '..', 'seo-pages');
+// Parasite FAQ + meta content, vendored into data/ when the ../seo-pages
+// parasite network was retired to redirect stubs (2026-07-15). The stubs no
+// longer carry FAQPage JSON-LD, so this generator reads the last pre-retirement
+// content (including each parasite's declared canonical slug) from
+// data/profession-parasite-content.json. See
+// scripts/vendor-parasite-content.js for provenance.
+const PARASITE_CONTENT = JSON.parse(
+    fs.readFileSync(path.join(ROOT, 'data', 'profession-parasite-content.json'), 'utf8'));
 const LOGO = 'https://assets.cdn.filesafe.space/ViERfxWPyzGokVuzinGu/media/69ded38080b446d0fb84f50e.png';
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -348,57 +357,6 @@ function titleCase(slug) {
     return slug.split('-').map(w => w ? w[0].toUpperCase() + w.slice(1) : w).join(' ');
 }
 
-function extractFaqs(html) {
-    // FAQPage JSON-LD is embedded in the parasite; pull every Question entry.
-    // Multiple script blocks may exist; concatenate matches.
-    const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-    for (const b of blocks) {
-        try {
-            const data = JSON.parse(b[1]);
-            const nodes = Array.isArray(data) ? data : (data['@graph'] ? data['@graph'] : [data]);
-            for (const n of nodes) {
-                if (n['@type'] === 'FAQPage' && Array.isArray(n.mainEntity)) {
-                    return n.mainEntity
-                        .filter(q => q['@type'] === 'Question' && q.acceptedAnswer && q.acceptedAnswer.text)
-                        .map(q => ({ q: q.name, a: q.acceptedAnswer.text }));
-                }
-            }
-        } catch (_) { /* not JSON-LD we care about; keep looking */ }
-    }
-    return [];
-}
-
-// Decode HTML entities ONCE on extracted values so our own esc() in the
-// renderer doesn't double-encode (e.g. parasite meta has "&amp;" -> raw
-// capture gives "&amp;" -> esc() would emit "&amp;amp;"). Decoding first
-// yields "&" -> esc() emits "&amp;" -> browser renders "&".
-function decodeEntities(s) {
-    if (!s) return s;
-    return s
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'")
-        .replace(/&apos;/g, "'")
-        .replace(/&#x27;/g, "'")
-        .replace(/&nbsp;/g, ' ');
-}
-
-function extractMeta(html, name) {
-    const m = html.match(new RegExp(`<meta\\s+name="${name}"\\s+content="([^"]*)"`, 'i'));
-    return m ? decodeEntities(m[1]) : '';
-}
-
-// Prefer the parasite's declared canonical slug over the filename-derived slug.
-// Handles cases where the parasite filename and its canonical disagree --
-// e.g. best-credit-cards-for-mechanics-2026.html canonicals to
-// /credit-cards/auto-mechanics, so the apex slug should be `auto-mechanics`.
-function extractCanonicalSlug(html) {
-    const m = html.match(/<link\s+rel="canonical"\s+href="https?:\/\/[^\/]+\/credit-cards\/([^"\/]+)"/i);
-    return m ? m[1] : null;
-}
-
 // ─────────── per-profession data builder ───────────
 
 function relatedFor(slug) {
@@ -460,10 +418,10 @@ function professionSlugFromFilename(f) {
     return m ? m[1] : null;
 }
 
-const files = fs.readdirSync(SEO_PAGES)
+const files = Object.keys(PARASITE_CONTENT)
     .filter(f => /^best-credit-cards-for-.+-20\d{2}\.html$/.test(f));
 
-console.log(`Discovered ${files.length} profession parasites`);
+console.log(`Discovered ${files.length} profession parasites (vendored)`);
 
 const pages = [];
 const skipped = [];
@@ -472,12 +430,12 @@ const errors = [];
 for (const f of files) {
     const filenameSlug = professionSlugFromFilename(f);
     if (!filenameSlug) continue;
-    const html = fs.readFileSync(path.join(SEO_PAGES, f), 'utf8');
+    const entry = PARASITE_CONTENT[f] || { canonicalSlug: null, metaDesc: '', faqs: [] };
     // Use the parasite's declared canonical slug when present; otherwise fall
     // back to the filename-derived slug.
-    const slug = extractCanonicalSlug(html) || filenameSlug;
-    const parasiteMeta = extractMeta(html, 'description');
-    const faqs = extractFaqs(html);
+    const slug = entry.canonicalSlug || filenameSlug;
+    const parasiteMeta = entry.metaDesc;
+    const faqs = entry.faqs;
     if (faqs.length === 0) {
         errors.push({ file: f, reason: 'no FAQs extracted' });
         continue;
