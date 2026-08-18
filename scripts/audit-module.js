@@ -23,13 +23,19 @@ const BLOCKING_SEVERITIES = ['CRITICAL', 'HIGH'];
 const ALL_CHECK_NAMES = [
     'cross-page-leakage', 'state-leakage', 'structural',
     'internal-link-validity', 'content-quality', 'cta-correctness',
-    'data-traceability',
+    'data-traceability', 'placeholder-literal', 'stale-date', 'affiliate-rel',
 ];
 // Checks suitable to run as a pre-publish guardrail on a single page
 const PRE_PUBLISH_CHECKS = [
     'cross-page-leakage', 'state-leakage', 'structural',
     'content-quality', 'cta-correctness',
+    'placeholder-literal', 'stale-date', 'affiliate-rel',
 ];
+
+// Hosts whose outbound links are monetized/affiliate and MUST carry
+// rel="nofollow sponsored" (see checkAffiliateRel). Keep in sync with the
+// generators' CTA templates and the monetization rule in the skill.
+const AFFILIATE_HOSTS = ['lendmatecapital.com', 'cardratings.com'];
 
 const INDUSTRY_TERMS = {
     'restaurants':        ['restaurant',  'dining',     'chef',         'menu pricing'],
@@ -367,6 +373,107 @@ function checkDataTraceability(html, { urlPath, industryData }) {
     return findings;
 }
 
+// Unreplaced integration/config placeholders that shipped to production —
+// the ALLCAPS cousins of the {curly} tokens content-quality already catches.
+// Curated shapes (not a blanket ALLCAPS_UNDERSCORE match) so legitimate inline
+// JS constants like BASE_UTM / PROFILES are never flagged.
+const PLACEHOLDER_PATTERNS = [
+    /\b(?:[A-Z0-9]+_)?(?:MEASUREMENT_ID|API_KEY|APIKEY|CLIENT_ID|CLIENT_SECRET|ACCESS_TOKEN|AUTH_TOKEN|TRACKING_ID|CONTAINER_ID|PIXEL_ID|SITE_KEY|SECRET_KEY|PRIVATE_KEY|PUBLIC_KEY|APP_ID|PROJECT_ID|PROPERTY_ID)\b/g,
+    /\bYOUR_[A-Z0-9_]{2,}\b/g,
+    /\bINSERT[_-][A-Z0-9_]{2,}\b/g,
+    /\bREPLACE[_-][A-Z0-9_]{2,}\b/g,
+    /\b[A-Z0-9]{2,}_HERE\b/g,
+    /\b(?:UA|G|GT|AW|GTM|FB)-[X0O#]{4,}\b/g,
+    /\bX{6,}\b/g,
+    /\bPLACEHOLDER\b/g,
+];
+
+function checkPlaceholderLiteral(html, { urlPath }) {
+    // Collect every match across patterns with its span, then keep only
+    // non-overlapping hits so a token matched by two patterns (e.g.
+    // "G-XXXXXXX" also matching the X-run rule) is reported once.
+    const hits = [];
+    for (const re of PLACEHOLDER_PATTERNS) {
+        let m;
+        re.lastIndex = 0;
+        while ((m = re.exec(html)) !== null) {
+            hits.push({ tok: m[0], start: m.index, end: m.index + m[0].length });
+            if (m.index === re.lastIndex) re.lastIndex++;
+        }
+    }
+    hits.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
+    const findings = [];
+    const seenTok = new Set();
+    let coveredTo = -1;
+    for (const h of hits) {
+        if (h.start < coveredTo) continue;       // overlaps an already-reported span
+        coveredTo = h.end;
+        if (seenTok.has(h.tok)) continue;         // same literal elsewhere on page
+        seenTok.add(h.tok);
+        findings.push({ check: 'placeholder-literal', page: urlPath, severity: 'HIGH', finding: `Unreplaced literal placeholder "${h.tok}" shipped on page (dead/mis-wired integration)`, fix: 'Replace with the real value or remove the snippet' });
+    }
+    return findings;
+}
+
+const MONTH_INDEX = {
+    january: 0, february: 1, march: 2, april: 3, may: 4, june: 5, july: 6,
+    august: 7, september: 8, october: 9, november: 10, december: 11,
+    jan: 0, feb: 1, mar: 2, apr: 3, jun: 5, jul: 6, aug: 7, sep: 8, sept: 8,
+    oct: 9, nov: 10, dec: 11,
+};
+const STALE_DATE_DAYS = 90;
+
+// Flag decaying "as of <Month> <Year>" stamps older than STALE_DATE_DAYS.
+// context.now (ISO string) overrides the clock for deterministic tests.
+function checkStaleDate(html, context) {
+    const findings = [];
+    const urlPath = context.urlPath;
+    const now = context && context.now ? new Date(context.now) : new Date();
+    const text = stripTags(html).replace(/\s+/g, ' ');
+    const re = /\b(?:as of|updated|last updated|current as of|accurate as of|rates as of|data as of|effective)\s+([A-Za-z]{3,9})\.?\s+(\d{4})\b/gi;
+    let m;
+    const seen = new Set();
+    while ((m = re.exec(text)) !== null) {
+        const monthIdx = MONTH_INDEX[m[1].toLowerCase()];
+        if (monthIdx === undefined) continue;
+        const year = parseInt(m[2], 10);
+        // End of the referenced month — the most recent instant the phrase can mean.
+        const asOf = new Date(year, monthIdx + 1, 0);
+        const ageDays = Math.floor((now - asOf) / 86400000);
+        if (ageDays > STALE_DATE_DAYS) {
+            const phrase = m[0];
+            if (seen.has(phrase)) continue;
+            seen.add(phrase);
+            findings.push({ check: 'stale-date', page: urlPath, severity: 'MEDIUM', finding: `Stale dated claim "${phrase}" is ~${ageDays} days old (>${STALE_DATE_DAYS})`, fix: 'Re-verify and refresh the date, or phrase structurally without a decaying date' });
+        }
+    }
+    return findings;
+}
+
+// Every outbound affiliate anchor must carry rel="nofollow sponsored"
+// (undisclosed affiliate links are a manual-action + FTC-disclosure risk).
+function checkAffiliateRel(html, { urlPath }) {
+    const findings = [];
+    const tags = html.match(/<a\b[^>]*>/gi) || [];
+    const seen = new Set();
+    for (const tag of tags) {
+        const hrefM = tag.match(/href=["']([^"']+)["']/i);
+        if (!hrefM) continue;
+        const href = hrefM[1];
+        if (!AFFILIATE_HOSTS.some(h => href.includes(h))) continue;
+        const relM = tag.match(/\brel=["']([^"']*)["']/i);
+        const rel = (relM ? relM[1] : '').toLowerCase();
+        const hasNofollow = /\bnofollow\b/.test(rel);
+        const hasSponsored = /\bsponsored\b/.test(rel);
+        if (hasNofollow && hasSponsored) continue;
+        if (seen.has(href)) continue;
+        seen.add(href);
+        const missing = [!hasNofollow ? 'nofollow' : null, !hasSponsored ? 'sponsored' : null].filter(Boolean).join(' + ');
+        findings.push({ check: 'affiliate-rel', page: urlPath, severity: 'HIGH', finding: `Affiliate link missing rel ${missing}: ${href.substring(0, 90)}`, fix: 'Add rel="nofollow sponsored" (preserve any existing noopener)' });
+    }
+    return findings;
+}
+
 // ─── Aggregate runner + signature/baseline helpers ─────────────────────
 
 const CHECKS = {
@@ -377,6 +484,9 @@ const CHECKS = {
     'content-quality': checkContentQuality,
     'cta-correctness': checkCtaCorrectness,
     'data-traceability': checkDataTraceability,
+    'placeholder-literal': checkPlaceholderLiteral,
+    'stale-date': checkStaleDate,
+    'affiliate-rel': checkAffiliateRel,
 };
 
 /**
@@ -475,6 +585,9 @@ module.exports = {
     checkContentQuality,
     checkCtaCorrectness,
     checkDataTraceability,
+    checkPlaceholderLiteral,
+    checkStaleDate,
+    checkAffiliateRel,
 
     // Baseline & signature helpers
     findingSignature,
@@ -487,6 +600,7 @@ module.exports = {
     BLOCKING_SEVERITIES,
     ALL_CHECK_NAMES,
     PRE_PUBLISH_CHECKS,
+    AFFILIATE_HOSTS,
 
     // File-tree helpers
     fileToUrlPath,
