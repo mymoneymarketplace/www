@@ -104,8 +104,6 @@ function buildPage(p) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --green: #008254; --green-dark: #006b45; --text: #111111; --text-secondary: #444444; --text-muted: #717171; --border: #e2e2e2; --bg-light: #f7f7f7; --white: #ffffff; }
@@ -220,7 +218,7 @@ ${JSON.stringify(schema, null, 4)}
     <div class="container">
         <h2>${esc(p.ctaHeadline)}</h2>
         <p>${esc(p.ctaSub)}</p>
-        <a href="${ctaUrl}" class="lendmate-btn">Check My Rate &rarr;</a>
+        <a href="${ctaUrl}" class="lendmate-btn" rel="nofollow sponsored">Check My Rate &rarr;</a>
         <p class="lendmate-micro">Soft credit check. Won't affect your credit score.</p>
     </div>
 </section>
