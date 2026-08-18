@@ -42,17 +42,17 @@ runs at **two layers**:
   **before writing the file**. A new CRITICAL/HIGH → file NOT written, exit 1. New
   MEDIUM/LOW → written with a warning. It runs the single-page subset
   `PRE_PUBLISH_CHECKS`: cross-page-leakage, state-leakage, structural,
-  content-quality, cta-correctness.
+  content-quality, cta-correctness, placeholder-literal, stale-date, affiliate-rel.
 - **Layer 2 — pre-commit hook.** `scripts/pre-commit-audit.js` (installed via
   `sh scripts/install-hooks.sh`) reads the **staged** blob of every `.html` file and
-  runs ALL 7 checks (adds `internal-link-validity` + `data-traceability`, which need
+  runs ALL 10 checks (adds `internal-link-validity` + `data-traceability`, which need
   site-wide context). Same block/warn rules. This is the backstop for hand edits.
 
 Pre-existing findings are grandfathered via `data/audit-baseline.json`. Refresh it
 ONLY after an intentional cleanup: `node scripts/content-audit.js --write-baseline`
 — otherwise you are hiding regressions, not fixing them.
 
-The 7 checks and what each blocks (read `references/scripts.md` for exact behavior):
+The 10 checks and what each blocks (read `references/scripts.md` for exact behavior):
 
 1. **cross-page-leakage** (CRITICAL/HIGH) — an industry's terms (from `INDUSTRY_TERMS`)
    must not appear in another SBA page's title/meta/H1/headings/program cards. Each
@@ -71,6 +71,16 @@ The 7 checks and what each blocks (read `references/scripts.md` for exact behavi
    `sba-<pageSlug>`; each Lendmate URL needs a `utm_content`; quiz profiles distinct.
 7. **data-traceability** (LOW) — `loan_count` and `charge_off_pct` shown on an
    industry page must match `data/industry-data.json`.
+8. **placeholder-literal** (HIGH) — no unreplaced ALLCAPS integration placeholders
+   shipped (the cousins of `{curly}` tokens): `GA_MEASUREMENT_ID`, `*_API_KEY`,
+   `G-XXXXXXX`, `YOUR_*`, etc. Curated shapes, so real inline JS constants like
+   `BASE_UTM` are never flagged. (Added after a dead GA snippet shipped on 350+ pages.)
+9. **stale-date** (MEDIUM) — an "as of / updated `<Month Year>`" stamp older than
+   90 days. Either refresh it or phrase structurally (rule 4). `context.now` overrides
+   the clock for tests. (Added after a "Rates as of April 2026" stamp went stale.)
+10. **affiliate-rel** (HIGH) — every `lendmatecapital.com` / `cardratings.com` anchor
+    (hosts in `AFFILIATE_HOSTS`) must carry `rel="nofollow sponsored"`. Undisclosed
+    affiliate links are a manual-action + FTC-disclosure risk.
 
 ## Hard rules (each with its reason)
 
@@ -220,6 +230,10 @@ Key data + config locations:
 - Google Indexing API requires OWNER-level GSC access (Ownership Verification → Add
   Owner, NOT Users and Permissions — the latter's "Full user" does not satisfy the
   API's ownership check). Full walkthrough in `docs/development.md`.
-- Lead pipeline (Cloudflare Worker → Zapier → GoHighLevel tag `mmm-lead` + Resend)
-  lives in the sibling `seo-pages` repo, NOT here — this repo has no worker. Verify
-  worker URL/state there if needed.
+- Lead pipeline (Cloudflare Worker → Zapier → GoHighLevel tag `mmm-lead` + Resend):
+  the **worker code** lives in the sibling `seo-pages` repo, NOT here (this repo has no
+  worker source). But mmm-site **pages embed the worker's capture form** — the deployed
+  endpoint is `https://lead-capture-worker.mymoneymarketplace.workers.dev/contact`
+  (POST JSON `{email, firstName, referrerPage, utmCampaign}`; `email`+`firstName`
+  required; unknown `referrerPage` falls back to `leadType:general`). `/contact/` and
+  the `/savings/` rate-capture both post to it. Verify worker URL/state in `seo-pages`.

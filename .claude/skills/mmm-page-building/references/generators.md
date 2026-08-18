@@ -30,9 +30,10 @@ freshness stamp, `esc()` for HTML-escaping, and trailing-slash URLs everywhere.
   `--preview` renders + audits but writes nothing. `SKIP_AUDIT=1` bypasses the
   guardrail (dev only — never to ship).
 - **Guardrail:** runs `PRE_PUBLISH_CHECKS` (cross-page-leakage, state-leakage,
-  structural, content-quality, cta-correctness). New CRITICAL/HIGH → not written,
-  exit 1. `SLUG_TO_NAICS` in audit-module maps the slug back to its NAICS for the
-  `data-traceability` check at commit time.
+  structural, content-quality, cta-correctness, placeholder-literal, stale-date,
+  affiliate-rel). New CRITICAL/HIGH → not written, exit 1. `SLUG_TO_NAICS` in
+  audit-module maps the slug back to its NAICS for the `data-traceability` check at
+  commit time.
 - **Quirk:** `YEAR` is a one-line constant at the top — update each January.
 
 ## scripts/generate-state-industry-page.js  (AUDITED)

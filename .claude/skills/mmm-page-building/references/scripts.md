@@ -11,14 +11,18 @@ Importable pure check functions `(html, context) → findings`. Consumed by the 
 audited generators (Layer 1), `pre-commit-audit.js` (Layer 2), and `content-audit.js`
 (site-wide). Not run directly.
 - **Severity:** `CRITICAL | HIGH | MEDIUM | LOW`; `BLOCKING_SEVERITIES = ['CRITICAL','HIGH']`.
-- **Check name sets:** `ALL_CHECK_NAMES` (7) vs `PRE_PUBLISH_CHECKS` (5 — excludes
+- **Check name sets:** `ALL_CHECK_NAMES` (10) vs `PRE_PUBLISH_CHECKS` (8 — excludes
   `internal-link-validity` + `data-traceability`, which need site-wide context).
-- **The 7 checks:** cross-page-leakage, state-leakage, structural,
-  internal-link-validity, content-quality, cta-correctness, data-traceability
-  (see SKILL.md for what each blocks and why).
+- **The 10 checks:** cross-page-leakage, state-leakage, structural,
+  internal-link-validity, content-quality, cta-correctness, data-traceability,
+  placeholder-literal, stale-date, affiliate-rel (see SKILL.md for what each blocks
+  and why). The last three: `placeholder-literal` (HIGH) catches unreplaced ALLCAPS
+  integration placeholders like `GA_MEASUREMENT_ID`; `stale-date` (MEDIUM) flags
+  "as of <Month Year>" older than 90 days; `affiliate-rel` (HIGH) requires
+  `rel="nofollow sponsored"` on `AFFILIATE_HOSTS` anchors.
 - **Policy constants live here:** `INDUSTRY_TERMS`, `SLUG_TO_NAICS`,
   `REQUIRED_LD_TYPES_SBA` (`Organization, BreadcrumbList, Article, FinancialService,
-  FAQPage`), state name/abbr/slug sets, `STOPWORDS`.
+  FAQPage`), `AFFILIATE_HOSTS`, state name/abbr/slug sets, `STOPWORDS`.
 - **Baseline helpers:** `loadBaseline`, `filterNewFindings`, `findingSignature`
   (normalizes quoted literals so grandfathered findings match across minor text drift).
 - **Note:** does NOT check title/meta *length* — those limits are editorial only.
